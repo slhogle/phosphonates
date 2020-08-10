@@ -6,16 +6,27 @@ The `data` directory contains results and summary tables needed to support the c
 
 ## Handy shortcuts
 
+### Phosphonate biosynthesis
 - [Summary of PepM genes](data/phosphonate_biosynthesis/MARMICRODB/pepm_genes.md) identified in [MARMICRODB](https://zenodo.org/record/3520509)
 - [Summary of MpnS genes](data/phosphonate_biosynthesis/MARMICRODB/mpns_genes.md) identified in [MARMICRODB](https://zenodo.org/record/3520509)
-- [Gene families](data/phosphonate_catabolism/HMM_models/phosphonate_utilization_families.md) used to identify 4 discrete phosphonate catabolism pathways in genomes
 - [HMM models](data/phosphonate_biosynthesis/HMM_models) for identifying phosphonate biosynthesis genes
+
+### Phosphonate catabolism
+- [Gene families](data/phosphonate_catabolism/HMM_models/phosphonate_utilization_families.md) used to identify 4 discrete phosphonate catabolism pathways in genomes
 - [HMM models](data/phosphonate_catabolism/HMM_models) for identifying phosphonate catabolism genes
 
-```.
+### Core genes families
+- [Summary of core genes](data/core_gene_families/core_gene_families.tsv) used for metagenome normalization
+- [HMM models](data/core_gene_families/HMM_models) used for identifying genes used in metagenome normalization
+- [HMM alignments](data/core_gene_families/HMM_alignments) used to produce core gene HMMs
+
+```
+.
 ├── code
 └── data
     ├── core_gene_families
+    │   ├── HMM_alignments
+    │   └── HMM_models
     ├── phosphonate_biosynthesis
     │   ├── GORG_tropics
     │   ├── HMM_models

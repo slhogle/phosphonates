@@ -1,0 +1,31 @@
+group	gene	description	DnDs	corresponding_tigrfam	corresponding_pfam	custom_HMM	Note
+Prochlorococcus	RpsJ	Ribosomal protein S10p/S20e	0.0047	TIGR01049	PF00338	pro-PX000049	
+Prochlorococcus	PsbJ	Photosytem_II_PsbJ	0.007		PF01788	pro-PX000092	
+Prochlorococcus	ComplexI-49KD	Respiratory-chain NADH dehydrogenase	0.0074		PF00346	pro-PX000116	
+Prochlorococcus	RpsG	Ribosomal protein S7p/S5e	0.0062	TIGR01029	PF00177	pro-PX000176	
+Prochlorococcus	DUF3172	Protein of unknown function (DUF3172)	0.0063		PF11371	pro-PX000234	
+Prochlorococcus	AtpD	ATP synthase beta domain	0.0036	TIGR01039	PF00006	pro-PX000373	
+Prochlorococcus	AtpA	ATP synthase alpha domain	0.0074	TIGR00962	PF00006	pro-PX000453	
+Prochlorococcus	PetB	Cytochrome b/b6/petB	0.0027		PF00033	pro-PX000495	
+Prochlorococcus	LepA	LepA elongation factor 4	0.003	TIGR01393	PF00009	pro-PX000732	
+Prochlorococcus	CbbP	Phosphoribulokinase / Uridine kinase family	0.0055		PF00485	pro-PX000753	
+SAR11	trpS	tryptophan tRNA synthetases class I	0.0144	TIGR00233	PF00579	pel-PX000099	
+SAR11	DUF3470	indolepyruvate ferredoxin oxidreductase alpha/beta subunit	0.0099		PF11953	pel-PX000249	
+SAR11	ACP	acyl carrier protein	0	TIGR00517	PF00550	pel-PX000355	
+SAR11	RpsL	Ribosomal protein S12/S23	0.0095	TIGR00981	PF00164	pel-PX000369	
+SAR11	NQO	NADH-quinone oxidoreductase, chain I	0.0149	TIGR01971		pel-PX000374	
+SAR11	CarD	CarD-like/TRCF domain	0.0165		PF02559	pel-PX000396	
+SAR11	UBQ	NADH-ubiquinone/plastoquinone oxidoreductase, chain 3	0.0137		PF00507	pel-PX000397	
+SAR11	TPR_2	putative PEP-CTERM system TPR-repeat lipoprotein	0			pel-PX000612	
+SAR11	RelA	RelA/SpoT family protein	0.0127	TIGR00691	PF13328	pel-PX000669	
+SAR11	CJE	Crossover junction endoribonuclease	0.0142			pel-PX000683	
+Bacteria+Archaea	GTP1	Ribosome-binding ATPase YchF, GTP1/OBG family	NA	TIGR00092	PF01926	COG0012	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	PheS	Phenylalanyl-tRNA synthetase alpha subunit	NA	TIGR00468	PF01409	COG0016	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	ArgS	Arginyl-tRNA synthetase	NA	TIGR00456	PF00750	COG0018	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	SerS	Seryl-tRNA synthetase	NA	TIGR00414	PF00587	COG0172	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	CysS	Cysteinyl-tRNA synthetase	NA	TIGR00435	PF09334	COG0215	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	LeuS	Leucyl-tRNA synthetase	NA	TIGR00395,TIGR00396	PF00133	COG0495	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	ValS	Valyl-tRNA synthetase	NA	TIGR00422	PF09334	COG0525	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	TsaD	tRNA A37 threonylcarbamoyltransferase TsaD	NA	TIGR03723	PF00814	COG0533	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	FfH	Signal recognition particle protein FfH	NA	TIGR00959	PF00448	COG0541	https://github.com/motu-tool/mOTUs_v2
+Bacteria+Archaea	FtsY	Signal recognition particle-docking protein FtsY	NA	TIGR00064	PF00448; PF02881 	COG0552	https://github.com/motu-tool/mOTUs_v2

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AGZ93913.1</td>
+              <td>adenylosuccinate_lyase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000937/1">BGC0000937</a></td>
+              <td>other</td>
+              <td>42.0</td>
+              <td>91.2</td>
+              <td>298.0</td>
+              <td>1.5e-80</td>
+          </tr>
+    
+          <tr>
+              <td>AHZ61868.1</td>
+              <td>Lom34</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000240/1">BGC0000240</a></td>
+              <td>t2pks-saccharide</td>
+              <td>40.0</td>
+              <td>92.3</td>
+              <td>290.0</td>
+              <td>3.1e-78</td>
+          </tr>
+    
+          <tr>
+              <td>ABP54657.1</td>
+              <td>Adenylosuccinate_lyase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000241/1">BGC0000241</a></td>
+              <td>t2pks-saccharide</td>
+              <td>40.0</td>
+              <td>91.9</td>
+              <td>289.0</td>
+              <td>1.2e-77</td>
+          </tr>
+    
+          <tr>
+              <td>ARD70882.1</td>
+              <td>adenylosuccinate_lyase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001693/1">BGC0001693</a></td>
+              <td>t2pks</td>
+              <td>40.0</td>
+              <td>92.3</td>
+              <td>287.0</td>
+              <td>2.6e-77</td>
+          </tr>
+    
+          <tr>
+              <td>WP_040253465.1</td>
+              <td>adenylosuccinate_lyase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001596/1">BGC0001596</a></td>
+              <td>t2pks</td>
+              <td>40.0</td>
+              <td>89.5</td>
+              <td>284.0</td>
+              <td>2.9e-76</td>
+          </tr>
+    
+          <tr>
+              <td>AEE65489.1</td>
+              <td>adenylosuccinate_lyase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000223/1">BGC0000223</a></td>
+              <td>t2pks</td>
+              <td>39.0</td>
+              <td>89.8</td>
+              <td>283.0</td>
+              <td>4.9e-76</td>
+          </tr>
+    
+          <tr>
+              <td>AFV92626.1</td>
+              <td>TymF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000881/1">BGC0000881</a></td>
+              <td>other</td>
+              <td>33.0</td>
+              <td>94.0</td>
+              <td>223.0</td>
+              <td>4.6e-58</td>
+          </tr>
+    
+          <tr>
+              <td>APT68174.1</td>
+              <td>ToyF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001808/1">BGC0001808</a></td>
+              <td>other</td>
+              <td>33.0</td>
+              <td>94.0</td>
+              <td>223.0</td>
+              <td>4.6e-58</td>
+          </tr>
+    
+          <tr>
+              <td>ACF06637.1</td>
+              <td>ToyF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000879/1">BGC0000879</a></td>
+              <td>other</td>
+              <td>31.0</td>
+              <td>96.5</td>
+              <td>215.0</td>
+              <td>1.6e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ALS30796.1</td>
+              <td>trans-aconitate_decarboxylase_1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001286/1">BGC0001286</a></td>
+              <td>other</td>
+              <td>27.0</td>
+              <td>100.9</td>
+              <td>146.0</td>
+              <td>1.2e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AFW04563.1</td>
+              <td>3-carboxymuconate_cycloisomerase_PcaB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001783/1">BGC0001783</a></td>
+              <td>other</td>
+              <td>23.0</td>
+              <td>83.0</td>
+              <td>101.0</td>
+              <td>2.6e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ALA99201.1</td>
+              <td>CreD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001295/1">BGC0001295</a></td>
+              <td>other</td>
+              <td>25.0</td>
+              <td>86.3</td>
+              <td>99.0</td>
+              <td>1.3e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CBL93728.1</td>
+              <td>3-carboxymuconate_cycloisomerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000360/1">BGC0000360</a></td>
+              <td>nrps</td>
+              <td>25.0</td>
+              <td>88.1</td>
+              <td>93.0</td>
+              <td>7.2e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AGH68898.1</td>
+              <td>3-carboxymuconate_cycloisomerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001083/1">BGC0001083</a></td>
+              <td>t3pks-terpene</td>
+              <td>24.0</td>
+              <td>82.1</td>
+              <td>92.0</td>
+              <td>2.1e-18</td>
+          </tr>
+    
+          <tr>
+              <td>BAE78985.1</td>
+              <td>3-carboxy-cis,cis-muconate_cycloisomerase_homologue</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001078/1">BGC0001078</a></td>
+              <td>terpene-t3pks</td>
+              <td>22.0</td>
+              <td>97.0</td>
+              <td>85.0</td>
+              <td>2e-16</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

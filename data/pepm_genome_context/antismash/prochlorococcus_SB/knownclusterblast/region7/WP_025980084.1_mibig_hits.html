@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAS55731.1</td>
+              <td>putative_glycosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000795/1">BGC0000795</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>75.1</td>
+              <td>87.0</td>
+              <td>5.9e-17</td>
+          </tr>
+    
+          <tr>
+              <td>ABX18582.1</td>
+              <td>glycosyl_transferase_group_1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000808/1">BGC0000808</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>59.7</td>
+              <td>64.0</td>
+              <td>3.1e-10</td>
+          </tr>
+    
+          <tr>
+              <td>AJW65414.1</td>
+              <td>glycosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001195/1">BGC0001195</a></td>
+              <td>nrps-t1pks</td>
+              <td>24.0</td>
+              <td>93.9</td>
+              <td>59.0</td>
+              <td>1.3e-08</td>
+          </tr>
+    
+          <tr>
+              <td>CAD19782.1</td>
+              <td>UDP-glucose:(heptosyl)LPS_alpha-1,3-glucosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000776/1">BGC0000776</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>49.9</td>
+              <td>55.0</td>
+              <td>1.9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24467.1</td>
+              <td>group_1_glycosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000806/1">BGC0000806</a></td>
+              <td>saccharide</td>
+              <td>37.0</td>
+              <td>23.9</td>
+              <td>54.0</td>
+              <td>5.5e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ABX18581.1</td>
+              <td>glycosyl_transferase_group_1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000808/1">BGC0000808</a></td>
+              <td>saccharide</td>
+              <td>24.0</td>
+              <td>37.7</td>
+              <td>51.0</td>
+              <td>3.6e-06</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24489.1</td>
+              <td>group_1_glycosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000806/1">BGC0000806</a></td>
+              <td>saccharide</td>
+              <td>24.0</td>
+              <td>46.9</td>
+              <td>50.0</td>
+              <td>8e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

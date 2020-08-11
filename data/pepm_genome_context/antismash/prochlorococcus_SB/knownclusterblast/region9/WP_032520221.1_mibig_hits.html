@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAB15195.1</td>
+              <td>leucyl_aminopeptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000309/1">BGC0000309</a></td>
+              <td>nrps</td>
+              <td>36.0</td>
+              <td>86.5</td>
+              <td>244.0</td>
+              <td>2.9e-64</td>
+          </tr>
+    
+          <tr>
+              <td>AFV25490.1</td>
+              <td>BotP</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000469/1">BGC0000469</a></td>
+              <td>bottromycin</td>
+              <td>35.0</td>
+              <td>75.7</td>
+              <td>197.0</td>
+              <td>5.2e-50</td>
+          </tr>
+    
+          <tr>
+              <td>CCM09452.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000468/1">BGC0000468</a></td>
+              <td>bottromycin</td>
+              <td>36.0</td>
+              <td>75.7</td>
+              <td>196.0</td>
+              <td>6.9e-50</td>
+          </tr>
+    
+          <tr>
+              <td>CBG72685.1</td>
+              <td>putative_cytosolic_aminopeptidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001157/1">BGC0001157</a></td>
+              <td>bottromycin</td>
+              <td>36.0</td>
+              <td>76.1</td>
+              <td>194.0</td>
+              <td>3.4e-49</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

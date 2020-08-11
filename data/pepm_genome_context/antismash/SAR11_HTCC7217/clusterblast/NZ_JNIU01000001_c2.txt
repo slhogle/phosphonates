@@ -1,0 +1,1169 @@
+ClusterBlast scores for NZ_JNIU01000001
+
+Table of genes, locations, strands and annotations of query cluster:
+P773_RS0101415	250375	251257	+	4-hydroxy-tetrahydrodipicolinate synthase	
+P773_RS0101420	251256	251727	+	SsrA-binding protein SmpB	
+P773_RS0101425	251692	252205	+	2-amino-4-hydroxy-6- hydroxymethyldihydropteridine diphosphokinase	
+P773_RS0101430	252224	253970	+	bifunctional (p)ppGpp synthetase/guanosine-3',5'-bis(diphosphate) 3'-pyrophosphohydrolase	
+P773_RS0101435	253926	254514	+	orotate phosphoribosyltransferase	
+P773_RS0101440	254510	255230	+	pyridoxine 5'-phosphate synthase	
+P773_RS0101445	255233	255620	+	holo-[acyl-carrier-protein] synthase	
+P773_RS0101450	255616	256354	+	signal peptidase I	
+P773_RS0101455	256353	257016	+	ribonuclease III	
+P773_RS0101460	257023	257704	+	DNA repair protein RecO	
+P773_RS0101465	257704	258694	-	porphobilinogen synthase	
+P773_RS0101470	258790	259381	+	peptide-aspartate beta-dioxygenase	
+P773_RS0101475	259382	259808	+	ribose 5-phosphate isomerase B	
+P773_RS0101480	259810	261118	+	serine hydroxymethyltransferase	
+P773_RS0101485	261120	261579	+	transcriptional repressor NrdR	
+P773_RS0101490	261559	262666	+	bifunctional diaminohydroxyphosphoribosylaminopyrimidine deaminase/5-amino-6-(5-phosphoribosylamino)uracil reductase RibD	
+P773_RS0101495	262667	263261	+	riboflavin synthase	
+P773_RS0101500	263247	264348	+	3,4-dihydroxy-2-butanone-4-phosphate synthase	
+P773_RS0101505	264347	264737	+	6,7-dimethyl-8-ribityllumazine synthase	
+P773_RS0101510	264733	265138	+	antitermination protein	
+P773_RS0101515	265130	266090	+	thiamine-phosphate kinase	
+P773_RS0101520	266168	268274	+	sodium-translocating pyrophosphatase	
+P773_RS0101525	268260	268746	-	outer membrane protein assembly factor BamE	
+P773_RS0101530	268744	269212	+	ubiquinol-cytochrome c reductase	
+P773_RS0101535	269214	269397	+	50S ribosomal protein L32	
+P773_RS0101540	269426	270428	+	phosphate acyltransferase PlsX	
+P773_RS0101545	270432	270732	+	integration host factor subunit alpha	
+P773_RS0101550	270721	271096	+	transcriptional regulator	
+P773_RS0101555	271097	271289	+	50S ribosomal protein L33	
+P773_RS0101560	271289	271580	-	chorismate mutase	
+P773_RS0101565	271623	272655	+	heme A synthase	
+P773_RS0101570	272637	273966	-	O-acetylhomoserine aminocarboxypropyltransferase	
+P773_RS0101575	274173	274632	+	50S ribosomal protein L13	
+P773_RS0101580	274633	275071	+	30S ribosomal protein S9	
+P773_RS0101585	275104	276124	+	N-acetyl-gamma-glutamyl-phosphate reductase	
+P773_RS0101590	276123	276351	+	hypothetical protein	
+P773_RS0101595	276347	277640	+	homoserine dehydrogenase	
+P773_RS0101600	277642	278545	+	transporter	
+P773_RS0101605	278562	279417	+	EamA/RhaT family transporter	
+P773_RS0101610	279957	280242	-	methylated-DNA--[protein]-cysteine S-methyltransferase	
+P773_RS0101615	280213	280651	-	N-acetyltransferase	
+P773_RS0101620	280694	281189	-	DUF2938 domain-containing protein	
+P773_RS0101630	281485	282442	+	integrase	
+P773_RS0101635	282448	283489	-	glycosyl transferase family 1	
+P773_RS0101640	283460	283718	-	excinuclease ABC subunit C	
+P773_RS0101650	283864	285559	-	single-stranded-DNA-specific exonuclease RecJ	
+P773_RS0101655	285555	286503	-	fructose-bisphosphatase class II	
+P773_RS0101660	286502	287495	-	hypothetical protein	
+P773_RS0101665	287498	287780	-	hypothetical protein	
+P773_RS0101675	287957	288446	+	hypothetical protein	
+P773_RS0101680	288452	289634	+	Na+/H+ antiporter NhaA	
+P773_RS0101685	289663	290173	+	glutathione peroxidase	
+P773_RS0101690	290167	290944	-	MBL fold hydrolase	
+P773_RS0101695	290951	291713	-	TatD family deoxyribonuclease	
+P773_RS0101700	291705	293247	-	methionine--tRNA ligase	
+
+
+Significant hits: 
+1. NZ_KL407334	Bartonella koehlerae C-29 supercont1.1, whole genome shotgun sequence
+2. NZ_LWQU01000137	Magnetospirillum moscoviense strain BB-1 NODE_36_length_38612_cov_104.542_ID_5894, whole genome shotgun sequence
+3. NC_007517	Geobacter metallireducens GS-15, complete genome
+4. NZ_MPIN01000003	Cystobacter ferrugineus strain Cbfe23 Contig_84, whole genome shotgun sequence
+5. NC_011666	Methylocella silvestris BL2, complete genome
+6. NZ_AQPH01000012	Phaeospirillum fulvum MGU-K5 contig00012, whole genome shotgun sequence
+7. NZ_KB915634	Bartonella vinsonii subsp. berkhoffii str. Tweed scaffold05, whole genome shotgun sequence
+8. NC_020301	Bartonella vinsonii subsp. berkhoffii str. Winnie, complete genome
+9. NZ_KI911798	Bartonella henselae JK 42 adkgh-supercont1.1, whole genome shotgun sequence
+10. NZ_HG969191	Bartonella henselae complete genome, strain BM1374165
+11. NZ_HG969191	Bartonella henselae complete genome, strain BM1374165
+12. NZ_CP020742	Bartonella henselae strain Houston-I chromosome, complete genome
+13. NZ_LNZZ01000016	Bartonella henselae strain A76 contig_24_1, whole genome shotgun sequence
+14. NZ_LOAH01000052	Bartonella henselae strain U4 contig_5_1, whole genome shotgun sequence
+15. NZ_LOAG01000012	Bartonella henselae strain A244 contig_20_1, whole genome shotgun sequence
+16. NZ_JH725037	Bartonella vinsonii subsp. arupensis OK-94-513 supercont1.1, whole genome shotgun sequence
+17. NZ_JH725046	Bartonella vinsonii subsp. arupensis Pm136co supercont1.4, whole genome shotgun sequence
+18. NZ_JH725020	Bartonella alsatica IBS 382 supercont1.1, whole genome shotgun sequence
+19. NZ_JH725101	Bartonella washoeensis 085-0475 supercont1.1, whole genome shotgun sequence
+20. NZ_JH725139	Bartonella elizabethae Re6043vi supercont1.1, whole genome shotgun sequence
+21. NZ_MUBG01000001	Bartonella sp. WD12.1 Ga0114333_11, whole genome shotgun sequence
+22. NZ_JH725124	Bartonella sp. DB5-6 supercont1.11, whole genome shotgun sequence
+23. NZ_KB915628	Bartonella schoenbuchensis m07a scaffold02, whole genome shotgun sequence
+24. NZ_JH725064	Bartonella rattimassiliensis 15908 supercont1.1, whole genome shotgun sequence
+25. NZ_JH725051	Bartonella taylorii 8TBB supercont1.2, whole genome shotgun sequence
+26. NC_005955	Bartonella quintana str. Toulouse, complete genome
+27. NZ_JH725083	Bartonella melophagi K-2C supercont1.3, whole genome shotgun sequence
+28. NC_020300	Bartonella australis Aust/NH1, complete genome
+29. NZ_MUYE01000001	Bartonella sp. AR 15-3 Ga0114335_11, whole genome shotgun sequence
+30. NZ_KI912377	Bartonella grahamii ATCC 700132 U736DRAFT_scaffold00002.2, whole genome shotgun sequence
+31. NZ_CP010401	Bartonella ancashensis strain 20.00, complete genome
+32. NC_012846	Bartonella grahamii as4aup, complete genome
+33. NZ_KL503780	Bartonella bacilliformis Hosp800-02 acPFO-supercont1.2, whole genome shotgun sequence
+34. NZ_CP019786	Bartonella sp. Raccoon60, complete genome
+35. NZ_CM001844	Bartonella bovis 91-4 chromosome, whole genome shotgun sequence
+36. NZ_CP019780	Bartonella sp. A1379B, complete genome
+37. NZ_KL503800	Bartonella bacilliformis Cond044 acOtG-supercont1.2, whole genome shotgun sequence
+38. NC_014932	Bartonella clarridgeiae strain 73, complete genome
+39. NC_010161	Bartonella tribocorum CIP 105476 complete genome, type strain CIP 105476
+40. NZ_CP019489	Bartonella sp. 1-1C chromosome, complete genome
+41. NZ_CP019787	Bartonella sp. JB15, complete genome
+42. NZ_KL503803	Bartonella bacilliformis Ver097 acOts-supercont1.2, whole genome shotgun sequence
+43. NZ_LVJZ01000003	Candidatus Thiodiazotropha endoloripes isolate G_D NODE_1_length_3866231_cov_46.8124_ID_1, whole genome shotgun sequence
+44. NZ_LVJX01000007	Candidatus Thiodiazotropha endoloripes isolate G_B NODE_3_length_561616_cov_50.6135_ID_5, whole genome shotgun sequence
+45. NZ_KB902553	Lamprocystis purpurea DSM 4197 A39ODRAFT_scaffold_8.9, whole genome shotgun sequence
+46. NZ_CP019789	Bartonella schoenbuchensis R1 genome
+47. NZ_KB915625	Bartonella bovis m02 scaffold02, whole genome shotgun sequence
+48. NZ_CP022098	Cystobacter fuscus strain DSM 52655 chromosome, complete genome
+49. NZ_ANAH02000030	Cystobacter fuscus DSM 2262 contig30, whole genome shotgun sequence
+50. NZ_LN848257	Thiocapsa sp. KS1, whole genome shotgun sequence
+
+
+Details:
+
+>>
+1. NZ_KL407334
+Source: Bartonella koehlerae C-29 supercont1.1, whole genome shotgun sequence
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 1460
+
+Table of genes, locations, strands and annotations of subject cluster:
+O9A_RS07705	O9A_RS07705	1033139	1033733	-	hypothetical_protein
+O9A_RS07710	O9A_RS07710	1045018	1045252	+	phage_tail_protein
+O9A_RS04355	O9A_RS04355	1045256	1045499	+	phage_tail_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	O9A_RS04455	63	542	98.62068965517241	5.7e-152
+P773_RS0101485	O9A_RS04460	58	165	96.71052631578947	3.9e-39
+P773_RS0101490	O9A_RS04465	37	179	89.94565217391305	8.2e-43
+P773_RS0101505	O9A_RS04475	41	92	106.9767441860465	3.5e-17
+P773_RS0101565	O9A_RS04445	40	203	94.75218658892129	3.8e-50
+P773_RS0101575	O9A_RS04325	49	149	94.73684210526315	3.7e-34
+P773_RS0101580	O9A_RS04320	52	130	91.0344827586207	1.3e-28
+
+
+
+>>
+2. NZ_LWQU01000137
+Source: Magnetospirillum moscoviense strain BB-1 NODE_36_length_38612_cov_104.542_ID_5894, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1706
+
+Table of genes, locations, strands and annotations of subject cluster:
+A6A05_RS20180	A6A05_RS20180	8341	8763	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101465	A6A05_RS10155	53	350	96.65653495440729	1.8e-94
+P773_RS0101475	A6A05_RS10180	42	121	97.87234042553192	1e-25
+P773_RS0101480	A6A05_RS10185	65	544	96.0919540229885	8.7e-153
+P773_RS0101485	A6A05_RS10190	57	167	98.02631578947368	1e-39
+P773_RS0101570	A6A05_RS10160	60	524	97.96380090497738	1.6e-146
+
+
+
+>>
+3. NC_007517
+Source: Geobacter metallireducens GS-15, complete genome
+Type: other
+Number of proteins with BLAST hits to this cluster: 7
+Cumulative BLAST score: 1493
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101475	GMET_RS08065	42	118	97.87234042553192	6.6e-25
+P773_RS0101480	GMET_RS08070	55	452	94.02298850574712	4.5e-125
+P773_RS0101485	GMET_RS08155	43	121	100.0	1.1e-25
+P773_RS0101495	GMET_RS08165	34	123	96.44670050761421	2.2e-26
+P773_RS0101500	GMET_RS08170	42	256	101.36612021857923	5.2e-66
+P773_RS0101540	GMET_RS08035	32	195	99.3993993993994	1e-47
+P773_RS0101595	GMET_RS08185	33	228	100.93023255813954	1.4e-57
+
+
+
+>>
+4. NZ_MPIN01000003
+Source: Cystobacter ferrugineus strain Cbfe23 Contig_84, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1067
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101475	BON30_RS12375	44	123	98.58156028368793	1.6e-26
+P773_RS0101480	BON30_RS12370	55	462	94.94252873563218	5.7e-128
+P773_RS0101485	BON30_RS12365	44	124	93.42105263157895	1.3e-26
+P773_RS0101495	BON30_RS12335	32	109	96.44670050761421	5.6e-22
+P773_RS0101500	BON30_RS12330	37	249	100.0	4.9e-64
+
+
+
+>>
+5. NC_011666
+Source: Methylocella silvestris BL2, complete genome
+Type: other
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 1256
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101430	MSIL_RS05150	48	461	82.09982788296041	1.7e-127
+P773_RS0101440	MSIL_RS05130	41	193	99.16317991631799	2.1e-47
+P773_RS0101445	MSIL_RS05125	33	63	103.125	2.3e-08
+P773_RS0101450	MSIL_RS05120	48	221	98.36734693877551	9.5e-56
+P773_RS0101455	MSIL_RS05115	33	117	94.54545454545455	2.3e-24
+P773_RS0101570	MSIL_RS05250	31	201	99.3212669683258	2.4e-49
+
+
+
+>>
+6. NZ_AQPH01000012
+Source: Phaeospirillum fulvum MGU-K5 contig00012, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 8
+Cumulative BLAST score: 1868
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101485	K678_RS05155	58	169	96.71052631578947	3.5e-40
+P773_RS0101490	K678_RS05160	31	142	85.59782608695652	1.1e-31
+P773_RS0101495	K678_RS05165	32	105	96.44670050761421	6.1e-21
+P773_RS0101500	K678_RS05170	43	285	100.27322404371584	1.1e-74
+P773_RS0101520	K678_RS05195	65	773	99.57203994293866	2.4e-221
+P773_RS0101540	K678_RS05220	40	264	99.69969969969969	1.7e-68
+P773_RS0101545	K678_RS05230	41	64	90.9090909090909	7.9e-09
+P773_RS0101550	K678_RS05235	42	66	66.93548387096774	2.6e-09
+
+
+
+>>
+7. NZ_KB915634
+Source: Bartonella vinsonii subsp. berkhoffii str. Tweed scaffold05, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1200
+
+Table of genes, locations, strands and annotations of subject cluster:
+BVTW_RS04510	BVTW_RS04510	3971	5685	+	phage_tail_tape_measure_protein
+BVTW_RS04525	BVTW_RS04525	6428	7416	+	late_control_protein
+BVTW_RS04530	BVTW_RS04530	7558	8375	+	DNA_methyltransferase
+BVTW_RS04545	BVTW_RS04545	9807	10698	-	nucleoside_triphosphate_pyrophosphohydrolase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BVTW_RS04615	63	543	98.62068965517241	1.9e-152
+P773_RS0101485	BVTW_RS04620	59	165	96.71052631578947	3.9e-39
+P773_RS0101490	BVTW_RS04625	37	182	90.21739130434783	7.4e-44
+P773_RS0101505	BVTW_RS04635	43	98	105.4263565891473	4.9e-19
+P773_RS0101565	BVTW_RS04600	41	212	93.29446064139941	1.1e-52
+
+
+
+>>
+8. NC_020301
+Source: Bartonella vinsonii subsp. berkhoffii str. Winnie, complete genome
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1198
+
+Table of genes, locations, strands and annotations of subject cluster:
+BVWIN_RS04375	BVWIN_RS04375	988185	989076	+	nucleoside_triphosphate_pyrophosphohydrolase
+BVWIN_RS04410	BVWIN_RS04410	993229	995067	-	phage_tail_tape_measure_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BVWIN_RS04305	63	543	98.62068965517241	1.9e-152
+P773_RS0101485	BVWIN_RS04300	59	165	96.71052631578947	3.9e-39
+P773_RS0101490	BVWIN_RS04295	37	182	90.21739130434783	9.6e-44
+P773_RS0101505	BVWIN_RS04285	43	96	105.4263565891473	2.4e-18
+P773_RS0101565	BVWIN_RS04320	41	212	93.29446064139941	1.1e-52
+
+
+
+>>
+9. NZ_KI911798
+Source: Bartonella henselae JK 42 adkgh-supercont1.1, whole genome shotgun sequence
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1195
+
+Table of genes, locations, strands and annotations of subject cluster:
+Q653_RS08270	Q653_RS08270	30421	30709	+	filamentous_hemagglutinin
+Q653_RS00045	Q653_RS00045	31315	31889	+	hypothetical_protein
+Q653_RS00070	Q653_RS00070	35965	36505	-	transcriptional_regulator
+Q653_RS08275	Q653_RS08275	36999	37527	-	hypothetical_protein
+Q653_RS00075	Q653_RS00075	37528	38133	-	2-hydroxyhepta-2,4-diene-1,7-dioate_isomerase
+Q653_RS08280	Q653_RS08280	38123	38785	-	hypothetical_protein
+Q653_RS08285	Q653_RS08285	38880	39083	-	hypothetical_protein
+Q653_RS08290	Q653_RS08290	39269	39587	+	hypothetical_protein
+Q653_RS00080	Q653_RS00080	39652	39945	+	DNA_methyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	Q653_RS00160	64	548	98.62068965517241	7.9e-154
+P773_RS0101485	Q653_RS00165	58	166	96.71052631578947	2.3e-39
+P773_RS0101490	Q653_RS00170	38	175	82.33695652173914	1.2e-41
+P773_RS0101505	Q653_RS00180	44	96	106.9767441860465	2.4e-18
+P773_RS0101565	Q653_RS00150	40	210	93.29446064139941	4e-52
+
+
+
+>>
+10. NZ_HG969191
+Source: Bartonella henselae complete genome, strain BM1374165
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1195
+
+Table of genes, locations, strands and annotations of subject cluster:
+BM1374165_RS03420	BM1374165_RS03420	808686	809260	+	hypothetical_protein
+BM1374165_RS03445	BM1374165_RS03445	813336	813876	-	transcriptional_regulator
+BM1374165_RS08900	BM1374165_RS08900	814370	814898	-	hypothetical_protein
+BM1374165_RS03450	BM1374165_RS03450	814899	815504	-	2-hydroxyhepta-2,4-diene-1,7-dioate_isomerase
+BM1374165_RS08905	BM1374165_RS08905	815494	816154	-	hypothetical_protein
+BM1374165_RS08910	BM1374165_RS08910	816243	816452	-	hypothetical_protein
+BM1374165_RS08915	BM1374165_RS08915	816638	816955	+	hypothetical_protein
+BM1374165_RS03455	BM1374165_RS03455	817020	817313	+	DNA_methyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BM1374165_RS03535	64	548	98.62068965517241	7.9e-154
+P773_RS0101485	BM1374165_RS03540	58	166	96.71052631578947	2.3e-39
+P773_RS0101490	BM1374165_RS03545	38	175	82.33695652173914	1.2e-41
+P773_RS0101505	BM1374165_RS03555	44	96	106.9767441860465	2.4e-18
+P773_RS0101565	BM1374165_RS03525	40	210	93.29446064139941	4e-52
+
+
+
+>>
+11. NZ_HG969191
+Source: Bartonella henselae complete genome, strain BM1374165
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1195
+
+Table of genes, locations, strands and annotations of subject cluster:
+BM1374165_RS08935	BM1374165_RS08935	908980	909177	+	hypothetical_protein
+BM1374165_RS08940	BM1374165_RS08940	910185	910413	+	hypothetical_protein
+BM1374165_RS03925	BM1374165_RS03925	911024	911568	+	hypothetical_protein
+BM1374165_RS03950	BM1374165_RS03950	915651	916191	-	transcriptional_regulator
+BM1374165_RS03955	BM1374165_RS03955	916685	917218	-	hypothetical_protein
+BM1374165_RS03960	BM1374165_RS03960	917215	917822	-	2-hydroxyhepta-2,4-diene-1,7-dioate_isomerase
+BM1374165_RS08945	BM1374165_RS08945	917812	918474	-	hypothetical_protein
+BM1374165_RS08950	BM1374165_RS08950	918569	918772	-	hypothetical_protein
+BM1374165_RS08955	BM1374165_RS08955	918957	919274	+	hypothetical_protein
+BM1374165_RS03965	BM1374165_RS03965	919339	919632	+	DNA_methyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BM1374165_RS04045	64	549	98.62068965517241	4.6e-154
+P773_RS0101485	BM1374165_RS04050	58	166	96.71052631578947	2.3e-39
+P773_RS0101490	BM1374165_RS04055	39	176	82.6086956521739	4.1e-42
+P773_RS0101505	BM1374165_RS04065	43	94	106.9767441860465	1.2e-17
+P773_RS0101565	BM1374165_RS04035	40	210	93.29446064139941	4e-52
+
+
+
+>>
+12. NZ_CP020742
+Source: Bartonella henselae strain Houston-I chromosome, complete genome
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1195
+
+Table of genes, locations, strands and annotations of subject cluster:
+BhenCHDE101_RS03525	BhenCHDE101_RS03525	826560	827158	+	hypothetical_protein
+BhenCHDE101_RS03550	BhenCHDE101_RS03550	831256	831796	-	transcriptional_regulator
+BhenCHDE101_RS03555	BhenCHDE101_RS03555	832290	832818	-	LysE_family_translocator
+BhenCHDE101_RS03560	BhenCHDE101_RS03560	832819	833424	-	2-hydroxyhepta-2,4-diene-1,7-dioate_isomerase
+BhenCHDE101_RS03565	BhenCHDE101_RS03565	833414	834074	-	hypothetical_protein
+BhenCHDE101_RS03570	BhenCHDE101_RS03570	834558	834875	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BhenCHDE101_RS03655	64	548	98.62068965517241	7.9e-154
+P773_RS0101485	BhenCHDE101_RS03660	58	166	96.71052631578947	2.3e-39
+P773_RS0101490	BhenCHDE101_RS03665	38	175	82.33695652173914	1.2e-41
+P773_RS0101505	BhenCHDE101_RS03675	44	96	106.9767441860465	2.4e-18
+P773_RS0101565	BhenCHDE101_RS03645	40	210	93.29446064139941	4e-52
+
+
+
+>>
+13. NZ_LNZZ01000016
+Source: Bartonella henselae strain A76 contig_24_1, whole genome shotgun sequence
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1195
+
+Table of genes, locations, strands and annotations of subject cluster:
+AT245_RS03855	AT245_RS03855	39157	39450	-	DNA_methyltransferase
+AT245_RS03860	AT245_RS03860	39515	39832	-	hypothetical_protein
+AT245_RS03865	AT245_RS03865	40018	40227	+	hypothetical_protein
+AT245_RS03870	AT245_RS03870	40316	40976	+	hypothetical_protein
+AT245_RS03875	AT245_RS03875	40966	41571	+	2-hydroxyhepta-2,4-diene-1,7-dioate_isomerase
+AT245_RS03880	AT245_RS03880	41572	42100	+	hypothetical_protein
+AT245_RS03885	AT245_RS03885	42594	43134	+	transcriptional_regulator
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	AT245_RS03775	64	548	98.62068965517241	7.9e-154
+P773_RS0101485	AT245_RS03770	58	166	96.71052631578947	2.3e-39
+P773_RS0101490	AT245_RS03765	38	175	82.33695652173914	1.2e-41
+P773_RS0101505	AT245_RS03755	44	96	106.9767441860465	2.4e-18
+P773_RS0101565	AT245_RS03785	41	210	93.29446064139941	3.1e-52
+
+
+
+>>
+14. NZ_LOAH01000052
+Source: Bartonella henselae strain U4 contig_5_1, whole genome shotgun sequence
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1195
+
+Table of genes, locations, strands and annotations of subject cluster:
+AT246_RS06990	AT246_RS06990	42571	42864	-	DNA_methyltransferase
+AT246_RS06995	AT246_RS06995	42929	43246	-	hypothetical_protein
+AT246_RS07000	AT246_RS07000	43431	43634	+	hypothetical_protein
+AT246_RS07005	AT246_RS07005	43729	44391	+	hypothetical_protein
+AT246_RS07010	AT246_RS07010	44381	44988	+	2-hydroxyhepta-2,4-diene-1,7-dioate_isomerase
+AT246_RS07015	AT246_RS07015	44985	45518	+	hypothetical_protein
+AT246_RS07020	AT246_RS07020	46012	46552	+	transcriptional_regulator
+AT246_RS07045	AT246_RS07045	50635	51156	-	replicative_DNA_helicase
+AT246_RS07050	AT246_RS07050	51382	51585	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	AT246_RS06910	64	549	98.62068965517241	4.6e-154
+P773_RS0101485	AT246_RS06905	58	166	96.71052631578947	2.3e-39
+P773_RS0101490	AT246_RS06900	39	176	82.6086956521739	4.1e-42
+P773_RS0101505	AT246_RS06890	43	94	106.9767441860465	1.2e-17
+P773_RS0101565	AT246_RS06920	40	210	93.29446064139941	4e-52
+
+
+
+>>
+15. NZ_LOAG01000012
+Source: Bartonella henselae strain A244 contig_20_1, whole genome shotgun sequence
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1194
+
+Table of genes, locations, strands and annotations of subject cluster:
+AT240_RS03745	AT240_RS03745	42102	42395	-	DNA_methyltransferase
+AT240_RS03750	AT240_RS03750	42460	42778	-	hypothetical_protein
+AT240_RS03755	AT240_RS03755	42963	43172	+	hypothetical_protein
+AT240_RS03760	AT240_RS03760	43261	43921	+	hypothetical_protein
+AT240_RS03765	AT240_RS03765	43911	44517	+	2-hydroxyhepta-2,4-diene-1,7-dioate_isomerase
+AT240_RS03770	AT240_RS03770	44518	45128	+	hypothetical_protein
+AT240_RS03775	AT240_RS03775	45542	46082	+	transcriptional_regulator
+AT240_RS03800	AT240_RS03800	50166	50687	-	replicative_DNA_helicase
+AT240_RS03815	AT240_RS03815	51943	52146	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	AT240_RS03665	64	549	98.62068965517241	2.7e-154
+P773_RS0101485	AT240_RS03660	58	166	96.71052631578947	2.3e-39
+P773_RS0101490	AT240_RS03655	38	173	82.33695652173914	3.4e-41
+P773_RS0101505	AT240_RS03645	44	95	106.9767441860465	4.2e-18
+P773_RS0101565	AT240_RS03675	41	211	93.29446064139941	1.8e-52
+
+
+
+>>
+16. NZ_JH725037
+Source: Bartonella vinsonii subsp. arupensis OK-94-513 supercont1.1, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1190
+
+Table of genes, locations, strands and annotations of subject cluster:
+ME1_RS04745	ME1_RS04745	1076220	1076456	-	DNA_methyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	ME1_RS04660	63	543	98.62068965517241	2.5e-152
+P773_RS0101485	ME1_RS04655	57	162	96.71052631578947	4.3e-38
+P773_RS0101490	ME1_RS04650	37	176	87.77173913043478	4.1e-42
+P773_RS0101505	ME1_RS04640	43	99	105.4263565891473	2.9e-19
+P773_RS0101565	ME1_RS04675	39	210	93.29446064139941	2.4e-52
+
+
+
+>>
+17. NZ_JH725046
+Source: Bartonella vinsonii subsp. arupensis Pm136co supercont1.4, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1190
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	MEI_RS07430	63	543	98.62068965517241	1.9e-152
+P773_RS0101485	MEI_RS07435	57	162	96.71052631578947	4.3e-38
+P773_RS0101490	MEI_RS07440	37	176	87.77173913043478	4.1e-42
+P773_RS0101505	MEI_RS07450	43	99	105.4263565891473	2.9e-19
+P773_RS0101565	MEI_RS07415	39	210	93.29446064139941	2.4e-52
+
+
+
+>>
+18. NZ_JH725020
+Source: Bartonella alsatica IBS 382 supercont1.1, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1183
+
+Table of genes, locations, strands and annotations of subject cluster:
+MEC_RS07170	MEC_RS07170	678209	678630	+	hypothetical_protein
+MEC_RS02845	MEC_RS02845	683300	683635	-	transcriptional_regulator
+MEC_RS02850	MEC_RS02850	683668	684522	-	DNA_methyltransferase
+MEC_RS02855	MEC_RS02855	684537	684851	-	hypothetical_protein
+MEC_RS02865	MEC_RS02865	685386	685877	+	exonuclease
+MEC_RS07175	MEC_RS07175	685989	686229	+	hypothetical_protein
+MEC_RS02870	MEC_RS02870	686232	686507	+	hypothetical_protein
+MEC_RS02875	MEC_RS02875	686523	687288	+	integrase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	MEC_RS02745	63	549	98.62068965517241	2.7e-154
+P773_RS0101485	MEC_RS02740	58	162	96.71052631578947	3.3e-38
+P773_RS0101490	MEC_RS02735	36	169	85.05434782608695	6.5e-40
+P773_RS0101505	MEC_RS02725	40	92	106.9767441860465	3.5e-17
+P773_RS0101565	MEC_RS02755	41	211	93.29446064139941	1.8e-52
+
+
+
+>>
+19. NZ_JH725101
+Source: Bartonella washoeensis 085-0475 supercont1.1, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1178
+
+Table of genes, locations, strands and annotations of subject cluster:
+MCW_RS02025	MCW_RS02025	469053	469595	+	FMN_reductase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	MCW_RS02110	63	547	98.62068965517241	1e-153
+P773_RS0101485	MCW_RS02115	57	160	96.71052631578947	2.1e-37
+P773_RS0101490	MCW_RS02120	37	171	85.59782608695652	1.7e-40
+P773_RS0101505	MCW_RS02130	43	96	106.9767441860465	1.9e-18
+P773_RS0101565	MCW_RS02100	40	204	93.29446064139941	1.7e-50
+
+
+
+>>
+20. NZ_JH725139
+Source: Bartonella elizabethae Re6043vi supercont1.1, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1174
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	MCU_RS01800	62	535	98.62068965517241	5.3e-150
+P773_RS0101485	MCU_RS01805	57	163	96.71052631578947	1.5e-38
+P773_RS0101490	MCU_RS01810	35	172	89.67391304347827	1e-40
+P773_RS0101505	MCU_RS01820	43	94	106.9767441860465	1.2e-17
+P773_RS0101565	MCU_RS01790	39	210	93.29446064139941	4e-52
+
+
+
+>>
+21. NZ_MUBG01000001
+Source: Bartonella sp. WD12.1 Ga0114333_11, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1174
+
+Table of genes, locations, strands and annotations of subject cluster:
+BWD121_RS02000	BWD121_RS02000	512621	514008	+	glutathione-disulfide_reductase
+BWD121_RS02035	BWD121_RS02035	522001	523538	+	histidine_ammonia-lyase
+BWD121_RS02080	BWD121_RS02080	529539	530365	-	nucleoside_triphosphate_pyrophosphohydrolase
+BWD121_RS02165	BWD121_RS02165	554298	554755	+	6,7-dimethyl-8-ribityllumazine_synthase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BWD121_RS02145	62	542	98.62068965517241	5.7e-152
+P773_RS0101485	BWD121_RS02150	58	163	96.71052631578947	1.9e-38
+P773_RS0101490	BWD121_RS02155	37	179	89.40217391304348	8.2e-43
+P773_RS0101505	BWD121_RS02165	41	94	106.9767441860465	9.3e-18
+P773_RS0101565	BWD121_RS02135	40	196	95.04373177842565	3.5e-48
+
+
+
+>>
+22. NZ_JH725124
+Source: Bartonella sp. DB5-6 supercont1.11, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1171
+
+Table of genes, locations, strands and annotations of subject cluster:
+MCO_RS08735	MCO_RS08735	3	146	+	phage_tail_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	MCO_RS08825	63	537	98.62068965517241	1.4e-150
+P773_RS0101485	MCO_RS08830	57	161	96.71052631578947	9.5e-38
+P773_RS0101490	MCO_RS08835	35	171	90.21739130434783	2.2e-40
+P773_RS0101505	MCO_RS08845	41	92	107.75193798449611	3.5e-17
+P773_RS0101565	MCO_RS08815	41	210	93.29446064139941	3.1e-52
+
+
+
+>>
+23. NZ_KB915628
+Source: Bartonella schoenbuchensis m07a scaffold02, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1166
+
+Table of genes, locations, strands and annotations of subject cluster:
+M07A_RS07690	M07A_RS07690	417508	417719	+	hypothetical_protein
+M07A_RS07695	M07A_RS07695	417826	418085	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	M07A_RS03215	63	541	97.70114942528735	9.7e-152
+P773_RS0101485	M07A_RS03220	57	161	96.71052631578947	7.3e-38
+P773_RS0101490	M07A_RS03225	36	173	87.22826086956522	4.5e-41
+P773_RS0101505	M07A_RS03235	42	96	106.9767441860465	1.9e-18
+P773_RS0101565	M07A_RS03205	40	195	95.04373177842565	7.9e-48
+
+
+
+>>
+24. NZ_JH725064
+Source: Bartonella rattimassiliensis 15908 supercont1.1, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1164
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	MCY_RS02110	61	525	98.16091954022988	4.2e-147
+P773_RS0101485	MCY_RS02105	56	160	96.71052631578947	1.2e-37
+P773_RS0101490	MCY_RS02100	36	173	90.21739130434783	3.4e-41
+P773_RS0101505	MCY_RS02090	42	94	106.20155038759691	7.1e-18
+P773_RS0101565	MCY_RS02120	41	212	93.29446064139941	1.1e-52
+
+
+
+>>
+25. NZ_JH725051
+Source: Bartonella taylorii 8TBB supercont1.2, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1164
+
+Table of genes, locations, strands and annotations of subject cluster:
+ME9_RS08800	ME9_RS08800	72469	72789	-	transcriptional_regulator
+ME9_RS08805	ME9_RS08805	72915	73181	-	mRNA_interferase_YafQ
+ME9_RS03205	ME9_RS03205	73184	73431	-	hypothetical_protein
+ME9_RS08810	ME9_RS08810	73537	73764	-	hypothetical_protein
+ME9_RS03210	ME9_RS03210	73724	73926	-	hypothetical_protein
+ME9_RS08640	ME9_RS08640	74167	74504	+	integrase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	ME9_RS03105	62	537	98.62068965517241	1.8e-150
+P773_RS0101485	ME9_RS03100	59	166	96.71052631578947	2.3e-39
+P773_RS0101490	ME9_RS03095	36	171	90.21739130434783	1.3e-40
+P773_RS0101505	ME9_RS03085	42	91	103.10077519379846	7.8e-17
+P773_RS0101565	ME9_RS03115	39	199	95.04373177842565	7.1e-49
+
+
+
+>>
+26. NC_005955
+Source: Bartonella quintana str. Toulouse, complete genome
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1158
+
+Table of genes, locations, strands and annotations of subject cluster:
+BQ_RS02575	BQ_RS02575	618864	620275	-	methylenetetrahydrofolate--tRNA-(uracil(54)-_C(5))-methyltransferase_(FADH(2)-oxidizing)_TrmFO
+BQ_RS06905	BQ_RS06905	620696	621088	-	hypothetical_protein
+BQ_RS06910	BQ_RS06910	621174	621406	+	transcriptional_regulator
+BQ_RS02585	BQ_RS02585	621471	621814	+	hypothetical_protein
+BQ_RS06915	BQ_RS06915	622136	622397	+	hypothetical_protein
+BQ_RS02605	BQ_RS02605	623927	624319	+	hypothetical_protein
+BQ_RS06920	BQ_RS06920	625036	625289	-	addiction_module_antidote_protein,_HigA_family
+BQ_RS06925	BQ_RS06925	625357	625632	-	plasmid_maintenance_system_killer
+BQ_RS06930	BQ_RS06930	625810	626107	+	hypothetical_protein
+BQ_RS02640	BQ_RS02640	631527	632338	-	nucleoside_triphosphate_pyrophosphohydrolase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BQ_RS02710	62	535	98.62068965517241	4.1e-150
+P773_RS0101485	BQ_RS02715	58	163	96.71052631578947	1.5e-38
+P773_RS0101490	BQ_RS02720	36	169	89.94565217391305	8.4e-40
+P773_RS0101505	BQ_RS02730	40	90	106.9767441860465	1.7e-16
+P773_RS0101565	BQ_RS02700	40	201	93.29446064139941	1.4e-49
+
+
+
+>>
+27. NZ_JH725083
+Source: Bartonella melophagi K-2C supercont1.3, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1158
+
+Table of genes, locations, strands and annotations of subject cluster:
+ME3_RS04970	ME3_RS04970	214987	216526	+	histidine_ammonia-lyase
+ME3_RS06870	ME3_RS06870	218959	219237	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	ME3_RS05070	62	536	98.62068965517241	2.4e-150
+P773_RS0101485	ME3_RS05075	56	157	96.71052631578947	1.1e-36
+P773_RS0101490	ME3_RS05080	35	171	86.95652173913044	1.3e-40
+P773_RS0101505	ME3_RS05090	41	95	106.9767441860465	5.4e-18
+P773_RS0101565	ME3_RS05060	41	199	95.04373177842565	5.4e-49
+
+
+
+>>
+28. NC_020300
+Source: Bartonella australis Aust/NH1, complete genome
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1157
+
+Table of genes, locations, strands and annotations of subject cluster:
+BANH1_RS07185	BANH1_RS07185	706519	707062	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BANH1_RS03110	62	534	98.16091954022988	1.5e-149
+P773_RS0101485	BANH1_RS03115	58	166	96.71052631578947	1.7e-39
+P773_RS0101490	BANH1_RS03120	38	174	84.78260869565217	2.6e-41
+P773_RS0101505	BANH1_RS03130	42	87	106.9767441860465	1.1e-15
+P773_RS0101565	BANH1_RS03100	40	196	93.58600583090379	6e-48
+
+
+
+>>
+29. NZ_MUYE01000001
+Source: Bartonella sp. AR 15-3 Ga0114335_11, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1156
+
+Table of genes, locations, strands and annotations of subject cluster:
+BAR153v2_RS02535	BAR153v2_RS02535	558428	558898	-	hypothetical_protein
+BAR153v2_RS02590	BAR153v2_RS02590	564066	564881	-	nucleoside_triphosphate_pyrophosphohydrolase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BAR153v2_RS02655	63	539	98.62068965517241	2.8e-151
+P773_RS0101485	BAR153v2_RS02660	59	163	96.71052631578947	2.5e-38
+P773_RS0101490	BAR153v2_RS02665	36	157	82.06521739130434	2.5e-36
+P773_RS0101505	BAR153v2_RS02675	40	94	106.9767441860465	1.2e-17
+P773_RS0101565	BAR153v2_RS02645	40	203	93.29446064139941	2.9e-50
+
+
+
+>>
+30. NZ_KI912377
+Source: Bartonella grahamii ATCC 700132 U736DRAFT_scaffold00002.2, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1155
+
+Table of genes, locations, strands and annotations of subject cluster:
+U736_RS12020	U736_RS12020	116768	116890	-	lysozyme
+U736_RS0109325	U736_RS0109325	116921	117382	-	phage_tail_protein
+U736_RS11385	U736_RS11385	118969	119319	-	hypothetical_protein
+U736_RS11390	U736_RS11390	119321	120355	-	major_capsid_protein_E
+U736_RS11395	U736_RS11395	120419	120697	-	hypothetical_protein
+U736_RS11595	U736_RS11595	120694	121424	-	phage_antirepressor_Ant
+U736_RS12025	U736_RS12025	121452	121749	-	hypothetical_protein
+U736_RS11410	U736_RS11410	122003	122372	-	hypothetical_protein
+U736_RS11420	U736_RS11420	122960	123602	+	DNA_methyltransferase
+U736_RS11425	U736_RS11425	123666	124057	+	transcriptional_regulator
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	U736_RS0109505	62	531	98.62068965517241	7.7e-149
+P773_RS0101485	U736_RS0109510	57	163	96.71052631578947	1.9e-38
+P773_RS0101490	U736_RS0109515	36	166	85.05434782608695	7.2e-39
+P773_RS0101505	U736_RS0109525	39	89	106.20155038759691	3e-16
+P773_RS0101565	U736_RS0109490	40	206	93.29446064139941	5.8e-51
+
+
+
+>>
+31. NZ_CP010401
+Source: Bartonella ancashensis strain 20.00, complete genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1155
+
+Table of genes, locations, strands and annotations of subject cluster:
+PU02_RS05115	PU02_RS05115	1153684	1155951	-	transporter
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	PU02_RS04990	62	527	97.93103448275862	1.4e-147
+P773_RS0101485	PU02_RS04985	55	161	96.71052631578947	9.5e-38
+P773_RS0101490	PU02_RS04980	38	182	85.59782608695652	7.4e-44
+P773_RS0101505	PU02_RS04970	39	84	104.65116279069768	1.3e-14
+P773_RS0101565	PU02_RS05000	40	201	93.00291545189503	1.1e-49
+
+
+
+>>
+32. NC_012846
+Source: Bartonella grahamii as4aup, complete genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1155
+
+Table of genes, locations, strands and annotations of subject cluster:
+BGR_RS05605	BGR_RS05605	1316432	1316823	-	transcriptional_regulator
+BGR_RS05610	BGR_RS05610	1316887	1317673	-	DNA_methyltransferase
+BGR_RS05625	BGR_RS05625	1318219	1318587	+	hypothetical_protein
+BGR_RS10415	BGR_RS10415	1318841	1319138	+	hypothetical_protein
+BGR_RS05635	BGR_RS05635	1319166	1319896	+	phage_antirepressor_Ant
+BGR_RS05640	BGR_RS05640	1319893	1320171	+	hypothetical_protein
+BGR_RS05645	BGR_RS05645	1320235	1321269	+	major_capsid_protein_E
+BGR_RS05650	BGR_RS05650	1321271	1321621	+	hypothetical_protein
+BGR_RS05660	BGR_RS05660	1323208	1323669	+	phage_tail_protein
+BGR_RS10420	BGR_RS10420	1323700	1323822	+	lysozyme
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BGR_RS05505	62	531	98.62068965517241	7.7e-149
+P773_RS0101485	BGR_RS05500	57	163	96.71052631578947	1.9e-38
+P773_RS0101490	BGR_RS05495	36	166	85.05434782608695	7.2e-39
+P773_RS0101505	BGR_RS05485	39	89	106.20155038759691	3e-16
+P773_RS0101565	BGR_RS05515	40	206	93.29446064139941	5.8e-51
+
+
+
+>>
+33. NZ_KL503780
+Source: Bartonella bacilliformis Hosp800-02 acPFO-supercont1.2, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1151
+
+Table of genes, locations, strands and annotations of subject cluster:
+H707_RS06300	H707_RS06300	385436	386648	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	H707_RS02790	62	529	97.93103448275862	3.8e-148
+P773_RS0101485	H707_RS02795	57	165	96.71052631578947	6.6e-39
+P773_RS0101490	H707_RS02800	34	174	89.40217391304348	2e-41
+P773_RS0101505	H707_RS02810	43	97	103.87596899224806	1.1e-18
+P773_RS0101565	H707_RS02780	36	186	93.29446064139941	6.2e-45
+
+
+
+>>
+34. NZ_CP019786
+Source: Bartonella sp. Raccoon60, complete genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1150
+
+Table of genes, locations, strands and annotations of subject cluster:
+Bra60_RS02360	Bra60_RS02360	535704	537027	+	hypothetical_protein
+Bra60_RS02390	Bra60_RS02390	543033	544466	+	histidine_ammonia-lyase
+Bra60_RS02440	Bra60_RS02440	551877	552697	-	nucleoside_triphosphate_pyrophosphohydrolase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	Bra60_RS02510	64	546	98.62068965517241	2.3e-153
+P773_RS0101485	Bra60_RS02515	58	163	96.71052631578947	1.9e-38
+P773_RS0101490	Bra60_RS02520	37	158	84.23913043478261	1.1e-36
+P773_RS0101505	Bra60_RS02530	43	99	106.9767441860465	2.9e-19
+P773_RS0101565	Bra60_RS02500	43	184	73.46938775510205	1.8e-44
+
+
+
+>>
+35. NZ_CM001844
+Source: Bartonella bovis 91-4 chromosome, whole genome shotgun sequence
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1149
+
+Table of genes, locations, strands and annotations of subject cluster:
+BBBE_RS07200	BBBE_RS07200	685606	687145	+	histidine_ammonia-lyase
+BBBE_RS07205	BBBE_RS07205	690280	690497	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BBBE_RS03070	61	530	97.70114942528735	2.2e-148
+P773_RS0101485	BBBE_RS03075	57	158	96.71052631578947	4.7e-37
+P773_RS0101490	BBBE_RS03080	34	168	87.22826086956522	1.9e-39
+P773_RS0101505	BBBE_RS03090	40	91	107.75193798449611	7.8e-17
+P773_RS0101565	BBBE_RS03060	40	202	95.33527696793003	8.4e-50
+
+
+
+>>
+36. NZ_CP019780
+Source: Bartonella sp. A1379B, complete genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1149
+
+Table of genes, locations, strands and annotations of subject cluster:
+BA1379B_RS02015	BA1379B_RS02015	480719	482026	+	hypothetical_protein
+BA1379B_RS02045	BA1379B_RS02045	488030	489463	+	histidine_ammonia-lyase
+BA1379B_RS02055	BA1379B_RS02055	491532	492452	-	Bcr/CflA_family_drug_resistance_efflux_transporter
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BA1379B_RS02165	63	544	98.62068965517241	8.7e-153
+P773_RS0101485	BA1379B_RS02170	58	163	96.71052631578947	1.9e-38
+P773_RS0101490	BA1379B_RS02175	36	160	83.96739130434783	5.1e-37
+P773_RS0101505	BA1379B_RS02185	43	99	106.9767441860465	2.9e-19
+P773_RS0101565	BA1379B_RS02155	42	183	73.46938775510205	3.1e-44
+
+
+
+>>
+37. NZ_KL503800
+Source: Bartonella bacilliformis Cond044 acOtG-supercont1.2, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1149
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	H705_RS02865	62	529	97.93103448275862	2.9e-148
+P773_RS0101485	H705_RS02870	57	165	96.71052631578947	6.6e-39
+P773_RS0101490	H705_RS02875	34	172	87.77173913043478	7.6e-41
+P773_RS0101505	H705_RS02885	43	97	103.87596899224806	1.1e-18
+P773_RS0101565	H705_RS02855	36	186	93.29446064139941	6.2e-45
+
+
+
+>>
+38. NC_014932
+Source: Bartonella clarridgeiae strain 73, complete genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1149
+
+Table of genes, locations, strands and annotations of subject cluster:
+BARCL_RS03875	BARCL_RS03875	935846	936658	+	nucleoside_triphosphate_pyrophosphohydrolase
+BARCL_RS03950	BARCL_RS03950	951502	952849	-	3-deoxy-7-phosphoheptulonate_synthase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BARCL_RS03810	64	545	97.93103448275862	6.7e-153
+P773_RS0101485	BARCL_RS03805	59	163	96.71052631578947	1.5e-38
+P773_RS0101490	BARCL_RS03800	36	170	86.95652173913044	3.8e-40
+P773_RS0101505	BARCL_RS03790	41	92	106.9767441860465	4.6e-17
+P773_RS0101565	BARCL_RS03820	37	179	93.29446064139941	5.8e-43
+
+
+
+>>
+39. NC_010161
+Source: Bartonella tribocorum CIP 105476 complete genome, type strain CIP 105476
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1147
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BTR_RS06290	62	530	98.62068965517241	1.7e-148
+P773_RS0101485	BTR_RS06285	57	164	96.71052631578947	8.6e-39
+P773_RS0101490	BTR_RS06280	34	166	89.94565217391305	5.5e-39
+P773_RS0101505	BTR_RS06270	42	91	109.30232558139534	1e-16
+P773_RS0101565	BTR_RS06300	39	196	93.29446064139941	3.5e-48
+
+
+
+>>
+40. NZ_CP019489
+Source: Bartonella sp. 1-1C chromosome, complete genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1140
+
+Table of genes, locations, strands and annotations of subject cluster:
+B11cv2_RS02490	B11cv2_RS02490	543428	544637	+	3-deoxy-7-phosphoheptulonate_synthase_class_II
+B11cv2_RS02520	B11cv2_RS02520	550528	551100	+	hypothetical_protein
+B11cv2_RS02535	B11cv2_RS02535	555015	555233	+	hypothetical_protein
+B11cv2_RS02545	B11cv2_RS02545	555406	555627	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	B11cv2_RS02645	64	547	98.62068965517241	1.3e-153
+P773_RS0101485	B11cv2_RS02650	58	163	96.71052631578947	1.9e-38
+P773_RS0101490	B11cv2_RS02655	37	159	84.51086956521739	8.7e-37
+P773_RS0101505	B11cv2_RS02665	42	96	106.9767441860465	2.4e-18
+P773_RS0101565	B11cv2_RS02635	37	175	93.29446064139941	1.4e-41
+
+
+
+>>
+41. NZ_CP019787
+Source: Bartonella sp. JB15, complete genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1137
+
+Table of genes, locations, strands and annotations of subject cluster:
+BJB15x_RS03295	BJB15x_RS03295	757425	759151	-	hypothetical_protein
+BJB15x_RS03330	BJB15x_RS03330	770599	771872	+	beta-ketoacyl-ACP_synthase_II
+BJB15x_RS03340	BJB15x_RS03340	772973	773901	+	lipid_A_biosynthesis_lauroyl_acyltransferase
+BJB15x_RS03345	BJB15x_RS03345	773931	774661	+	hypothetical_protein
+BJB15x_RS03385	BJB15x_RS03385	780201	781703	-	histidine_ammonia-lyase
+BJB15x_RS03415	BJB15x_RS03415	787649	788989	-	phospho-2-dehydro-3-deoxyheptonate_aldolase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BJB15x_RS03280	64	551	98.62068965517241	9.3e-155
+P773_RS0101485	BJB15x_RS03275	59	164	96.71052631578947	1.1e-38
+P773_RS0101490	BJB15x_RS03270	35	166	87.22826086956522	4.2e-39
+P773_RS0101505	BJB15x_RS03260	40	90	106.9767441860465	1.7e-16
+P773_RS0101565	BJB15x_RS03290	36	166	93.29446064139941	5.1e-39
+
+
+
+>>
+42. NZ_KL503803
+Source: Bartonella bacilliformis Ver097 acOts-supercont1.2, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1137
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	H710_RS03580	62	525	97.93103448275862	4.2e-147
+P773_RS0101485	H710_RS03585	57	163	96.71052631578947	2.5e-38
+P773_RS0101490	H710_RS03590	35	168	84.23913043478261	1.1e-39
+P773_RS0101505	H710_RS03600	42	95	103.87596899224806	4.2e-18
+P773_RS0101565	H710_RS03570	36	186	93.58600583090379	3.6e-45
+
+
+
+>>
+43. NZ_LVJZ01000003
+Source: Candidatus Thiodiazotropha endoloripes isolate G_D NODE_1_length_3866231_cov_46.8124_ID_1, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 788
+
+Table of genes, locations, strands and annotations of subject cluster:
+A3196_RS11190	A3196_RS11190	2434186	2434812	-	endonuclease
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	A3196_RS11200	52	434	94.25287356321839	1.3e-119
+P773_RS0101485	A3196_RS11205	45	114	97.36842105263158	1.3e-23
+P773_RS0101490	A3196_RS11210	34	118	62.22826086956522	1.7e-24
+P773_RS0101495	A3196_RS11215	34	122	96.95431472081218	4.9e-26
+
+
+
+>>
+44. NZ_LVJX01000007
+Source: Candidatus Thiodiazotropha endoloripes isolate G_B NODE_3_length_561616_cov_50.6135_ID_5, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 786
+
+Table of genes, locations, strands and annotations of subject cluster:
+A3194_RS11685	A3194_RS11685	232124	232750	-	endonuclease
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	A3194_RS11695	52	434	94.25287356321839	1.3e-119
+P773_RS0101485	A3194_RS11700	45	114	97.36842105263158	1.3e-23
+P773_RS0101490	A3194_RS11705	34	116	62.22826086956522	5e-24
+P773_RS0101495	A3194_RS11710	34	122	96.95431472081218	4.9e-26
+
+
+
+>>
+45. NZ_KB902553
+Source: Lamprocystis purpurea DSM 4197 A39ODRAFT_scaffold_8.9, whole genome shotgun sequence
+Type: hserlactone-terpene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 741
+
+Table of genes, locations, strands and annotations of subject cluster:
+A39O_RS35600	A39O_RS35600	26853	27065	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	A39O_RS0128360	53	431	96.7816091954023	1.4e-118
+P773_RS0101485	A39O_RS0128365	45	120	97.36842105263158	1.9e-25
+P773_RS0101490	A39O_RS0128370	32	102	63.58695652173913	7.4e-20
+P773_RS0101495	A39O_RS0128380	33	88	59.390862944162436	1e-15
+
+
+
+>>
+46. NZ_CP019789
+Source: Bartonella schoenbuchensis R1 genome
+Type: arylpolyene-ladderane
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 727
+
+Table of genes, locations, strands and annotations of subject cluster:
+BscR1v2_RS02870	BscR1v2_RS02870	706775	708135	+	GTPase_HflX
+BscR1v2_RS02875	BscR1v2_RS02875	708275	710037	+	hypothetical_protein
+BscR1v2_RS02890	BscR1v2_RS02890	712540	713852	+	serine_hydroxymethyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	BscR1v2_RS02890	67	109	20.0	7.2e-22
+P773_RS0101485	BscR1v2_RS02895	57	161	96.71052631578947	7.3e-38
+P773_RS0101490	BscR1v2_RS02900	36	168	87.22826086956522	1.1e-39
+P773_RS0101505	BscR1v2_RS02910	41	94	106.9767441860465	9.3e-18
+P773_RS0101565	BscR1v2_RS02880	40	195	95.04373177842565	7.9e-48
+
+
+
+>>
+47. NZ_KB915625
+Source: Bartonella bovis m02 scaffold02, whole genome shotgun sequence
+Type: ladderane
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1074
+
+Table of genes, locations, strands and annotations of subject cluster:
+M02_RS02845	M02_RS02845	453230	454762	+	histidine_ammonia-lyase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	M02_RS02950	62	537	97.70114942528735	1.8e-150
+P773_RS0101485	M02_RS02955	57	161	96.71052631578947	9.5e-38
+P773_RS0101490	M02_RS02960	36	176	87.22826086956522	6.9e-42
+P773_RS0101565	M02_RS02940	39	200	95.33527696793003	3.2e-49
+
+
+
+>>
+48. NZ_CP022098
+Source: Cystobacter fuscus strain DSM 52655 chromosome, complete genome
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 943
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	CYFUS_RS17570	55	462	94.94252873563218	5.7e-128
+P773_RS0101485	CYFUS_RS17575	44	122	92.76315789473685	3.7e-26
+P773_RS0101495	CYFUS_RS17610	32	109	96.44670050761421	5.6e-22
+P773_RS0101500	CYFUS_RS17615	37	250	100.0	2.2e-64
+
+
+
+>>
+49. NZ_ANAH02000030
+Source: Cystobacter fuscus DSM 2262 contig30, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 942
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	D187_RS35365	55	460	94.94252873563218	1.7e-127
+P773_RS0101485	D187_RS35360	44	122	92.76315789473685	3.7e-26
+P773_RS0101495	D187_RS35325	32	108	96.44670050761421	9.5e-22
+P773_RS0101500	D187_RS35320	37	252	100.0	9.9e-65
+
+
+
+>>
+50. NZ_LN848257
+Source: Thiocapsa sp. KS1, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 923
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0101480	THIOKS1_RS07230	56	455	96.7816091954023	7e-126
+P773_RS0101485	THIOKS1_RS07225	45	121	97.36842105263158	8.3e-26
+P773_RS0101490	THIOKS1_RS07220	32	111	63.58695652173913	1.6e-22
+P773_RS0101500	THIOKS1_RS07210	38	236	101.09289617486338	5.6e-60
+

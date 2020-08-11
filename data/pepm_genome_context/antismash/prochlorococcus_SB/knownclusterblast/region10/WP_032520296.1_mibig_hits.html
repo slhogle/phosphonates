@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAD19798.1</td>
+              <td>putative_mannose-1-phosphate_guanosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000777/1">BGC0000777</a></td>
+              <td>saccharide</td>
+              <td>51.0</td>
+              <td>99.4</td>
+              <td>494.0</td>
+              <td>1.6e-139</td>
+          </tr>
+    
+          <tr>
+              <td>BAG50493.1</td>
+              <td>putative_mannose-1-phosphate_guanylyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000780/1">BGC0000780</a></td>
+              <td>saccharide</td>
+              <td>48.0</td>
+              <td>98.1</td>
+              <td>464.0</td>
+              <td>1.7e-130</td>
+          </tr>
+    
+          <tr>
+              <td>AAR90888.1</td>
+              <td>GDP-mannose_pyrophosphorylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000787/1">BGC0000787</a></td>
+              <td>saccharide</td>
+              <td>48.0</td>
+              <td>98.8</td>
+              <td>463.0</td>
+              <td>3e-130</td>
+          </tr>
+    
+          <tr>
+              <td>AAK53463.1</td>
+              <td>phosphomannose_isomerase/GDP-D-mannose_pyrophosphorylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000774/1">BGC0000774</a></td>
+              <td>saccharide</td>
+              <td>50.0</td>
+              <td>98.3</td>
+              <td>460.0</td>
+              <td>2.5e-129</td>
+          </tr>
+    
+          <tr>
+              <td>AAG41692.2</td>
+              <td>mannose-1-P_guanosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000788/1">BGC0000788</a></td>
+              <td>saccharide</td>
+              <td>48.0</td>
+              <td>98.8</td>
+              <td>458.0</td>
+              <td>1.2e-128</td>
+          </tr>
+    
+          <tr>
+              <td>AAC27538.1</td>
+              <td>ManC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000773/1">BGC0000773</a></td>
+              <td>saccharide</td>
+              <td>47.0</td>
+              <td>98.1</td>
+              <td>443.0</td>
+              <td>4.2e-124</td>
+          </tr>
+    
+          <tr>
+              <td>BAC55145.1</td>
+              <td>GDP-mannose_pyrophosphorylase_EpsQ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000761/1">BGC0000761</a></td>
+              <td>saccharide</td>
+              <td>47.0</td>
+              <td>98.3</td>
+              <td>442.0</td>
+              <td>9.3e-124</td>
+          </tr>
+    
+          <tr>
+              <td>AAC77846.1</td>
+              <td>mannose-1-P_guanosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000799/1">BGC0000799</a></td>
+              <td>saccharide</td>
+              <td>46.0</td>
+              <td>98.6</td>
+              <td>441.0</td>
+              <td>1.2e-123</td>
+          </tr>
+    
+          <tr>
+              <td>WP_006490764.1</td>
+              <td>mannose-1-phosphate_guanylyltransferase/mannose-6-phosphate_isomerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001589/1">BGC0001589</a></td>
+              <td>saccharide</td>
+              <td>44.0</td>
+              <td>100.8</td>
+              <td>416.0</td>
+              <td>5.4e-116</td>
+          </tr>
+    
+          <tr>
+              <td>ABX18591.1</td>
+              <td>mannose-1-phosphate_guanylyltransferase/mannose-6-phosphate_isomerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000808/1">BGC0000808</a></td>
+              <td>saccharide</td>
+              <td>42.0</td>
+              <td>101.0</td>
+              <td>402.0</td>
+              <td>1.1e-111</td>
+          </tr>
+    
+          <tr>
+              <td>WP_004553779.1</td>
+              <td>mannose-1-phosphate_guanylyltransferase/mannose-6-phosphate_isomerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001588/1">BGC0001588</a></td>
+              <td>saccharide</td>
+              <td>42.0</td>
+              <td>100.8</td>
+              <td>391.0</td>
+              <td>1.9e-108</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ84559.1</td>
+              <td>mannose-1-phosphate_guanylyltransferase/mannose-6-phosphate_isomerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000726/1">BGC0000726</a></td>
+              <td>saccharide</td>
+              <td>44.0</td>
+              <td>90.5</td>
+              <td>390.0</td>
+              <td>3.2e-108</td>
+          </tr>
+    
+          <tr>
+              <td>ADF88287.1</td>
+              <td>putative_nucleotidyl_transferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000981/1">BGC0000981</a></td>
+              <td>nrps-t1pks</td>
+              <td>34.0</td>
+              <td>75.4</td>
+              <td>191.0</td>
+              <td>2.2e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AAS55729.1</td>
+              <td>mannose-1-phosphate_guanylyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000795/1">BGC0000795</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>99.0</td>
+              <td>184.0</td>
+              <td>3.5e-46</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

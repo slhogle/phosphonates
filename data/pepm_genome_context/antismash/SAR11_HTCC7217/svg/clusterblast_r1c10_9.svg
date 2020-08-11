@@ -1,0 +1,160 @@
+<svg version="1.1" preserveAspectRatio="none" width="800" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" height="230" x="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 230"  >
+<g label="Query sequence" class="clusterblast-cluster"  >
+<text class="clusterblast-acc" y="20" x="5"  >
+Query sequence</text>
+<line style="stroke-width:1; stroke:grey; " y1="35" x2="778.0" y2="35" x1="10"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="198,40 206,40 211,35 206,30 198,30 198,40 " description="&lt;b&gt;P773_RS0107005&lt;/b&gt;&lt;br&gt;N-acetylmuramoyl-L-alanine amidase&lt;br&gt;Location: 1292440 - 1293184" id="dummy-10_q0_0_all" locus_tag="P773_RS0107005"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="222,40 225,40 230,35 225,30 222,30 222,40 " description="&lt;b&gt;P773_RS0107010&lt;/b&gt;&lt;br&gt;transcriptional regulator MraZ&lt;br&gt;Location: 1293844 - 1294312" id="dummy-10_q1_0_all" locus_tag="P773_RS0107010"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#33d815; " points="231,40 251,40 256,35 251,30 231,30 231,40 " description="&lt;b&gt;P773_RS0107015&lt;/b&gt;&lt;br&gt;cell division protein FtsZ&lt;br&gt;Location: 1294315 - 1295794" id="dummy-10_q2_0_all" locus_tag="P773_RS0107015"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15abd8; " points="256,40 269,40 274,35 269,30 256,30 256,40 " description="&lt;b&gt;P773_RS0107020&lt;/b&gt;&lt;br&gt;16S rRNA (cytosine(1402)-N(4))-methyltransferase RsmH&lt;br&gt;Location: 1295812 - 1296823" id="dummy-10_q3_0_all" locus_tag="P773_RS0107020"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="274,40 274,40 279,35 274,30 274,30 274,40 " description="&lt;b&gt;P773_RS0107025&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 1296819 - 1297125" id="dummy-10_q4_0_all" locus_tag="P773_RS0107025"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#8d15d8; " points="279,40 303,40 308,35 303,30 279,30 279,40 " description="&lt;b&gt;P773_RS0107030&lt;/b&gt;&lt;br&gt;penicillin-binding protein 2&lt;br&gt;Location: 1297124 - 1298816" id="dummy-10_q5_0_all" locus_tag="P773_RS0107030"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d86f15; " points="308,40 352,40 357,35 352,30 308,30 308,40 " description="&lt;b&gt;P773_RS0107035&lt;/b&gt;&lt;br&gt;UDP-N-acetylmuramoyl-L-alanyl-D-glutamate--2, 6-diaminopimelate ligase&lt;br&gt;Location: 1298818 - 1301662" id="dummy-10_q6_0_all" locus_tag="P773_RS0107035"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d851; " points="357,40 371,40 376,35 371,30 357,30 357,40 " description="&lt;b&gt;P773_RS0107040&lt;/b&gt;&lt;br&gt;phospho-N-acetylmuramoyl-pentapeptide- transferase&lt;br&gt;Location: 1301662 - 1302748" id="dummy-10_q7_0_all" locus_tag="P773_RS0107040"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="376,40 393,40 398,35 393,30 376,30 376,40 " description="&lt;b&gt;P773_RS0107045&lt;/b&gt;&lt;br&gt;UDP-N-acetylmuramoyl-L-alanine--D-glutamate ligase&lt;br&gt;Location: 1302747 - 1304043" id="dummy-10_q8_0_all" locus_tag="P773_RS0107045"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1551d8; " points="398,40 412,40 417,35 412,30 398,30 398,40 " description="&lt;b&gt;P773_RS0107050&lt;/b&gt;&lt;br&gt;cell division protein FtsW&lt;br&gt;Location: 1304032 - 1305154" id="dummy-10_q9_0_all" locus_tag="P773_RS0107050"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="417,40 430,40 435,35 430,30 417,30 417,40 " description="&lt;b&gt;P773_RS0107055&lt;/b&gt;&lt;br&gt;UDP-N-acetylglucosamine--N-acetylmuramyl- (pentapeptide) pyrophosphoryl-undecaprenol N-acetylglucosamine transferase&lt;br&gt;Location: 1305157 - 1306225" id="dummy-10_q10_0_all" locus_tag="P773_RS0107055"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d815c9; " points="435,40 454,40 459,35 454,30 435,30 435,40 " description="&lt;b&gt;P773_RS0107060&lt;/b&gt;&lt;br&gt;UDP-N-acetylmuramate--L-alanine ligase&lt;br&gt;Location: 1306214 - 1307609" id="dummy-10_q11_0_all" locus_tag="P773_RS0107060"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d8c915; " points="459,40 470,40 475,35 470,30 459,30 459,40 " description="&lt;b&gt;P773_RS0107065&lt;/b&gt;&lt;br&gt;UDP-N-acetylenolpyruvoylglucosamine reductase&lt;br&gt;Location: 1307608 - 1308514" id="dummy-10_q12_0_all" locus_tag="P773_RS0107065"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d8ab; " points="475,40 485,40 490,35 485,30 475,30 475,40 " description="&lt;b&gt;P773_RS0107070&lt;/b&gt;&lt;br&gt;D-alanine--D-alanine ligase&lt;br&gt;Location: 1308515 - 1309430" id="dummy-10_q13_0_all" locus_tag="P773_RS0107070"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="490,40 497,40 502,35 497,30 490,30 490,40 " description="&lt;b&gt;P773_RS0107075&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 1309410 - 1310088" id="dummy-10_q14_0_all" locus_tag="P773_RS0107075"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="502,40 509,40 514,35 509,30 502,30 502,40 " description="&lt;b&gt;P773_RS0107080&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 1310080 - 1310782" id="dummy-10_q15_0_all" locus_tag="P773_RS0107080"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#3315d8; " points="515,40 526,40 531,35 526,30 515,30 515,40 " description="&lt;b&gt;P773_RS0107085&lt;/b&gt;&lt;br&gt;UDP-3-O-[3-hydroxymyristoyl] N-acetylglucosamine deacetylase&lt;br&gt;Location: 1310846 - 1311767" id="dummy-10_q16_0_all" locus_tag="P773_RS0107085"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d8156f; " points="532,40 541,40 546,35 541,30 532,30 532,40 " description="&lt;b&gt;P773_RS0107090&lt;/b&gt;&lt;br&gt;outer membrane protein assembly factor BamD&lt;br&gt;Location: 1311823 - 1312675" id="dummy-10_q17_0_all" locus_tag="P773_RS0107090"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#8dd815; " points="546,40 576,40 581,35 576,30 546,30 546,40 " description="&lt;b&gt;P773_RS0107095&lt;/b&gt;&lt;br&gt;NAD-dependent DNA ligase LigA&lt;br&gt;Location: 1312667 - 1314698" id="dummy-10_q18_0_all" locus_tag="P773_RS0107095"  />
+</g>
+<g label="NC_010725" class="clusterblast-cluster" description="NC_010725_c7: Methylobacterium populi BJ001, complete genome (9% of genes show similarity), nrps"  >
+<text class="clusterblast-acc" y="70" x="5"  >
+<a xlink:href="https://antismash-db.secondarymetabolites.org/go/NC_010725/7" target="_blank">NC_010725_c7</a>: Methylobacterium populi BJ001, complete genome (9% of genes show similarity), nrps</text>
+<line style="stroke-width:1; stroke:grey; " y1="85" x2="778.0" y2="85" x1="10"  />
+</g>
+<g id="a10_000"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="0,90 4,85 0,80 0,90 " description="&lt;b&gt;MPOP_RS25615&lt;/b&gt;&lt;br&gt;type II toxin-antitoxin system ParD family antitoxin&lt;br&gt;Location: 5550676 - 5550401" id="dummy-10_h10_9_0" locus_tag="MPOP_RS25615"  />
+</g>
+<g id="a10_001"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="4,90 4,90 9,85 4,80 4,80 4,90 " description="&lt;b&gt;MPOP_RS25610&lt;/b&gt;&lt;br&gt;type II toxin-antitoxin system RelE/ParE family toxin&lt;br&gt;Location: 5550411 - 5550106" id="dummy-10_h10_9_1" locus_tag="MPOP_RS25610"  />
+</g>
+<g id="a10_002"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15abd8; " points="26,90 39,90 44,85 39,80 26,80 26,90 " description="&lt;b&gt;MPOP_RS25605&lt;/b&gt;&lt;br&gt;ribosomal RNA small subunit methyltransferase H&lt;br&gt;Location: 5549146 - 5548091&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0107020&lt;/b&gt;&lt;br&gt;Percentage identity: 39&lt;br&gt;Percentage coverage: 84&lt;br&gt;BLAST bit score: 163&lt;br&gt;E-value: 5.5e-38" id="dummy-10_h10_9_2" locus_tag="MPOP_RS25605"  />
+</g>
+<g id="a10_003"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="44,90 46,90 51,85 46,80 44,80 44,90 " description="&lt;b&gt;MPOP_RS25600&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5548094 - 5547663" id="dummy-10_h10_9_3" locus_tag="MPOP_RS25600"  />
+</g>
+<g id="a10_004"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#8d15d8; " points="51,90 79,90 84,85 79,80 51,80 51,90 " description="&lt;b&gt;MPOP_RS25595&lt;/b&gt;&lt;br&gt;penicillin-binding protein 2&lt;br&gt;Location: 5547655 - 5545778&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0107030&lt;/b&gt;&lt;br&gt;Percentage identity: 31&lt;br&gt;Percentage coverage: 89&lt;br&gt;BLAST bit score: 215&lt;br&gt;E-value: 1.2e-53" id="dummy-10_h10_9_4" locus_tag="MPOP_RS25595"  />
+</g>
+<g id="a10_005"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d86f15; " points="85,90 105,90 110,85 105,80 85,80 85,90 " description="&lt;b&gt;MPOP_RS25590&lt;/b&gt;&lt;br&gt;UDP-N-acetylmuramoyl-L-alanyl-D-glutamate--2, 6-diaminopimelate ligase&lt;br&gt;Location: 5545720 - 5544257&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0107035&lt;/b&gt;&lt;br&gt;Percentage identity: 36&lt;br&gt;Percentage coverage: 50&lt;br&gt;BLAST bit score: 262&lt;br&gt;E-value: 2.5e-67" id="dummy-10_h10_9_5" locus_tag="MPOP_RS25590"  />
+</g>
+<g id="a10_006"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="110,90 130,90 135,85 130,80 110,80 110,90 " description="&lt;b&gt;MPOP_RS25585&lt;/b&gt;&lt;br&gt;UDP-N-acetylmuramoylalanyl-D-glutamyl-2, 6-diaminopimelate--D-alanyl-D-alanine ligase&lt;br&gt;Location: 5544260 - 5542797" id="dummy-10_h10_9_6" locus_tag="MPOP_RS25585"  />
+</g>
+<g id="a10_007"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d851; " points="137,90 150,90 155,85 150,80 137,80 137,90 " description="&lt;b&gt;MPOP_RS25580&lt;/b&gt;&lt;br&gt;phospho-N-acetylmuramoyl-pentapeptide- transferase&lt;br&gt;Location: 5542690 - 5541608&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0107040&lt;/b&gt;&lt;br&gt;Percentage identity: 53&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 357&lt;br&gt;E-value: 2.1e-96" id="dummy-10_h10_9_7" locus_tag="MPOP_RS25580"  />
+</g>
+<g id="a10_008"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="156,90 174,90 179,85 174,80 156,80 156,90 " description="&lt;b&gt;MPOP_RS25575&lt;/b&gt;&lt;br&gt;UDP-N-acetylmuramoyl-L-alanine--D-glutamate ligase&lt;br&gt;Location: 5541581 - 5540214" id="dummy-10_h10_9_8" locus_tag="MPOP_RS25575"  />
+</g>
+<g id="a10_009"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="180,85 185,80 212,80 212,90 185,90 180,85 " description="&lt;b&gt;MPOP_RS25570&lt;/b&gt;&lt;br&gt;potassium transporter TrkA&lt;br&gt;Location: 5540202 - 5538304" id="dummy-10_h10_9_9" locus_tag="MPOP_RS25570"  />
+</g>
+<g id="a10_0010"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="221,90 237,90 242,85 237,80 221,80 221,90 " description="&lt;b&gt;MPOP_RS25565&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5537777 - 5536554" id="dummy-10_h10_9_10" locus_tag="MPOP_RS25565"  />
+</g>
+<g id="a10_0011"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="243,90 249,90 254,85 249,80 243,80 243,90 " description="&lt;b&gt;MPOP_RS25560&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5536530 - 5535877" id="dummy-10_h10_9_11" locus_tag="MPOP_RS25560"  />
+</g>
+<g id="a10_0012"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="254,85 259,80 262,80 262,90 259,90 254,85 " description="&lt;b&gt;MPOP_RS25555&lt;/b&gt;&lt;br&gt;PIN domain-containing protein&lt;br&gt;Location: 5535852 - 5535409" id="dummy-10_h10_9_12" locus_tag="MPOP_RS25555"  />
+</g>
+<g id="a10_0013"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="262,85 267,80 268,80 268,90 267,90 262,85 " description="&lt;b&gt;MPOP_RS25550&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5535412 - 5535089" id="dummy-10_h10_9_13" locus_tag="MPOP_RS25550"  />
+</g>
+<g id="a10_0014"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="270,90 279,90 284,85 279,80 270,80 270,90 " description="&lt;b&gt;MPOP_RS25545&lt;/b&gt;&lt;br&gt;MoxR family ATPase&lt;br&gt;Location: 5534959 - 5534108" id="dummy-10_h10_9_14" locus_tag="MPOP_RS25545"  />
+</g>
+<g id="a10_0015"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="285,90 297,90 302,85 297,80 285,80 285,90 " description="&lt;b&gt;MPOP_RS25540&lt;/b&gt;&lt;br&gt;aldo/keto reductase&lt;br&gt;Location: 5534051 - 5533071" id="dummy-10_h10_9_15" locus_tag="MPOP_RS25540"  />
+</g>
+<g id="a10_0016"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="302,90 306,90 311,85 306,80 302,80 302,90 " description="&lt;b&gt;MPOP_RS25535&lt;/b&gt;&lt;br&gt;histidine phosphatase family protein&lt;br&gt;Location: 5533074 - 5532544" id="dummy-10_h10_9_16" locus_tag="MPOP_RS25535"  />
+</g>
+<g id="a10_0017"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="313,90 330,90 335,85 330,80 313,80 313,90 " description="&lt;b&gt;MPOP_RS25530&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5532454 - 5531177" id="dummy-10_h10_9_17" locus_tag="MPOP_RS25530"  />
+</g>
+<g id="a10_0018"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="337,90 340,85 337,80 337,90 " description="&lt;b&gt;MPOP_RS25525&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5531075 - 5530854" id="dummy-10_h10_9_18" locus_tag="MPOP_RS25525"  />
+</g>
+<g id="a10_0019"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="341,90 396,90 401,85 396,80 341,80 341,90 " description="&lt;b&gt;MPOP_RS25520&lt;/b&gt;&lt;br&gt;non-ribosomal peptide synthetase&lt;br&gt;Location: 5530828 - 5527304" id="dummy-10_h10_9_19" locus_tag="MPOP_RS25520"  />
+</g>
+<g id="a10_0020"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="402,90 440,90 445,85 440,80 402,80 402,90 " description="&lt;b&gt;MPOP_RS25515&lt;/b&gt;&lt;br&gt;aspartate racemase&lt;br&gt;Location: 5527291 - 5524760" id="dummy-10_h10_9_20" locus_tag="MPOP_RS25515"  />
+</g>
+<g id="a10_0021"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="453,85 458,80 469,80 469,90 458,90 453,85 " description="&lt;b&gt;MPOP_RS25510&lt;/b&gt;&lt;br&gt;GDP-L-fucose synthase&lt;br&gt;Location: 5524296 - 5523358" id="dummy-10_h10_9_21" locus_tag="MPOP_RS25510"  />
+</g>
+<g id="a10_0022"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="470,85 474,80 474,90 470,85 " description="&lt;b&gt;MPOP_RS28030&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5523348 - 5523112" id="dummy-10_h10_9_22" locus_tag="MPOP_RS28030"  />
+</g>
+<g id="a10_0023"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="480,90 484,85 480,80 480,90 " description="&lt;b&gt;MPOP_RS25500&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5522718 - 5522497" id="dummy-10_h10_9_23" locus_tag="MPOP_RS25500"  />
+</g>
+<g id="a10_0024"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="484,85 489,80 491,80 491,90 489,90 484,85 " description="&lt;b&gt;MPOP_RS25495&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5522482 - 5522096" id="dummy-10_h10_9_24" locus_tag="MPOP_RS25495"  />
+</g>
+<g id="a10_0025"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="497,90 542,90 547,85 542,80 497,80 497,90 " description="&lt;b&gt;MPOP_RS25490&lt;/b&gt;&lt;br&gt;monovalent cation/H+ antiporter subunit A&lt;br&gt;Location: 5521746 - 5518819" id="dummy-10_h10_9_25" locus_tag="MPOP_RS25490"  />
+</g>
+<g id="a10_0026"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="547,90 549,90 554,85 549,80 547,80 547,90 " description="&lt;b&gt;MPOP_RS25485&lt;/b&gt;&lt;br&gt;Na+/H+ antiporter subunit C&lt;br&gt;Location: 5518819 - 5518451" id="dummy-10_h10_9_26" locus_tag="MPOP_RS25485"  />
+</g>
+<g id="a10_0027"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="554,90 576,90 581,85 576,80 554,80 554,90 " description="&lt;b&gt;MPOP_RS25480&lt;/b&gt;&lt;br&gt;monovalent cation/H+ antiporter subunit D&lt;br&gt;Location: 5518454 - 5516850" id="dummy-10_h10_9_27" locus_tag="MPOP_RS25480"  />
+</g>
+<g id="a10_0028"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="581,90 585,90 590,85 585,80 581,80 581,90 " description="&lt;b&gt;MPOP_RS25475&lt;/b&gt;&lt;br&gt;Na+/H+ antiporter subunit E&lt;br&gt;Location: 5516853 - 5516365" id="dummy-10_h10_9_28" locus_tag="MPOP_RS25475"  />
+</g>
+<g id="a10_0029"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="590,90 594,85 590,80 590,90 " description="&lt;b&gt;MPOP_RS25470&lt;/b&gt;&lt;br&gt;K+/H+ antiporter subunit F&lt;br&gt;Location: 5516368 - 5516084" id="dummy-10_h10_9_29" locus_tag="MPOP_RS25470"  />
+</g>
+<g id="a10_0030"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="594,90 595,90 600,85 595,80 594,80 594,90 " description="&lt;b&gt;MPOP_RS25465&lt;/b&gt;&lt;br&gt;cation:proton antiporter&lt;br&gt;Location: 5516087 - 5515746" id="dummy-10_h10_9_30" locus_tag="MPOP_RS25465"  />
+</g>
+<g id="a10_0031"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="613,90 616,90 621,85 616,80 613,80 613,90 " description="&lt;b&gt;MPOP_RS25460&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5514979 - 5514539" id="dummy-10_h10_9_31" locus_tag="MPOP_RS25460"  />
+</g>
+<g id="a10_0032"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="621,90 638,90 643,85 638,80 621,80 621,90 " description="&lt;b&gt;MPOP_RS25455&lt;/b&gt;&lt;br&gt;relaxase&lt;br&gt;Location: 5514542 - 5513268" id="dummy-10_h10_9_32" locus_tag="MPOP_RS25455"  />
+</g>
+<g id="a10_0033"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="643,90 648,90 653,85 648,80 643,80 643,90 " description="&lt;b&gt;MPOP_RS25450&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5513249 - 5512701" id="dummy-10_h10_9_33" locus_tag="MPOP_RS25450"  />
+</g>
+<g id="a10_0034"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="653,90 657,85 653,80 653,90 " description="&lt;b&gt;MPOP_RS25445&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5512704 - 5512474" id="dummy-10_h10_9_34" locus_tag="MPOP_RS25445"  />
+</g>
+<g id="a10_0035"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="656,90 675,90 680,85 675,80 656,80 656,90 " description="&lt;b&gt;MPOP_RS25440&lt;/b&gt;&lt;br&gt;type IV secretory pathway protein VirD4&lt;br&gt;Location: 5512477 - 5511116" id="dummy-10_h10_9_35" locus_tag="MPOP_RS25440"  />
+</g>
+<g id="a10_0036"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="681,85 686,80 693,80 693,90 686,90 681,85 " description="&lt;b&gt;MPOP_RS28025&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5511052 - 5510369" id="dummy-10_h10_9_36" locus_tag="MPOP_RS28025"  />
+</g>
+<g id="a10_0037"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="694,90 709,90 714,85 709,80 694,80 694,90 " description="&lt;b&gt;MPOP_RS28020&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5510293 - 5509112" id="dummy-10_h10_9_37" locus_tag="MPOP_RS28020"  />
+</g>
+<g id="a10_0038"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="714,90 738,90 743,85 738,80 714,80 714,90 " description="&lt;b&gt;MPOP_RS28015&lt;/b&gt;&lt;br&gt;thiamine biosynthesis protein ThiF&lt;br&gt;Location: 5509112 - 5507451" id="dummy-10_h10_9_38" locus_tag="MPOP_RS28015"  />
+</g>
+<g id="a10_0039"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="743,90 746,90 751,85 746,80 743,80 743,90 " description="&lt;b&gt;MPOP_RS28010&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5507454 - 5506987" id="dummy-10_h10_9_39" locus_tag="MPOP_RS28010"  />
+</g>
+<g id="a10_0040"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="763,85 768,80 768,80 768,90 768,90 763,85 " description="&lt;b&gt;MPOP_RS25430&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 5506257 - 5505991" id="dummy-10_h10_9_40" locus_tag="MPOP_RS25430"  />
+</g>
+<g id="a10_0041"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="770,90 774,85 770,80 770,90 " description="&lt;b&gt;MPOP_RS25425&lt;/b&gt;&lt;br&gt;type II toxin-antitoxin system ParD family antitoxin&lt;br&gt;Location: 5505860 - 5505615" id="dummy-10_h10_9_41" locus_tag="MPOP_RS25425"  />
+</g>
+<g id="a10_0042"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="775,90 775,90 780,85 775,80 775,80 775,90 " description="&lt;b&gt;MPOP_RS25420&lt;/b&gt;&lt;br&gt;type II toxin-antitoxin system RelE/ParE family toxin&lt;br&gt;Location: 5505614 - 5505324" id="dummy-10_h10_9_42" locus_tag="MPOP_RS25420"  />
+</g>
+</svg>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAO84855.1</td>
+              <td>putative_UV-repair_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000414/1">BGC0000414</a></td>
+              <td>nrps</td>
+              <td>35.0</td>
+              <td>99.6</td>
+              <td>556.0</td>
+              <td>8.8e-158</td>
+          </tr>
+    
+          <tr>
+              <td>CAE17542.1</td>
+              <td>UV-repair_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000210/1">BGC0000210</a></td>
+              <td>t2pks-saccharide</td>
+              <td>34.0</td>
+              <td>99.5</td>
+              <td>547.0</td>
+              <td>3.1e-155</td>
+          </tr>
+    
+          <tr>
+              <td>ADG27345.1</td>
+              <td>UrvA-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000296/1">BGC0000296</a></td>
+              <td>nrps</td>
+              <td>36.0</td>
+              <td>99.2</td>
+              <td>527.0</td>
+              <td>5.7e-149</td>
+          </tr>
+    
+          <tr>
+              <td>AGD80606.1</td>
+              <td>UV-repair_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000394/1">BGC0000394</a></td>
+              <td>nrps</td>
+              <td>34.0</td>
+              <td>99.9</td>
+              <td>526.0</td>
+              <td>7.5e-149</td>
+          </tr>
+    
+          <tr>
+              <td>ABI22122.1</td>
+              <td>UV-repair_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000422/1">BGC0000422</a></td>
+              <td>nrps</td>
+              <td>34.0</td>
+              <td>99.6</td>
+              <td>519.0</td>
+              <td>1.6e-146</td>
+          </tr>
+    
+          <tr>
+              <td>ANY94424.1</td>
+              <td>UvrA-like_drug_resistance_pump</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001584/1">BGC0001584</a></td>
+              <td>polyketide</td>
+              <td>35.0</td>
+              <td>100.2</td>
+              <td>498.0</td>
+              <td>2.2e-140</td>
+          </tr>
+    
+          <tr>
+              <td>AAL06654.1</td>
+              <td>UvrA-like_drug_resistance_pump</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000965/1">BGC0000965</a></td>
+              <td>t1pks+t1pks</td>
+              <td>34.0</td>
+              <td>100.2</td>
+              <td>492.0</td>
+              <td>2e-138</td>
+          </tr>
+    
+          <tr>
+              <td>ALU98419.1</td>
+              <td>daunorubicin_resistance_protein_DrrC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001397/1">BGC0001397</a></td>
+              <td>nrps-t1pks</td>
+              <td>34.0</td>
+              <td>100.2</td>
+              <td>492.0</td>
+              <td>2e-138</td>
+          </tr>
+    
+          <tr>
+              <td>KDN80074.1</td>
+              <td>daunorubicin_resistance_protein_DrrC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001074/1">BGC0001074</a></td>
+              <td>saccharide-t2pks</td>
+              <td>33.0</td>
+              <td>99.4</td>
+              <td>474.0</td>
+              <td>3.4e-133</td>
+          </tr>
+    
+          <tr>
+              <td>AAP85339.1</td>
+              <td>UvrA-like_drug_resistance_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000233/1">BGC0000233</a></td>
+              <td>t2pks</td>
+              <td>33.0</td>
+              <td>99.4</td>
+              <td>473.0</td>
+              <td>5.7e-133</td>
+          </tr>
+    
+          <tr>
+              <td>ARK19485.1</td>
+              <td>ABC_transporter-related_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001540/1">BGC0001540</a></td>
+              <td>other</td>
+              <td>33.0</td>
+              <td>100.9</td>
+              <td>472.0</td>
+              <td>1.7e-132</td>
+          </tr>
+    
+          <tr>
+              <td>AOC89014.1</td>
+              <td>putative_excinuclease_ABC_subunit_A</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001652/1">BGC0001652</a></td>
+              <td>nrps</td>
+              <td>33.0</td>
+              <td>100.1</td>
+              <td>468.0</td>
+              <td>2.4e-131</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018891755.1</td>
+              <td>excinuclease_ABC_subunit_UvrA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001558/1">BGC0001558</a></td>
+              <td>t2pks</td>
+              <td>33.0</td>
+              <td>99.8</td>
+              <td>466.0</td>
+              <td>9.2e-131</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00745.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001568/1">BGC0001568</a></td>
+              <td>t2pks</td>
+              <td>33.0</td>
+              <td>99.8</td>
+              <td>466.0</td>
+              <td>9.2e-131</td>
+          </tr>
+    
+          <tr>
+              <td>WP_030684660.1</td>
+              <td>ABC_transporter</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001607/1">BGC0001607</a></td>
+              <td>other</td>
+              <td>39.0</td>
+              <td>72.7</td>
+              <td>466.0</td>
+              <td>9.2e-131</td>
+          </tr>
+    
+          <tr>
+              <td>ABW71839.1</td>
+              <td>drug-resistance_pump</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000303/1">BGC0000303</a></td>
+              <td>nrps</td>
+              <td>33.0</td>
+              <td>99.7</td>
+              <td>464.0</td>
+              <td>4.5e-130</td>
+          </tr>
+    
+          <tr>
+              <td>ACN39026.1</td>
+              <td>putative_UvrA-drug_resistance_pump</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000448/1">BGC0000448</a></td>
+              <td>nrps</td>
+              <td>33.0</td>
+              <td>98.6</td>
+              <td>461.0</td>
+              <td>2.9e-129</td>
+          </tr>
+    
+          <tr>
+              <td>AFV52154.1</td>
+              <td>efflux_pump</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000081/1">BGC0000081</a></td>
+              <td>t1pks+t1pks</td>
+              <td>33.0</td>
+              <td>99.1</td>
+              <td>459.0</td>
+              <td>1.1e-128</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ34377.1</td>
+              <td>DNA_excisionase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000445/1">BGC0000445</a></td>
+              <td>nrps</td>
+              <td>33.0</td>
+              <td>99.0</td>
+              <td>447.0</td>
+              <td>4.4e-125</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ04403.1</td>
+              <td>UvrA-like_transporter_(ABC)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001637/1">BGC0001637</a></td>
+              <td>nrps</td>
+              <td>32.0</td>
+              <td>99.6</td>
+              <td>447.0</td>
+              <td>5.7e-125</td>
+          </tr>
+    
+          <tr>
+              <td>AEA29626.1</td>
+              <td>Por3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000409/1">BGC0000409</a></td>
+              <td>nrps</td>
+              <td>33.0</td>
+              <td>97.2</td>
+              <td>443.0</td>
+              <td>8.3e-124</td>
+          </tr>
+    
+          <tr>
+              <td>CAB59004.1</td>
+              <td>SnorO</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000250/1">BGC0000250</a></td>
+              <td>t2pks-saccharide</td>
+              <td>33.0</td>
+              <td>98.9</td>
+              <td>440.0</td>
+              <td>9.2e-123</td>
+          </tr>
+    
+          <tr>
+              <td>CAK50795.1</td>
+              <td>MtrX</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000247/1">BGC0000247</a></td>
+              <td>t2pks-saccharide</td>
+              <td>31.0</td>
+              <td>99.5</td>
+              <td>439.0</td>
+              <td>1.2e-122</td>
+          </tr>
+    
+          <tr>
+              <td>AET98908.1</td>
+              <td>UvrA-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000415/1">BGC0000415</a></td>
+              <td>nrps</td>
+              <td>32.0</td>
+              <td>99.0</td>
+              <td>436.0</td>
+              <td>1.3e-121</td>
+          </tr>
+    
+          <tr>
+              <td>BAE98165.1</td>
+              <td>UvrA-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000339/1">BGC0000339</a></td>
+              <td>nrps</td>
+              <td>31.0</td>
+              <td>99.0</td>
+              <td>429.0</td>
+              <td>1.6e-119</td>
+          </tr>
+    
+          <tr>
+              <td>BAH04165.1</td>
+              <td>UvrA-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000450/1">BGC0000450</a></td>
+              <td>nrps</td>
+              <td>31.0</td>
+              <td>98.9</td>
+              <td>429.0</td>
+              <td>1.6e-119</td>
+          </tr>
+    
+          <tr>
+              <td>CDG76951.1</td>
+              <td>Excinuclease_ABC_subunit_A_paralog_of_unknown_function</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001805/1">BGC0001805</a></td>
+              <td>nrps</td>
+              <td>32.0</td>
+              <td>97.1</td>
+              <td>428.0</td>
+              <td>2.8e-119</td>
+          </tr>
+    
+          <tr>
+              <td>WP_028678150.1</td>
+              <td>daunorubicin_resistance_protein_DrrC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001228/1">BGC0001228</a></td>
+              <td>nrps</td>
+              <td>31.0</td>
+              <td>99.0</td>
+              <td>424.0</td>
+              <td>5.2e-118</td>
+          </tr>
+    
+          <tr>
+              <td>ACN39729.1</td>
+              <td>SibF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000428/1">BGC0000428</a></td>
+              <td>nrps</td>
+              <td>37.0</td>
+              <td>72.1</td>
+              <td>419.0</td>
+              <td>1.3e-116</td>
+          </tr>
+    
+          <tr>
+              <td>BAI63287.1</td>
+              <td>UvrA-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000434/1">BGC0000434</a></td>
+              <td>nrps</td>
+              <td>31.0</td>
+              <td>99.9</td>
+              <td>414.0</td>
+              <td>4.1e-115</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

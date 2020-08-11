@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAF47050.1</td>
+              <td>GDP-D-mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000732/1">BGC0000732</a></td>
+              <td>saccharide</td>
+              <td>65.0</td>
+              <td>101.6</td>
+              <td>519.0</td>
+              <td>4.6e-147</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47067.1</td>
+              <td>GDP-D-mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000733/1">BGC0000733</a></td>
+              <td>saccharide</td>
+              <td>65.0</td>
+              <td>101.6</td>
+              <td>518.0</td>
+              <td>7.8e-147</td>
+          </tr>
+    
+          <tr>
+              <td>AAV34519.1</td>
+              <td>GDP-mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000788/1">BGC0000788</a></td>
+              <td>saccharide</td>
+              <td>65.0</td>
+              <td>100.0</td>
+              <td>517.0</td>
+              <td>1.7e-146</td>
+          </tr>
+    
+          <tr>
+              <td>AAC77842.1</td>
+              <td>GDP-D-mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000799/1">BGC0000799</a></td>
+              <td>saccharide</td>
+              <td>65.0</td>
+              <td>100.0</td>
+              <td>513.0</td>
+              <td>3.3e-145</td>
+          </tr>
+    
+          <tr>
+              <td>AAR90885.1</td>
+              <td>GDP-mannose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000787/1">BGC0000787</a></td>
+              <td>saccharide</td>
+              <td>65.0</td>
+              <td>100.0</td>
+              <td>503.0</td>
+              <td>2e-142</td>
+          </tr>
+    
+          <tr>
+              <td>AAC98612.1</td>
+              <td>GDP-mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000772/1">BGC0000772</a></td>
+              <td>saccharide</td>
+              <td>65.0</td>
+              <td>98.9</td>
+              <td>498.0</td>
+              <td>1.1e-140</td>
+          </tr>
+    
+          <tr>
+              <td>BAG50490.1</td>
+              <td>putative_GDP-mannose-4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000780/1">BGC0000780</a></td>
+              <td>saccharide</td>
+              <td>62.0</td>
+              <td>98.1</td>
+              <td>456.0</td>
+              <td>3.6e-128</td>
+          </tr>
+    
+          <tr>
+              <td>AAL61891.1</td>
+              <td>Gmd</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001411/1">BGC0001411</a></td>
+              <td>saccharide</td>
+              <td>61.0</td>
+              <td>95.7</td>
+              <td>436.0</td>
+              <td>3e-122</td>
+          </tr>
+    
+          <tr>
+              <td>AAN05764.1</td>
+              <td>GDP-D-mannose-dehydratase_MdhtA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000769/1">BGC0000769</a></td>
+              <td>saccharide</td>
+              <td>54.0</td>
+              <td>92.7</td>
+              <td>372.0</td>
+              <td>9e-103</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44219.1</td>
+              <td>mdhtA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000362/1">BGC0000362</a></td>
+              <td>nrps</td>
+              <td>53.0</td>
+              <td>92.7</td>
+              <td>362.0</td>
+              <td>7.2e-100</td>
+          </tr>
+    
+          <tr>
+              <td>AAS55711.1</td>
+              <td>GDP-mannose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000795/1">BGC0000795</a></td>
+              <td>saccharide</td>
+              <td>55.0</td>
+              <td>94.9</td>
+              <td>356.0</td>
+              <td>6.7e-98</td>
+          </tr>
+    
+          <tr>
+              <td>ABC42542.1</td>
+              <td>putative_mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000698/1">BGC0000698</a></td>
+              <td>saccharide</td>
+              <td>50.0</td>
+              <td>91.9</td>
+              <td>351.0</td>
+              <td>1.3e-96</td>
+          </tr>
+    
+          <tr>
+              <td>ABX18290.1</td>
+              <td>GDP-mannose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000808/2">BGC0000808</a></td>
+              <td>saccharide</td>
+              <td>50.0</td>
+              <td>92.2</td>
+              <td>341.0</td>
+              <td>1.7e-93</td>
+          </tr>
+    
+          <tr>
+              <td>BAV32153.1</td>
+              <td>GDP-mannose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001373/1">BGC0001373</a></td>
+              <td>t1pks</td>
+              <td>49.0</td>
+              <td>94.1</td>
+              <td>331.0</td>
+              <td>2.3e-90</td>
+          </tr>
+    
+          <tr>
+              <td>AAK53476.1</td>
+              <td>putative_GDP-mannose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000774/1">BGC0000774</a></td>
+              <td>saccharide</td>
+              <td>48.0</td>
+              <td>93.3</td>
+              <td>325.0</td>
+              <td>1.3e-88</td>
+          </tr>
+    
+          <tr>
+              <td>ACG60774.1</td>
+              <td>GDP-mannose-4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001058/1">BGC0001058</a></td>
+              <td>nrps-t1pks-saccharide</td>
+              <td>47.0</td>
+              <td>94.6</td>
+              <td>322.0</td>
+              <td>6.3e-88</td>
+          </tr>
+    
+          <tr>
+              <td>CAC20923.1</td>
+              <td>PimJ_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000125/1">BGC0000125</a></td>
+              <td>t1pks</td>
+              <td>45.0</td>
+              <td>96.8</td>
+              <td>293.0</td>
+              <td>4.1e-79</td>
+          </tr>
+    
+          <tr>
+              <td>ADU85990.1</td>
+              <td>putative_GDP-D-mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000165/1">BGC0000165</a></td>
+              <td>t1pks</td>
+              <td>45.0</td>
+              <td>94.9</td>
+              <td>293.0</td>
+              <td>5.3e-79</td>
+          </tr>
+    
+          <tr>
+              <td>ADX66463.1</td>
+              <td>ScnJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000108/1">BGC0000108</a></td>
+              <td>t1pks</td>
+              <td>45.0</td>
+              <td>96.8</td>
+              <td>292.0</td>
+              <td>7e-79</td>
+          </tr>
+    
+          <tr>
+              <td>AQT01391.1</td>
+              <td>SgnJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001690/1">BGC0001690</a></td>
+              <td>t1pks</td>
+              <td>45.0</td>
+              <td>96.8</td>
+              <td>292.0</td>
+              <td>1.2e-78</td>
+          </tr>
+    
+          <tr>
+              <td>BAO98800.1</td>
+              <td>putative_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001002/1">BGC0001002</a></td>
+              <td>nrps-t1pks</td>
+              <td>44.0</td>
+              <td>97.8</td>
+              <td>288.0</td>
+              <td>1.3e-77</td>
+          </tr>
+    
+          <tr>
+              <td>OJF16264.1</td>
+              <td>AceD3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001491/1">BGC0001491</a></td>
+              <td>t1pks</td>
+              <td>44.0</td>
+              <td>96.2</td>
+              <td>287.0</td>
+              <td>2.9e-77</td>
+          </tr>
+    
+          <tr>
+              <td>AAQ82569.1</td>
+              <td>FscMIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000061/1">BGC0000061</a></td>
+              <td>t1pks</td>
+              <td>44.0</td>
+              <td>97.0</td>
+              <td>284.0</td>
+              <td>1.9e-76</td>
+          </tr>
+    
+          <tr>
+              <td>AAK73500.1</td>
+              <td>AmphDIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000015/1">BGC0000015</a></td>
+              <td>t1pks</td>
+              <td>42.0</td>
+              <td>97.0</td>
+              <td>284.0</td>
+              <td>3.2e-76</td>
+          </tr>
+    
+          <tr>
+              <td>AVX51097.1</td>
+              <td>nysDIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001709/1">BGC0001709</a></td>
+              <td>polyketide</td>
+              <td>43.0</td>
+              <td>97.0</td>
+              <td>284.0</td>
+              <td>3.2e-76</td>
+          </tr>
+    
+          <tr>
+              <td>ABV83220.1</td>
+              <td>CppDIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000116/1">BGC0000116</a></td>
+              <td>t1pks</td>
+              <td>43.0</td>
+              <td>97.0</td>
+              <td>282.0</td>
+              <td>1.2e-75</td>
+          </tr>
+    
+          <tr>
+              <td>AAF71765.1</td>
+              <td>NysDIII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000115/1">BGC0000115</a></td>
+              <td>t1pks-saccharide</td>
+              <td>43.0</td>
+              <td>97.0</td>
+              <td>280.0</td>
+              <td>2.7e-75</td>
+          </tr>
+    
+          <tr>
+              <td>AET51847.1</td>
+              <td>GDP-D-manose-4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001138/1">BGC0001138</a></td>
+              <td>other</td>
+              <td>44.0</td>
+              <td>94.6</td>
+              <td>276.0</td>
+              <td>6.7e-74</td>
+          </tr>
+    
+          <tr>
+              <td>ADU85982.1</td>
+              <td>putative_GDP-D-mannose_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000165/1">BGC0000165</a></td>
+              <td>t1pks</td>
+              <td>42.0</td>
+              <td>93.3</td>
+              <td>271.0</td>
+              <td>1.7e-72</td>
+          </tr>
+    
+          <tr>
+              <td>CAD27644.1</td>
+              <td>Ata12_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000873/1">BGC0000873</a></td>
+              <td>other</td>
+              <td>42.0</td>
+              <td>95.2</td>
+              <td>260.0</td>
+              <td>3.8e-69</td>
+          </tr>
+    
+          <tr>
+              <td>ADV15440.1</td>
+              <td>GDP-mannose_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000165/1">BGC0000165</a></td>
+              <td>t1pks</td>
+              <td>40.0</td>
+              <td>94.9</td>
+              <td>259.0</td>
+              <td>1.1e-68</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AIE77055.1</td>
+              <td>prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000418/1">BGC0000418</a></td>
+              <td>nrps</td>
+              <td>23.0</td>
+              <td>88.3</td>
+              <td>74.0</td>
+              <td>2.4e-13</td>
+          </tr>
+    
+          <tr>
+              <td>AEI58863.1</td>
+              <td>prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000455/1">BGC0000455</a></td>
+              <td>nrps</td>
+              <td>22.0</td>
+              <td>85.9</td>
+              <td>74.0</td>
+              <td>3.1e-13</td>
+          </tr>
+    
+          <tr>
+              <td>EME52992.1</td>
+              <td>prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001460/1">BGC0001460</a></td>
+              <td>nrps</td>
+              <td>22.0</td>
+              <td>85.9</td>
+              <td>72.0</td>
+              <td>1.5e-12</td>
+          </tr>
+    
+          <tr>
+              <td>OKA09421.1</td>
+              <td>prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001459/1">BGC0001459</a></td>
+              <td>nrps</td>
+              <td>23.0</td>
+              <td>85.9</td>
+              <td>71.0</td>
+              <td>2e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAG25755.1</td>
+              <td>putative_prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000311/1">BGC0000311</a></td>
+              <td>nrps</td>
+              <td>22.0</td>
+              <td>85.9</td>
+              <td>70.0</td>
+              <td>5.9e-12</td>
+          </tr>
+    
+          <tr>
+              <td>AIG79245.1</td>
+              <td>Hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000419/1">BGC0000419</a></td>
+              <td>nrps-saccharide</td>
+              <td>22.0</td>
+              <td>85.9</td>
+              <td>69.0</td>
+              <td>7.7e-12</td>
+          </tr>
+    
+          <tr>
+              <td>CAA11792.1</td>
+              <td>PCZA363.1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000322/1">BGC0000322</a></td>
+              <td>nrps</td>
+              <td>22.0</td>
+              <td>85.9</td>
+              <td>69.0</td>
+              <td>1e-11</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ52459.1</td>
+              <td>prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001462/1">BGC0001462</a></td>
+              <td>nrps</td>
+              <td>23.0</td>
+              <td>85.9</td>
+              <td>68.0</td>
+              <td>1.7e-11</td>
+          </tr>
+    
+          <tr>
+              <td>ABD65943.1</td>
+              <td>prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000341/1">BGC0000341</a></td>
+              <td>nrps</td>
+              <td>22.0</td>
+              <td>84.6</td>
+              <td>68.0</td>
+              <td>2.2e-11</td>
+          </tr>
+    
+          <tr>
+              <td>AVI10265.1</td>
+              <td>putative_prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001592/1">BGC0001592</a></td>
+              <td>other</td>
+              <td>31.0</td>
+              <td>46.0</td>
+              <td>66.0</td>
+              <td>6.5e-11</td>
+          </tr>
+    
+          <tr>
+              <td>CAD91200.1</td>
+              <td>putative_prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000289/1">BGC0000289</a></td>
+              <td>nrps-saccharide</td>
+              <td>21.0</td>
+              <td>85.9</td>
+              <td>65.0</td>
+              <td>1.4e-10</td>
+          </tr>
+    
+          <tr>
+              <td>BAM73624.1</td>
+              <td>putative_prephenate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000889/1">BGC0000889</a></td>
+              <td>other</td>
+              <td>28.0</td>
+              <td>45.0</td>
+              <td>65.0</td>
+              <td>1.4e-10</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

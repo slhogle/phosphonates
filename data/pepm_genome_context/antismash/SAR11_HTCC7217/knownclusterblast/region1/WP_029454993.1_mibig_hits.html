@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAF47059.1</td>
+              <td>multimeric_putative_translocation_channel</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000733/1">BGC0000733</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>98.7</td>
+              <td>116.0</td>
+              <td>6.8e-26</td>
+          </tr>
+    
+          <tr>
+              <td>BAF46980.1</td>
+              <td>multimeric_putative_translocation_channel</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000728/1">BGC0000728</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>95.4</td>
+              <td>116.0</td>
+              <td>1.2e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAF46996.1</td>
+              <td>multimeric_putative_translocation_channel</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000729/1">BGC0000729</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>95.4</td>
+              <td>116.0</td>
+              <td>1.2e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47012.1</td>
+              <td>multimeric_putative_translocation_channel</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000730/1">BGC0000730</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>98.1</td>
+              <td>112.0</td>
+              <td>1.7e-24</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47027.1</td>
+              <td>multimeric_putative_translocation_channel</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000731/1">BGC0000731</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>98.1</td>
+              <td>112.0</td>
+              <td>1.7e-24</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47042.1</td>
+              <td>multimeric_putative_translocation_channel</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000732/1">BGC0000732</a></td>
+              <td>saccharide</td>
+              <td>26.0</td>
+              <td>98.1</td>
+              <td>111.0</td>
+              <td>3.8e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ASA76652.1</td>
+              <td>sugar_ABC_transporter_substrate_binding_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001751/1">BGC0001751</a></td>
+              <td>nrps-t1pks</td>
+              <td>24.0</td>
+              <td>98.4</td>
+              <td>109.0</td>
+              <td>1.4e-23</td>
+          </tr>
+    
+          <tr>
+              <td>CAB57195.1</td>
+              <td>putative_outer_membrane_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000760/1">BGC0000760</a></td>
+              <td>saccharide</td>
+              <td>29.0</td>
+              <td>66.1</td>
+              <td>103.0</td>
+              <td>6e-22</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

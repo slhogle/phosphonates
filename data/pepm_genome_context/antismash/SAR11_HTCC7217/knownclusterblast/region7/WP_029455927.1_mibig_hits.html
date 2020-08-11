@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AVE17169.1</td>
+              <td>BkdC2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001534/1">BGC0001534</a></td>
+              <td>other</td>
+              <td>34.0</td>
+              <td>105.5</td>
+              <td>175.0</td>
+              <td>1.5e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AQW44895.1</td>
+              <td>phenylpyruvate_dehydrogenase_complex,_E2_component_and_acyl_carrier_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001737/1">BGC0001737</a></td>
+              <td>nrps-t1pks</td>
+              <td>26.0</td>
+              <td>100.2</td>
+              <td>152.0</td>
+              <td>1.3e-36</td>
+          </tr>
+    
+          <tr>
+              <td>AVE17172.1</td>
+              <td>BkdC1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001535/1">BGC0001535</a></td>
+              <td>other</td>
+              <td>33.0</td>
+              <td>105.7</td>
+              <td>146.0</td>
+              <td>7.3e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AGN74889.1</td>
+              <td>branched-chain_alpha-keto_acid_dehydrogenase_E2</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000459/1">BGC0000459</a></td>
+              <td>nrps-transatpks</td>
+              <td>28.0</td>
+              <td>108.7</td>
+              <td>146.0</td>
+              <td>9.5e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AGC45625.1</td>
+              <td>alpha_keto_acid_dehydrogenase_complex,_E2_component,_dihydrolipoamide_acetyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001394/1">BGC0001394</a></td>
+              <td>nrps-t1pks</td>
+              <td>31.0</td>
+              <td>99.1</td>
+              <td>138.0</td>
+              <td>3.4e-32</td>
+          </tr>
+    
+          <tr>
+              <td>AQW44876.1</td>
+              <td>phenylpyruvate_dehydrogenase_complex,_E2_component_and_acyl_carrier_protein_domain</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001761/1">BGC0001761</a></td>
+              <td>polyketide</td>
+              <td>24.0</td>
+              <td>98.2</td>
+              <td>138.0</td>
+              <td>3.4e-32</td>
+          </tr>
+    
+          <tr>
+              <td>ASA49556.1</td>
+              <td>E2_duhyrolipoyl_acyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001730/1">BGC0001730</a></td>
+              <td>polyketide</td>
+              <td>23.0</td>
+              <td>105.2</td>
+              <td>89.0</td>
+              <td>1.8e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AGD80611.1</td>
+              <td>transketolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000394/1">BGC0000394</a></td>
+              <td>nrps</td>
+              <td>28.0</td>
+              <td>39.6</td>
+              <td>82.0</td>
+              <td>1.7e-15</td>
+          </tr>
+    
+          <tr>
+              <td>WP_030624999.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001771/1">BGC0001771</a></td>
+              <td>nrps</td>
+              <td>24.0</td>
+              <td>64.2</td>
+              <td>76.0</td>
+              <td>9.3e-14</td>
+          </tr>
+    
+          <tr>
+              <td>CAE15170.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001736/1">BGC0001736</a></td>
+              <td>nrps</td>
+              <td>28.0</td>
+              <td>34.6</td>
+              <td>72.0</td>
+              <td>2.3e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

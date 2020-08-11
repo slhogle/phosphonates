@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AQX77698.1</td>
+              <td>NocT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001704/1">BGC0001704</a></td>
+              <td>other</td>
+              <td>40.0</td>
+              <td>82.0</td>
+              <td>422.0</td>
+              <td>9.7e-118</td>
+          </tr>
+    
+          <tr>
+              <td>AKL71653.1</td>
+              <td>NocT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001703/1">BGC0001703</a></td>
+              <td>other</td>
+              <td>39.0</td>
+              <td>86.1</td>
+              <td>416.0</td>
+              <td>9.1e-116</td>
+          </tr>
+    
+          <tr>
+              <td>AWI62630.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001822/1">BGC0001822</a></td>
+              <td>nrps</td>
+              <td>30.0</td>
+              <td>65.7</td>
+              <td>174.0</td>
+              <td>4.6e-43</td>
+          </tr>
+    
+          <tr>
+              <td>AEA30257.1</td>
+              <td>putative_ABC1-family_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000429/1">BGC0000429</a></td>
+              <td>nrps</td>
+              <td>30.0</td>
+              <td>65.4</td>
+              <td>164.0</td>
+              <td>4.8e-40</td>
+          </tr>
+    
+          <tr>
+              <td>AQX77683.1</td>
+              <td>NocF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001704/1">BGC0001704</a></td>
+              <td>other</td>
+              <td>26.0</td>
+              <td>67.8</td>
+              <td>155.0</td>
+              <td>2.9e-37</td>
+          </tr>
+    
+          <tr>
+              <td>CBD77728.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000974/1">BGC0000974</a></td>
+              <td>nrps-t1pks</td>
+              <td>29.0</td>
+              <td>54.9</td>
+              <td>146.0</td>
+              <td>1e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AIR74909.1</td>
+              <td>ABC-1_domain_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001559/1">BGC0001559</a></td>
+              <td>other</td>
+              <td>29.0</td>
+              <td>54.9</td>
+              <td>146.0</td>
+              <td>1e-34</td>
+          </tr>
+    
+          <tr>
+              <td>AKL71639.1</td>
+              <td>NocF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001703/1">BGC0001703</a></td>
+              <td>other</td>
+              <td>25.0</td>
+              <td>67.6</td>
+              <td>144.0</td>
+              <td>3.9e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CCE88383.1</td>
+              <td>ABC_transporter_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001034/1">BGC0001034</a></td>
+              <td>nrps-t1pks</td>
+              <td>29.0</td>
+              <td>55.5</td>
+              <td>141.0</td>
+              <td>4.3e-33</td>
+          </tr>
+    
+          <tr>
+              <td>AAM94780.1</td>
+              <td>CalR3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000033/1">BGC0000033</a></td>
+              <td>t1pks</td>
+              <td>23.0</td>
+              <td>62.0</td>
+              <td>132.0</td>
+              <td>2e-30</td>
+          </tr>
+    
+          <tr>
+              <td>ASA76647.1</td>
+              <td>ABC_transporter_like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001751/1">BGC0001751</a></td>
+              <td>nrps-t1pks</td>
+              <td>34.0</td>
+              <td>44.8</td>
+              <td>126.0</td>
+              <td>1.9e-28</td>
+          </tr>
+    
+          <tr>
+              <td>ACB47054.1</td>
+              <td>DynR3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001060/1">BGC0001060</a></td>
+              <td>t1pks+t2pks</td>
+              <td>25.0</td>
+              <td>63.8</td>
+              <td>109.0</td>
+              <td>2.4e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AME17996.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001804/1">BGC0001804</a></td>
+              <td>polyketide</td>
+              <td>23.0</td>
+              <td>59.7</td>
+              <td>101.0</td>
+              <td>4.9e-21</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

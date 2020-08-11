@@ -1,0 +1,87 @@
+<svg version="1.1" preserveAspectRatio="none" width="800" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" height="230" x="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 230"  >
+<g label="Query sequence" class="clusterblast-cluster"  >
+<text class="clusterblast-acc" y="20" x="5"  >
+Query sequence</text>
+<line style="stroke-width:1; stroke:grey; " y1="35" x2="778.0" y2="35" x1="10"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="0,35 5,30 18,30 18,40 5,40 0,35 " description="&lt;b&gt;P773_RS0102035&lt;/b&gt;&lt;br&gt;phosphate regulon transcriptional regulatory protein PhoB&lt;br&gt;Location: 349897 - 350581" id="dummy-3_q0_0_all" locus_tag="P773_RS0102035"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5cd815; " points="18,35 23,30 36,30 36,40 23,40 18,35 " description="&lt;b&gt;P773_RS0102040&lt;/b&gt;&lt;br&gt;phosphate transport system regulatory protein PhoU&lt;br&gt;Location: 350584 - 351292" id="dummy-3_q1_0_all" locus_tag="P773_RS0102040"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15a3d8; " points="36,35 41,30 56,30 56,40 41,40 36,35 " description="&lt;b&gt;P773_RS0102045&lt;/b&gt;&lt;br&gt;phosphate ABC transporter ATP-binding protein&lt;br&gt;Location: 351291 - 352047" id="dummy-3_q2_0_all" locus_tag="P773_RS0102045"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#c715d8; " points="56,35 61,30 89,30 89,40 61,40 56,35 " description="&lt;b&gt;P773_RS0102050&lt;/b&gt;&lt;br&gt;phosphate ABC transporter, permease protein PstA&lt;br&gt;Location: 352050 - 353322" id="dummy-3_q3_0_all" locus_tag="P773_RS0102050"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d88015; " points="89,35 94,30 125,30 125,40 94,40 89,35 " description="&lt;b&gt;P773_RS0102055&lt;/b&gt;&lt;br&gt;phosphate ABC transporter permease subunit PstC&lt;br&gt;Location: 353314 - 354700" id="dummy-3_q4_0_all" locus_tag="P773_RS0102055"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d839; " points="127,35 132,30 154,30 154,40 132,40 127,35 " description="&lt;b&gt;P773_RS0102060&lt;/b&gt;&lt;br&gt;phosphate-binding protein&lt;br&gt;Location: 354775 - 355810" id="dummy-3_q5_0_all" locus_tag="P773_RS0102060"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="157,35 162,30 172,30 172,40 162,40 157,35 " description="&lt;b&gt;P773_RS0102065&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 355916 - 356483" id="dummy-3_q6_0_all" locus_tag="P773_RS0102065"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1539d8; " points="176,35 181,30 206,30 206,40 181,40 176,35 " description="&lt;b&gt;P773_RS0102070&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 356628 - 357777" id="dummy-3_q7_0_all" locus_tag="P773_RS0102070"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="208,40 224,40 229,35 224,30 208,30 208,40 " description="&lt;b&gt;P773_RS0102075&lt;/b&gt;&lt;br&gt;GNAT family N-acetyltransferase&lt;br&gt;Location: 357848 - 358676" id="dummy-3_q8_0_all" locus_tag="P773_RS0102075"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81580; " points="229,40 244,40 249,35 244,30 229,30 229,40 " description="&lt;b&gt;P773_RS0102080&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 358675 - 359413" id="dummy-3_q9_0_all" locus_tag="P773_RS0102080"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="249,35 254,30 275,30 275,40 254,40 249,35 " description="&lt;b&gt;P773_RS0102085&lt;/b&gt;&lt;br&gt;glycosyltransferase family 1 protein&lt;br&gt;Location: 359405 - 360410" id="dummy-3_q10_0_all" locus_tag="P773_RS0102085"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="275,35 280,30 297,30 297,40 280,40 275,35 " description="&lt;b&gt;P773_RS0102090&lt;/b&gt;&lt;br&gt;UDP-2,3-diacylglucosamine diphosphatase&lt;br&gt;Location: 360412 - 361246" id="dummy-3_q11_0_all" locus_tag="P773_RS0102090"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="299,40 317,40 322,35 317,30 299,30 299,40 " description="&lt;b&gt;P773_RS0102095&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 361330 - 362221" id="dummy-3_q12_0_all" locus_tag="P773_RS0102095"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="324,40 324,40 329,35 324,30 324,30 324,40 " description="&lt;b&gt;P773_RS0102100&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 362290 - 362500" id="dummy-3_q13_0_all" locus_tag="P773_RS0102100"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="335,35 340,30 363,30 363,40 340,40 335,35 " description="&lt;b&gt;P773_RS0102105&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 362701 - 363799" id="dummy-3_q14_0_all" locus_tag="P773_RS0102105"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="363,35 368,30 392,30 392,40 368,40 363,35 " description="&lt;b&gt;P773_RS0102110&lt;/b&gt;&lt;br&gt;phosphonopyruvate decarboxylase&lt;br&gt;Location: 363795 - 364893" id="dummy-3_q15_0_all" locus_tag="P773_RS0102110"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="392,35 397,30 426,30 426,40 397,40 392,35 " description="&lt;b&gt;P773_RS0102115&lt;/b&gt;&lt;br&gt;phosphoenolpyruvate mutase&lt;br&gt;Location: 364885 - 366187" id="dummy-3_q16_0_all" locus_tag="P773_RS0102115"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="426,35 431,30 460,30 460,40 431,40 426,35 " description="&lt;b&gt;P773_RS0102120&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 366183 - 367488" id="dummy-3_q17_0_all" locus_tag="P773_RS0102120"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="463,35 468,30 492,30 492,40 468,40 463,35 " description="&lt;b&gt;P773_RS0102125&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 367607 - 368726" id="dummy-3_q18_0_all" locus_tag="P773_RS0102125"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="493,35 498,30 525,30 525,40 498,40 493,35 " description="&lt;b&gt;P773_RS0102130&lt;/b&gt;&lt;br&gt;mannose-6-phosphate isomerase&lt;br&gt;Location: 368750 - 369956" id="dummy-3_q19_0_all" locus_tag="P773_RS0102130"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="525,35 530,30 570,30 570,40 530,40 525,35 " description="&lt;b&gt;P773_RS0102135&lt;/b&gt;&lt;br&gt;dihydroxy-acid dehydratase&lt;br&gt;Location: 369955 - 371674" id="dummy-3_q20_0_all" locus_tag="P773_RS0102135"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="569,35 574,30 638,30 638,40 574,40 569,35 " description="&lt;b&gt;P773_RS0102140&lt;/b&gt;&lt;br&gt;valine--tRNA ligase&lt;br&gt;Location: 371673 - 374301" id="dummy-3_q21_0_all" locus_tag="P773_RS0102140"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="649,35 654,30 659,30 659,40 654,40 649,35 " description="&lt;b&gt;P773_RS0102155&lt;/b&gt;&lt;br&gt;XRE family transcriptional regulator&lt;br&gt;Location: 374716 - 375088" id="dummy-3_q22_0_all" locus_tag="P773_RS0102155"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15a3d8; " points="664,35 669,30 683,30 683,40 669,40 664,35 " description="&lt;b&gt;P773_RS0102160&lt;/b&gt;&lt;br&gt;amino acid ABC transporter ATP-binding protein&lt;br&gt;Location: 375275 - 376010" id="dummy-3_q23_0_all" locus_tag="P773_RS0102160"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#c7d815; " points="683,35 688,30 721,30 721,40 688,40 683,35 " description="&lt;b&gt;P773_RS0102165&lt;/b&gt;&lt;br&gt;amino acid ABC transporter permease&lt;br&gt;Location: 376009 - 377452" id="dummy-3_q24_0_all" locus_tag="P773_RS0102165"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d8a3; " points="721,35 726,30 751,30 751,40 726,40 721,35 " description="&lt;b&gt;P773_RS0102170&lt;/b&gt;&lt;br&gt;amino acid ABC transporter permease&lt;br&gt;Location: 377451 - 378597" id="dummy-3_q25_0_all" locus_tag="P773_RS0102170"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5c15d8; " points="753,35 758,30 780,30 780,40 758,40 753,35 " description="&lt;b&gt;P773_RS0102175&lt;/b&gt;&lt;br&gt;amino acid ABC transporter substrate-binding protein&lt;br&gt;Location: 378669 - 379710" id="dummy-3_q26_0_all" locus_tag="P773_RS0102175"  />
+</g>
+<g label="NC_007626" class="clusterblast-cluster" description="NC_007626_c1: Magnetospirillum magneticum AMB-1 DNA, complete genome (37% of genes show similarity), terpene"  >
+<text class="clusterblast-acc" y="70" x="5"  >
+<a xlink:href="https://antismash-db.secondarymetabolites.org/go/NC_007626/1" target="_blank">NC_007626_c1</a>: Magnetospirillum magneticum AMB-1 DNA, complete genome (37% of genes show similarity), terpene</text>
+<line style="stroke-width:1; stroke:grey; " y1="85" x2="778.0" y2="85" x1="10"  />
+</g>
+<g id="a3_000"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="114,85 119,80 218,80 218,90 119,90 114,85 " description="&lt;b&gt;AMB_RS06885&lt;/b&gt;&lt;br&gt;peptide synthetase&lt;br&gt;Location: 1471870 - 1475846" id="dummy-3_h3_2_0" locus_tag="AMB_RS06885"  />
+</g>
+<g id="a3_001"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="218,85 223,80 234,80 234,90 223,90 218,85 " description="&lt;b&gt;AMB_RS06890&lt;/b&gt;&lt;br&gt;4'-phosphopantetheinyl transferase&lt;br&gt;Location: 1475843 - 1476457" id="dummy-3_h3_2_1" locus_tag="AMB_RS06890"  />
+</g>
+<g id="a3_002"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="236,90 262,90 267,85 262,80 236,80 236,90 " description="&lt;b&gt;AMB_RS06895&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 1476518 - 1477699" id="dummy-3_h3_2_2" locus_tag="AMB_RS06895"  />
+</g>
+<g id="a3_003"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="267,90 306,90 311,85 306,80 267,80 267,90 " description="&lt;b&gt;AMB_RS06900&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 1477696 - 1479378" id="dummy-3_h3_2_3" locus_tag="AMB_RS06900"  />
+</g>
+<g id="a3_004"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="317,90 338,90 343,85 338,80 317,80 317,90 " description="&lt;b&gt;AMB_RS06905&lt;/b&gt;&lt;br&gt;NAD-dependent dehydratase&lt;br&gt;Location: 1479613 - 1480605" id="dummy-3_h3_2_4" locus_tag="AMB_RS06905"  />
+</g>
+<g id="a3_005"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="343,90 368,90 373,85 368,80 343,80 343,90 " description="&lt;b&gt;AMB_RS06910&lt;/b&gt;&lt;br&gt;glycosyl transferase&lt;br&gt;Location: 1480602 - 1481765" id="dummy-3_h3_2_5" locus_tag="AMB_RS06910"  />
+</g>
+<g id="a3_006"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="373,90 391,90 396,85 391,80 373,80 373,90 " description="&lt;b&gt;AMB_RS06915&lt;/b&gt;&lt;br&gt;squalene synthase HpnD&lt;br&gt;Location: 1481771 - 1482631" id="dummy-3_h3_2_6" locus_tag="AMB_RS06915"  />
+</g>
+<g id="a3_007"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="397,90 443,90 448,85 443,80 397,80 397,90 " description="&lt;b&gt;AMB_RS06920&lt;/b&gt;&lt;br&gt;squalene--hopene cyclase&lt;br&gt;Location: 1482658 - 1484612" id="dummy-3_h3_2_7" locus_tag="AMB_RS06920"  />
+</g>
+<g id="a3_008"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="453,90 465,90 470,85 465,80 453,80 453,90 " description="&lt;b&gt;AMB_RS06925&lt;/b&gt;&lt;br&gt;nucleoside phosphorylase&lt;br&gt;Location: 1484823 - 1485473" id="dummy-3_h3_2_8" locus_tag="AMB_RS06925"  />
+</g>
+<g id="a3_009"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="469,85 474,80 499,80 499,90 474,90 469,85 " description="&lt;b&gt;AMB_RS06930&lt;/b&gt;&lt;br&gt;hopanoid biosynthesis associated radical SAM protein HpnH&lt;br&gt;Location: 1485420 - 1486571" id="dummy-3_h3_2_9" locus_tag="AMB_RS06930"  />
+</g>
+<g id="a3_0010"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="505,85 510,80 524,80 524,90 510,90 505,85 " description="&lt;b&gt;AMB_RS06935&lt;/b&gt;&lt;br&gt;phosphate regulon transcriptional regulatory protein PhoB&lt;br&gt;Location: 1486809 - 1487531&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102035&lt;/b&gt;&lt;br&gt;Percentage identity: 53&lt;br&gt;Percentage coverage: 98&lt;br&gt;BLAST bit score: 256&lt;br&gt;E-value: 2.5e-66" id="dummy-3_h3_2_10" locus_tag="AMB_RS06935"  />
+</g>
+<g id="a3_0011"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5cd815; " points="524,85 529,80 542,80 542,90 529,90 524,85 " description="&lt;b&gt;AMB_RS06940&lt;/b&gt;&lt;br&gt;phosphate transport system regulatory protein PhoU&lt;br&gt;Location: 1487531 - 1488226&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102040&lt;/b&gt;&lt;br&gt;Percentage identity: 37&lt;br&gt;Percentage coverage: 94&lt;br&gt;BLAST bit score: 146&lt;br&gt;E-value: 3.7e-33" id="dummy-3_h3_2_11" locus_tag="AMB_RS06940"  />
+</g>
+<g id="a3_0012"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15a3d8; " points="546,85 551,80 566,80 566,90 551,90 546,85 " description="&lt;b&gt;AMB_RS06945&lt;/b&gt;&lt;br&gt;phosphate ABC transporter ATP-binding protein&lt;br&gt;Location: 1488367 - 1489146&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102045&lt;/b&gt;&lt;br&gt;Percentage identity: 68&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 359&lt;br&gt;E-value: 3.9e-97&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102160&lt;/b&gt;&lt;br&gt;Percentage identity: 36&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 149&lt;br&gt;E-value: 3.5e-34" id="dummy-3_h3_2_12" locus_tag="AMB_RS06945"  />
+</g>
+<g id="a3_0013"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#c715d8; " points="566,85 571,80 601,80 601,90 571,90 566,85 " description="&lt;b&gt;AMB_RS06950&lt;/b&gt;&lt;br&gt;phosphate ABC transporter, permease protein PstA&lt;br&gt;Location: 1489154 - 1490458&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102050&lt;/b&gt;&lt;br&gt;Percentage identity: 48&lt;br&gt;Percentage coverage: 98&lt;br&gt;BLAST bit score: 362&lt;br&gt;E-value: 7.8e-98" id="dummy-3_h3_2_13" locus_tag="AMB_RS06950"  />
+</g>
+<g id="a3_0014"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d88015; " points="600,85 605,80 636,80 636,90 605,90 600,85 " description="&lt;b&gt;AMB_RS06955&lt;/b&gt;&lt;br&gt;phosphate ABC transporter permease subunit PstC&lt;br&gt;Location: 1490451 - 1491824&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102055&lt;/b&gt;&lt;br&gt;Percentage identity: 43&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 333&lt;br&gt;E-value: 3.2e-89" id="dummy-3_h3_2_14" locus_tag="AMB_RS06955"  />
+</g>
+<g id="a3_0015"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d839; " points="638,85 643,80 665,80 665,90 643,90 638,85 " description="&lt;b&gt;AMB_RS06960&lt;/b&gt;&lt;br&gt;phosphate ABC transporter substrate-binding protein&lt;br&gt;Location: 1491883 - 1492908&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102060&lt;/b&gt;&lt;br&gt;Percentage identity: 47&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 289&lt;br&gt;E-value: 5.2e-76" id="dummy-3_h3_2_15" locus_tag="AMB_RS06960"  />
+</g>
+</svg>

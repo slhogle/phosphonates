@@ -1,0 +1,562 @@
+ClusterBlast scores for NZ_JNAS01000002
+
+Table of genes, locations, strands and annotations of query cluster:
+EV02_RS09110	1058959	1059691	+	SAM-dependent methyltransferase	
+EV02_RS00830	1060533	1060764	+	acyltransferase	
+EV02_RS00825	1060835	1061501	+	acyltransferase	
+EV02_RS00820	1061501	1062287	+	hypothetical protein	
+EV02_RS00815	1063028	1063469	-	hypothetical protein	
+EV02_RS00810	1063924	1064965	-	hypothetical protein	
+EV02_RS00805	1065123	1065597	-	hypothetical protein	
+EV02_RS00800	1065596	1067999	-	hypothetical protein	
+EV02_RS00795	1068089	1069193	+	hypothetical protein	
+EV02_RS0108935	1069194	1070301	+	hypothetical protein	
+EV02_RS00790	1070297	1071644	+	hypothetical protein	
+EV02_RS00785	1071643	1072846	+	hypothetical protein	
+EV02_RS00780	1072842	1073955	+	hypothetical protein	
+EV02_RS00775	1073947	1075363	+	hypothetical protein	
+EV02_RS00770	1075418	1076681	+	hypothetical protein	
+EV02_RS00765	1076710	1077571	-	exosortase/archaeosortase family protein	
+EV02_RS00760	1077567	1078224	-	hypothetical protein	
+EV02_RS00755	1078227	1078770	-	hypothetical protein	
+EV02_RS09115	1078928	1080290	+	hypothetical protein	
+EV02_RS00750	1080322	1081168	-	hypothetical protein	
+EV02_RS00745	1081245	1082262	-	GDP-L-fucose synthase	
+EV02_RS00740	1082663	1083719	+	UDP-glucose 4-epimerase GalE	
+EV02_RS0108945	1083814	1084834	+	hypothetical protein	
+EV02_RS00735	1084891	1086010	+	GDP-mannose 4,6-dehydratase	
+EV02_RS00730	1086009	1087464	+	mannose-1-phosphate guanylyltransferase/mannose-6-phosphate isomerase	
+EV02_RS00725	1087480	1088920	-	nucleotide sugar dehydrogenase	
+EV02_RS00720	1089138	1089969	-	hypothetical protein	
+EV02_RS00715	1090115	1091048	+	hypothetical protein	
+EV02_RS0108950	1091079	1092246	+	hypothetical protein	
+EV02_RS00710	1092361	1093672	+	phosphoenolpyruvate mutase	
+EV02_RS00705	1093664	1094810	+	phosphonopyruvate decarboxylase	
+EV02_RS00700	1094810	1095941	+	hypothetical protein	
+EV02_RS09255	1095949	1097257	-	O-antigen ligase domain-containing protein	
+EV02_RS00685	1097583	1098210	+	hypothetical protein	
+EV02_RS0108955	1098211	1098436	-	hypothetical protein	
+EV02_RS00680	1098455	1099319	-	16S rRNA (cytidine(1402)-2'-O)-methyltransferase	
+EV02_RS00675	1099322	1100222	+	3'(2'),5'-bisphosphate nucleotidase CysQ	
+EV02_RS00670	1100225	1102391	-	polyribonucleotide nucleotidyltransferase	
+EV02_RS00665	1102561	1102864	-	30S ribosomal protein S14	
+EV02_RS00660	1102926	1104006	-	RIP metalloprotease RseP	
+EV02_RS00655	1104015	1105293	-	serine--tRNA ligase	
+EV02_RS00650	1105415	1106882	-	ATPase AAA	
+EV02_RS00645	1106896	1108039	-	membrane protein insertase YidC	
+EV02_RS00640	1108101	1108524	-	ribonuclease P	
+EV02_RS00635	1108520	1108907	-	ribonuclease P	
+EV02_RS00630	1108919	1109057	-	50S ribosomal protein L34	
+EV02_RS00625	1109087	1109666	-	DUF2808 domain-containing protein	
+EV02_RS00620	1109733	1110117	-	chorismate mutase	
+EV02_RS00615	1110123	1110933	-	signal peptide peptidase SppA	
+EV02_RS00610	1110985	1111927	+	EamA family transporter	
+EV02_RS00605	1111955	1113032	+	glycosyl transferase	
+EV02_RS00600	1113038	1114844	+	glycosyl transferase	
+EV02_RS00595	1114840	1115092	-	hypothetical protein	
+EV02_RS0108960	1115173	1115968	-	malate transporter	
+EV02_RS00590	1116173	1116398	-	hypothetical protein	
+EV02_RS00585	1116479	1116737	-	MtN3 and saliva related protein	
+EV02_RS00580	1116754	1117489	-	hypothetical protein	
+EV02_RS00575	1117630	1118155	+	flavodoxin FldA	
+EV02_RS00570	1118298	1119357	+	chlorophyll a/b binding light-harvesting protein	
+EV02_RS00565	1119434	1120088	+	DUF3386 domain-containing protein	
+EV02_RS00560	1120092	1120338	-	hypothetical protein	
+EV02_RS00555	1120447	1121086	-	methyltransferase type 11	
+EV02_RS00550	1121410	1121743	+	hypothetical protein	
+EV02_RS00545	1121764	1122151	+	DUF1824 domain-containing protein	
+
+
+Significant hits: 
+1. BGC0001411	Polysaccharide B
+2. BGC0000787	O-antigen
+3. BGC0000788	O-antigen
+4. BGC0000799	Colanic acid
+5. BGC0000780	O&K-antigen
+6. BGC0000777	Lipopolysaccharide
+7. BGC0000774	Lipopolysaccharide
+8. BGC0000362	Glycopeptidolipid
+9. BGC0000698	Hygromycin A
+10. BGC0000807	Phosphonoglycans
+11. BGC0000806	Phosphonoglycans
+
+
+Details:
+
+>>
+1. BGC0001411
+Source: Polysaccharide B
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1698
+
+Table of genes, locations, strands and annotations of subject cluster:
+AAL61888.1	AAL61888.1	222	1379	-	unknown
+AAL61889.1	AAL61889.1	1488	3146	-	unknown
+AAL61890.1	AAL61890.1	3340	4422	-	GDP-4-keto-6-deoxy-D-mannose-3,_5-epimerase-4-reductase
+AAL61891.1	AAL61891.1	4415	5488	-	Gmd
+AAL61892.1	AAL61892.1	5702	6973	+	unknown
+AAL61893.1	AAL61893.1	7267	8070	-	unknown
+AAL61894.1	AAL61894.1	8120	8467	-	unknown
+AAG26461.1	AAG26461.1	9468	9992	+	putative_transcriptional_regulatory_protein
+AAG26462.1	AAG26462.1	9996	10481	+	unknown
+AAG26463.1	AAG26463.1	10478	11761	+	unknown
+AAG26464.1	AAG26464.1	11754	12473	+	putative_glucose-1-P-cytidylyltransferase
+AAG26465.1	AAG26465.1	12493	13794	+	putative_phosphoenolpyruvate_phosphomutase
+AAG26466.1	AAG26466.1	13806	14942	+	putative_phosphoenolpyruvate_decarboxylase
+AAG26467.1	AAG26467.1	14939	16039	+	putative_2-aminoethylphosphonate_pyruvate_aminotransferase
+AAG26468.1	AAG26468.1	16059	17552	+	putative_flippase
+AAG26469.1	AAG26469.1	17556	18701	+	unknown
+AAG26470.1	AAG26470.1	18698	19567	+	putative_alpha-1,2-fucosyltransferase
+AAG26471.1	AAG26471.1	19575	20627	+	putative_UDP-glucuronic_acid_epimerase
+AAG26472.1	AAG26472.1	20630	21952	+	putative_UDP-glucose_dehydrogenase
+AAG26473.1	AAG26473.1	22235	23257	+	putative_glycosyltransferase
+AAG26474.1	AAG26474.1	23287	24333	+	putative_glycosyltransferase
+AAG26475.1	AAG26475.1	24330	25460	+	putative_polymerase
+AAG26476.1	AAG26476.1	25432	26547	+	putative_glycosyltransferase
+AAG26477.1	AAG26477.1	26540	27556	+	putative_dehydratase
+AAG26478.1	AAG26478.1	27544	28674	+	putative_epimerase
+AAG26479.1	AAG26479.1	28695	29558	+	putative_reductase
+AAG26480.1	AAG26480.1	29555	30766	+	putative_glycosyltransferase
+AAG26481.1	AAG26481.1	30789	31796	+	putative_dehydratase
+AAG26482.1	AAG26482.1	31800	32750	+	putative_UndPP-QuiNAc-P-transferase
+AAG26483.1	AAG26483.1	33741	34214	+	unknown
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS0108945	AAG26471.1	50	362	102.65486725663717	6.5e-100
+EV02_RS00735	AAL61891.1	61	436	95.6989247311828	3e-122
+EV02_RS00710	AAG26465.1	59	529	98.85321100917432	4e-150
+EV02_RS00705	AAG26466.1	49	371	99.21259842519686	2.1e-102
+
+
+
+>>
+2. BGC0000787
+Source: O-antigen
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 1279
+
+Table of genes, locations, strands and annotations of subject cluster:
+AAR90882.1	AAR90882.1	1	894	+	UDP-glucose_pyrophosphorylase
+AAR90883.1	AAR90883.1	1204	2223	+	UDP-glucose_C4-epimerase
+AAR90884.1	AAR90884.1	2242	3258	+	putative_glycosyltransferase
+AAR90885.1	AAR90885.1	3285	4406	+	GDP-mannose_4,6-dehydratase
+AAR90886.1	AAR90886.1	4409	5266	+	GDP-fucose_synthetase
+AAR90887.1	AAR90887.1	5382	5882	+	GDP-mannose_mannosyl_hydrolase
+AAR90888.1	AAR90888.1	5875	7323	+	GDP-mannose_pyrophosphorylase
+AAR90889.1	AAR90889.1	7327	8700	+	phosphomannomutase
+AAR90890.1	AAR90890.1	8712	9983	+	O-antigen_flippase
+AAR90891.1	AAR90891.1	10232	10633	+	putative_O-acetyltransferase
+AAR90892.1	AAR90892.1	10641	11807	+	O-antigen_polymerase
+AAR90893.1	AAR90893.1	11808	12545	+	putative_glycosyltransferase
+AAR90894.1	AAR90894.1	12553	13452	+	putative_fucosyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00740	AAR90883.1	46	313	99.43019943019942	4.7e-85
+EV02_RS00735	AAR90885.1	65	503	100.0	2e-142
+EV02_RS00730	AAR90888.1	48	463	98.7603305785124	3e-130
+
+
+
+>>
+3. BGC0000788
+Source: O-antigen
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 975
+
+Table of genes, locations, strands and annotations of subject cluster:
+AAV34516.1	AAV34516.1	205	1200	+	UDP-GlcNAc_4-epimerase
+AAV34517.1	AAV34517.1	1443	2336	+	UDP-glucose_pyrophosporylase
+AAV34518.1	AAV34518.1	2732	3847	+	glycosyltransferase
+AAV34519.1	AAV34519.1	3869	4987	+	GDP-mannose_dehydratase
+AAV34520.1	AAV34520.1	5187	5903	+	fucose_synthetase
+AAV34521.1	AAV34521.1	5906	6406	+	GDP-mannose_mannosylhydrolase
+AAG41692.2	AAG41692.2	6399	7847	+	mannose-1-P_guanosyltransferase
+AAG41691.1	AAG41691.1	7851	9233	+	phosphomannomutase
+AAV34522.1	AAV34522.1	9230	10096	+	glycosyltransferase
+AAV34523.1	AAV34523.1	10108	11085	+	O-antigen_polymerase
+AAV34524.1	AAV34524.1	11106	12377	+	O-antigen_flippase
+AAV34525.1	AAV34525.1	12371	13165	+	glycosyltransferase
+AAV34526.1	AAV34526.1	13368	13931	+	glycosyltransferase
+AAV34527.1	AAV34527.1	14004	15410	+	6-phosphogluconate_dehydrogenase
+AAV34528.1	AAV34528.1	15527	16450	+	putative_GDP-colitose_biosynthetic_protein
+AAV34529.1	AAV34529.1	16447	17613	+	putative_GDP-colitose_biosynthetic_protein
+AAV34530.1	AAV34530.1	18691	19857	+	UDP-glucose-6-dehydrogenase
+AAV34531.1	AAV34531.1	20000	20872	+	O-antigen_chain_length_determinant
+AAV34532.1	AAV34532.1	21086	21355	+	phosphoribosyl-AMP_cyclohydrolase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00735	AAV34519.1	65	517	100.0	1.7e-146
+EV02_RS00730	AAG41692.2	48	458	98.7603305785124	1.2e-128
+
+
+
+>>
+4. BGC0000799
+Source: Colanic acid
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 954
+
+Table of genes, locations, strands and annotations of subject cluster:
+AAC77833.1	AAC77833.1	1	870	+	putative_outer_membrane_lipoprotein
+AAC77834.1	AAC77834.1	876	1319	+	putative_acid_phosphatase
+AAC77835.1	AAC77835.1	1322	3484	+	putative_membrane-associated_ATP-hydrolase
+AAC77836.1	AAC77836.1	3576	4415	+	putative_glycosyl_transferase
+AAC77837.1	AAC77837.1	4418	4906	+	putative_acetyl_transferase
+AAC77838.1	AAC77838.1	4903	6120	+	putative_glycosyltransferase
+AAC77839.1	AAC77839.1	6095	7312	+	putative_colanic_acid_polymerase
+AAC77840.1	AAC77840.1	7323	8069	+	putative_glycosyl_transferase
+AAC77841.1	AAC77841.1	8085	8633	+	putative_acetyl_transferase
+AAC77842.1	AAC77842.1	8659	9780	+	GDP-D-mannose_dehydratase
+AAC77843.1	AAC77843.1	9783	10748	+	GDP-L-fucose_synthetase
+AAC77844.1	AAC77844.1	10748	11230	+	GDP-mannose_mannosyl_hydrolase
+AAC77845.1	AAC77845.1	11227	12450	+	putative_glycosyl_transferase
+AAC77846.1	AAC77846.1	12453	13889	+	mannose-1-P_guanosyltransferase
+AAC77847.1	AAC77847.1	13994	15364	+	phosphomannomutase
+AAC77848.1	AAC77848.1	15419	16813	+	putative_UDP-glucose_lipid_carrier_transferase
+AAC77849.1	AAC77849.1	16815	18293	+	putative_export_protein
+AAC77850.1	AAC77850.1	18569	19849	+	unknown
+AAC77851.1	AAC77851.1	19846	21066	+	putative_glycosyl_transferase
+AAC77852.1	AAC77852.1	21077	22471	+	unknown
+AAC77853.1	AAC77853.1	22646	23539	+	possible_glucose-1-P_uridylyl_transferase_isozyme
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00735	AAC77842.1	65	513	100.0	3.3e-145
+EV02_RS00730	AAC77846.1	46	441	98.55371900826447	1.2e-123
+
+
+
+>>
+5. BGC0000780
+Source: O&K-antigen
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 920
+
+Table of genes, locations, strands and annotations of subject cluster:
+BAG50449.1	BAG50449.1	49	552	+	lipopolysaccharide_core_biosynthesis_protein_KdtB
+BAG50450.1	BAG50450.1	539	1474	+	putative_lipopolysaccharide_A_protein
+BAG50451.1	BAG50451.1	1523	2311	-	predicted_glycosyl_transferases
+BAG50452.1	BAG50452.1	2308	3075	-	putative_lipopolysaccharide_biosynthesis_glycosyltransferase
+BAG50453.1	BAG50453.1	3111	4166	-	putative_lipopolysaccharide_biosynthesis_protein
+BAG50454.1	BAG50454.1	4274	4681	+	diacylglycerol_kinase
+BAG50455.1	BAG50455.1	4692	5402	+	3-deoxy-D-manno-octulosonic-acid_kinase
+BAG50456.1	BAG50456.1	5495	6559	+	dTDP-D-glucose_4,6-dehydratase
+BAG50457.1	BAG50457.1	6559	7425	+	glucose-1-phosphate-thymidylyltransferase
+BAG50458.1	BAG50458.1	7426	7839	+	WblP_protein
+BAG50459.1	BAG50459.1	7826	8347	+	putative_butyryltransferase
+BAG50460.1	BAG50460.1	8347	9453	+	WblQ_protein
+BAG50461.1	BAG50461.1	9459	10388	+	putative_glycosyl_transferase
+BAG50462.1	BAG50462.1	10446	11375	-	hypothetical_protein
+BAG50463.1	BAG50463.1	11385	11798	-	hypothetical_protein
+BAG50464.1	BAG50464.1	11820	12671	-	putative_prenyltransferase
+BAG50465.1	BAG50465.1	12707	13108	+	hypothetical_protein
+BAG50466.1	BAG50466.1	13110	14393	+	putative_oxidoreductase,FAD-binding_protein
+BAG50467.1	BAG50467.1	14396	15133	+	putative_oxidoreductase,_short-chain_dehydrogenase/reductase
+BAG50468.1	BAG50468.1	15130	16752	+	hypothetical_protein
+BAG50469.1	BAG50469.1	16780	18060	-	putative_3-deoxy-D-manno-octulosonic-acid_transferase
+BAG50470.1	BAG50470.1	18190	19059	-	putative_glycosyl_transferase
+BAG50471.1	BAG50471.1	19082	20137	-	ADP-heptose-LPS_heptosyltransferase_II
+BAG50472.1	BAG50472.1	20134	20856	-	putative_Lex2B
+BAG50473.1	BAG50473.1	20853	21839	-	lipid_A_biosynthesis_lauroyl_acyltransferase
+BAG50474.1	BAG50474.1	21955	22896	-	ADP_glyceromanno-heptose_6-epimerase
+BAG50475.1	BAG50475.1	23033	25231	-	putative_OtnG_protein
+BAG50476.1	BAG50476.1	25234	25995	-	hypothetical_protein
+BAG50477.1	BAG50477.1	25992	26669	-	putative_regulator
+BAG50478.1	BAG50478.1	27128	27475	+	hypothetical_protein
+BAG50479.1	BAG50479.1	27576	28091	+	hypothetical_protein
+BAG50480.1	BAG50480.1	28158	30830	+	OtnA_protein
+BAG50481.1	BAG50481.1	31133	32101	+	OtnB_protein
+BAG50482.1	BAG50482.1	32229	32609	+	hypothetical_protein
+BAG50483.1	BAG50483.1	32600	34186	+	hypothetical_protein
+BAG50484.1	BAG50484.1	34183	34920	+	hypothetical_protein
+BAG50485.1	BAG50485.1	34877	37201	+	hypothetical_protein
+BAG50486.1	BAG50486.1	37189	38310	+	hypothetical_protein
+BAG50487.1	BAG50487.1	38310	39464	+	hypothetical_protein
+BAG50488.1	BAG50488.1	39465	40463	+	hypothetical_protein
+BAG50489.1	BAG50489.1	40465	41313	+	hypothetical_protein
+BAG50490.1	BAG50490.1	41313	42419	+	putative_GDP-mannose-4,6-dehydratase
+BAG50491.1	BAG50491.1	42503	43462	+	putative_nucleotide_di-P-sugar_epimerase_or_dehydratase
+BAG50492.1	BAG50492.1	43505	43960	+	putative_GDP-mannose_mannosylhydrolase
+BAG50493.1	BAG50493.1	43998	45440	+	putative_mannose-1-phosphate_guanylyltransferase
+BAG50494.1	BAG50494.1	45463	46890	+	putative_phosphomannomutase
+BAG50495.1	BAG50495.1	46951	48168	+	putative_mannose-6-phosphate_isomer
+BAG50496.1	BAG50496.1	48263	49072	-	predicted_glycosyl_transferases
+BAG50497.1	BAG50497.1	49074	50081	-	putative_exopolysaccharide_biosynthesis_protein
+BAG50498.1	BAG50498.1	50330	51496	+	UDP-glucose_6-dehydrogenase
+BAG50499.1	BAG50499.1	51562	52440	+	UTP-glucose-1-phosphate_uridylyltransferase
+BAG50500.1	BAG50500.1	52594	53796	+	putative_transposase
+BAG50501.1	BAG50501.1	54789	55265	+	hypothetical_protein
+BAG50502.1	BAG50502.1	55288	58110	+	hypothetical_protein
+BAG50503.1	BAG50503.1	58123	58866	+	hypothetical_protein
+BAG50504.1	BAG50504.1	58863	59483	+	hypothetical_protein
+BAG50505.1	BAG50505.1	59692	60732	+	ISSod13,_transposase
+BAG50506.1	BAG50506.1	61082	61741	-	putative_transposase
+BAG50507.1	BAG50507.1	61756	62040	-	putative_transposase
+BAG50508.1	BAG50508.1	62100	62438	-	hypothetical_protein
+BAG50509.1	BAG50509.1	62495	63265	-	triosephosphate_isomerase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00735	BAG50490.1	62	456	98.11827956989248	3.6e-128
+EV02_RS00730	BAG50493.1	48	464	98.14049586776859	1.7e-130
+
+
+
+>>
+6. BGC0000777
+Source: Lipopolysaccharide
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 790
+
+Table of genes, locations, strands and annotations of subject cluster:
+CAD19791.1	CAD19791.1	357	1613	+	putative_O_antigen_flippase
+wzy	wzy	1613	2956	+	
+CAD19793.1	CAD19793.1	2962	3822	+	putative_glycosyltransferase
+CAD19794.1	CAD19794.1	3819	4850	+	putative_glycosyltransferase
+CAD19795.1	CAD19795.1	4837	5982	+	putative_glycosyltransferase
+CAD19796.1	CAD19796.1	5999	7006	+	putative_epimerase
+CAD19797.1	CAD19797.1	7027	8232	+	putative_glycosyltransferase
+CAD19798.1	CAD19798.1	8210	9661	+	putative_mannose-1-phosphate_guanosyltransferase
+CAD19799.1	CAD19799.1	9744	11114	+	putative_phosphomannomutase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00740	CAD19796.1	46	296	98.86039886039886	4.6e-80
+EV02_RS00730	CAD19798.1	51	494	99.3801652892562	1.6e-139
+
+
+
+>>
+7. BGC0000774
+Source: Lipopolysaccharide
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 785
+
+Table of genes, locations, strands and annotations of subject cluster:
+AAK53494.1	AAK53494.1	134	772	+	putative_methyltransferase
+AAK53493.1	AAK53493.1	1054	1692	-	beta-subunit_of_putative_3-oxoacid_CoA-transferase
+AAK53462.1	AAK53462.1	1692	2420	-	alpha_subunit_of_putative_3-oxoacid_CoA-transferase
+AAA27610.1	AAA27610.1	2555	3901	+	phosphomannomutase/phosphoglucomutase
+AAK53463.1	AAK53463.1	3947	5350	+	phosphomannose_isomerase/GDP-D-mannose_pyrophosphorylase
+AAK53464.1	AAK53464.1	5472	6380	-	dTDP-4-dehydrorhamnose_reductase
+AAK53465.1	AAK53465.1	6377	6934	-	dTDP-4-dehydrorhamnose_3,5-epimerase
+AAA16191.1	AAA16191.1	6931	7818	-	glucose-1-phosphate_thymidyltransferase
+AAK53466.1	AAK53466.1	7882	8937	-	dTDP-glucose-4,6-dehydratase
+AAK53467.1	AAK53467.1	9166	9912	+	putative_electron-transferring_flavoprotein_beta_subunit
+AAK53468.1	AAK53468.1	9912	10856	+	putative_electron-transferring_flavoprotein_alpha_subunit
+AAK53469.1	AAK53469.1	10916	11263	+	WxcH
+AAK53470.1	AAK53470.1	11312	12415	+	putative_aminotransferase
+AAK53471.1	AAK53471.1	12400	13371	+	putative_glycosyltransferase
+AAK53472.1	AAK53472.1	13368	14297	+	putative_bifunctional_enzyme_WxcM
+AAK53473.1	AAK53473.1	14284	14724	+	putative_integral_membrane_protein_WxcN
+AAK53474.1	AAK53474.1	14794	17046	+	integral_membrane_protein_WxcO
+AAK53475.1	AAK53475.1	17188	18126	-	putative_NDP-hexose_epimerase/oxydoreductase
+AAK53476.1	AAK53476.1	18110	19144	-	putative_GDP-mannose_4,6-dehydratase
+AAK53477.1	AAK53477.1	19222	19857	-	putative_membrane_protein_WxcE
+AAK53478.1	AAK53478.1	19857	21602	-	putative_membrane_protein_WxcD
+AAK53479.1	AAK53479.1	21623	22684	-	putative_glycosyltransferase
+AAK53480.1	AAK53480.1	22734	25022	-	putative_kinase
+AAK53481.1	AAK53481.1	25062	26348	-	ABC_transporter
+AAK53482.1	AAK53482.1	26345	27130	-	ABC_transporter
+AAK53483.1	AAK53483.1	27214	28599	-	putative_glycosyltransferase
+AAK53484.1	AAK53484.1	28596	29795	-	cystathionine_gamma-synthase
+AAK53485.1	AAK53485.1	29889	31259	-	cystathionine_beta-lyase
+AAK53486.1	AAK53486.1	31491	31985	-	UptF
+AAK53487.1	AAK53487.1	32051	32941	-	putative_outer_membrane_protein_UptE_precursor
+AAK53488.1	AAK53488.1	32938	33321	-	putative_outer_membrane_protein_UptD_precursor
+AAK53489.1	AAK53489.1	33420	34553	+	type_II_secretion_system_protein-like_protein
+AAK53490.1	AAK53490.1	35073	35735	-	putative_maleylacetoacetate_isomerase
+AAK53491.1	AAK53491.1	35779	36768	-	putative_dioxygenase
+AAK53492.1	AAK53492.1	37148	37753	+	putative_ATP-dependent_RNA_helicase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00735	AAK53476.1	48	325	93.27956989247312	1.3e-88
+EV02_RS00730	AAK53463.1	50	460	98.34710743801654	2.5e-129
+
+
+
+>>
+8. BGC0000362
+Source: Glycopeptidolipid
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 647
+
+Table of genes, locations, strands and annotations of subject cluster:
+AAD44199.1	AAD44199.1	47	1132	+	unknown
+AAD44200.1	AAD44200.1	1524	2441	-	IS1601-D
+AAD44201.1	AAD44201.1	2441	2785	-	IS1601-C
+AAD44202.1	AAD44202.1	2837	4039	-	IS1601-B
+AAD44203.1	AAD44203.1	4298	5545	-	IS1601-A
+AAD44204.1	AAD44204.1	5791	6876	+	A-protein-like_protein
+AAD44205.1	AAD44205.1	6996	8057	+	GepiA
+AAD44206.1	AAD44206.1	8321	9448	+	MtfA
+AAD44207.1	AAD44207.1	9715	10536	+	MtfB
+AAD44208.1	AAD44208.1	10658	11935	+	GtfA
+AAD44209.1	AAD44209.1	12339	13625	+	RtfA
+AAD44210.1	AAD44210.1	13727	14527	+	MtfC
+AAD44211.1	AAD44211.1	14627	15445	+	mtfD
+AAD44212.1	AAD44212.1	16004	17236	-	transposase
+AAD44213.2	AAD44213.2	17728	18984	-	GtfB
+AAD44214.2	AAD44214.2	19126	19779	+	unknown
+AAD44215.1	AAD44215.1	20437	20781	+	transposase
+AAD44216.1	AAD44216.1	20781	21698	+	transposase
+AAD44217.2	AAD44217.2	22689	23729	-	GdhgA
+AAD44218.1	AAD44218.1	24002	24811	+	GtfC
+AAD44219.1	AAD44219.1	25020	26051	+	mdhtA
+AAD44220.1	AAD44220.1	25991	27010	+	MerA
+AAD44221.1	AAD44221.1	27286	28008	+	unknown
+AAD44222.1	AAD44222.1	28153	28953	+	GtfD
+AAD44223.1	AAD44223.1	29601	30518	-	IS1601-D
+AAD44224.1	AAD44224.1	30518	30862	-	IS1601-C
+AAD44225.1	AAD44225.1	30914	32116	-	IS1601-B
+AAD44226.1	AAD44226.1	32375	33622	-	IS1601-A
+AAD44227.1	AAD44227.1	33901	34692	-	DrrC
+AAD44228.1	AAD44228.1	34692	35432	-	DrrB
+AAD44229.1	AAD44229.1	35429	36376	-	DrrA
+AAD44230.1	AAD44230.1	36589	39513	-	TmtpC
+AAD44231.1	AAD44231.1	39572	42463	-	TmtpB
+AAD44232.1	AAD44232.1	42460	43125	-	TmtpA
+AAD44233.1	AAD44233.1	44047	54294	+	PstA
+AAD44234.1	AAD44234.1	54291	61949	+	PstB
+AAD44235.1	AAD44235.1	65266	66183	-	IS1601-D
+AAD44236.1	AAD44236.1	66183	66527	-	IS1601-C
+AAF63833.1	AAF63833.1	67088	71286	+	PstD
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00745	AAD44220.1	46	285	92.60355029585799	1e-76
+EV02_RS00735	AAD44219.1	53	362	92.74193548387096	7.2e-100
+
+
+
+>>
+9. BGC0000698
+Source: Hygromycin A
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 635
+
+Table of genes, locations, strands and annotations of subject cluster:
+ABC42538.1	ABC42538.1	2270	3397	-	putative_AfsR_regulatory_protein
+ABC42539.1	ABC42539.1	3717	4916	-	putative_p-hydroxybenzoate_hydroxylase
+ABC42540.1	ABC42540.1	5308	6279	+	putative_regulatory_protein
+ABC42541.1	ABC42541.1	6452	6973	+	putative_chorismate_lyase
+ABC42542.1	ABC42542.1	7011	8069	+	putative_mannose_dehydratase
+ABC42543.1	ABC42543.1	8342	9091	+	putative_methyltransferase
+ABC42544.1	ABC42544.1	9084	10823	+	unknown
+ABC42545.1	ABC42545.1	10911	12146	+	putative_aminotransferase
+ABC42546.1	ABC42546.1	12149	12400	+	putative_acyl_carrier_protein
+ABC42547.1	ABC42547.1	12397	13533	+	putative_beta-ketoacyl_synthase_1
+ABC42548.1	ABC42548.1	13533	14291	+	unknown
+ABC42549.1	ABC42549.1	14294	15649	+	putative_Co-A_ligase
+ABC42550.1	ABC42550.1	15715	16005	+	putative_acyl_carrier_protein
+ABC42551.1	ABC42551.1	16002	17045	+	putative_3-hydroyacyl_ACP_dehydratase
+ABC42552.1	ABC42552.1	17012	17782	+	putative_3-ketoacyl_ACP_reductase
+ABC42553.1	ABC42553.1	17817	19112	+	putative_glycosyltransferase
+ABC42554.1	ABC42554.1	19109	20101	+	putative_myo-inositol_dehydrogenase
+ABC42555.1	ABC42555.1	20193	21284	+	putative_myo-inositol-1-phosphate_synthase
+ABC42556.1	ABC42556.1	21344	22594	+	putative_transmembrane_protein
+ABC42557.1	ABC42557.1	22599	23714	+	putative_transglucosylase
+ABC42558.1	ABC42558.1	23787	24338	-	putative_phosphotransferase
+ABC42559.1	ABC42559.1	24603	25778	+	putative_acyltransferase
+ABC42560.1	ABC42560.1	25788	26765	+	putative_fucose_synthase
+ABC42561.1	ABC42561.1	26786	27649	-	unknown
+ABC42562.1	ABC42562.1	27762	28403	+	putative_myo-inositol-1-phosphatase
+ABC42563.1	ABC42563.1	28423	29238	-	putative_short_chain_dehydrogenase
+ABC42564.1	ABC42564.1	29701	30906	+	putative_DAHP_synthase
+ABC42565.1	ABC42565.1	30998	32710	+	putative_ABC_transporter
+ABC42566.1	ABC42566.1	32643	33779	-	putative_methyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00745	ABC42560.1	46	284	95.85798816568047	2.3e-76
+EV02_RS00735	ABC42542.1	50	351	91.93548387096774	1.3e-96
+
+
+
+>>
+10. BGC0000807
+Source: Phosphonoglycans
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 876
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00710	Snas_5665	61	527	98.85321100917432	1.5e-149
+EV02_RS00705	Snas_5664	46	349	99.21259842519686	8.4e-96
+
+
+
+>>
+11. BGC0000806
+Source: Phosphonoglycans
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 870
+
+Table of genes, locations, strands and annotations of subject cluster:
+AHL24449.1	AHL24449.1	297	1469	+	glycoside_hydrolase_family_6
+AHL24450.1	AHL24450.1	1770	2429	-	TetR_family_transcriptional_regulator
+AHL24451.1	AHL24451.1	2444	4057	-	EmrB/QacA_subfamily_drug_resistance_transporter
+AHL24452.1	AHL24452.1	4507	5967	+	3-polyprenyl-4-hydroxybenzoate_decarboxylase
+AHL24453.1	AHL24453.1	6015	6896	+	4-hydroxybenzoate_polyprenyltransferase
+AHL24454.1	AHL24454.1	6948	7289	+	hypothetical_protein
+AHL24455.1	AHL24455.1	7534	7860	+	NADH-ubiquinone_oxidoreductase_chain_K
+AHL24456.1	AHL24456.1	7857	9668	+	NADH-ubiquinone_oxidoreductase_chain_L
+AHL24457.1	AHL24457.1	10099	11553	+	NADH-ubiquinone_oxidoreductase_chain_M
+AHL24458.1	AHL24458.1	11554	13254	+	NADH-ubiquinone_oxidoreductase_chain_N
+AHL24459.1	AHL24459.1	13329	14192	+	peptidase_M48_Ste24P_precursor
+AHL24460.1	AHL24460.1	14235	14993	-	short-chain_dehydrogenase/reductase_SDR
+AHL24461.1	AHL24461.1	15066	15638	+	transcriptional_regulator_TetR_family
+AHL24462.1	AHL24462.1	15733	16047	-	hypothetical_protein
+AHL24463.1	AHL24463.1	16336	16539	-	excisonase_family_DNA-binding_protein
+AHL24464.1	AHL24464.1	16738	18474	-	hypothetical_protein
+AHL24465.1	AHL24465.1	18602	19522	-	proline_dehydrogenase
+AHL24466.1	AHL24466.1	20194	21516	-	glycosyltransferase-like_protein
+AHL24467.1	AHL24467.1	22042	23253	-	group_1_glycosyltransferase
+AHL24468.1	AHL24468.1	23250	24737	-	group_1_glycosyltransferase
+AHL24469.1	AHL24469.1	25002	25562	+	acetyltransferase
+AHL24470.1	AHL24470.1	25559	26731	+	UDP-N-acetylglucosamine_2-epimerase
+AHL24471.1	AHL24471.1	26758	28338	+	group_1_glycosyltransferase
+AHL24472.1	AHL24472.1	28416	29699	-	UDP-N-acetyl-D-mannosaminuronic_acid_dehydrogenase
+AHL24473.1	AHL24473.1	29774	30784	-	NAD-dependent_dehydrogenase
+AHL24474.1	AHL24474.1	30781	31884	-	glutamine-scyllo-inositol_transaminase
+AHL24475.1	AHL24475.1	32043	32831	-	xylose_isomerase_domain-containing_protein
+AHL24476.1	AHL24476.1	32928	33743	+	hypothetical_protein
+AHL24477.1	AHL24477.1	33730	34548	-	lipopolysaccharide_biosynthesis_glycosyltransferase
+AHL24478.1	AHL24478.1	34942	36657	+	hypothetical_protein
+AHL24479.1	AHL24479.1	36836	38122	+	PEP_mutase
+AHL24480.1	AHL24480.1	38119	39243	+	phosphonopyruvate_decarboxylase
+AHL24481.1	AHL24481.1	39246	40406	+	iron-containing_alcohol_dehydrogenase
+AHL24482.1	AHL24482.1	40485	42428	-	LicD_family_protein
+AHL24483.1	AHL24483.1	42495	44456	-	LicD_family_protein
+AHL24484.1	AHL24484.1	44498	47836	-	CDP-glycerol:poly(glycerophosphate)_glycerophosphotransferase
+AHL24485.1	AHL24485.1	48043	48582	-	UDP-N-acetylglucosamine_pyrophosphorylase_related_protein
+AHL24486.1	AHL24486.1	48922	49656	+	2-C-methyl-D-erythritol_4-phosphate_cytidylyltransferase
+AHL24487.1	AHL24487.1	49663	51228	-	CDP-glycerol:poly(glycerophosphate)_glycerophosphotransferase
+AHL24488.1	AHL24488.1	51483	52022	-	UDP-N-acetylglucosamine_pyrophosphorylase-like_protein
+AHL24489.1	AHL24489.1	52294	53460	-	group_1_glycosyltransferase
+AHL24490.1	AHL24490.1	53584	56328	-	DNA_topoisomerase_I
+AHL24491.1	AHL24491.1	56494	58818	-	pyrophosphate-energized_proton_pump
+AHL24492.1	AHL24492.1	59053	59571	-	anti-sigma_factor
+AHL24493.1	AHL24493.1	59568	59927	-	anti-sigma_factor_antagonist
+AHL24494.1	AHL24494.1	60155	62494	+	ATP-dependent_RNA_helicase
+AHL24495.1	AHL24495.1	62614	62805	+	YcfA_family_protein
+AHL24496.1	AHL24496.1	62780	63652	-	hypothetical_protein
+AHL24497.1	AHL24497.1	63852	64589	+	putative_NagD-like_phosphatase
+AHL24498.1	AHL24498.1	64601	64963	+	hypothetical_protein
+AHL24499.1	AHL24499.1	65079	66239	-	amino_acid_permease
+AHL24500.1	AHL24500.1	66357	67103	-	phosphoesterase_PA-phosphatase_related_protein
+AHL24501.1	AHL24501.1	67209	68159	-	malate_dehydrogenase
+AHL24502.1	AHL24502.1	68521	69444	+	putative_membrane_protein
+AHL24503.1	AHL24503.1	69747	70742	-	acyl-CoA_dehydrogenase_short_chain_specific_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS00710	AHL24479.1	61	534	97.24770642201835	1.6e-151
+EV02_RS00705	AHL24480.1	46	336	99.47506561679789	5.6e-92
+

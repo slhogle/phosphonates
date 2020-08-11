@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AHZ61876.1</td>
+              <td>Lom42</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000240/1">BGC0000240</a></td>
+              <td>t2pks-saccharide</td>
+              <td>40.0</td>
+              <td>61.4</td>
+              <td>213.0</td>
+              <td>7.9e-55</td>
+          </tr>
+    
+          <tr>
+              <td>ABB90392.1</td>
+              <td>FrbC</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000904/1">BGC0000904</a></td>
+              <td>other</td>
+              <td>34.0</td>
+              <td>66.5</td>
+              <td>176.0</td>
+              <td>1.4e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ACZ55947.1</td>
+              <td>hydroxymethylglutaryl-CoA_lyase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000302/1">BGC0000302</a></td>
+              <td>nrps</td>
+              <td>26.0</td>
+              <td>73.6</td>
+              <td>99.0</td>
+              <td>1.7e-20</td>
+          </tr>
+    
+          <tr>
+              <td>EPE34345.1</td>
+              <td>Aldolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001035/1">BGC0001035</a></td>
+              <td>other</td>
+              <td>25.0</td>
+              <td>60.1</td>
+              <td>96.0</td>
+              <td>1.1e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AFT91393.1</td>
+              <td>HtyA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000338/2">BGC0000338</a></td>
+              <td>nrps</td>
+              <td>25.0</td>
+              <td>70.5</td>
+              <td>94.0</td>
+              <td>7e-19</td>
+          </tr>
+    
+          <tr>
+              <td>AMM63167.1</td>
+              <td>AniE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001371/1">BGC0001371</a></td>
+              <td>nrps</td>
+              <td>24.0</td>
+              <td>68.3</td>
+              <td>93.0</td>
+              <td>9.1e-19</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

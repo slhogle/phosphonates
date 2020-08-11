@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAG26465.1</td>
+              <td>putative_phosphoenolpyruvate_phosphomutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001411/1">BGC0001411</a></td>
+              <td>saccharide</td>
+              <td>49.0</td>
+              <td>99.5</td>
+              <td>399.0</td>
+              <td>6.2e-111</td>
+          </tr>
+    
+          <tr>
+              <td>ACG70831.1</td>
+              <td>phosphoenolpyruvate_phosphomutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000938/1">BGC0000938</a></td>
+              <td>other</td>
+              <td>48.0</td>
+              <td>99.1</td>
+              <td>397.0</td>
+              <td>3.1e-110</td>
+          </tr>
+    
+          <tr>
+              <td>ADD45295.1</td>
+              <td>phosphoenolpyruvate_phosphomutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000807/1">BGC0000807</a></td>
+              <td>saccharide</td>
+              <td>47.0</td>
+              <td>99.8</td>
+              <td>388.0</td>
+              <td>1.4e-107</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24479.1</td>
+              <td>PEP_mutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000806/1">BGC0000806</a></td>
+              <td>saccharide</td>
+              <td>44.0</td>
+              <td>97.2</td>
+              <td>372.0</td>
+              <td>1.1e-102</td>
+          </tr>
+    
+          <tr>
+              <td>WP_051801207.1</td>
+              <td>phosphoenolpyruvate_phosphomutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001739/1">BGC0001739</a></td>
+              <td>other</td>
+              <td>37.0</td>
+              <td>65.1</td>
+              <td>160.0</td>
+              <td>4.8e-39</td>
+          </tr>
+    
+          <tr>
+              <td>ADB43073.1</td>
+              <td>phosphoenolpyruvate_phosphomutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000926/1">BGC0000926</a></td>
+              <td>other</td>
+              <td>34.0</td>
+              <td>65.8</td>
+              <td>158.0</td>
+              <td>3.1e-38</td>
+          </tr>
+    
+          <tr>
+              <td>ABB90393.1</td>
+              <td>FrbD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000904/1">BGC0000904</a></td>
+              <td>other</td>
+              <td>39.0</td>
+              <td>56.6</td>
+              <td>156.0</td>
+              <td>6.9e-38</td>
+          </tr>
+    
+          <tr>
+              <td>AGZ93898.1</td>
+              <td>PEP_mutase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000937/1">BGC0000937</a></td>
+              <td>other</td>
+              <td>35.0</td>
+              <td>66.1</td>
+              <td>151.0</td>
+              <td>2.9e-36</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

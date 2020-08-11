@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAF47051.1</td>
+              <td>GDP-fucose_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000732/1">BGC0000732</a></td>
+              <td>saccharide</td>
+              <td>44.0</td>
+              <td>98.5</td>
+              <td>305.0</td>
+              <td>7.2e-83</td>
+          </tr>
+    
+          <tr>
+              <td>BAG50491.1</td>
+              <td>putative_nucleotide_di-P-sugar_epimerase_or_dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000780/1">BGC0000780</a></td>
+              <td>saccharide</td>
+              <td>44.0</td>
+              <td>95.9</td>
+              <td>305.0</td>
+              <td>7.2e-83</td>
+          </tr>
+    
+          <tr>
+              <td>AAC77843.1</td>
+              <td>GDP-L-fucose_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000799/1">BGC0000799</a></td>
+              <td>saccharide</td>
+              <td>45.0</td>
+              <td>95.6</td>
+              <td>300.0</td>
+              <td>2.3e-81</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47068.1</td>
+              <td>GDP-fucose_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000733/1">BGC0000733</a></td>
+              <td>saccharide</td>
+              <td>43.0</td>
+              <td>97.6</td>
+              <td>292.0</td>
+              <td>8.3e-79</td>
+          </tr>
+    
+          <tr>
+              <td>AAD44220.1</td>
+              <td>MerA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000362/1">BGC0000362</a></td>
+              <td>nrps</td>
+              <td>46.0</td>
+              <td>92.6</td>
+              <td>285.0</td>
+              <td>1e-76</td>
+          </tr>
+    
+          <tr>
+              <td>ABC42560.1</td>
+              <td>putative_fucose_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000698/1">BGC0000698</a></td>
+              <td>saccharide</td>
+              <td>46.0</td>
+              <td>95.9</td>
+              <td>284.0</td>
+              <td>2.3e-76</td>
+          </tr>
+    
+          <tr>
+              <td>AAN05765.1</td>
+              <td>GDP-6-deoxy-4-keto-D-mannose-3-5-epimerase-4-_reductase_MerA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000769/1">BGC0000769</a></td>
+              <td>saccharide</td>
+              <td>45.0</td>
+              <td>92.6</td>
+              <td>279.0</td>
+              <td>5.5e-75</td>
+          </tr>
+    
+          <tr>
+              <td>AAR90886.1</td>
+              <td>GDP-fucose_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000787/1">BGC0000787</a></td>
+              <td>saccharide</td>
+              <td>45.0</td>
+              <td>85.5</td>
+              <td>264.0</td>
+              <td>2.4e-70</td>
+          </tr>
+    
+          <tr>
+              <td>AAL61890.1</td>
+              <td>GDP-4-keto-6-deoxy-D-mannose-3,_5-epimerase-4-reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001411/1">BGC0001411</a></td>
+              <td>saccharide</td>
+              <td>40.0</td>
+              <td>106.2</td>
+              <td>261.0</td>
+              <td>1.6e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AAV34520.1</td>
+              <td>fucose_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000788/1">BGC0000788</a></td>
+              <td>saccharide</td>
+              <td>45.0</td>
+              <td>69.5</td>
+              <td>228.0</td>
+              <td>1.9e-59</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,195 @@
+<svg version="1.1" preserveAspectRatio="none" width="800" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" height="230" x="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 230"  >
+<g label="Query sequence" class="clusterblast-cluster"  >
+<text class="clusterblast-acc" y="20" x="5"  >
+Query sequence</text>
+<line style="stroke-width:1; stroke:grey; " y1="35" x2="778.0" y2="35" x1="10"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="280,35 285,30 285,30 285,40 285,40 280,35 " description="&lt;b&gt;P773_RS0102035&lt;/b&gt;&lt;br&gt;phosphate regulon transcriptional regulatory protein PhoB&lt;br&gt;Location: 349897 - 350581" id="dummy-3_q0_0_all" locus_tag="P773_RS0102035"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5cd815; " points="285,35 290,30 290,30 290,40 290,40 285,35 " description="&lt;b&gt;P773_RS0102040&lt;/b&gt;&lt;br&gt;phosphate transport system regulatory protein PhoU&lt;br&gt;Location: 350584 - 351292" id="dummy-3_q1_0_all" locus_tag="P773_RS0102040"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15a3d8; " points="290,35 295,30 296,30 296,40 295,40 290,35 " description="&lt;b&gt;P773_RS0102045&lt;/b&gt;&lt;br&gt;phosphate ABC transporter ATP-binding protein&lt;br&gt;Location: 351291 - 352047" id="dummy-3_q2_0_all" locus_tag="P773_RS0102045"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#c715d8; " points="296,35 301,30 305,30 305,40 301,40 296,35 " description="&lt;b&gt;P773_RS0102050&lt;/b&gt;&lt;br&gt;phosphate ABC transporter, permease protein PstA&lt;br&gt;Location: 352050 - 353322" id="dummy-3_q3_0_all" locus_tag="P773_RS0102050"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d88015; " points="305,35 310,30 315,30 315,40 310,40 305,35 " description="&lt;b&gt;P773_RS0102055&lt;/b&gt;&lt;br&gt;phosphate ABC transporter permease subunit PstC&lt;br&gt;Location: 353314 - 354700" id="dummy-3_q4_0_all" locus_tag="P773_RS0102055"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d839; " points="316,35 321,30 324,30 324,40 321,40 316,35 " description="&lt;b&gt;P773_RS0102060&lt;/b&gt;&lt;br&gt;phosphate-binding protein&lt;br&gt;Location: 354775 - 355810" id="dummy-3_q5_0_all" locus_tag="P773_RS0102060"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="324,35 328,30 328,40 324,35 " description="&lt;b&gt;P773_RS0102065&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 355916 - 356483" id="dummy-3_q6_0_all" locus_tag="P773_RS0102065"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1539d8; " points="330,35 335,30 338,30 338,40 335,40 330,35 " description="&lt;b&gt;P773_RS0102070&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 356628 - 357777" id="dummy-3_q7_0_all" locus_tag="P773_RS0102070"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="339,40 340,40 345,35 340,30 339,30 339,40 " description="&lt;b&gt;P773_RS0102075&lt;/b&gt;&lt;br&gt;GNAT family N-acetyltransferase&lt;br&gt;Location: 357848 - 358676" id="dummy-3_q8_0_all" locus_tag="P773_RS0102075"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81580; " points="345,40 345,40 350,35 345,30 345,30 345,40 " description="&lt;b&gt;P773_RS0102080&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 358675 - 359413" id="dummy-3_q9_0_all" locus_tag="P773_RS0102080"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="350,35 355,30 357,30 357,40 355,40 350,35 " description="&lt;b&gt;P773_RS0102085&lt;/b&gt;&lt;br&gt;glycosyltransferase family 1 protein&lt;br&gt;Location: 359405 - 360410" id="dummy-3_q10_0_all" locus_tag="P773_RS0102085"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="357,35 362,30 363,30 363,40 362,40 357,35 " description="&lt;b&gt;P773_RS0102090&lt;/b&gt;&lt;br&gt;UDP-2,3-diacylglucosamine diphosphatase&lt;br&gt;Location: 360412 - 361246" id="dummy-3_q11_0_all" locus_tag="P773_RS0102090"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="364,40 366,40 371,35 366,30 364,30 364,40 " description="&lt;b&gt;P773_RS0102095&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 361330 - 362221" id="dummy-3_q12_0_all" locus_tag="P773_RS0102095"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="371,40 373,35 371,30 371,40 " description="&lt;b&gt;P773_RS0102100&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 362290 - 362500" id="dummy-3_q13_0_all" locus_tag="P773_RS0102100"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="374,35 379,30 382,30 382,40 379,40 374,35 " description="&lt;b&gt;P773_RS0102105&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 362701 - 363799" id="dummy-3_q14_0_all" locus_tag="P773_RS0102105"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="382,35 387,30 390,30 390,40 387,40 382,35 " description="&lt;b&gt;P773_RS0102110&lt;/b&gt;&lt;br&gt;phosphonopyruvate decarboxylase&lt;br&gt;Location: 363795 - 364893" id="dummy-3_q15_0_all" locus_tag="P773_RS0102110"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="390,35 395,30 400,30 400,40 395,40 390,35 " description="&lt;b&gt;P773_RS0102115&lt;/b&gt;&lt;br&gt;phosphoenolpyruvate mutase&lt;br&gt;Location: 364885 - 366187" id="dummy-3_q16_0_all" locus_tag="P773_RS0102115"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="400,35 405,30 409,30 409,40 405,40 400,35 " description="&lt;b&gt;P773_RS0102120&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 366183 - 367488" id="dummy-3_q17_0_all" locus_tag="P773_RS0102120"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="410,35 415,30 418,30 418,40 415,40 410,35 " description="&lt;b&gt;P773_RS0102125&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 367607 - 368726" id="dummy-3_q18_0_all" locus_tag="P773_RS0102125"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="419,35 424,30 427,30 427,40 424,40 419,35 " description="&lt;b&gt;P773_RS0102130&lt;/b&gt;&lt;br&gt;mannose-6-phosphate isomerase&lt;br&gt;Location: 368750 - 369956" id="dummy-3_q19_0_all" locus_tag="P773_RS0102130"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="427,35 432,30 440,30 440,40 432,40 427,35 " description="&lt;b&gt;P773_RS0102135&lt;/b&gt;&lt;br&gt;dihydroxy-acid dehydratase&lt;br&gt;Location: 369955 - 371674" id="dummy-3_q20_0_all" locus_tag="P773_RS0102135"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="440,35 445,30 459,30 459,40 445,40 440,35 " description="&lt;b&gt;P773_RS0102140&lt;/b&gt;&lt;br&gt;valine--tRNA ligase&lt;br&gt;Location: 371673 - 374301" id="dummy-3_q21_0_all" locus_tag="P773_RS0102140"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="462,35 465,30 465,40 462,35 " description="&lt;b&gt;P773_RS0102155&lt;/b&gt;&lt;br&gt;XRE family transcriptional regulator&lt;br&gt;Location: 374716 - 375088" id="dummy-3_q22_0_all" locus_tag="P773_RS0102155"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15a3d8; " points="466,35 471,30 472,30 472,40 471,40 466,35 " description="&lt;b&gt;P773_RS0102160&lt;/b&gt;&lt;br&gt;amino acid ABC transporter ATP-binding protein&lt;br&gt;Location: 375275 - 376010" id="dummy-3_q23_0_all" locus_tag="P773_RS0102160"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#c7d815; " points="472,35 477,30 482,30 482,40 477,40 472,35 " description="&lt;b&gt;P773_RS0102165&lt;/b&gt;&lt;br&gt;amino acid ABC transporter permease&lt;br&gt;Location: 376009 - 377452" id="dummy-3_q24_0_all" locus_tag="P773_RS0102165"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d8a3; " points="482,35 487,30 491,30 491,40 487,40 482,35 " description="&lt;b&gt;P773_RS0102170&lt;/b&gt;&lt;br&gt;amino acid ABC transporter permease&lt;br&gt;Location: 377451 - 378597" id="dummy-3_q25_0_all" locus_tag="P773_RS0102170"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5c15d8; " points="491,35 496,30 499,30 499,40 496,40 491,35 " description="&lt;b&gt;P773_RS0102175&lt;/b&gt;&lt;br&gt;amino acid ABC transporter substrate-binding protein&lt;br&gt;Location: 378669 - 379710" id="dummy-3_q26_0_all" locus_tag="P773_RS0102175"  />
+</g>
+<g label="NZ_CP022163" class="clusterblast-cluster" description="NZ_CP022163_c23: Melittangium boletus DSM 14713 chromosome, complete genome (13% of genes show similarity), t1pks-nrps"  >
+<text class="clusterblast-acc" y="70" x="5"  >
+<a xlink:href="https://antismash-db.secondarymetabolites.org/go/NZ_CP022163/23" target="_blank">NZ_CP022163_c23</a>: Melittangium boletus DSM 14713 chromosome, complete genome (13% of genes show similarity), t1pks-nrps</text>
+<line style="stroke-width:1; stroke:grey; " y1="85" x2="778.0" y2="85" x1="10"  />
+</g>
+<g id="a3_000"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="0,90 9,90 14,85 9,80 0,80 0,90 " description="&lt;b&gt;MEBOL_RS29745&lt;/b&gt;&lt;br&gt;DUF4339 domain-containing protein&lt;br&gt;Location: 7128624 - 7130666" id="dummy-3_h3_9_0" locus_tag="MEBOL_RS29745"  />
+</g>
+<g id="a3_001"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="16,90 18,90 23,85 18,80 16,80 16,90 " description="&lt;b&gt;MEBOL_RS29750&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7130889 - 7131797" id="dummy-3_h3_9_1" locus_tag="MEBOL_RS29750"  />
+</g>
+<g id="a3_002"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="28,90 32,90 37,85 32,80 28,80 28,90 " description="&lt;b&gt;MEBOL_RS29755&lt;/b&gt;&lt;br&gt;TIGR04552 family protein&lt;br&gt;Location: 7132565 - 7133695" id="dummy-3_h3_9_2" locus_tag="MEBOL_RS29755"  />
+</g>
+<g id="a3_003"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="39,90 43,90 48,85 43,80 39,80 39,90 " description="&lt;b&gt;MEBOL_RS29760&lt;/b&gt;&lt;br&gt;ISAs1 family transposase&lt;br&gt;Location: 7134036 - 7135247" id="dummy-3_h3_9_3" locus_tag="MEBOL_RS29760"  />
+</g>
+<g id="a3_004"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="50,85 55,80 56,80 56,90 55,90 50,85 " description="&lt;b&gt;MEBOL_RS29765&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7135474 - 7136262" id="dummy-3_h3_9_4" locus_tag="MEBOL_RS29765"  />
+</g>
+<g id="a3_005"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="58,90 62,90 67,85 62,80 58,80 58,90 " description="&lt;b&gt;MEBOL_RS29770&lt;/b&gt;&lt;br&gt;IS21 family transposase&lt;br&gt;Location: 7136541 - 7137788" id="dummy-3_h3_9_5" locus_tag="MEBOL_RS29770"  />
+</g>
+<g id="a3_006"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="67,90 68,90 73,85 68,80 67,80 67,90 " description="&lt;b&gt;MEBOL_RS29775&lt;/b&gt;&lt;br&gt;ATP-binding protein&lt;br&gt;Location: 7137785 - 7138591" id="dummy-3_h3_9_6" locus_tag="MEBOL_RS29775"  />
+</g>
+<g id="a3_007"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="74,85 77,80 77,90 74,85 " description="&lt;b&gt;MEBOL_RS29780&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7138715 - 7139158" id="dummy-3_h3_9_7" locus_tag="MEBOL_RS29780"  />
+</g>
+<g id="a3_008"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="80,90 81,90 86,85 81,80 80,80 80,90 " description="&lt;b&gt;MEBOL_RS29785&lt;/b&gt;&lt;br&gt;IS5/IS1182 family transposase&lt;br&gt;Location: 7139554 - 7140351" id="dummy-3_h3_9_8" locus_tag="MEBOL_RS29785"  />
+</g>
+<g id="a3_009"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="86,85 91,80 100,80 100,90 91,90 86,85 " description="&lt;b&gt;MEBOL_RS29790&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7140384 - 7142333" id="dummy-3_h3_9_9" locus_tag="MEBOL_RS29790"  />
+</g>
+<g id="a3_0010"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="102,85 107,80 114,80 114,90 107,90 102,85 " description="&lt;b&gt;MEBOL_RS29795&lt;/b&gt;&lt;br&gt;signal recognition particle protein&lt;br&gt;Location: 7142594 - 7144237" id="dummy-3_h3_9_10" locus_tag="MEBOL_RS29795"  />
+</g>
+<g id="a3_0011"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="117,85 122,80 150,80 150,90 122,90 117,85 " description="&lt;b&gt;MEBOL_RS29800&lt;/b&gt;&lt;br&gt;KR domain-containing protein&lt;br&gt;Location: 7144563 - 7149137" id="dummy-3_h3_9_11" locus_tag="MEBOL_RS29800"  />
+</g>
+<g id="a3_0012"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="150,85 155,80 156,80 156,90 155,90 150,85 " description="&lt;b&gt;MEBOL_RS29805&lt;/b&gt;&lt;br&gt;thioesterase&lt;br&gt;Location: 7149161 - 7149964" id="dummy-3_h3_9_12" locus_tag="MEBOL_RS29805"  />
+</g>
+<g id="a3_0013"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="156,85 161,80 190,80 190,90 161,90 156,85 " description="&lt;b&gt;MEBOL_RS29810&lt;/b&gt;&lt;br&gt;KR domain-containing protein&lt;br&gt;Location: 7149968 - 7154533" id="dummy-3_h3_9_13" locus_tag="MEBOL_RS29810"  />
+</g>
+<g id="a3_0014"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="190,85 195,80 196,80 196,90 195,90 190,85 " description="&lt;b&gt;MEBOL_RS29815&lt;/b&gt;&lt;br&gt;thioesterase&lt;br&gt;Location: 7154552 - 7155328" id="dummy-3_h3_9_14" locus_tag="MEBOL_RS29815"  />
+</g>
+<g id="a3_0015"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="196,85 201,80 203,80 203,90 201,90 196,85 " description="&lt;b&gt;MEBOL_RS29820&lt;/b&gt;&lt;br&gt;chlorinating enzyme&lt;br&gt;Location: 7155364 - 7156278" id="dummy-3_h3_9_15" locus_tag="MEBOL_RS29820"  />
+</g>
+<g id="a3_0016"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="203,85 208,80 211,80 211,90 208,90 203,85 " description="&lt;b&gt;MEBOL_RS29825&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7156275 - 7157390" id="dummy-3_h3_9_16" locus_tag="MEBOL_RS29825"  />
+</g>
+<g id="a3_0017"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="211,85 216,80 308,80 308,90 216,90 211,85 " description="&lt;b&gt;MEBOL_RS29830&lt;/b&gt;&lt;br&gt;LLM class flavin-dependent oxidoreductase&lt;br&gt;Location: 7157415 - 7170605" id="dummy-3_h3_9_17" locus_tag="MEBOL_RS29830"  />
+</g>
+<g id="a3_0018"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="310,90 326,90 331,85 326,80 310,80 310,90 " description="&lt;b&gt;MEBOL_RS29835&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7170942 - 7173809" id="dummy-3_h3_9_18" locus_tag="MEBOL_RS29835"  />
+</g>
+<g id="a3_0019"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="332,90 336,85 332,80 332,90 " description="&lt;b&gt;MEBOL_RS29840&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7173921 - 7174400" id="dummy-3_h3_9_19" locus_tag="MEBOL_RS29840"  />
+</g>
+<g id="a3_0020"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="336,90 340,90 345,85 340,80 336,80 336,90 " description="&lt;b&gt;MEBOL_RS29845&lt;/b&gt;&lt;br&gt;Hsp70 family protein&lt;br&gt;Location: 7174457 - 7175707" id="dummy-3_h3_9_20" locus_tag="MEBOL_RS29845"  />
+</g>
+<g id="a3_0021"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="350,90 353,85 350,80 350,90 " description="&lt;b&gt;MEBOL_RS29855&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7176432 - 7176776" id="dummy-3_h3_9_21" locus_tag="MEBOL_RS29855"  />
+</g>
+<g id="a3_0022"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="353,90 373,90 378,85 373,80 353,80 353,90 " description="&lt;b&gt;MEBOL_RS29860&lt;/b&gt;&lt;br&gt;serine/threonine-protein kinase PknK&lt;br&gt;Location: 7176809 - 7180207" id="dummy-3_h3_9_22" locus_tag="MEBOL_RS29860"  />
+</g>
+<g id="a3_0023"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="379,90 381,90 386,85 381,80 379,80 379,90 " description="&lt;b&gt;MEBOL_RS29865&lt;/b&gt;&lt;br&gt;RNA polymerase subunit sigma&lt;br&gt;Location: 7180344 - 7181279" id="dummy-3_h3_9_23" locus_tag="MEBOL_RS29865"  />
+</g>
+<g id="a3_0024"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="386,90 387,90 392,85 387,80 386,80 386,90 " description="&lt;b&gt;MEBOL_RS29870&lt;/b&gt;&lt;br&gt;serine/threonine protein kinase&lt;br&gt;Location: 7181276 - 7182148" id="dummy-3_h3_9_24" locus_tag="MEBOL_RS29870"  />
+</g>
+<g id="a3_0025"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="394,90 400,90 405,85 400,80 394,80 394,90 " description="&lt;b&gt;MEBOL_RS29875&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7182350 - 7183918" id="dummy-3_h3_9_25" locus_tag="MEBOL_RS29875"  />
+</g>
+<g id="a3_0026"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="406,90 408,90 413,85 408,80 406,80 406,90 " description="&lt;b&gt;MEBOL_RS29880&lt;/b&gt;&lt;br&gt;nucleotidyltransferase&lt;br&gt;Location: 7183956 - 7184897" id="dummy-3_h3_9_26" locus_tag="MEBOL_RS29880"  />
+</g>
+<g id="a3_0027"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="413,90 415,90 420,85 415,80 413,80 413,90 " description="&lt;b&gt;MEBOL_RS29885&lt;/b&gt;&lt;br&gt;nucleotidyltransferase&lt;br&gt;Location: 7184963 - 7185922" id="dummy-3_h3_9_27" locus_tag="MEBOL_RS29885"  />
+</g>
+<g id="a3_0028"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="421,90 428,90 433,85 428,80 421,80 421,90 " description="&lt;b&gt;MEBOL_RS29890&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7186025 - 7187698" id="dummy-3_h3_9_28" locus_tag="MEBOL_RS29890"  />
+</g>
+<g id="a3_0029"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="435,90 437,90 442,85 437,80 435,80 435,90 " description="&lt;b&gt;MEBOL_RS29895&lt;/b&gt;&lt;br&gt;nucleotidyltransferase&lt;br&gt;Location: 7187952 - 7188887" id="dummy-3_h3_9_29" locus_tag="MEBOL_RS29895"  />
+</g>
+<g id="a3_0030"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="450,85 453,80 453,90 450,85 " description="&lt;b&gt;MEBOL_RS29905&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7190052 - 7190381" id="dummy-3_h3_9_30" locus_tag="MEBOL_RS29905"  />
+</g>
+<g id="a3_0031"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="453,85 457,80 457,90 453,85 " description="&lt;b&gt;MEBOL_RS29910&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7190378 - 7190905" id="dummy-3_h3_9_31" locus_tag="MEBOL_RS29910"  />
+</g>
+<g id="a3_0032"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="458,85 463,80 491,80 491,90 463,90 458,85 " description="&lt;b&gt;MEBOL_RS29915&lt;/b&gt;&lt;br&gt;KR domain-containing protein&lt;br&gt;Location: 7191118 - 7195599" id="dummy-3_h3_9_32" locus_tag="MEBOL_RS29915"  />
+</g>
+<g id="a3_0033"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="491,85 496,80 532,80 532,90 496,90 491,85 " description="&lt;b&gt;MEBOL_RS29920&lt;/b&gt;&lt;br&gt;KR domain-containing protein&lt;br&gt;Location: 7195596 - 7201103" id="dummy-3_h3_9_33" locus_tag="MEBOL_RS29920"  />
+</g>
+<g id="a3_0034"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="532,85 537,80 557,80 557,90 537,90 532,85 " description="&lt;b&gt;MEBOL_RS29925&lt;/b&gt;&lt;br&gt;non-ribosomal peptide synthetase&lt;br&gt;Location: 7201134 - 7204580" id="dummy-3_h3_9_34" locus_tag="MEBOL_RS29925"  />
+</g>
+<g id="a3_0035"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="557,85 562,80 598,80 598,90 562,90 557,85 " description="&lt;b&gt;MEBOL_RS29930&lt;/b&gt;&lt;br&gt;KR domain-containing protein&lt;br&gt;Location: 7204577 - 7210102" id="dummy-3_h3_9_35" locus_tag="MEBOL_RS29930"  />
+</g>
+<g id="a3_0036"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="598,85 603,80 638,80 638,90 603,90 598,85 " description="&lt;b&gt;MEBOL_RS29935&lt;/b&gt;&lt;br&gt;KR domain-containing protein&lt;br&gt;Location: 7210099 - 7215579" id="dummy-3_h3_9_36" locus_tag="MEBOL_RS29935"  />
+</g>
+<g id="a3_0037"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="639,85 644,80 679,80 679,90 644,90 639,85 " description="&lt;b&gt;MEBOL_RS29940&lt;/b&gt;&lt;br&gt;NACHT domain-containing protein&lt;br&gt;Location: 7215709 - 7221210" id="dummy-3_h3_9_37" locus_tag="MEBOL_RS29940"  />
+</g>
+<g id="a3_0038"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="679,85 684,80 695,80 695,90 684,90 679,85 " description="&lt;b&gt;MEBOL_RS29945&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7221223 - 7223310" id="dummy-3_h3_9_38" locus_tag="MEBOL_RS29945"  />
+</g>
+<g id="a3_0039"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="695,85 698,80 698,90 695,85 " description="&lt;b&gt;MEBOL_RS29950&lt;/b&gt;&lt;br&gt;response regulator&lt;br&gt;Location: 7223342 - 7223719" id="dummy-3_h3_9_39" locus_tag="MEBOL_RS29950"  />
+</g>
+<g id="a3_0040"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="698,85 703,80 704,80 704,90 703,90 698,85 " description="&lt;b&gt;MEBOL_RS29955&lt;/b&gt;&lt;br&gt;metallophosphoesterase&lt;br&gt;Location: 7223817 - 7224650" id="dummy-3_h3_9_40" locus_tag="MEBOL_RS29955"  />
+</g>
+<g id="a3_0041"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="705,85 710,80 715,80 715,90 710,90 705,85 " description="&lt;b&gt;MEBOL_RS29960&lt;/b&gt;&lt;br&gt;glycosyl transferase&lt;br&gt;Location: 7224737 - 7226035" id="dummy-3_h3_9_41" locus_tag="MEBOL_RS29960"  />
+</g>
+<g id="a3_0042"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5cd815; " points="715,85 720,80 720,80 720,90 720,90 715,85 " description="&lt;b&gt;MEBOL_RS29965&lt;/b&gt;&lt;br&gt;phosphate transport system regulatory protein PhoU&lt;br&gt;Location: 7226101 - 7226802&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102040&lt;/b&gt;&lt;br&gt;Percentage identity: 38&lt;br&gt;Percentage coverage: 95&lt;br&gt;BLAST bit score: 155&lt;br&gt;E-value: 6.2e-36" id="dummy-3_h3_9_42" locus_tag="MEBOL_RS29965"  />
+</g>
+<g id="a3_0043"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15a3d8; " points="720,85 725,80 726,80 726,90 725,90 720,85 " description="&lt;b&gt;MEBOL_RS29970&lt;/b&gt;&lt;br&gt;phosphate ABC transporter ATP-binding protein&lt;br&gt;Location: 7226822 - 7227598&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102045&lt;/b&gt;&lt;br&gt;Percentage identity: 58&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 300&lt;br&gt;E-value: 1.7e-79&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102160&lt;/b&gt;&lt;br&gt;Percentage identity: 34&lt;br&gt;Percentage coverage: 98&lt;br&gt;BLAST bit score: 131&lt;br&gt;E-value: 9.9e-29" id="dummy-3_h3_9_43" locus_tag="MEBOL_RS29970"  />
+</g>
+<g id="a3_0044"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#c715d8; " points="726,85 731,80 733,80 733,90 731,90 726,85 " description="&lt;b&gt;MEBOL_RS29975&lt;/b&gt;&lt;br&gt;phosphate ABC transporter, permease protein PstA&lt;br&gt;Location: 7227610 - 7228521&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102050&lt;/b&gt;&lt;br&gt;Percentage identity: 31&lt;br&gt;Percentage coverage: 60&lt;br&gt;BLAST bit score: 99&lt;br&gt;E-value: 9.4e-19" id="dummy-3_h3_9_44" locus_tag="MEBOL_RS29975"  />
+</g>
+<g id="a3_0045"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d88015; " points="733,85 738,80 740,80 740,90 738,90 733,85 " description="&lt;b&gt;MEBOL_RS29980&lt;/b&gt;&lt;br&gt;phosphate ABC transporter permease subunit PstC&lt;br&gt;Location: 7228518 - 7229534&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102055&lt;/b&gt;&lt;br&gt;Percentage identity: 41&lt;br&gt;Percentage coverage: 48&lt;br&gt;BLAST bit score: 153&lt;br&gt;E-value: 6e-35" id="dummy-3_h3_9_45" locus_tag="MEBOL_RS29980"  />
+</g>
+<g id="a3_0046"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="741,85 746,80 747,80 747,90 746,90 741,85 " description="&lt;b&gt;MEBOL_RS29985&lt;/b&gt;&lt;br&gt;phosphate-binding protein&lt;br&gt;Location: 7229580 - 7230401" id="dummy-3_h3_9_46" locus_tag="MEBOL_RS29985"  />
+</g>
+<g id="a3_0047"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="747,85 752,80 752,80 752,90 752,90 747,85 " description="&lt;b&gt;MEBOL_RS29990&lt;/b&gt;&lt;br&gt;DNA-binding response regulator&lt;br&gt;Location: 7230493 - 7231182&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102035&lt;/b&gt;&lt;br&gt;Percentage identity: 41&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 179&lt;br&gt;E-value: 5e-43" id="dummy-3_h3_9_47" locus_tag="MEBOL_RS29990"  />
+</g>
+<g id="a3_0048"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="753,85 758,80 760,80 760,90 758,90 753,85 " description="&lt;b&gt;MEBOL_RS29995&lt;/b&gt;&lt;br&gt;metallophosphoesterase&lt;br&gt;Location: 7231258 - 7232202" id="dummy-3_h3_9_48" locus_tag="MEBOL_RS29995"  />
+</g>
+<g id="a3_0049"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1539d8; " points="760,85 765,80 770,80 770,90 765,90 760,85 " description="&lt;b&gt;MEBOL_RS30000&lt;/b&gt;&lt;br&gt;histidine kinase&lt;br&gt;Location: 7232215 - 7233588&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102070&lt;/b&gt;&lt;br&gt;Percentage identity: 35&lt;br&gt;Percentage coverage: 62&lt;br&gt;BLAST bit score: 143&lt;br&gt;E-value: 6.7e-32" id="dummy-3_h3_9_49" locus_tag="MEBOL_RS30000"  />
+</g>
+<g id="a3_0050"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="770,85 775,80 775,80 775,90 775,90 770,85 " description="&lt;b&gt;MEBOL_RS30005&lt;/b&gt;&lt;br&gt;DNA-binding response regulator&lt;br&gt;Location: 7233590 - 7234270&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0102035&lt;/b&gt;&lt;br&gt;Percentage identity: 38&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 164&lt;br&gt;E-value: 1.3e-38" id="dummy-3_h3_9_50" locus_tag="MEBOL_RS30005"  />
+</g>
+<g id="a3_0051"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:white; " points="776,85 780,80 780,90 776,85 " description="&lt;b&gt;MEBOL_RS30010&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 7234366 - 7234866" id="dummy-3_h3_9_51" locus_tag="MEBOL_RS30010"  />
+</g>
+</svg>

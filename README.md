@@ -20,6 +20,16 @@ The `data` directory contains results and summary tables needed to support the c
 - [HMM models](data/core_gene_families/HMM_models) used for identifying genes used in metagenome normalization
 - [HMM alignments](data/core_gene_families/HMM_alignments) used to produce core gene HMMs
 
+### Genome context around PepM clusters in Prochlorococcus SB, SAR11 RS40, and SAR11 HTCC7217
+- [Prochlorococcus SB antiSMASH results.](http://htmlpreview.github.io/?https://github.com/slhogle/phosphonates/blob/master/data/pepm_genome_context/antismash/prochlorococcus_SB/index.html) PepM cluster is in region 2.10. 
+- [SAR11 RS40 antiSMASH results.](http://htmlpreview.github.io/?https://github.com/slhogle/phosphonates/blob/master/data/pepm_genome_context/antismash/SAR11_RS40/index.html) PepM cluster is in region 1.5
+- [SAR11 HTCC7217 antiSMASH results.](http://htmlpreview.github.io/?https://github.com/slhogle/phosphonates/blob/master/data/pepm_genome_context/antismash/SAR11_HTCC7217/index.html) PepM cluster is in region 1.3
+
+### Functional enrichments near PepM clusters
+![title](data/pepm_genome_context/clusterprofiler/map00520.png)
+
+- [clusterProfiler results](data/pepm_genome_context/clusterprofiler/enrichment_scores.tsv)
+
 ```
 .
 ├── code

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AFV92627.1</td>
+              <td>TymE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000881/1">BGC0000881</a></td>
+              <td>other</td>
+              <td>25.0</td>
+              <td>106.5</td>
+              <td>99.0</td>
+              <td>9e-21</td>
+          </tr>
+    
+          <tr>
+              <td>APT68175.1</td>
+              <td>ToyE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001808/1">BGC0001808</a></td>
+              <td>other</td>
+              <td>25.0</td>
+              <td>106.5</td>
+              <td>99.0</td>
+              <td>9e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ACF06636.1</td>
+              <td>ToyE</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000879/1">BGC0000879</a></td>
+              <td>other</td>
+              <td>26.0</td>
+              <td>103.9</td>
+              <td>94.0</td>
+              <td>4.9e-19</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ42313.1</td>
+              <td>putative_inosine_monophosphate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000273/1">BGC0000273</a></td>
+              <td>t2pks-saccharide</td>
+              <td>31.0</td>
+              <td>51.4</td>
+              <td>81.0</td>
+              <td>4.3e-15</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

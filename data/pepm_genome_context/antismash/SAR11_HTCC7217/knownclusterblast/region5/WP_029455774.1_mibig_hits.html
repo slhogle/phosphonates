@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AKL71653.1</td>
+              <td>NocT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001703/1">BGC0001703</a></td>
+              <td>other</td>
+              <td>29.0</td>
+              <td>81.0</td>
+              <td>170.0</td>
+              <td>7.3e-42</td>
+          </tr>
+    
+          <tr>
+              <td>AQX77698.1</td>
+              <td>NocT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001704/1">BGC0001704</a></td>
+              <td>other</td>
+              <td>28.0</td>
+              <td>74.7</td>
+              <td>168.0</td>
+              <td>2.8e-41</td>
+          </tr>
+    
+          <tr>
+              <td>ATX68118.1</td>
+              <td>ubiquinone_biosynthesis_monooxygenase_UbiB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001772/1">BGC0001772</a></td>
+              <td>polyketide</td>
+              <td>27.0</td>
+              <td>78.7</td>
+              <td>147.0</td>
+              <td>5.1e-35</td>
+          </tr>
+    
+          <tr>
+              <td>AQX77683.1</td>
+              <td>NocF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001704/1">BGC0001704</a></td>
+              <td>other</td>
+              <td>24.0</td>
+              <td>83.5</td>
+              <td>135.0</td>
+              <td>2e-31</td>
+          </tr>
+    
+          <tr>
+              <td>AEA30257.1</td>
+              <td>putative_ABC1-family_protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000429/1">BGC0000429</a></td>
+              <td>nrps</td>
+              <td>23.0</td>
+              <td>88.7</td>
+              <td>127.0</td>
+              <td>7.1e-29</td>
+          </tr>
+    
+          <tr>
+              <td>AWI62630.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001822/1">BGC0001822</a></td>
+              <td>nrps</td>
+              <td>24.0</td>
+              <td>84.9</td>
+              <td>124.0</td>
+              <td>6e-28</td>
+          </tr>
+    
+          <tr>
+              <td>AKL71639.1</td>
+              <td>NocF</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001703/1">BGC0001703</a></td>
+              <td>other</td>
+              <td>23.0</td>
+              <td>76.8</td>
+              <td>123.0</td>
+              <td>7.9e-28</td>
+          </tr>
+    
+          <tr>
+              <td>CCE88383.1</td>
+              <td>ABC_transporter_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001034/1">BGC0001034</a></td>
+              <td>nrps-t1pks</td>
+              <td>23.0</td>
+              <td>82.6</td>
+              <td>92.0</td>
+              <td>2.5e-18</td>
+          </tr>
+    
+          <tr>
+              <td>AME17996.1</td>
+              <td>hypothetical_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001804/1">BGC0001804</a></td>
+              <td>polyketide</td>
+              <td>21.0</td>
+              <td>71.3</td>
+              <td>87.0</td>
+              <td>4.8e-17</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

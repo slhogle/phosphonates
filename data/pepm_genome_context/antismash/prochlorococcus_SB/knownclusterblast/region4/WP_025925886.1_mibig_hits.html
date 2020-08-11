@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ADO67763.1</td>
+              <td>Tpa1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000615/1">BGC0000615</a></td>
+              <td>thiopeptide</td>
+              <td>61.0</td>
+              <td>97.2</td>
+              <td>175.0</td>
+              <td>6.1e-44</td>
+          </tr>
+    
+          <tr>
+              <td>AAP11944.1</td>
+              <td>LSU_ribosomal_protein_L11P</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000612/1">BGC0000612</a></td>
+              <td>thiopeptide</td>
+              <td>58.0</td>
+              <td>98.6</td>
+              <td>166.0</td>
+              <td>2.9e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AAP11947.1</td>
+              <td>LSU_ribosomal_protein_L11P</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000612/1">BGC0000612</a></td>
+              <td>thiopeptide</td>
+              <td>58.0</td>
+              <td>98.6</td>
+              <td>166.0</td>
+              <td>2.9e-41</td>
+          </tr>
+    
+          <tr>
+              <td>AIU53943.1</td>
+              <td>TclQ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000607/1">BGC0000607</a></td>
+              <td>thiopeptide</td>
+              <td>62.0</td>
+              <td>100.0</td>
+              <td>165.0</td>
+              <td>6.4e-41</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>CAJ20005.1</td>
+              <td>5&#39;-fluoro-5&#39;-deoxy-adenosine_phosphorylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000903/1">BGC0000903</a></td>
+              <td>other</td>
+              <td>49.0</td>
+              <td>91.7</td>
+              <td>237.0</td>
+              <td>3.5e-62</td>
+          </tr>
+    
+          <tr>
+              <td>AMP46607.1</td>
+              <td>putative_nucleoside_phosphorylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001387/1">BGC0001387</a></td>
+              <td>other</td>
+              <td>39.0</td>
+              <td>85.9</td>
+              <td>176.0</td>
+              <td>7.4e-44</td>
+          </tr>
+    
+          <tr>
+              <td>BAV57064.1</td>
+              <td>5&#39;-methylthioadenosine_phosphorylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001514/1">BGC0001514</a></td>
+              <td>other</td>
+              <td>36.0</td>
+              <td>90.3</td>
+              <td>173.0</td>
+              <td>3.7e-43</td>
+          </tr>
+    
+          <tr>
+              <td>ABP73635.1</td>
+              <td>SalT</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000145/1">BGC0000145</a></td>
+              <td>t1pks</td>
+              <td>40.0</td>
+              <td>78.6</td>
+              <td>162.0</td>
+              <td>8.5e-40</td>
+          </tr>
+    
+          <tr>
+              <td>ABP53509.1</td>
+              <td>methylthioadenosine_phosphorylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001041/1">BGC0001041</a></td>
+              <td>nrps-polyketide</td>
+              <td>40.0</td>
+              <td>78.6</td>
+              <td>162.0</td>
+              <td>1.1e-39</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

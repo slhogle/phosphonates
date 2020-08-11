@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEW22517.1</td>
+              <td>N-acetylneuraminate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001651/1">BGC0001651</a></td>
+              <td>other</td>
+              <td>59.0</td>
+              <td>99.7</td>
+              <td>372.0</td>
+              <td>6.2e-103</td>
+          </tr>
+    
+          <tr>
+              <td>ABB29902.1</td>
+              <td>NnaB</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000789/1">BGC0000789</a></td>
+              <td>saccharide</td>
+              <td>52.0</td>
+              <td>99.4</td>
+              <td>311.0</td>
+              <td>1.7e-84</td>
+          </tr>
+    
+          <tr>
+              <td>CAB65212.1</td>
+              <td>N-acetylneuraminic_acid_condensing_enzyme</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000775/1">BGC0000775</a></td>
+              <td>saccharide</td>
+              <td>46.0</td>
+              <td>95.5</td>
+              <td>280.0</td>
+              <td>2.5e-75</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf9</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000770/1">BGC0000770</a></td>
+              <td>saccharide</td>
+              <td>34.0</td>
+              <td>98.8</td>
+              <td>184.0</td>
+              <td>3.1e-46</td>
+          </tr>
+    
+          <tr>
+              <td>KKY62503.1</td>
+              <td>N-acetylneuraminate_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001747/1">BGC0001747</a></td>
+              <td>other</td>
+              <td>35.0</td>
+              <td>97.3</td>
+              <td>179.0</td>
+              <td>7.7e-45</td>
+          </tr>
+    
+          <tr>
+              <td>AAV52040.1</td>
+              <td>sialic_acid_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000771/1">BGC0000771</a></td>
+              <td>saccharide</td>
+              <td>34.0</td>
+              <td>26.6</td>
+              <td>49.0</td>
+              <td>9.2e-06</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

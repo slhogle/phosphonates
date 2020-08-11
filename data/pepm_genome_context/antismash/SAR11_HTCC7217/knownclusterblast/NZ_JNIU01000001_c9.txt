@@ -1,0 +1,65 @@
+ClusterBlast scores for NZ_JNIU01000001
+
+Table of genes, locations, strands and annotations of query cluster:
+P773_RS0106855	1263416	1263665	+	hypothetical protein	
+P773_RS0106860	1263642	1264959	-	two-component sensor histidine kinase	
+P773_RS0106865	1264939	1265617	-	DNA-binding response regulator	
+P773_RS0106870	1265609	1266047	-	MarR family transcriptional regulator	
+P773_RS0106875	1266117	1266999	+	branched-chain amino acid aminotransferase	
+P773_RS0106880	1266995	1267580	-	CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase	
+P773_RS0106885	1267582	1269418	-	excinuclease ABC subunit UvrC	
+P773_RS0106890	1269404	1269830	-	dihydroneopterin aldolase	
+P773_RS0106895	1269826	1270573	-	short chain dehydrogenase	
+P773_RS0106900	1270588	1272757	-	excinuclease ABC subunit UvrB	
+P773_RS0106905	1272792	1273980	+	pyridoxal phosphate-dependent aminotransferase	
+P773_RS0106910	1273983	1274637	+	segregation protein B	
+P773_RS0106915	1274639	1275587	-	ADP-ribosylglycohydrolase	
+P773_RS0106920	1275592	1276267	-	oxidoreductase	
+P773_RS0106925	1276292	1276706	-	hypothetical protein	
+P773_RS0106930	1276709	1277654	-	thioredoxin-disulfide reductase	
+P773_RS0106935	1277675	1278620	+	nucleoside-diphosphate sugar epimerase	
+P773_RS0106940	1278619	1279282	+	hypothetical protein	
+P773_RS0106945	1279284	1280010	-	20S proteasome subunits A/B	
+P773_RS0106950	1280123	1281569	+	circularly permuted type 2 ATP-grasp protein	
+P773_RS0106955	1281574	1284799	-	carbamoyl-phosphate synthase large subunit	
+P773_RS0106960	1284776	1285970	-	carbamoyl-phosphate synthase small subunit	
+P773_RS0106965	1286096	1286558	+	GatB/YqeY domain-containing protein	
+P773_RS0106970	1286557	1288333	+	DNA primase	
+
+
+Significant hits: 
+1. BGC0000982	Cystothiazole A
+
+
+Details:
+
+>>
+1. BGC0000982
+Source: Cystothiazole A
+Type: nrps-t1pks
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 1483
+
+Table of genes, locations, strands and annotations of subject cluster:
+AAW03320.1	AAW03320.1	7734	8291	+	hypothetical_protein
+AAW03321.1	AAW03321.1	8865	10055	+	hypothetical_protein
+AAW03322.1	AAW03322.1	10860	14087	+	hypothetical_protein
+AAW03323.1	AAW03323.1	15382	17442	-	hypothetical_protein
+AAW03324.1	AAW03324.1	17754	18650	+	hypothetical_protein
+AAW03325.1	AAW03325.1	19334	22489	+	CtaB
+AAW03326.1	AAW03326.1	22528	26457	+	CtaC
+AAW03327.1	AAW03327.1	26454	36314	+	CtaD
+AAW03328.1	AAW03328.1	36369	42092	+	CtaE
+AAW03329.1	AAW03329.1	42089	46171	+	CtaF
+AAW03330.1	AAW03330.1	46168	51408	+	CtaG
+AAW03331.1	AAW03331.1	51427	52416	+	hypothetical_protein
+AAW03332.1	AAW03332.1	52448	53479	-	CtaJ
+AAW03333.1	AAW03333.1	53476	54381	-	CtaK
+AAW03334.1	AAW03334.1	55066	56451	-	hypothetical_protein
+AAW03335.1	AAW03335.1	58085	61021	-	hypothetical_protein
+AAW03336.1	AAW03336.1	62217	62681	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0106905	AAW03321.1	46	341	100.25316455696202	1.4e-93
+P773_RS0106955	AAW03322.1	55	1142	100.93109869646182	0.0
+

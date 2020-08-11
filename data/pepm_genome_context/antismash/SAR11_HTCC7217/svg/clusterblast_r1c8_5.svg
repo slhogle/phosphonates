@@ -1,0 +1,112 @@
+<svg version="1.1" preserveAspectRatio="none" width="800" y="0" xmlns:xlink="http://www.w3.org/1999/xlink" height="230" x="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 230"  >
+<g label="Query sequence" class="clusterblast-cluster"  >
+<text class="clusterblast-acc" y="20" x="5"  >
+Query sequence</text>
+<line style="stroke-width:1; stroke:grey; " y1="35" x2="778.0" y2="35" x1="10"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="0,40 55,40 60,35 55,30 0,30 0,40 " description="&lt;b&gt;P773_RS0106630&lt;/b&gt;&lt;br&gt;cytochrome c oxidase subunit I&lt;br&gt;Location: 1225167 - 1226802" id="dummy-8_q0_0_all" locus_tag="P773_RS0106630"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#54d815; " points="61,40 89,40 94,35 89,30 61,30 61,40 " description="&lt;b&gt;P773_RS0106635&lt;/b&gt;&lt;br&gt;protoheme IX farnesyltransferase&lt;br&gt;Location: 1226831 - 1227743" id="dummy-8_q1_0_all" locus_tag="P773_RS0106635"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15c1d8; " points="94,40 98,35 94,30 94,40 " description="&lt;b&gt;P773_RS0106640&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 1227739 - 1227865" id="dummy-8_q2_0_all" locus_tag="P773_RS0106640"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#8215d8; " points="98,40 113,40 118,35 113,30 98,30 98,40 " description="&lt;b&gt;P773_RS0106645&lt;/b&gt;&lt;br&gt;cytochrome c oxidase assembly protein&lt;br&gt;Location: 1227864 - 1228395" id="dummy-8_q3_0_all" locus_tag="P773_RS0106645"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d84415; " points="118,40 142,40 147,35 142,30 118,30 118,40 " description="&lt;b&gt;P773_RS0106650&lt;/b&gt;&lt;br&gt;cytochrome c oxidase subunit 3&lt;br&gt;Location: 1228404 - 1229193" id="dummy-8_q4_0_all" locus_tag="P773_RS0106650"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#25d815; " points="147,40 166,40 171,35 166,30 147,30 147,40 " description="&lt;b&gt;P773_RS0106655&lt;/b&gt;&lt;br&gt;SURF1 family protein&lt;br&gt;Location: 1229203 - 1229857" id="dummy-8_q5_0_all" locus_tag="P773_RS0106655"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1592d8; " points="171,40 217,40 222,35 217,30 171,30 171,40 " description="&lt;b&gt;P773_RS0106660&lt;/b&gt;&lt;br&gt;threonine synthase&lt;br&gt;Location: 1229857 - 1231240" id="dummy-8_q6_0_all" locus_tag="P773_RS0106660"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#b115d8; " points="221,40 234,40 239,35 234,30 221,30 221,40 " description="&lt;b&gt;P773_RS0106665&lt;/b&gt;&lt;br&gt;peroxiredoxin&lt;br&gt;Location: 1231236 - 1231725" id="dummy-8_q7_0_all" locus_tag="P773_RS0106665"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d87315; " points="239,35 244,30 255,30 255,40 244,40 239,35 " description="&lt;b&gt;P773_RS0106670&lt;/b&gt;&lt;br&gt;ribonuclease HI&lt;br&gt;Location: 1231716 - 1232142" id="dummy-8_q8_0_all" locus_tag="P773_RS0106670"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d834; " points="255,35 260,30 290,30 290,40 260,40 255,35 " description="&lt;b&gt;P773_RS0106675&lt;/b&gt;&lt;br&gt;homoserine kinase&lt;br&gt;Location: 1232141 - 1233107" id="dummy-8_q9_0_all" locus_tag="P773_RS0106675"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1563d8; " points="290,35 295,30 324,30 324,40 295,40 290,35 " description="&lt;b&gt;P773_RS0106680&lt;/b&gt;&lt;br&gt;4-hydroxy-3-methylbut-2-enyl diphosphate reductase&lt;br&gt;Location: 1233107 - 1234052" id="dummy-8_q10_0_all" locus_tag="P773_RS0106680"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d815d0; " points="324,35 329,30 358,30 358,40 329,40 324,35 " description="&lt;b&gt;P773_RS0106685&lt;/b&gt;&lt;br&gt;membrane protein&lt;br&gt;Location: 1234041 - 1234977" id="dummy-8_q11_0_all" locus_tag="P773_RS0106685"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d8a215; " points="358,35 363,30 397,30 397,40 363,40 358,35 " description="&lt;b&gt;P773_RS0106690&lt;/b&gt;&lt;br&gt;lycopene cyclase&lt;br&gt;Location: 1234979 - 1236044" id="dummy-8_q12_0_all" locus_tag="P773_RS0106690"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d863; " points="397,35 402,30 428,30 428,40 402,40 397,35 " description="&lt;b&gt;P773_RS0106695&lt;/b&gt;&lt;br&gt;phytoene synthase&lt;br&gt;Location: 1236030 - 1236885" id="dummy-8_q13_0_all" locus_tag="P773_RS0106695"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1534d8; " points="428,35 433,30 481,30 481,40 433,40 428,35 " description="&lt;b&gt;P773_RS0106700&lt;/b&gt;&lt;br&gt;phytoene desaturase&lt;br&gt;Location: 1236881 - 1238342" id="dummy-8_q14_0_all" locus_tag="P773_RS0106700"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d815a2; " points="482,35 487,30 501,30 501,40 487,40 482,35 " description="&lt;b&gt;P773_RS0106705&lt;/b&gt;&lt;br&gt;ATPase&lt;br&gt;Location: 1238381 - 1238888" id="dummy-8_q15_0_all" locus_tag="P773_RS0106705"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d8d015; " points="500,35 505,30 520,30 520,40 505,40 500,35 " description="&lt;b&gt;P773_RS0106710&lt;/b&gt;&lt;br&gt;ATP synthase subunit B&lt;br&gt;Location: 1238868 - 1239408" id="dummy-8_q16_0_all" locus_tag="P773_RS0106710"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d892; " points="522,35 527,30 530,30 530,40 527,40 522,35 " description="&lt;b&gt;P773_RS0106715&lt;/b&gt;&lt;br&gt;ATP synthase subunit C&lt;br&gt;Location: 1239464 - 1239692" id="dummy-8_q17_0_all" locus_tag="P773_RS0106715"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#2515d8; " points="531,35 536,30 558,30 558,40 536,40 531,35 " description="&lt;b&gt;P773_RS0106720&lt;/b&gt;&lt;br&gt;F0F1 ATP synthase subunit A&lt;br&gt;Location: 1239710 - 1240445" id="dummy-8_q18_0_all" locus_tag="P773_RS0106720"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81573; " points="558,35 563,30 568,30 568,40 563,40 558,35 " description="&lt;b&gt;P773_RS0106725&lt;/b&gt;&lt;br&gt;membrane protein&lt;br&gt;Location: 1240454 - 1240730" id="dummy-8_q19_0_all" locus_tag="P773_RS0106725"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#b1d815; " points="568,35 573,30 662,30 662,40 573,40 568,35 " description="&lt;b&gt;P773_RS0106730&lt;/b&gt;&lt;br&gt;chromosome segregation protein SMC&lt;br&gt;Location: 1240739 - 1243313" id="dummy-8_q20_0_all" locus_tag="P773_RS0106730"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d8c1; " points="663,35 668,30 684,30 684,40 668,40 663,35 " description="&lt;b&gt;P773_RS0106735&lt;/b&gt;&lt;br&gt;DSBA oxidoreductase&lt;br&gt;Location: 1243321 - 1243900" id="dummy-8_q21_0_all" locus_tag="P773_RS0106735"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5415d8; " points="684,35 689,30 702,30 702,40 689,40 684,35 " description="&lt;b&gt;P773_RS0106740&lt;/b&gt;&lt;br&gt;DUF721 domain-containing protein&lt;br&gt;Location: 1243896 - 1244385" id="dummy-8_q22_0_all" locus_tag="P773_RS0106740"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81544; " points="702,40 733,40 738,35 733,30 702,30 702,40 " description="&lt;b&gt;P773_RS0106745&lt;/b&gt;&lt;br&gt;A/G-specific adenine glycosylase&lt;br&gt;Location: 1244399 - 1245380" id="dummy-8_q23_0_all" locus_tag="P773_RS0106745"  />
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#82d815; " points="738,40 775,40 780,35 775,30 738,30 738,40 " description="&lt;b&gt;P773_RS0106750&lt;/b&gt;&lt;br&gt;FAD-dependent monooxygenase&lt;br&gt;Location: 1245376 - 1246528" id="dummy-8_q24_0_all" locus_tag="P773_RS0106750"  />
+</g>
+<g label="NZ_KI421440" class="clusterblast-cluster" description="NZ_KI421440_c1: Candidatus Pelagibacter ubique HTCC8051 HTC8051 Contig1.1, wh... (100% of genes show similarity), terpene"  >
+<text class="clusterblast-acc" y="70" x="5"  >
+<a xlink:href="https://antismash-db.secondarymetabolites.org/go/NZ_KI421440/1" target="_blank">NZ_KI421440_c1</a>: Candidatus Pelagibacter ubique HTCC8051 HTC8051 Contig1.1, wh... (100% of genes show similarity), terpene</text>
+<line style="stroke-width:1; stroke:grey; " y1="85" x2="778.0" y2="85" x1="10"  />
+</g>
+<g id="a8_000"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81515; " points="0,90 55,90 60,85 55,80 0,80 0,90 " description="&lt;b&gt;F754_RS0100580&lt;/b&gt;&lt;br&gt;cytochrome c oxidase subunit I&lt;br&gt;Location: 113108 - 114742&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106630&lt;/b&gt;&lt;br&gt;Percentage identity: 98&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 1083&lt;br&gt;E-value: 0.0" id="dummy-8_h8_5_0" locus_tag="F754_RS0100580"  />
+</g>
+<g id="a8_001"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#54d815; " points="61,90 89,90 94,85 89,80 61,80 61,90 " description="&lt;b&gt;F754_RS0100585&lt;/b&gt;&lt;br&gt;protoheme IX farnesyltransferase&lt;br&gt;Location: 114772 - 115683&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106635&lt;/b&gt;&lt;br&gt;Percentage identity: 92&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 541&lt;br&gt;E-value: 5.2e-152" id="dummy-8_h8_5_1" locus_tag="F754_RS0100585"  />
+</g>
+<g id="a8_002"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15c1d8; " points="94,90 94,90 99,85 94,80 94,80 94,90 " description="&lt;b&gt;F754_RS0100590&lt;/b&gt;&lt;br&gt;hypothetical protein&lt;br&gt;Location: 115680 - 115805&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106640&lt;/b&gt;&lt;br&gt;Percentage identity: 90&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 73&lt;br&gt;E-value: 7e-12" id="dummy-8_h8_5_2" locus_tag="F754_RS0100590"  />
+</g>
+<g id="a8_003"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#8215d8; " points="99,90 113,90 118,85 113,80 99,80 99,90 " description="&lt;b&gt;F754_RS0100595&lt;/b&gt;&lt;br&gt;cytochrome c oxidase assembly protein&lt;br&gt;Location: 115805 - 116335&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106645&lt;/b&gt;&lt;br&gt;Percentage identity: 99&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 357&lt;br&gt;E-value: 1e-96" id="dummy-8_h8_5_3" locus_tag="F754_RS0100595"  />
+</g>
+<g id="a8_004"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d84415; " points="118,90 142,90 147,85 142,80 118,80 118,90 " description="&lt;b&gt;F754_RS0100600&lt;/b&gt;&lt;br&gt;cytochrome c oxidase subunit 3&lt;br&gt;Location: 116344 - 117132&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106650&lt;/b&gt;&lt;br&gt;Percentage identity: 96&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 542&lt;br&gt;E-value: 3.4e-152" id="dummy-8_h8_5_4" locus_tag="F754_RS0100600"  />
+</g>
+<g id="a8_005"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#25d815; " points="147,90 166,90 171,85 166,80 147,80 147,90 " description="&lt;b&gt;F754_RS0100605&lt;/b&gt;&lt;br&gt;SURF1 family protein&lt;br&gt;Location: 117143 - 117796&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106655&lt;/b&gt;&lt;br&gt;Percentage identity: 82&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 374&lt;br&gt;E-value: 7.8e-102" id="dummy-8_h8_5_5" locus_tag="F754_RS0100605"  />
+</g>
+<g id="a8_006"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1592d8; " points="171,90 216,90 221,85 216,80 171,80 171,90 " description="&lt;b&gt;F754_RS0100610&lt;/b&gt;&lt;br&gt;threonine synthase&lt;br&gt;Location: 117797 - 119170&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106660&lt;/b&gt;&lt;br&gt;Percentage identity: 74&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 706&lt;br&gt;E-value: 1.4e-201" id="dummy-8_h8_5_6" locus_tag="F754_RS0100610"  />
+</g>
+<g id="a8_007"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#b115d8; " points="221,90 234,90 239,85 234,80 221,80 221,90 " description="&lt;b&gt;F754_RS0100615&lt;/b&gt;&lt;br&gt;peroxiredoxin&lt;br&gt;Location: 119167 - 119652&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106665&lt;/b&gt;&lt;br&gt;Percentage identity: 54&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 183&lt;br&gt;E-value: 1.9e-44" id="dummy-8_h8_5_7" locus_tag="F754_RS0100615"  />
+</g>
+<g id="a8_008"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d87315; " points="239,85 244,80 254,80 254,90 244,90 239,85 " description="&lt;b&gt;F754_RS0100620&lt;/b&gt;&lt;br&gt;ribonuclease HI&lt;br&gt;Location: 119644 - 120069&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106670&lt;/b&gt;&lt;br&gt;Percentage identity: 79&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 245&lt;br&gt;E-value: 2.7e-63" id="dummy-8_h8_5_8" locus_tag="F754_RS0100620"  />
+</g>
+<g id="a8_009"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d834; " points="254,85 259,80 289,80 289,90 259,90 254,85 " description="&lt;b&gt;F754_RS0100625&lt;/b&gt;&lt;br&gt;homoserine kinase&lt;br&gt;Location: 120069 - 121034&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106675&lt;/b&gt;&lt;br&gt;Percentage identity: 75&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 484&lt;br&gt;E-value: 7.9e-135" id="dummy-8_h8_5_9" locus_tag="F754_RS0100625"  />
+</g>
+<g id="a8_0010"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1563d8; " points="290,85 295,80 324,80 324,90 295,90 290,85 " description="&lt;b&gt;F754_RS0100630&lt;/b&gt;&lt;br&gt;4-hydroxy-3-methylbut-2-enyl diphosphate reductase&lt;br&gt;Location: 121035 - 121979&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106680&lt;/b&gt;&lt;br&gt;Percentage identity: 85&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 531&lt;br&gt;E-value: 7.2e-149" id="dummy-8_h8_5_10" locus_tag="F754_RS0100630"  />
+</g>
+<g id="a8_0011"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d815d0; " points="324,85 329,80 358,80 358,90 329,90 324,85 " description="&lt;b&gt;F754_RS0100635&lt;/b&gt;&lt;br&gt;membrane protein&lt;br&gt;Location: 121969 - 122907&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106685&lt;/b&gt;&lt;br&gt;Percentage identity: 67&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 392&lt;br&gt;E-value: 4e-107" id="dummy-8_h8_5_11" locus_tag="F754_RS0100635"  />
+</g>
+<g id="a8_0012"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d8a215; " points="358,85 363,80 397,80 397,90 363,90 358,85 " description="&lt;b&gt;F754_RS0100640&lt;/b&gt;&lt;br&gt;lycopene cyclase&lt;br&gt;Location: 122909 - 123973&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106690&lt;/b&gt;&lt;br&gt;Percentage identity: 67&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 495&lt;br&gt;E-value: 3.8e-138" id="dummy-8_h8_5_12" locus_tag="F754_RS0100640"  />
+</g>
+<g id="a8_0013"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d863; " points="396,85 401,80 427,80 427,90 401,90 396,85 " description="&lt;b&gt;F754_RS0100645&lt;/b&gt;&lt;br&gt;phytoene synthase&lt;br&gt;Location: 123960 - 124811&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106695&lt;/b&gt;&lt;br&gt;Percentage identity: 75&lt;br&gt;Percentage coverage: 99&lt;br&gt;BLAST bit score: 426&lt;br&gt;E-value: 1.7e-117" id="dummy-8_h8_5_13" locus_tag="F754_RS0100645"  />
+</g>
+<g id="a8_0014"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#1534d8; " points="427,85 432,80 481,80 481,90 432,90 427,85 " description="&lt;b&gt;F754_RS0100650&lt;/b&gt;&lt;br&gt;phytoene desaturase&lt;br&gt;Location: 124811 - 126271&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106700&lt;/b&gt;&lt;br&gt;Percentage identity: 86&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 867&lt;br&gt;E-value: 8.6e-250" id="dummy-8_h8_5_14" locus_tag="F754_RS0100650"  />
+</g>
+<g id="a8_0015"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d815a2; " points="482,85 487,80 501,80 501,90 487,90 482,85 " description="&lt;b&gt;F754_RS0100655&lt;/b&gt;&lt;br&gt;ATPase&lt;br&gt;Location: 126311 - 126817&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106705&lt;/b&gt;&lt;br&gt;Percentage identity: 95&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 201&lt;br&gt;E-value: 5.4e-50" id="dummy-8_h8_5_15" locus_tag="F754_RS0100655"  />
+</g>
+<g id="a8_0016"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d8d015; " points="500,85 505,80 520,80 520,90 505,90 500,85 " description="&lt;b&gt;F754_RS0100660&lt;/b&gt;&lt;br&gt;ATP synthase subunit B&lt;br&gt;Location: 126798 - 127337&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106710&lt;/b&gt;&lt;br&gt;Percentage identity: 48&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 141&lt;br&gt;E-value: 1.2e-31" id="dummy-8_h8_5_16" locus_tag="F754_RS0100660"  />
+</g>
+<g id="a8_0017"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d892; " points="522,85 527,80 530,80 530,90 527,90 522,85 " description="&lt;b&gt;F754_RS0100665&lt;/b&gt;&lt;br&gt;ATP synthase subunit C&lt;br&gt;Location: 127394 - 127621&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106715&lt;/b&gt;&lt;br&gt;Percentage identity: 100&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 111&lt;br&gt;E-value: 4.3e-23" id="dummy-8_h8_5_17" locus_tag="F754_RS0100665"  />
+</g>
+<g id="a8_0018"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#2515d8; " points="531,85 536,80 557,80 557,90 536,90 531,85 " description="&lt;b&gt;F754_RS0100670&lt;/b&gt;&lt;br&gt;F0F1 ATP synthase subunit A&lt;br&gt;Location: 127640 - 128374&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106720&lt;/b&gt;&lt;br&gt;Percentage identity: 96&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 440&lt;br&gt;E-value: 1e-121" id="dummy-8_h8_5_18" locus_tag="F754_RS0100670"  />
+</g>
+<g id="a8_0019"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81573; " points="558,85 563,80 568,80 568,90 563,90 558,85 " description="&lt;b&gt;F754_RS0100675&lt;/b&gt;&lt;br&gt;membrane protein&lt;br&gt;Location: 128385 - 128660&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106725&lt;/b&gt;&lt;br&gt;Percentage identity: 95&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 168&lt;br&gt;E-value: 4.7e-40" id="dummy-8_h8_5_19" locus_tag="F754_RS0100675"  />
+</g>
+<g id="a8_0020"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#b1d815; " points="568,85 573,80 662,80 662,90 573,90 568,85 " description="&lt;b&gt;F754_RS0100680&lt;/b&gt;&lt;br&gt;chromosome segregation protein SMC&lt;br&gt;Location: 128670 - 131243&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106730&lt;/b&gt;&lt;br&gt;Percentage identity: 88&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 1156&lt;br&gt;E-value: 0.0" id="dummy-8_h8_5_20" locus_tag="F754_RS0100680"  />
+</g>
+<g id="a8_0021"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#15d8c1; " points="663,85 668,80 684,80 684,90 668,90 663,85 " description="&lt;b&gt;F754_RS0100685&lt;/b&gt;&lt;br&gt;DSBA oxidoreductase&lt;br&gt;Location: 131252 - 131830&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106735&lt;/b&gt;&lt;br&gt;Percentage identity: 79&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 314&lt;br&gt;E-value: 6.5e-84" id="dummy-8_h8_5_21" locus_tag="F754_RS0100685"  />
+</g>
+<g id="a8_0022"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#5415d8; " points="684,85 689,80 701,80 701,90 689,90 684,85 " description="&lt;b&gt;F754_RS0100690&lt;/b&gt;&lt;br&gt;DUF721 domain-containing protein&lt;br&gt;Location: 131827 - 132315&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106740&lt;/b&gt;&lt;br&gt;Percentage identity: 80&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 267&lt;br&gt;E-value: 7.7e-70" id="dummy-8_h8_5_22" locus_tag="F754_RS0100690"  />
+</g>
+<g id="a8_0023"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#d81544; " points="701,90 732,90 737,85 732,80 701,80 701,90 " description="&lt;b&gt;F754_RS0100695&lt;/b&gt;&lt;br&gt;A/G-specific adenine glycosylase&lt;br&gt;Location: 132316 - 133299&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106745&lt;/b&gt;&lt;br&gt;Percentage identity: 57&lt;br&gt;Percentage coverage: 98&lt;br&gt;BLAST bit score: 346&lt;br&gt;E-value: 2.6e-93" id="dummy-8_h8_5_23" locus_tag="F754_RS0100695"  />
+</g>
+<g id="a8_0024"  >
+<polygon class="clusterblast-orf" style="stroke-width:1; stroke:black; fill:#82d815; " points="737,90 774,90 779,85 774,80 737,80 737,90 " description="&lt;b&gt;F754_RS0100700&lt;/b&gt;&lt;br&gt;FAD-dependent monooxygenase&lt;br&gt;Location: 133296 - 134438&lt;br&gt;&lt;br&gt;&lt;b&gt;BlastP hit with P773_RS0106750&lt;/b&gt;&lt;br&gt;Percentage identity: 71&lt;br&gt;Percentage coverage: 100&lt;br&gt;BLAST bit score: 545&lt;br&gt;E-value: 4.5e-153" id="dummy-8_h8_5_24" locus_tag="F754_RS0100700"  />
+</g>
+</svg>

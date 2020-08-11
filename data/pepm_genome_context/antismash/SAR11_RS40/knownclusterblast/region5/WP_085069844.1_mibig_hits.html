@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ANC94991.1</td>
+              <td>AlmDII</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001396/1">BGC0001396</a></td>
+              <td>t1pks</td>
+              <td>35.0</td>
+              <td>97.9</td>
+              <td>191.0</td>
+              <td>2.5e-48</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54232.1</td>
+              <td>PauY12</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001732/1">BGC0001732</a></td>
+              <td>other</td>
+              <td>33.0</td>
+              <td>98.2</td>
+              <td>188.0</td>
+              <td>1.6e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AFJ52687.1</td>
+              <td>pyruvate_dehydrogenase_beta-subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001073/1">BGC0001073</a></td>
+              <td>nrps-t2pks</td>
+              <td>35.0</td>
+              <td>97.6</td>
+              <td>187.0</td>
+              <td>2.8e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AIE54179.1</td>
+              <td>Pau12</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001731/1">BGC0001731</a></td>
+              <td>other</td>
+              <td>33.0</td>
+              <td>98.2</td>
+              <td>187.0</td>
+              <td>2.8e-47</td>
+          </tr>
+    
+          <tr>
+              <td>AAK83191.1</td>
+              <td>putative_pyruvate_dehydrogenase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000026/1">BGC0000026</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>88.1</td>
+              <td>115.0</td>
+              <td>1.8e-25</td>
+          </tr>
+    
+          <tr>
+              <td>BAD38880.1</td>
+              <td>putative_dehydrogenase_beta_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000111/1">BGC0000111</a></td>
+              <td>t1pks</td>
+              <td>29.0</td>
+              <td>98.8</td>
+              <td>113.0</td>
+              <td>8.7e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AVE17171.1</td>
+              <td>BkdB1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001535/1">BGC0001535</a></td>
+              <td>other</td>
+              <td>28.0</td>
+              <td>103.4</td>
+              <td>111.0</td>
+              <td>2.5e-24</td>
+          </tr>
+    
+          <tr>
+              <td>BAX89995.1</td>
+              <td>pyruvate_dehydrogenase_complex,_E1_beta_and_E2_units</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001628/1">BGC0001628</a></td>
+              <td>nrps</td>
+              <td>30.0</td>
+              <td>82.0</td>
+              <td>103.0</td>
+              <td>5.3e-22</td>
+          </tr>
+    
+          <tr>
+              <td>ADU85985.1</td>
+              <td>putative_transketolase_central_region</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000165/1">BGC0000165</a></td>
+              <td>t1pks</td>
+              <td>27.0</td>
+              <td>99.1</td>
+              <td>99.0</td>
+              <td>7.6e-21</td>
+          </tr>
+    
+          <tr>
+              <td>WP_067426788.1</td>
+              <td>transketolase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001567/1">BGC0001567</a></td>
+              <td>nrps</td>
+              <td>29.0</td>
+              <td>82.9</td>
+              <td>98.0</td>
+              <td>1.7e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CAE15169.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001736/1">BGC0001736</a></td>
+              <td>nrps</td>
+              <td>27.0</td>
+              <td>101.8</td>
+              <td>98.0</td>
+              <td>1.7e-20</td>
+          </tr>
+    
+          <tr>
+              <td>CBW45750.1</td>
+              <td>branched-chain_alpha-keto_acid_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000952/3">BGC0000952</a></td>
+              <td>nrps-t1pks+transatpks</td>
+              <td>26.0</td>
+              <td>99.7</td>
+              <td>88.0</td>
+              <td>2.3e-17</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

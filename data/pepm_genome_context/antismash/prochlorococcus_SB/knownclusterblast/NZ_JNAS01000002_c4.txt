@@ -1,0 +1,67 @@
+ClusterBlast scores for NZ_JNAS01000002
+
+Table of genes, locations, strands and annotations of query cluster:
+EV02_RS03975	422558	425315	+	ATPase AAA	
+EV02_RS03970	425377	425620	+	preprotein translocase subunit SecE	
+EV02_RS03965	425671	426283	+	transcription termination/antitermination protein NusG	
+EV02_RS03960	426350	426776	+	50S ribosomal protein L11	
+EV02_RS03955	426842	427550	+	50S ribosomal protein L1	
+EV02_RS03950	427740	428268	+	50S ribosomal protein L10	
+EV02_RS03945	428296	428692	+	50S ribosomal protein L7/L12	
+EV02_RS03940	428739	429468	+	ribonuclease HI	
+EV02_RS03935	429464	430634	+	quinone-dependent dihydroorotate dehydrogenase	
+EV02_RS03930	430643	431765	+	aspartate aminotransferase	
+EV02_RS03925	431743	432835	-	UDP-N-acetylglucosamine--N-acetylmuramyl- (pentapeptide) pyrophosphoryl-undecaprenol N-acetylglucosamine transferase	
+EV02_RS03920	432876	433602	+	hypothetical protein	
+EV02_RS03915	433603	434812	-	phosphoglycerate kinase	
+EV02_RS03910	435024	435897	+	ribosome biogenesis GTPase YlqF	
+EV02_RS03905	435887	436847	+	RluA family pseudouridine synthase	
+EV02_RS03900	436839	438438	-	ABC transporter ATP-binding protein	
+EV02_RS03895	438492	440802	+	bifunctional (p)ppGpp synthetase/guanosine-3',5'-bis(diphosphate) 3'-pyrophosphohydrolase	
+EV02_RS03890	440820	441264	-	DUF2062 domain-containing protein	
+EV02_RS03885	441330	442713	+	tRNA uridine-5-carboxymethylaminomethyl(34) synthesis GTPase MnmE	
+
+
+Significant hits: 
+1. BGC0000615	TP-1161
+
+
+Details:
+
+>>
+1. BGC0000615
+Source: TP-1161
+Type: thiopeptide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 405
+
+Table of genes, locations, strands and annotations of subject cluster:
+ADO67763.1	ADO67763.1	1	429	+	Tpa1
+ADO67764.1	ADO67764.1	518	1195	+	Tpa2
+ADO67765.1	ADO67765.1	1603	2130	+	Tpa3
+ADO67766.1	ADO67766.1	2227	2616	+	Tpa4
+ADO67767.1	ADO67767.1	3355	6822	+	Tpa5
+ADO67768.1	ADO67768.1	6857	10735	+	Tpa6
+ADO67769.1	ADO67769.1	10852	14034	+	hypothetical_protein
+ADO67770.1	ADO67770.1	14405	14551	+	TpaA
+ADO67771.1	ADO67771.1	14689	15756	+	hypothetical_protein
+ADO67772.1	ADO67772.1	15806	17152	+	TpaC
+ADO67773.1	ADO67773.1	17180	17782	+	TpaD
+ADO67774.1	ADO67774.1	17794	19434	+	TpaE
+ADO67775.1	ADO67775.1	19424	20125	+	TpaF
+ADO67776.1	ADO67776.1	20217	22031	+	hypothetical_protein
+ADO67777.1	ADO67777.1	22028	23893	+	TpaH
+ADO67778.1	ADO67778.1	24008	24817	-	TpaI
+ADO67779.1	ADO67779.1	24879	26093	-	TpaJ
+ADO67780.1	ADO67780.1	26463	26609	+	TpaX
+ADO67781.1	ADO67781.1	26673	29462	+	TpaK
+ADO67782.1	ADO67782.1	29497	30369	+	TpaL
+ADO67783.1	ADO67783.1	30799	31170	+	Tpa8
+ADO67784.1	ADO67784.1	31173	31643	+	Tpa9
+ADO67785.1	ADO67785.1	31692	33803	+	Tpa10
+ADO67786.1	ADO67786.1	33887	35080	+	Tpa11
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+EV02_RS03960	ADO67763.1	61	175	97.16312056737588	6.1e-44
+EV02_RS03955	ADO67764.1	48	230	95.31914893617022	2.7e-60
+

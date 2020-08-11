@@ -1,0 +1,110 @@
+ClusterBlast scores for NZ_CP020778.1
+
+Table of genes, locations, strands and annotations of query cluster:
+B8063_RS04185	782954	784070	-	hypothetical protein	
+B8063_RS04190	784070	785171	-	phosphonopyruvate decarboxylase	
+B8063_RS04195	785163	786465	-	phosphoenolpyruvate mutase	
+B8063_RS04200	786531	787053	-	adenylyl-sulfate kinase	
+B8063_RS04205	787420	789403	+	hypothetical protein	
+B8063_RS04210	789623	790622	+	SDR family NAD-dependent epimerase/dehydratase	
+B8063_RS04215	790608	791769	+	aminotransferase DegT	
+B8063_RS04220	791769	792663	+	formyl transferase	
+B8063_RS04225	792652	793657	+	N-acetylneuraminate synthase	
+B8063_RS04230	793656	794823	+	UDP-N-acetylglucosamine 2-epimerase (hydrolyzing)	
+B8063_RS04235	794878	795931	+	CBS domain-containing protein	
+B8063_RS04240	795953	796952	+	hypothetical protein	
+B8063_RS04245	796962	797766	+	3-deoxy-manno-octulosonate cytidylyltransferase	
+B8063_RS04250	797996	799832	-	hypothetical protein	
+B8063_RS04255	799983	800367	-	hypothetical protein	
+B8063_RS04260	800519	801962	+	hypothetical protein	
+B8063_RS04265	801958	803698	+	hypothetical protein	
+B8063_RS04270	803699	804734	+	hypothetical protein	
+B8063_RS04275	804720	805245	+	hypothetical protein	
+B8063_RS04280	805247	806192	+	hypothetical protein	
+B8063_RS04285	806188	806893	+	SDR family NAD(P)-dependent oxidoreductase	
+B8063_RS04290	806868	807612	+	hypothetical protein	
+B8063_RS04295	807675	808845	+	hypothetical protein	
+B8063_RS04300	808944	810063	+	hypothetical protein	
+B8063_RS04305	810124	811354	+	O-antigen ligase domain-containing protein	
+B8063_RS04310	811440	812766	+	hypothetical protein	
+B8063_RS04315	812749	814039	+	glycosyltransferase WbuB	
+B8063_RS04320	814166	815474	+	nucleotide sugar dehydrogenase	
+B8063_RS04325	815519	816209	+	CDP-alcohol phosphatidyltransferase family protein	
+B8063_RS04330	816226	818080	+	asparagine synthase (glutamine-hydrolyzing)	
+B8063_RS04335	818076	819174	+	hypothetical protein	
+B8063_RS04340	819183	820164	+	thiamine pyrophosphate-dependent dehydrogenase E1 component subunit alpha	
+B8063_RS04345	820156	821140	+	hypothetical protein	
+B8063_RS04350	821139	821790	+	class I SAM-dependent methyltransferase	
+B8063_RS04355	821792	822899	+	DegT/DnrJ/EryC1/StrS family aminotransferase	
+B8063_RS04360	822909	823638	+	sugar transferase	
+B8063_RS04365	823741	825673	+	polysaccharide biosynthesis protein	
+B8063_RS04375	825926	826820	+	ADP-L-glycero-D-manno-heptose-6-epimerase	
+B8063_RS04380	826819	826945	+	50S ribosomal protein L36	
+B8063_RS04385	826949	827060	+	aa3-type cytochrome c oxidase subunit IV	
+B8063_RS04390	827060	828149	+	NAD(P) transhydrogenase subunit alpha	
+B8063_RS04395	828151	828454	+	NAD(P) transhydrogenase subunit alpha	
+B8063_RS04400	828463	829858	+	NAD synthetase	
+B8063_RS04405	829859	830552	+	transaldolase	
+B8063_RS04415	830636	830831	-	30S ribosomal protein S21	
+B8063_RS04420	830890	831460	-	DUF1013 domain-containing protein	
+B8063_RS04425	831459	831690	-	50S ribosomal protein L31	
+B8063_RS04430	831727	832474	-	inositol monophosphatase	
+B8063_RS04435	832477	833038	-	elongation factor P	
+B8063_RS04440	833034	833652	-	thiamine phosphate synthase	
+B8063_RS04445	833635	834649	-	fructose-bisphosphate aldolase class I	
+B8063_RS04450	834649	835822	-	phosphoglycerate kinase	
+
+
+Significant hits: 
+1. BGC0001651	Legionaminic acid
+2. BGC0001131	Ambactin
+3. BGC0001692	Nematophin
+
+
+Details:
+
+>>
+1. BGC0001651
+Source: Legionaminic acid
+Type: other
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 1207
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+B8063_RS04215	BFO_1073	58	438	96.89119170984456	1.4e-122
+B8063_RS04225	BFO_1066	59	372	99.7005988023952	6.2e-103
+B8063_RS04230	BFO_1065	51	397	98.71134020618557	2.7e-110
+
+
+
+>>
+2. BGC0001131
+Source: Ambactin
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 518
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+B8063_RS04395	Xmir_01404	55	94	92.0	9.8e-20
+B8063_RS04400	Xmir_01405	51	424	99.35344827586206	1.9e-118
+
+
+
+>>
+3. BGC0001692
+Source: Nematophin
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 517
+
+Table of genes, locations, strands and annotations of subject cluster:
+XNC1_RS22245	XNC1_RS22245	18904	19333	-	adenylate_kinase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+B8063_RS04395	XNC1_RS09375	57	97	92.0	8.8e-21
+B8063_RS04400	XNC1_RS09380	51	420	100.86206896551724	2.8e-117
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AEW22424.1</td>
+              <td>UDP-N-acetyl-D-glucosamine_2-epimerase,_UDP-hydrolysing</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001651/1">BGC0001651</a></td>
+              <td>other</td>
+              <td>51.0</td>
+              <td>98.7</td>
+              <td>397.0</td>
+              <td>2.7e-110</td>
+          </tr>
+    
+          <tr>
+              <td>ABB29904.1</td>
+              <td>NnaA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000789/1">BGC0000789</a></td>
+              <td>saccharide</td>
+              <td>40.0</td>
+              <td>100.8</td>
+              <td>238.0</td>
+              <td>1.6e-62</td>
+          </tr>
+    
+          <tr>
+              <td>CAB65211.1</td>
+              <td>N-acylglucosamine_2-epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000775/1">BGC0000775</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>96.4</td>
+              <td>212.0</td>
+              <td>1.6e-54</td>
+          </tr>
+    
+          <tr>
+              <td>ctg1_orf10</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000770/1">BGC0000770</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>88.7</td>
+              <td>164.0</td>
+              <td>3.9e-40</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

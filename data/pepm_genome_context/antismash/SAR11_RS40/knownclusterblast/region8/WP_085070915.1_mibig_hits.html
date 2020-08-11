@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAF92584.1</td>
+              <td>glutathione_peroxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000118/1">BGC0000118</a></td>
+              <td>t1pks</td>
+              <td>41.0</td>
+              <td>92.4</td>
+              <td>134.0</td>
+              <td>1.4e-31</td>
+          </tr>
+    
+          <tr>
+              <td>ACJ24858.1</td>
+              <td>glutathione_peroxidase-like_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000119/1">BGC0000119</a></td>
+              <td>t1pks-other-saccharide</td>
+              <td>41.0</td>
+              <td>92.4</td>
+              <td>134.0</td>
+              <td>1.4e-31</td>
+          </tr>
+    
+          <tr>
+              <td>KDN80073.1</td>
+              <td>glutathione_peroxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001074/1">BGC0001074</a></td>
+              <td>saccharide-t2pks</td>
+              <td>39.0</td>
+              <td>90.0</td>
+              <td>110.0</td>
+              <td>2.2e-24</td>
+          </tr>
+    
+          <tr>
+              <td>WP_018891754.1</td>
+              <td>glutathione_peroxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001558/1">BGC0001558</a></td>
+              <td>t2pks</td>
+              <td>37.0</td>
+              <td>90.0</td>
+              <td>109.0</td>
+              <td>5e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ATJ00746.1</td>
+              <td>glutathione_peroxidase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001568/1">BGC0001568</a></td>
+              <td>t2pks</td>
+              <td>37.0</td>
+              <td>90.0</td>
+              <td>108.0</td>
+              <td>1.1e-23</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

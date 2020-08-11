@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABX71135.1</td>
+              <td>Lct52</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000238/1">BGC0000238</a></td>
+              <td>t2pks</td>
+              <td>49.0</td>
+              <td>102.6</td>
+              <td>356.0</td>
+              <td>7e-98</td>
+          </tr>
+    
+          <tr>
+              <td>CBW45636.1</td>
+              <td>S-adenosylmethionine_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000952/1">BGC0000952</a></td>
+              <td>nrps-t1pks+transatpks</td>
+              <td>50.0</td>
+              <td>102.3</td>
+              <td>356.0</td>
+              <td>7e-98</td>
+          </tr>
+    
+          <tr>
+              <td>ABI22144.1</td>
+              <td>putative_S-adenosylmethionine_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000422/1">BGC0000422</a></td>
+              <td>nrps</td>
+              <td>49.0</td>
+              <td>101.5</td>
+              <td>355.0</td>
+              <td>1.2e-97</td>
+          </tr>
+    
+          <tr>
+              <td>AKC91620.1</td>
+              <td>S-adenosylmethionine_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001302/1">BGC0001302</a></td>
+              <td>other</td>
+              <td>51.0</td>
+              <td>100.8</td>
+              <td>354.0</td>
+              <td>2e-97</td>
+          </tr>
+    
+          <tr>
+              <td>ALV82467.1</td>
+              <td>putative_S-adenosylmethionine_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001382/1">BGC0001382</a></td>
+              <td>nrps-t1pks</td>
+              <td>49.0</td>
+              <td>102.8</td>
+              <td>353.0</td>
+              <td>3.5e-97</td>
+          </tr>
+    
+          <tr>
+              <td>ARW71501.1</td>
+              <td>methionine_adenosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001812/1">BGC0001812</a></td>
+              <td>polyketide</td>
+              <td>50.0</td>
+              <td>99.2</td>
+              <td>348.0</td>
+              <td>1.5e-95</td>
+          </tr>
+    
+          <tr>
+              <td>ADE34497.1</td>
+              <td>SsfQ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000269/1">BGC0000269</a></td>
+              <td>t2pks-saccharide-other</td>
+              <td>49.0</td>
+              <td>101.3</td>
+              <td>344.0</td>
+              <td>2.8e-94</td>
+          </tr>
+    
+          <tr>
+              <td>AKD43530.1</td>
+              <td>S-Adenosylmethionine_synthase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001409/1">BGC0001409</a></td>
+              <td>t2pks</td>
+              <td>50.0</td>
+              <td>98.7</td>
+              <td>342.0</td>
+              <td>1e-93</td>
+          </tr>
+    
+          <tr>
+              <td>BAC76509.1</td>
+              <td>probable_S-adenosylmethionine_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000085/1">BGC0000085</a></td>
+              <td>t1pks</td>
+              <td>47.0</td>
+              <td>103.6</td>
+              <td>329.0</td>
+              <td>9.2e-90</td>
+          </tr>
+    
+          <tr>
+              <td>ADI71438.1</td>
+              <td>putative_methionine_adenosyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000203/1">BGC0000203</a></td>
+              <td>t2pks</td>
+              <td>47.0</td>
+              <td>100.0</td>
+              <td>325.0</td>
+              <td>1e-88</td>
+          </tr>
+    
+          <tr>
+              <td>ADE22279.1</td>
+              <td>S-adenosylmethionine_synthetase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000279/1">BGC0000279</a></td>
+              <td>t2pks</td>
+              <td>46.0</td>
+              <td>102.8</td>
+              <td>323.0</td>
+              <td>3.9e-88</td>
+          </tr>
+    
+          <tr>
+              <td>CAK50772.1</td>
+              <td>AdoMet_synthetase_and_MTHF_reductase_fusion</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000247/1">BGC0000247</a></td>
+              <td>t2pks-saccharide</td>
+              <td>41.0</td>
+              <td>44.7</td>
+              <td>110.0</td>
+              <td>6.7e-24</td>
+          </tr>
+    
+          <tr>
+              <td>ACN64816.1</td>
+              <td>PokSAMS</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001061/1">BGC0001061</a></td>
+              <td>t1pks+t2pks-saccharide</td>
+              <td>47.0</td>
+              <td>28.5</td>
+              <td>101.0</td>
+              <td>4.1e-21</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

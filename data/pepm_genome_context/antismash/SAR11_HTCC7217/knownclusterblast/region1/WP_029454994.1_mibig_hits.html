@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>BAF47029.1</td>
+              <td>putative_transmembrane_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000731/1">BGC0000731</a></td>
+              <td>saccharide</td>
+              <td>21.0</td>
+              <td>100.4</td>
+              <td>103.0</td>
+              <td>1.1e-21</td>
+          </tr>
+    
+          <tr>
+              <td>BAF47014.1</td>
+              <td>putative_transmembrane_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000730/1">BGC0000730</a></td>
+              <td>saccharide</td>
+              <td>21.0</td>
+              <td>100.4</td>
+              <td>100.0</td>
+              <td>1.3e-20</td>
+          </tr>
+    
+          <tr>
+              <td>WP_064482096.1</td>
+              <td>tyrosine-protein_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001586/1">BGC0001586</a></td>
+              <td>saccharide</td>
+              <td>21.0</td>
+              <td>105.9</td>
+              <td>88.0</td>
+              <td>5e-17</td>
+          </tr>
+    
+          <tr>
+              <td>AAA64641.1</td>
+              <td>type_1_capsule_synthesis_gene</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000758/1">BGC0000758</a></td>
+              <td>saccharide</td>
+              <td>27.0</td>
+              <td>31.7</td>
+              <td>85.0</td>
+              <td>3.2e-16</td>
+          </tr>
+    
+          <tr>
+              <td>WP_012493287.1</td>
+              <td>LPS_biosynthesis_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001589/1">BGC0001589</a></td>
+              <td>saccharide</td>
+              <td>21.0</td>
+              <td>64.9</td>
+              <td>81.0</td>
+              <td>4.7e-15</td>
+          </tr>
+    
+          <tr>
+              <td>CAB57193.1</td>
+              <td>protein_tyrosine_kinase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000760/1">BGC0000760</a></td>
+              <td>saccharide</td>
+              <td>21.0</td>
+              <td>100.3</td>
+              <td>76.0</td>
+              <td>1.5e-13</td>
+          </tr>
+    
+          <tr>
+              <td>ACN94847.1</td>
+              <td>Wze</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000803/1">BGC0000803</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>26.8</td>
+              <td>71.0</td>
+              <td>8.3e-12</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

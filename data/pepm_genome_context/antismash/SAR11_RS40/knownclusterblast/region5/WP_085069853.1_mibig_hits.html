@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAF23989.1</td>
+              <td>WbpM</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000781/1">BGC0000781</a></td>
+              <td>saccharide</td>
+              <td>43.0</td>
+              <td>102.3</td>
+              <td>501.0</td>
+              <td>1.7e-141</td>
+          </tr>
+    
+          <tr>
+              <td>CAB57208.1</td>
+              <td>putative_dTDP-glucose-4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000760/1">BGC0000760</a></td>
+              <td>saccharide</td>
+              <td>42.0</td>
+              <td>90.8</td>
+              <td>431.0</td>
+              <td>1.7e-120</td>
+          </tr>
+    
+          <tr>
+              <td>AAA64643.1</td>
+              <td>type_1_capsule_synthesis_gene</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000758/1">BGC0000758</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>95.0</td>
+              <td>357.0</td>
+              <td>5.2e-98</td>
+          </tr>
+    
+          <tr>
+              <td>AAK27405.1</td>
+              <td>putative_epimerase/dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000785/1">BGC0000785</a></td>
+              <td>saccharide</td>
+              <td>36.0</td>
+              <td>96.4</td>
+              <td>352.0</td>
+              <td>1.3e-96</td>
+          </tr>
+    
+          <tr>
+              <td>AAD05468.1</td>
+              <td>putative_epimerase/dehydratase_WbiI</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000782/1">BGC0000782</a></td>
+              <td>saccharide</td>
+              <td>36.0</td>
+              <td>96.4</td>
+              <td>347.0</td>
+              <td>4.1e-95</td>
+          </tr>
+    
+          <tr>
+              <td>CAN89624.1</td>
+              <td>putative_nucleoside-diphosphate_sugar_epimerase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001070/1">BGC0001070</a></td>
+              <td>nrps-t1pks+transatpks</td>
+              <td>39.0</td>
+              <td>45.9</td>
+              <td>208.0</td>
+              <td>2.3e-53</td>
+          </tr>
+    
+          <tr>
+              <td>AAM27552.1</td>
+              <td></td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000784/1">BGC0000784</a></td>
+              <td>saccharide</td>
+              <td>35.0</td>
+              <td>42.0</td>
+              <td>146.0</td>
+              <td>1.1e-34</td>
+          </tr>
+    
+          <tr>
+              <td>CAI47655.1</td>
+              <td>putative_tobramycin/apramycin_oxidoreductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000692/1">BGC0000692</a></td>
+              <td>saccharide</td>
+              <td>28.0</td>
+              <td>45.7</td>
+              <td>116.0</td>
+              <td>2e-25</td>
+          </tr>
+    
+          <tr>
+              <td>KKY62496.1</td>
+              <td>UDP-N-acetylglucosamine_4,6-dehydratase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001747/1">BGC0001747</a></td>
+              <td>other</td>
+              <td>28.0</td>
+              <td>44.2</td>
+              <td>101.0</td>
+              <td>6.7e-21</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

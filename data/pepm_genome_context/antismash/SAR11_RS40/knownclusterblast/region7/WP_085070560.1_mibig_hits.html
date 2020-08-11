@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AGN11675.1</td>
+              <td>elongation_factor_Tu</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001472/1">BGC0001472</a></td>
+              <td>other</td>
+              <td>71.0</td>
+              <td>100.3</td>
+              <td>566.0</td>
+              <td>3.5e-161</td>
+          </tr>
+    
+          <tr>
+              <td>ADO67786.1</td>
+              <td>Tpa11</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000615/1">BGC0000615</a></td>
+              <td>thiopeptide</td>
+              <td>69.0</td>
+              <td>100.8</td>
+              <td>558.0</td>
+              <td>9.5e-159</td>
+          </tr>
+    
+          <tr>
+              <td>AGY49600.1</td>
+              <td>EF_Tu</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001155/1">BGC0001155</a></td>
+              <td>thiopeptide</td>
+              <td>68.0</td>
+              <td>100.8</td>
+              <td>551.0</td>
+              <td>8.9e-157</td>
+          </tr>
+    
+          <tr>
+              <td>BAW27679.1</td>
+              <td>sulfate_adenyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001764/1">BGC0001764</a></td>
+              <td>nrps</td>
+              <td>27.0</td>
+              <td>82.6</td>
+              <td>91.0</td>
+              <td>2.5e-18</td>
+          </tr>
+    
+          <tr>
+              <td>BAV57454.1</td>
+              <td>sulfate_adenylyltransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001818/1">BGC0001818</a></td>
+              <td>nrps</td>
+              <td>27.0</td>
+              <td>77.3</td>
+              <td>84.0</td>
+              <td>4e-16</td>
+          </tr>
+    
+          <tr>
+              <td>AQX14446.1</td>
+              <td>bifunctional_ATP_sulfurylase_(ATPS)_/_adenosine_5&#39;-phosphosulfate_kinase_(APSK)</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001671/1">BGC0001671</a></td>
+              <td>nrps</td>
+              <td>24.0</td>
+              <td>78.5</td>
+              <td>80.0</td>
+              <td>5.8e-15</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

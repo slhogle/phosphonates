@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AIE77052.1</td>
+              <td>VanA</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000418/1">BGC0000418</a></td>
+              <td>nrps</td>
+              <td>31.0</td>
+              <td>111.1</td>
+              <td>113.0</td>
+              <td>8.1e-25</td>
+          </tr>
+    
+          <tr>
+              <td>AGS77300.1</td>
+              <td>D-ala-D-ala_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001178/1">BGC0001178</a></td>
+              <td>nrps</td>
+              <td>27.0</td>
+              <td>93.1</td>
+              <td>111.0</td>
+              <td>2.4e-24</td>
+          </tr>
+    
+          <tr>
+              <td>EME52995.1</td>
+              <td>D-alanine--D-lactate_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001460/1">BGC0001460</a></td>
+              <td>nrps</td>
+              <td>29.0</td>
+              <td>111.1</td>
+              <td>110.0</td>
+              <td>5.3e-24</td>
+          </tr>
+    
+          <tr>
+              <td>AIG79248.1</td>
+              <td>Putative_D-alanine-D-lactate_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000419/1">BGC0000419</a></td>
+              <td>nrps-saccharide</td>
+              <td>29.0</td>
+              <td>111.1</td>
+              <td>109.0</td>
+              <td>1.2e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AEI58860.1</td>
+              <td>D-alanyl-D-alanine_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000455/1">BGC0000455</a></td>
+              <td>nrps</td>
+              <td>30.0</td>
+              <td>111.1</td>
+              <td>108.0</td>
+              <td>2.6e-23</td>
+          </tr>
+    
+          <tr>
+              <td>AAC23582.2</td>
+              <td>D-alanine:D-alanine_ligase-related_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000290/1">BGC0000290</a></td>
+              <td>nrps</td>
+              <td>28.0</td>
+              <td>110.5</td>
+              <td>107.0</td>
+              <td>4.5e-23</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ50881.1</td>
+              <td>D-alanine--(R)-lactate_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001461/1">BGC0001461</a></td>
+              <td>nrps</td>
+              <td>29.0</td>
+              <td>111.1</td>
+              <td>106.0</td>
+              <td>9.9e-23</td>
+          </tr>
+    
+          <tr>
+              <td>OKA09417.1</td>
+              <td>D-alanine--(R)-lactate_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001459/1">BGC0001459</a></td>
+              <td>nrps</td>
+              <td>29.0</td>
+              <td>111.8</td>
+              <td>105.0</td>
+              <td>1.7e-22</td>
+          </tr>
+    
+          <tr>
+              <td>OLZ52461.1</td>
+              <td>D-alanine--(R)-lactate_ligase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001462/1">BGC0001462</a></td>
+              <td>nrps</td>
+              <td>25.0</td>
+              <td>111.1</td>
+              <td>74.0</td>
+              <td>2.5e-13</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

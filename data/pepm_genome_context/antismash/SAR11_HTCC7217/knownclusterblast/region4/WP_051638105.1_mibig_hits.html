@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>KKY62499.1</td>
+              <td>aminotransferase_class_III</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001747/1">BGC0001747</a></td>
+              <td>other</td>
+              <td>47.0</td>
+              <td>98.9</td>
+              <td>399.0</td>
+              <td>6.2e-111</td>
+          </tr>
+    
+          <tr>
+              <td>AAG31135.1</td>
+              <td>MxcL</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001345/1">BGC0001345</a></td>
+              <td>nrps</td>
+              <td>26.0</td>
+              <td>93.4</td>
+              <td>155.0</td>
+              <td>2e-37</td>
+          </tr>
+    
+          <tr>
+              <td>ABT18049.1</td>
+              <td>glutamate-1-semialdehyde_2,1-aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000905/1">BGC0000905</a></td>
+              <td>other</td>
+              <td>28.0</td>
+              <td>78.5</td>
+              <td>118.0</td>
+              <td>2.8e-26</td>
+          </tr>
+    
+          <tr>
+              <td>ABU41515.1</td>
+              <td>HemL</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000906/1">BGC0000906</a></td>
+              <td>other</td>
+              <td>29.0</td>
+              <td>78.5</td>
+              <td>116.0</td>
+              <td>1.1e-25</td>
+          </tr>
+    
+          <tr>
+              <td>ABK32269.1</td>
+              <td>AmbR</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000014/1">BGC0000014</a></td>
+              <td>t1pks</td>
+              <td>28.0</td>
+              <td>76.3</td>
+              <td>109.0</td>
+              <td>1.7e-23</td>
+          </tr>
+    
+          <tr>
+              <td>KFL51883.1</td>
+              <td>amino_acid_adenylation_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001711/1">BGC0001711</a></td>
+              <td>nrps-t1pks</td>
+              <td>28.0</td>
+              <td>69.6</td>
+              <td>100.0</td>
+              <td>7.8e-21</td>
+          </tr>
+    
+          <tr>
+              <td>ABC67270.1</td>
+              <td>putative_aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000723/1">BGC0000723</a></td>
+              <td>saccharide</td>
+              <td>33.0</td>
+              <td>23.7</td>
+              <td>54.0</td>
+              <td>4.9e-07</td>
+          </tr>
+    
+          <tr>
+              <td>ABA41503.1</td>
+              <td>aminotransferase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000722/1">BGC0000722</a></td>
+              <td>other</td>
+              <td>33.0</td>
+              <td>22.8</td>
+              <td>53.0</td>
+              <td>8.4e-07</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

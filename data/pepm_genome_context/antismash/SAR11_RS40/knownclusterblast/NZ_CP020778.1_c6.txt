@@ -1,0 +1,134 @@
+ClusterBlast scores for NZ_CP020778.1
+
+Table of genes, locations, strands and annotations of query cluster:
+B8063_RS05680	1104291	1105902	+	iron ABC transporter permease	
+B8063_RS05685	1105901	1106960	+	ABC transporter ATP-binding protein	
+B8063_RS05690	1107042	1109238	+	CHASE2 domain-containing protein	
+B8063_RS05695	1109239	1109692	-	hypothetical protein	
+B8063_RS05700	1109677	1113217	+	hypothetical protein	
+B8063_RS05705	1113219	1114563	+	hypothetical protein	
+B8063_RS05710	1114537	1115686	-	hypothetical protein	
+B8063_RS05715	1115855	1118003	+	hypothetical protein	
+B8063_RS05720	1118007	1119423	+	hypothetical protein	
+B8063_RS05725	1119511	1121086	+	hypothetical protein	
+B8063_RS05730	1121105	1121951	+	glycosyltransferase family 2 protein	
+B8063_RS05735	1122027	1122708	+	acylneuraminate cytidylyltransferase family protein	
+B8063_RS05740	1122691	1123546	+	DUF115 domain-containing protein	
+B8063_RS05745	1123552	1125361	+	asparagine synthase (glutamine-hydrolyzing)	
+B8063_RS05750	1125347	1126505	+	hypothetical protein	
+B8063_RS05755	1126514	1127591	+	hypothetical protein	
+B8063_RS05760	1127582	1128611	-	hypothetical protein	
+B8063_RS05765	1128649	1130194	+	hypothetical protein	
+B8063_RS05770	1130193	1131003	+	aldo/keto reductase	
+B8063_RS05775	1130995	1132543	+	hypothetical protein	
+B8063_RS05780	1132529	1133234	-	methyltransferase domain-containing protein	
+B8063_RS05785	1133356	1134526	-	hypothetical protein	
+B8063_RS05790	1134525	1136319	-	asparagine synthase (glutamine-hydrolyzing)	
+B8063_RS05795	1136320	1137040	-	FkbM family methyltransferase	
+B8063_RS05800	1137040	1138372	-	hypothetical protein	
+B8063_RS05805	1138422	1138617	+	hypothetical protein	
+B8063_RS05810	1138606	1139365	+	hypothetical protein	
+B8063_RS05815	1139365	1140088	+	glycosyltransferase	
+B8063_RS05820	1140288	1141188	+	class I SAM-dependent methyltransferase	
+B8063_RS05825	1141338	1142859	+	hypothetical protein	
+B8063_RS05830	1142941	1143952	+	NAD-dependent dehydratase	
+B8063_RS05835	1144050	1145085	+	GDP-mannose 4,6-dehydratase	
+B8063_RS05840	1145062	1146067	-	UDP-glucose 4-epimerase GalE	
+B8063_RS05845	1146090	1148532	+	FAD-dependent oxidoreductase	
+B8063_RS05850	1148532	1149567	-	GMP reductase	
+B8063_RS05855	1149651	1150656	-	hypothetical protein	
+B8063_RS05860	1150813	1152232	+	CRTAC1 family protein	
+B8063_RS05865	1152488	1153148	+	hypothetical protein	
+B8063_RS05875	1153258	1153786	-	adenine phosphoribosyltransferase	
+B8063_RS05880	1153826	1154705	+	S-methyl-5'-thioadenosine phosphorylase	
+B8063_RS05885	1154694	1155771	+	S-methyl-5-thioribose-1-phosphate isomerase	
+B8063_RS05890	1155767	1156400	+	class II aldolase	
+B8063_RS05895	1156403	1157444	+	adenosylmethionine decarboxylase	
+B8063_RS05900	1157503	1158355	+	ABC transporter substrate-binding protein	
+B8063_RS05905	1158398	1159091	+	ABC transporter permease	
+B8063_RS05910	1159091	1159769	+	ABC transporter permease	
+B8063_RS05915	1159765	1161076	-	MATE family efflux transporter	
+B8063_RS05920	1161083	1161473	-	hypothetical protein	
+B8063_RS05925	1161505	1162447	+	lipopolysaccharide heptosyltransferase family protein	
+B8063_RS05930	1162451	1162868	-	hypothetical protein	
+B8063_RS05935	1162877	1163960	-	glycosyltransferase family 4 protein	
+B8063_RS05940	1163959	1164517	-	thioredoxin family protein	
+B8063_RS05945	1164534	1165047	+	gamma carbonic anhydrase family protein	
+B8063_RS05950	1165043	1165643	-	flavin-binding protein	
+B8063_RS05955	1165646	1166516	-	NAD(P)-dependent oxidoreductase	
+B8063_RS05960	1166524	1167733	+	MFS transporter	
+B8063_RS05965	1167776	1168295	+	DNA-directed RNA polymerase subunit omega	
+B8063_RS05970	1168356	1169361	-	hypothetical protein	
+B8063_RS05975	1169526	1170702	-	aminomethyl transferase family protein	
+B8063_RS05980	1170712	1173043	-	aspartyl/glutamyl-tRNA(Asn/Gln) amidotransferase subunit C	
+
+
+Significant hits: 
+1. BGC0000732	Capsular polysaccharide
+2. BGC0000733	Capsular polysaccharide
+
+
+Details:
+
+>>
+1. BGC0000732
+Source: Capsular polysaccharide
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 464
+
+Table of genes, locations, strands and annotations of subject cluster:
+BAF47039.1	BAF47039.1	152	1048	+	UDP-glucose_pyrophosphorylase
+BAF47040.1	BAF47040.1	1442	2071	+	acid_phosphatase_homologue
+BAF47041.1	BAF47041.1	3029	4468	+	surface_assembly_of_capsule
+BAF47042.1	BAF47042.1	4614	5747	+	multimeric_putative_translocation_channel
+BAF47043.1	BAF47043.1	5753	6187	+	protein_tyrosine_phosphatase
+BAF47044.1	BAF47044.1	6206	8356	+	putative_transmembrane_protein
+BAF47045.1	BAF47045.1	8408	9568	+	putative_glycosyltransferase
+BAF47046.1	BAF47046.1	9653	10819	+	flippase
+BAF47047.1	BAF47047.1	10916	11998	+	polymerase
+BAF47048.1	BAF47048.1	11973	12575	+	putative_acetyltransferase
+BAF47049.1	BAF47049.1	12568	13488	+	putative_glycosyltransferase
+BAF47050.1	BAF47050.1	13499	14617	+	GDP-D-mannose_dehydratase
+BAF47051.1	BAF47051.1	14586	15590	+	GDP-fucose_synthetase
+BAF47052.1	BAF47052.1	15592	16050	+	putative_GDP-mannose
+BAF47053.1	BAF47053.1	16062	17276	+	putative_glycosyl_transferase
+BAF47054.1	BAF47054.1	17580	18983	+	putative_CPS_biosynthesis_glycosyltransferase
+BAF47055.1	BAF47055.1	19147	20553	+	6-phosphogluconate_dehydrogenase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+B8063_RS05720	BAF47054.1	46	165	40.76433121019109	2.1e-40
+B8063_RS05835	BAF47050.1	46	299	102.90697674418605	9e-81
+
+
+
+>>
+2. BGC0000733
+Source: Capsular polysaccharide
+Type: saccharide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 464
+
+Table of genes, locations, strands and annotations of subject cluster:
+BAF47056.1	BAF47056.1	152	1048	+	UDP-glucose_pyrophosphorylase
+BAF47057.1	BAF47057.1	1441	2070	+	acid_phosphatase_homologue
+BAF47058.1	BAF47058.1	3030	4469	+	surface_assembly_of_capsule
+BAF47059.1	BAF47059.1	4615	5748	+	multimeric_putative_translocation_channel
+BAF47060.1	BAF47060.1	5754	6188	+	protein_tyrosine_phosphatase
+BAF47061.1	BAF47061.1	6207	8357	+	putative_transmembrane_protein
+BAF47062.1	BAF47062.1	8410	9570	+	putative_glycosyltransferase
+BAF47063.1	BAF47063.1	9655	10821	+	flippase
+BAF47064.1	BAF47064.1	10918	12000	+	serotype_K54_polymerase
+BAF47065.1	BAF47065.1	12142	12576	+	putative_acetyltransferase
+BAF47066.1	BAF47066.1	12569	13489	+	putative_glycosyltransferase
+BAF47067.1	BAF47067.1	13500	14618	+	GDP-D-mannose_dehydratase
+BAF47068.1	BAF47068.1	14622	15590	+	GDP-fucose_synthetase
+BAF47069.1	BAF47069.1	15592	16050	+	putative_GDP-mannose
+BAF47070.1	BAF47070.1	16062	17276	+	putative_glycosyl_transferase
+BAF47071.1	BAF47071.1	17579	18982	+	putative_CPS_biosynthesis_glycosyltransferase
+BAF47072.1	BAF47072.1	19146	20552	+	6-phosphogluconate_dehydrogenase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+B8063_RS05720	BAF47071.1	46	165	40.76433121019109	2.1e-40
+B8063_RS05835	BAF47067.1	46	299	102.90697674418605	9e-81
+

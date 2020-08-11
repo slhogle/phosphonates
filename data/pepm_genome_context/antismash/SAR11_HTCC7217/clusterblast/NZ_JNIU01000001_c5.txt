@@ -1,0 +1,932 @@
+ClusterBlast scores for NZ_JNIU01000001
+
+Table of genes, locations, strands and annotations of query cluster:
+P773_RS0105270	974945	975809	-	bifunctional DNA-formamidopyrimidine glycosylase/DNA-(apurinic or apyrimidinic site) lyase	
+P773_RS0105275	975840	976545	+	bifunctional demethylmenaquinone methyltransferase/2-methoxy-6-polyprenyl-1,4-benzoquinol methylase UbiE	
+P773_RS0105280	976544	978113	+	2-polyprenylphenol 6-hydroxylase	
+P773_RS0105285	978122	979328	+	bifunctional phosphopantothenoylcysteine decarboxylase/phosphopantothenate--cysteine ligase CoaBC	
+P773_RS0105290	979327	979765	+	dUTP diphosphatase	
+P773_RS0105295	979761	980517	+	molybdopterin biosynthesis protein	
+P773_RS0105300	980516	980960	+	hypothetical protein	
+P773_RS0105305	980960	981557	-	peptide-aspartate beta-dioxygenase	
+P773_RS0105310	981573	983781	-	catalase/peroxidase HPI	
+P773_RS0105315	983889	984303	-	transcriptional repressor	
+P773_RS0105320	984398	984899	+	bifunctional 3-hydroxydecanoyl-ACP dehydratase/trans-2-decenoyl-ACP isomerase	
+P773_RS0105325	984898	986110	+	beta-ketoacyl-[acyl-carrier-protein] synthase I	
+P773_RS0105330	986113	986899	+	enoyl-ACP reductase	
+P773_RS0105335	987012	989085	-	polyribonucleotide nucleotidyltransferase	
+P773_RS0105340	989142	989391	-	30S ribosomal protein S15	
+P773_RS0105345	989403	989772	-	30S ribosome-binding factor RbfA	
+P773_RS0105350	989771	991991	-	translation initiation factor IF-2	
+P773_RS0105355	992001	993594	-	transcription termination/antitermination protein NusA	
+P773_RS0105360	993653	994823	-	methionine adenosyltransferase	
+
+
+Significant hits: 
+1. NZ_FTPS01000001	Pontibaca methylaminivorans strain DSM 21219, whole genome shotgun sequence
+2. NZ_FTPR01000001	Yoonia rosea strain DSM 29591, whole genome shotgun sequence
+3. NZ_LIGP01000002	Loktanella sp. 1ANDIMAR09 PM06_002, whole genome shotgun sequence
+4. NZ_MDHA01000069	Thioclava sp. SK-1 scaffold60_cov1989_read209, whole genome shotgun sequence
+5. NZ_MPHL01000006	Colwellia sp. UCD-KL20 scaffold_5, whole genome shotgun sequence
+6. NZ_LT840185	Sphingomonas indica strain Dd16 genome assembly, chromosome: I
+7. NZ_KK211162	Sphingomonas sp. URHD0057 N539DRAFT_scaffold00001.1, whole genome shotgun sequence
+8. NZ_JONN01000001	Sphingomonas astaxanthinifaciens DSM 22298 BS69DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+9. NZ_CP020038	Agarilytica rhodophyticola strain 017 chromosome, complete genome
+10. NZ_LXIE01000010	Aequorivita soesokkakensis strain RSSK-12 contig_18, whole genome shotgun sequence
+11. NZ_ALBT01000058	Cellvibrio mixtus subsp. mixtus J3-8 Scaffold10_1, whole genome shotgun sequence
+12. NZ_CP024923	Sphingomonas sp. Cra20 chromosome, complete genome
+13. NZ_JQNS01000004	Methylobacter whittenburyi strain UCM-B-3033 GY38DRAFT_scf7180000000023_quiver.4_C, whole genome shotgun sequence
+14. NZ_JQKS01000001	Methylobacter sp. BBA5.1 EK22DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+15. NZ_KB912877	Methylobacter marinus A45 MetmaDRAFT_scaffold1.1, whole genome shotgun sequence
+16. NZ_JYNS01000001	Methyloterricola oryzae strain 73a EK23DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+17. NZ_BBUL01000091	Cellvibrio sp. OA-2007, whole genome shotgun sequence
+18. NC_015276	Marinomonas mediterranea MMB-1, complete genome
+19. NZ_AOUR02000139	Pseudomonas putida LF54 seq62_NODE_65, whole genome shotgun sequence
+20. NZ_JUHC01000037	Pseudomonas putida strain PD1 EX27DRAFT_scaffold00020.20_C, whole genome shotgun sequence
+21. NZ_ALPV02000012	Pseudomonas putida LS46 Contig12, whole genome shotgun sequence
+22. NC_017986	Pseudomonas putida ND6, complete genome
+23. NZ_BCBP01000023	Pseudomonas sp. NBRC 111139, whole genome shotgun sequence
+24. NC_009512	Pseudomonas putida F1, complete genome
+25. NZ_CP011525	Pseudomonas sp. JY-Q, complete genome
+26. NZ_BCBM01000060	Pseudomonas sp. NBRC 111136, whole genome shotgun sequence
+27. NZ_CP015202	Pseudomonas putida B6-2 chromosome, complete genome
+28. NZ_KB891587	Dasania marina DSM 21967 B067DRAFT_scaffold_4.5, whole genome shotgun sequence
+29. NZ_FNKM01000002	Pseudomonas grimontii strain BS2976, whole genome shotgun sequence
+30. NZ_LT671418	Herminiimonas sp. AS8 genome assembly, chromosome: I
+31. NZ_CP019650	Microbulbifer agarilyticus strain GP101, complete genome
+32. NZ_GL349411	Neisseria sp. oral taxon 014 str. F0314 supercont1.1, whole genome shotgun sequence
+33. NC_013422	Halothiobacillus neapolitanus c2, complete genome
+34. NZ_AAVT01000011	Marine gamma proteobacterium HTCC2143 1100111000152, whole genome shotgun sequence
+35. NZ_BBUM02000022	Mizugakiibacter sediminis strain skMP5, whole genome shotgun sequence
+36. NZ_LMOV01000028	Acidovorax sp. Leaf160 contig_8, whole genome shotgun sequence
+37. NZ_LN614830	Tatlockia micdadei genome assembly LMI, chromosome : I
+38. NZ_AXVM01000003	Comamonas badia DSM 17552 K320DRAFT_scaffold00003.3_C, whole genome shotgun sequence
+39. NZ_FOMQ01000002	Acidovorax konjaci strain DSM 7481, whole genome shotgun sequence
+40. NZ_CP021425	Oleiphilus messinensis strain ME102 chromosome, complete genome
+41. NZ_LJGU01000093	Streptomyces oceani strain SCSIO 02100 scaffold78, whole genome shotgun sequence
+42. NZ_FPIQ01000001	Nitrosovibrio sp. Nv17, whole genome shotgun sequence
+43. NZ_CH724113	Bermanella marisrubri strain RED65 scf_1100007010816, whole genome shotgun sequence
+44. NZ_KK037166	Kutzneria sp. 744 supercont1.1, whole genome shotgun sequence
+45. NZ_CP016279	Streptomyces griseochromogenes strain ATCC 14511, complete genome
+46. NZ_JNYZ01000022	Amycolatopsis jejuensis strain NRRL B-24427 contig22.1, whole genome shotgun sequence
+47. NZ_FRCM01000001	Mucilaginibacter sp. OK098, whole genome shotgun sequence
+48. NC_015177	Pseudopedobacter saltans DSM 12145, complete genome
+49. NZ_AULF01000014	Pedobacter glucosidilyticus DSM 23534 H510DRAFT_scaffold00011.11_C, whole genome shotgun sequence
+50. NZ_CP022743	Mucilaginibacter sp. BJC16-A31 chromosome, complete genome
+
+
+Details:
+
+>>
+1. NZ_FTPS01000001
+Source: Pontibaca methylaminivorans strain DSM 21219, whole genome shotgun sequence
+Type: t1pks-nrps
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1355
+
+Table of genes, locations, strands and annotations of subject cluster:
+B0B01_RS10120	B0B01_RS10120	2076138	2077490	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105315	B0B01_RS09995	33	61	86.86131386861314	9.2e-08
+P773_RS0105320	B0B01_RS09990	54	190	96.98795180722891	1.2e-46
+P773_RS0105325	B0B01_RS09985	54	426	100.99255583126552	2.5e-117
+P773_RS0105330	B0B01_RS09980	52	264	100.38314176245211	1e-68
+P773_RS0105360	B0B01_RS10035	56	414	98.45758354755783	1.6e-113
+
+
+
+>>
+2. NZ_FTPR01000001
+Source: Yoonia rosea strain DSM 29591, whole genome shotgun sequence
+Type: lantipeptide
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 952
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105315	B0B09_RS08535	35	69	90.51094890510949	3.4e-10
+P773_RS0105320	B0B09_RS08540	53	185	95.78313253012048	5.1e-45
+P773_RS0105325	B0B09_RS08545	53	420	100.74441687344913	1.8e-115
+P773_RS0105330	B0B09_RS08550	54	278	98.85057471264368	7e-73
+
+
+
+>>
+3. NZ_LIGP01000002
+Source: Loktanella sp. 1ANDIMAR09 PM06_002, whole genome shotgun sequence
+Type: lantipeptide
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 951
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105315	AL073_RS08620	35	69	90.51094890510949	3.4e-10
+P773_RS0105320	AL073_RS08615	53	185	95.78313253012048	5.1e-45
+P773_RS0105325	AL073_RS08610	53	420	100.74441687344913	3e-115
+P773_RS0105330	AL073_RS08605	54	277	98.85057471264368	1.2e-72
+
+
+
+>>
+4. NZ_MDHA01000069
+Source: Thioclava sp. SK-1 scaffold60_cov1989_read209, whole genome shotgun sequence
+Type: hserlactone
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 952
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	BFP70_RS16130	55	195	96.98795180722891	6.5e-48
+P773_RS0105325	BFP70_RS16125	60	482	100.49627791563276	3.8e-134
+P773_RS0105330	BFP70_RS16120	55	275	99.23371647509579	4.5e-72
+
+
+
+>>
+5. NZ_MPHL01000006
+Source: Colwellia sp. UCD-KL20 scaffold_5, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 1121
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	BM744_RS09960	37	232	101.73697270471465	6.8e-59
+P773_RS0105340	BM744_RS09815	49	71	92.6829268292683	7e-11
+P773_RS0105350	BM744_RS09800	42	501	83.62652232746956	1.4e-139
+P773_RS0105355	BM744_RS09795	38	317	96.41509433962264	2.1e-84
+
+
+
+>>
+6. NZ_LT840185
+Source: Sphingomonas indica strain Dd16 genome assembly, chromosome: I
+Type: t3pks
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 2745
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105310	B9N75_RS02950	57	825	100.13605442176872	4.3e-237
+P773_RS0105335	B9N75_RS02965	57	747	100.28985507246378	1.4e-213
+P773_RS0105340	B9N75_RS02970	51	71	84.14634146341463	4.1e-11
+P773_RS0105345	B9N75_RS02985	39	72	89.34426229508196	2.7e-11
+P773_RS0105350	B9N75_RS02990	49	558	85.38565629228687	1.3e-156
+P773_RS0105355	B9N75_RS03000	49	472	97.73584905660377	8.8e-131
+
+
+
+>>
+7. NZ_KK211162
+Source: Sphingomonas sp. URHD0057 N539DRAFT_scaffold00001.1, whole genome shotgun sequence
+Type: t3pks
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 2418
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105335	N539_RS0108700	59	775	99.85507246376811	3.7e-222
+P773_RS0105340	N539_RS0108705	49	75	93.90243902439023	3.7e-12
+P773_RS0105345	N539_RS0108740	38	74	89.34426229508196	1.2e-11
+P773_RS0105350	N539_RS0108745	48	562	84.97970230040596	6.9e-158
+P773_RS0105355	N539_RS0108755	50	496	97.73584905660377	3.3e-138
+P773_RS0105360	N539_RS0108820	58	436	101.2853470437018	3e-120
+
+
+
+>>
+8. NZ_JONN01000001
+Source: Sphingomonas astaxanthinifaciens DSM 22298 BS69DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+Type: t3pks
+Number of proteins with BLAST hits to this cluster: 6
+Cumulative BLAST score: 2353
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105335	BS69_RS0102170	57	741	99.85507246376811	7.7e-212
+P773_RS0105340	BS69_RS0102175	47	73	93.90243902439023	1.4e-11
+P773_RS0105345	BS69_RS0102205	38	75	89.34426229508196	5.5e-12
+P773_RS0105350	BS69_RS0102210	49	544	85.1150202976996	1.5e-152
+P773_RS0105355	BS69_RS0102220	50	485	98.49056603773585	5.9e-135
+P773_RS0105360	BS69_RS0102285	57	435	101.2853470437018	8.7e-120
+
+
+
+>>
+9. NZ_CP020038
+Source: Agarilytica rhodophyticola strain 017 chromosome, complete genome
+Type: bacteriocin-arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 1168
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	BVC89_RS21210	59	217	98.79518072289156	9.3e-55
+P773_RS0105325	BVC89_RS21215	63	517	99.75186104218362	1.8e-144
+P773_RS0105325	BVC89_RS21115	34	222	101.24069478908189	9.2e-56
+P773_RS0105325	BVC89_RS20980	35	212	101.48883374689825	1.2e-52
+
+
+
+>>
+10. NZ_LXIE01000010
+Source: Aequorivita soesokkakensis strain RSSK-12 contig_18, whole genome shotgun sequence
+Type: arylpolyene-resorcinol
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 1161
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	A7A78_RS05460	39	279	101.48883374689825	6.3e-73
+P773_RS0105325	A7A78_RS05540	31	170	101.98511166253101	4.2e-40
+P773_RS0105350	A7A78_RS05620	44	485	81.86738836265224	8.2e-135
+P773_RS0105355	A7A78_RS05615	33	227	76.0377358490566	2.9e-57
+
+
+
+>>
+11. NZ_ALBT01000058
+Source: Cellvibrio mixtus subsp. mixtus J3-8 Scaffold10_1, whole genome shotgun sequence
+Type: t2pks
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 1059
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	A596_RS03130	60	222	98.79518072289156	3.8e-56
+P773_RS0105325	A596_RS03125	65	529	100.0	3.5e-148
+P773_RS0105325	A596_RS03170	32	167	107.19602977667493	3.5e-39
+P773_RS0105325	A596_RS03160	35	141	62.531017369727046	1.6e-31
+
+
+
+>>
+12. NZ_CP024923
+Source: Sphingomonas sp. Cra20 chromosome, complete genome
+Type: lassopeptide
+Number of proteins with BLAST hits to this cluster: 5
+Cumulative BLAST score: 1036
+
+Table of genes, locations, strands and annotations of subject cluster:
+CVN68_RS22060	CVN68_RS22060	4871492	4871605	+	IS5/IS1182_family_transposase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105270	CVN68_RS22105	32	138	100.69686411149826	1.6e-30
+P773_RS0105275	CVN68_RS22100	37	158	99.14529914529915	1.2e-36
+P773_RS0105280	CVN68_RS22095	41	323	88.12260536398468	3.8e-86
+P773_RS0105285	CVN68_RS22035	41	287	101.99501246882794	3e-75
+P773_RS0105290	CVN68_RS22030	54	130	89.65517241379311	1.3e-28
+
+
+
+>>
+13. NZ_JQNS01000004
+Source: Methylobacter whittenburyi strain UCM-B-3033 GY38DRAFT_scf7180000000023_quiver.4_C, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 750
+
+Table of genes, locations, strands and annotations of subject cluster:
+GY38_RS07795	GY38_RS07795	356315	356820	-	transposase
+GY38_RS07920	GY38_RS07920	398979	399755	-	DNA_topoisomerase_III
+GY38_RS25425	GY38_RS25425	399742	399969	+	transposase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	GY38_RS07950	57	208	98.79518072289156	5.7e-52
+P773_RS0105325	GY38_RS07945	67	542	100.0	4e-152
+
+
+
+>>
+14. NZ_JQKS01000001
+Source: Methylobacter sp. BBA5.1 EK22DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 750
+
+Table of genes, locations, strands and annotations of subject cluster:
+EK22_RS00190	EK22_RS00190	37812	38507	-	CTP_synthase
+EK22_RS00210	EK22_RS00210	41247	42172	-	EamA_family_transporter
+EK22_RS00215	EK22_RS00215	42213	42902	-	transposase
+EK22_RS00250	EK22_RS00250	51387	53066	-	ABC_transporter_ATP-binding_protein
+EK22_RS00355	EK22_RS00355	89937	90821	-	DNA_topoisomerase_III
+EK22_RS23420	EK22_RS23420	90817	91044	+	transposase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	EK22_RS00385	57	208	98.79518072289156	5.7e-52
+P773_RS0105325	EK22_RS00380	67	542	100.0	4e-152
+
+
+
+>>
+15. NZ_KB912877
+Source: Methylobacter marinus A45 MetmaDRAFT_scaffold1.1, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 750
+
+Table of genes, locations, strands and annotations of subject cluster:
+METMA_RS0100345	METMA_RS0100345	64833	65338	-	transposase
+METMA_RS26090	METMA_RS26090	109212	110642	-	hypothetical_protein
+METMA_RS26100	METMA_RS26100	111424	111659	-	hypothetical_protein
+METMA_RS26105	METMA_RS26105	111738	112123	-	DNA_topoisomerase_III
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	METMA_RS0100525	57	208	98.79518072289156	5.7e-52
+P773_RS0105325	METMA_RS0100520	67	542	100.0	4e-152
+
+
+
+>>
+16. NZ_JYNS01000001
+Source: Methyloterricola oryzae strain 73a EK23DRAFT_scaffold00001.1_C, whole genome shotgun sequence
+Type: other
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 745
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	EK23_RS03660	59	215	98.79518072289156	4.6e-54
+P773_RS0105325	EK23_RS03655	66	530	99.50372208436724	2.1e-148
+
+
+
+>>
+17. NZ_BBUL01000091
+Source: Cellvibrio sp. OA-2007, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 742
+
+Table of genes, locations, strands and annotations of subject cluster:
+AWU77_RS12500	AWU77_RS12500	187769	191388	+	RND_transporter
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	AWU77_RS12455	60	221	98.79518072289156	8.4e-56
+P773_RS0105325	AWU77_RS12450	64	521	100.0	7.3e-146
+
+
+
+>>
+18. NC_015276
+Source: Marinomonas mediterranea MMB-1, complete genome
+Type: other
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 741
+
+Table of genes, locations, strands and annotations of subject cluster:
+MARME_RS01360	MARME_RS01360	272116	272445	+	IS30_family_transposase
+MARME_RS01375	MARME_RS01375	275105	275433	+	IS5/IS1182_family_transposase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	MARME_RS01445	56	207	97.59036144578313	1.6e-51
+P773_RS0105325	MARME_RS01440	67	534	99.75186104218362	1.4e-149
+
+
+
+>>
+19. NZ_AOUR02000139
+Source: Pseudomonas putida LF54 seq62_NODE_65, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 737
+
+Table of genes, locations, strands and annotations of subject cluster:
+O999_RS50525	O999_RS50525	134486	136862	-	GGDEF_domain-containing_protein
+O999_RS50550	O999_RS50550	143803	150619	+	non-ribosomal_peptide_synthetase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	O999_RS50635	58	214	98.79518072289156	1e-53
+P773_RS0105325	O999_RS50630	65	523	99.75186104218362	2.5e-146
+
+
+
+>>
+20. NZ_JUHC01000037
+Source: Pseudomonas putida strain PD1 EX27DRAFT_scaffold00020.20_C, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 736
+
+Table of genes, locations, strands and annotations of subject cluster:
+EX27_RS06925	EX27_RS06925	79399	81458	+	non-ribosomal_peptide_synthetase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	EX27_RS06855	58	214	98.79518072289156	1e-53
+P773_RS0105325	EX27_RS06860	65	522	99.75186104218362	5.6e-146
+
+
+
+>>
+21. NZ_ALPV02000012
+Source: Pseudomonas putida LS46 Contig12, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 736
+
+Table of genes, locations, strands and annotations of subject cluster:
+PPUTLS46_RS12710	PPUTLS46_RS12710	344013	346589	+	non-ribosomal_peptide_synthetase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	PPUTLS46_RS12640	58	214	98.79518072289156	1e-53
+P773_RS0105325	PPUTLS46_RS12645	65	522	99.75186104218362	5.6e-146
+
+
+
+>>
+22. NC_017986
+Source: Pseudomonas putida ND6, complete genome
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 734
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	YSA_RS20585	58	214	98.79518072289156	1e-53
+P773_RS0105325	YSA_RS20580	65	520	99.75186104218362	2.1e-145
+
+
+
+>>
+23. NZ_BCBP01000023
+Source: Pseudomonas sp. NBRC 111139, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 734
+
+Table of genes, locations, strands and annotations of subject cluster:
+BJQ17_RS08020	BJQ17_RS08020	136878	138804	+	non-ribosomal_peptide_synthetase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	BJQ17_RS07950	58	214	98.79518072289156	1e-53
+P773_RS0105325	BJQ17_RS07955	65	520	99.75186104218362	2.1e-145
+
+
+
+>>
+24. NC_009512
+Source: Pseudomonas putida F1, complete genome
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 734
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	PPUT_RS08605	58	214	98.79518072289156	1e-53
+P773_RS0105325	PPUT_RS08600	65	520	99.75186104218362	2.1e-145
+
+
+
+>>
+25. NZ_CP011525
+Source: Pseudomonas sp. JY-Q, complete genome
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 734
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	AA098_RS19060	58	214	98.79518072289156	1e-53
+P773_RS0105325	AA098_RS19065	65	520	99.75186104218362	2.1e-145
+
+
+
+>>
+26. NZ_BCBM01000060
+Source: Pseudomonas sp. NBRC 111136, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 734
+
+Table of genes, locations, strands and annotations of subject cluster:
+APH39_RS16610	APH39_RS16610	1	1946	-	non-ribosomal_peptide_synthetase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	APH39_RS16680	58	214	98.79518072289156	1e-53
+P773_RS0105325	APH39_RS16675	65	520	99.75186104218362	2.1e-145
+
+
+
+>>
+27. NZ_CP015202
+Source: Pseudomonas putida B6-2 chromosome, complete genome
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 734
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	KKK_RS04295	58	214	98.79518072289156	1e-53
+P773_RS0105325	KKK_RS04290	65	520	99.75186104218362	2.1e-145
+
+
+
+>>
+28. NZ_KB891587
+Source: Dasania marina DSM 21967 B067DRAFT_scaffold_4.5, whole genome shotgun sequence
+Type: other
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 729
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	B067_RS0115815	60	220	99.3975903614458	1.1e-55
+P773_RS0105325	B067_RS0115820	63	509	99.75186104218362	3.8e-142
+
+
+
+>>
+29. NZ_FNKM01000002
+Source: Pseudomonas grimontii strain BS2976, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 726
+
+Table of genes, locations, strands and annotations of subject cluster:
+BLQ48_RS01195	BLQ48_RS01195	89266	89450	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	BLQ48_RS01090	59	217	98.79518072289156	9.3e-55
+P773_RS0105325	BLQ48_RS01095	64	509	99.75186104218362	3.8e-142
+
+
+
+>>
+30. NZ_LT671418
+Source: Herminiimonas sp. AS8 genome assembly, chromosome: I
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 4
+Cumulative BLAST score: 718
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105270	BQ6873_RS14460	32	127	101.74216027874566	2.9e-27
+P773_RS0105275	BQ6873_RS14580	40	159	100.42735042735043	5.6e-37
+P773_RS0105280	BQ6873_RS14595	36	285	95.01915708812261	1.5e-74
+P773_RS0105325	BQ6873_RS14515	37	147	64.01985111662532	3.8e-33
+
+
+
+>>
+31. NZ_CP019650
+Source: Microbulbifer agarilyticus strain GP101, complete genome
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 714
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	Mag101_RS14495	58	218	99.3975903614458	4.2e-55
+P773_RS0105325	Mag101_RS14500	63	496	101.24069478908189	2.5e-138
+
+
+
+>>
+32. NZ_GL349411
+Source: Neisseria sp. oral taxon 014 str. F0314 supercont1.1, whole genome shotgun sequence
+Type: terpene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 710
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	HMPREF9016_RS02515	58	213	98.19277108433735	1.3e-53
+P773_RS0105325	HMPREF9016_RS02510	63	497	100.24813895781637	1.9e-138
+
+
+
+>>
+33. NC_013422
+Source: Halothiobacillus neapolitanus c2, complete genome
+Type: hserlactone-t1pks
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 707
+
+Table of genes, locations, strands and annotations of subject cluster:
+HNEAP_RS04775	HNEAP_RS04775	1018025	1019295	+	IS110_family_transposase
+HNEAP_RS12500	HNEAP_RS12500	1023010	1024134	+	IS3_family_transposase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	HNEAP_RS04935	58	214	99.3975903614458	1e-53
+P773_RS0105325	HNEAP_RS04930	62	493	99.75186104218362	1.6e-137
+
+
+
+>>
+34. NZ_AAVT01000011
+Source: Marine gamma proteobacterium HTCC2143 1100111000152, whole genome shotgun sequence
+Type: t1pks-nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 703
+
+Table of genes, locations, strands and annotations of subject cluster:
+GP2143_RS15350	GP2143_RS15350	59015	60019	+	capsular_biosynthesis_protein_CpsI
+GP2143_RS15370	GP2143_RS15370	63829	65162	-	UDP-glucose_6-dehydrogenase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	GP2143_RS15375	53	199	99.3975903614458	2.6e-49
+P773_RS0105325	GP2143_RS15380	62	504	99.75186104218362	1.2e-140
+
+
+
+>>
+35. NZ_BBUM02000022
+Source: Mizugakiibacter sediminis strain skMP5, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 684
+
+Table of genes, locations, strands and annotations of subject cluster:
+MBSD_RS02080	MBSD_RS02080	1	287	-	hypothetical_protein
+MBSD_RS02235	MBSD_RS02235	30266	31078	-	kinase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	MBSD_RS02165	57	216	96.98795180722891	2.7e-54
+P773_RS0105325	MBSD_RS02160	59	468	99.50372208436724	9.6e-130
+
+
+
+>>
+36. NZ_LMOV01000028
+Source: Acidovorax sp. Leaf160 contig_8, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 647
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	ASF94_RS18875	59	210	98.19277108433735	1.5e-52
+P773_RS0105325	ASF94_RS18870	56	437	99.75186104218362	1.4e-120
+
+
+
+>>
+37. NZ_LN614830
+Source: Tatlockia micdadei genome assembly LMI, chromosome : I
+Type: t1pks-nrps
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 640
+
+Table of genes, locations, strands and annotations of subject cluster:
+LMI_RS03015	LMI_RS03015	653490	654581	-	hypothetical_protein
+LMI_RS15200	LMI_RS15200	689770	690195	-	GNAT_family_N-acetyltransferase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105285	LMI_RS02955	41	263	98.75311720698254	3.6e-68
+P773_RS0105290	LMI_RS02960	39	114	100.0	7.4e-24
+P773_RS0105325	LMI_RS03085	38	263	101.98511166253101	3.6e-68
+
+
+
+>>
+38. NZ_AXVM01000003
+Source: Comamonas badia DSM 17552 K320DRAFT_scaffold00003.3_C, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 635
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	K320_RS0107110	60	213	96.98795180722891	2.3e-53
+P773_RS0105325	K320_RS0107105	54	422	99.50372208436724	4.6e-116
+
+
+
+>>
+39. NZ_FOMQ01000002
+Source: Acidovorax konjaci strain DSM 7481, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 634
+
+Table of genes, locations, strands and annotations of subject cluster:
+BM144_RS02650	BM144_RS02650	1	439	-	ImpA_family_type_VI_secretion-associated_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	BM144_RS02675	59	208	97.59036144578313	4.3e-52
+P773_RS0105325	BM144_RS02680	55	426	99.75186104218362	2.5e-117
+
+
+
+>>
+40. NZ_CP021425
+Source: Oleiphilus messinensis strain ME102 chromosome, complete genome
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 619
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	OLMES_RS12785	47	164	97.59036144578313	9.4e-39
+P773_RS0105325	OLMES_RS12790	57	455	99.75186104218362	8.4e-126
+
+
+
+>>
+41. NZ_LJGU01000093
+Source: Streptomyces oceani strain SCSIO 02100 scaffold78, whole genome shotgun sequence
+Type: nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 555
+
+Table of genes, locations, strands and annotations of subject cluster:
+AN216_RS01880	AN216_RS01880	94755	95264	+	hypothetical_protein
+AN216_RS27960	AN216_RS27960	95537	96730	+	IS3_family_transposase
+AN216_RS01925	AN216_RS01925	104078	105417	-	IS4_family_transposase
+AN216_RS27970	AN216_RS27970	130606	130734	-	glycoside_hydrolase
+AN216_RS27975	AN216_RS27975	153448	153555	-	reverse_transcriptase
+AN216_RS01990	AN216_RS01990	153691	154929	+	IS701_family_transposase
+AN216_RS02005	AN216_RS02005	158009	158677	+	GNAT_family_N-acetyltransferase
+AN216_RS26330	AN216_RS26330	161191	161461	-	site-specific_integrase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	AN216_RS02045	36	212	101.24069478908189	1.2e-52
+P773_RS0105325	AN216_RS02055	32	185	100.49627791563276	1.6e-44
+P773_RS0105330	AN216_RS02050	35	158	96.93486590038314	8.1e-37
+
+
+
+>>
+42. NZ_FPIQ01000001
+Source: Nitrosovibrio sp. Nv17, whole genome shotgun sequence
+Type: hserlactone-acyl_amino_acids
+Number of proteins with BLAST hits to this cluster: 3
+Cumulative BLAST score: 545
+
+Table of genes, locations, strands and annotations of subject cluster:
+BT108_RS01155	BT108_RS01155	264612	265151	+	long-chain_N-acyl_amino_acid_synthase
+BT108_RS01200	BT108_RS01200	276910	278112	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105285	BT108_RS01250	39	223	87.28179551122194	4.1e-56
+P773_RS0105290	BT108_RS01255	41	111	91.72413793103448	1.1e-22
+P773_RS0105325	BT108_RS01045	34	211	100.74441687344913	2.1e-52
+
+
+
+>>
+43. NZ_CH724113
+Source: Bermanella marisrubri strain RED65 scf_1100007010816, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 523
+
+Table of genes, locations, strands and annotations of subject cluster:
+RED65_RS17065	RED65_RS17065	230726	231918	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105320	RED65_RS05195	45	140	84.93975903614458	1.5e-31
+P773_RS0105325	RED65_RS05190	50	383	100.0	2.4e-104
+
+
+
+>>
+44. NZ_KK037166
+Source: Kutzneria sp. 744 supercont1.1, whole genome shotgun sequence
+Type: lantipeptide-nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 352
+
+Table of genes, locations, strands and annotations of subject cluster:
+KUTG_RS07080	KUTG_RS07080	1609881	1610398	+	multidrug_ABC_transporter_ATP-binding_protein
+KUTG_RS56055	KUTG_RS56055	1613579	1631979	-	non-ribosomal_peptide_synthetase
+KUTG_RS07230	KUTG_RS07230	1661406	1662583	-	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	KUTG_RS07180	36	222	100.99255583126552	1.2e-55
+P773_RS0105330	KUTG_RS07185	36	130	97.31800766283524	3.1e-28
+
+
+
+>>
+45. NZ_CP016279
+Source: Streptomyces griseochromogenes strain ATCC 14511, complete genome
+Type: lantipeptide-t1pks-otherks
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 346
+
+Table of genes, locations, strands and annotations of subject cluster:
+AVL59_RS48830	AVL59_RS48830	5189834	5190198	+	IS5/IS1182_family_transposase
+AVL59_RS48835	AVL59_RS48835	5194935	5195102	+	DDE_endonuclease
+AVL59_RS48840	AVL59_RS48840	5195232	5195342	+	integrase
+AVL59_RS50700	AVL59_RS50700	5213382	5213525	-	IS256_family_transposase
+AVL59_RS51530	AVL59_RS51530	5224337	5224437	+	IS481_family_transposase
+AVL59_RS51535	AVL59_RS51535	5224850	5225047	+	IS701_family_transposase
+AVL59_RS50705	AVL59_RS50705	5225245	5226006	+	IS5_family_transposase
+AVL59_RS48860	AVL59_RS48860	5244707	5245120	-	transposase
+AVL59_RS48865	AVL59_RS48865	5248026	5248124	-	MarR_family_transcriptional_regulator
+AVL59_RS48870	AVL59_RS48870	5248224	5249041	+	IS5_family_transposase
+AVL59_RS22395	AVL59_RS22395	5249133	5249669	+	hypothetical_protein
+AVL59_RS22405	AVL59_RS22405	5250272	5250735	+	hypothetical_protein
+AVL59_RS48875	AVL59_RS48875	5254254	5254463	+	IS5/IS1182_family_transposase
+AVL59_RS22430	AVL59_RS22430	5254427	5255609	-	IS3_family_transposase
+AVL59_RS48880	AVL59_RS48880	5255608	5256277	+	helix-turn-helix_domain_containing_protein
+AVL59_RS48885	AVL59_RS48885	5257124	5257612	-	MFS_transporter
+AVL59_RS48890	AVL59_RS48890	5258758	5259033	+	transcriptional_regulator
+AVL59_RS22460	AVL59_RS22460	5259198	5260190	-	transposase
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	AVL59_RS22205	36	195	82.6302729528536	9.2e-48
+P773_RS0105330	AVL59_RS22200	38	151	100.38314176245211	9.9e-35
+
+
+
+>>
+46. NZ_JNYZ01000022
+Source: Amycolatopsis jejuensis strain NRRL B-24427 contig22.1, whole genome shotgun sequence
+Type: lantipeptide
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 341
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	OO71_RS28815	35	225	101.73697270471465	8.3e-57
+P773_RS0105330	OO71_RS28810	31	116	96.93486590038314	6e-24
+
+
+
+>>
+47. NZ_FRCM01000001
+Source: Mucilaginibacter sp. OK098, whole genome shotgun sequence
+Type: t1pks-nrps
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 328
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	BUE31_RS05855	35	175	86.35235732009926	1.7e-41
+P773_RS0105330	BUE31_RS05860	36	153	100.76628352490422	4.4e-35
+
+
+
+>>
+48. NC_015177
+Source: Pseudopedobacter saltans DSM 12145, complete genome
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 327
+
+Table of genes, locations, strands and annotations of subject cluster:
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	PEDSA_RS03340	31	178	110.17369727047146	2e-42
+P773_RS0105330	PEDSA_RS03345	35	149	100.76628352490422	6.4e-34
+
+
+
+>>
+49. NZ_AULF01000014
+Source: Pedobacter glucosidilyticus DSM 23534 H510DRAFT_scaffold00011.11_C, whole genome shotgun sequence
+Type: arylpolyene
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 327
+
+Table of genes, locations, strands and annotations of subject cluster:
+H510_RS19845	H510_RS19845	60437	60625	-	hypothetical_protein
+H510_RS18365	H510_RS18365	83449	83788	+	antitoxin
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	H510_RS0106015	33	187	110.17369727047146	3.3e-45
+P773_RS0105330	H510_RS0106010	32	140	99.23371647509579	3e-31
+
+
+
+>>
+50. NZ_CP022743
+Source: Mucilaginibacter sp. BJC16-A31 chromosome, complete genome
+Type: other
+Number of proteins with BLAST hits to this cluster: 2
+Cumulative BLAST score: 327
+
+Table of genes, locations, strands and annotations of subject cluster:
+MuYL_RS09260	MuYL_RS09260	2134630	2135740	+	hypothetical_protein
+
+Table of Blast hits (query gene, subject gene, %identity, blast score, %coverage, e-value):
+P773_RS0105325	MuYL_RS09300	35	176	86.35235732009926	5.8e-42
+P773_RS0105330	MuYL_RS09295	36	151	100.0	1.7e-34
+

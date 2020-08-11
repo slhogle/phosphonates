@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AAG26466.1</td>
+              <td>putative_phosphoenolpyruvate_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001411/1">BGC0001411</a></td>
+              <td>saccharide</td>
+              <td>37.0</td>
+              <td>98.1</td>
+              <td>242.0</td>
+              <td>1.4e-63</td>
+          </tr>
+    
+          <tr>
+              <td>AHL24480.1</td>
+              <td>phosphonopyruvate_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000806/1">BGC0000806</a></td>
+              <td>saccharide</td>
+              <td>38.0</td>
+              <td>98.1</td>
+              <td>226.0</td>
+              <td>6e-59</td>
+          </tr>
+    
+          <tr>
+              <td>ADD45294.1</td>
+              <td>phosphonopyruvate_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000807/1">BGC0000807</a></td>
+              <td>saccharide</td>
+              <td>37.0</td>
+              <td>93.2</td>
+              <td>221.0</td>
+              <td>2.5e-57</td>
+          </tr>
+    
+          <tr>
+              <td>ACG70832.1</td>
+              <td>phosphonopyruvate_decarboxylase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000938/1">BGC0000938</a></td>
+              <td>other</td>
+              <td>34.0</td>
+              <td>98.9</td>
+              <td>199.0</td>
+              <td>1e-50</td>
+          </tr>
+    
+          <tr>
+              <td>CAJ14045.1</td>
+              <td>phosphonopyruvate_decarboxylase_Ppd</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000406/1">BGC0000406</a></td>
+              <td>nrps</td>
+              <td>29.0</td>
+              <td>95.9</td>
+              <td>142.0</td>
+              <td>1.5e-33</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

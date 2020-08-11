@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>ABC35745.1</td>
+              <td>4-hydroxy-3-methylbut-2-enyl_diphosphate_reductase</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000386/1">BGC0000386</a></td>
+              <td>nrps</td>
+              <td>50.0</td>
+              <td>97.8</td>
+              <td>281.0</td>
+              <td>1.4e-75</td>
+          </tr>
+    
+          <tr>
+              <td>CCH63727.1</td>
+              <td>XiaA_protein</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000665/1">BGC0000665</a></td>
+              <td>terpene-alkaloid</td>
+              <td>46.0</td>
+              <td>97.1</td>
+              <td>279.0</td>
+              <td>8.8e-75</td>
+          </tr>
+    
+          <tr>
+              <td>AFK78070.1</td>
+              <td>XiaD</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000666/1">BGC0000666</a></td>
+              <td>terpene</td>
+              <td>46.0</td>
+              <td>97.1</td>
+              <td>278.0</td>
+              <td>1.5e-74</td>
+          </tr>
+    
+          <tr>
+              <td>ADD82999.1</td>
+              <td>PtnM1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001156/1">BGC0001156</a></td>
+              <td>terpene</td>
+              <td>45.0</td>
+              <td>98.4</td>
+              <td>275.0</td>
+              <td>9.7e-74</td>
+          </tr>
+    
+          <tr>
+              <td>ACO31284.1</td>
+              <td>PtmM1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001140/1">BGC0001140</a></td>
+              <td>terpene</td>
+              <td>45.0</td>
+              <td>98.4</td>
+              <td>274.0</td>
+              <td>2.2e-73</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

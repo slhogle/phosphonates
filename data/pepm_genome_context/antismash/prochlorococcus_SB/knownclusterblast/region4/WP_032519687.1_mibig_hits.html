@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AWH12688.1</td>
+              <td>Rp1J</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001759/1">BGC0001759</a></td>
+              <td>t1pks</td>
+              <td>37.0</td>
+              <td>78.3</td>
+              <td>79.0</td>
+              <td>4.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>AAS07738.1</td>
+              <td>RplJ</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000136/1">BGC0000136</a></td>
+              <td>t1pks</td>
+              <td>40.0</td>
+              <td>69.7</td>
+              <td>79.0</td>
+              <td>7.4e-15</td>
+          </tr>
+    
+          <tr>
+              <td>ADO67765.1</td>
+              <td>Tpa3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000615/1">BGC0000615</a></td>
+              <td>thiopeptide</td>
+              <td>30.0</td>
+              <td>94.9</td>
+              <td>77.0</td>
+              <td>2.8e-14</td>
+          </tr>
+    
+          <tr>
+              <td>ACR48349.1</td>
+              <td>Nos7</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000610/1">BGC0000610</a></td>
+              <td>thiopeptide</td>
+              <td>31.0</td>
+              <td>91.4</td>
+              <td>75.0</td>
+              <td>8.2e-14</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

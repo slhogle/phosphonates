@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<script type="text/javascript" src="../../js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript" >
+var counter = 1;
+function addInput(divName){
+     var newdiv = document.createElement('div');
+     newdiv.innerHTML = "<b>Locus " + (counter + 1) + "</b><br> GenBank accession: <input type='text' required name='myInputs[]'> Start nt: <input type='number' name='myStartCoords[]' placeholder='N/A'> End nt: <input type='number' name='myEndCoords[]' placeholder='N/A'> <br><br>";
+     document.getElementById(divName).appendChild(newdiv);
+     counter++;
+}
+</script>
+
+<script>
+$(document).ready(function()
+    {
+        $("#myTable").tablesorter();
+    }
+);
+
+</script>
+<style>
+table {
+    border-width: thin;
+    border-spacing: 2px;
+    border-style: none;
+    border-color: black;
+}
+</style>
+</head>
+<body>
+    <table id="myTable" class="tablesorter" border=1>
+    <thead>
+    <tr>
+        <th>MIBiG Protein</th>
+        <th>Description</th>
+        <th>MIBiG Cluster</th>
+        <th>MiBiG Product</th>
+        <th>% ID</th>
+        <th>% Coverage</th>
+        <th>BLAST Score</th>
+        <th>E-value</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+          <tr>
+              <td>AHI58832.1</td>
+              <td>WelT3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000668/1">BGC0000668</a></td>
+              <td>terpene-alkaloid</td>
+              <td>47.0</td>
+              <td>94.6</td>
+              <td>267.0</td>
+              <td>2.4e-71</td>
+          </tr>
+    
+          <tr>
+              <td>ACC79985.1</td>
+              <td>tryptophan_synthase,_alpha_subunit</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000824/1">BGC0000824</a></td>
+              <td>alkaloid</td>
+              <td>50.0</td>
+              <td>93.9</td>
+              <td>267.0</td>
+              <td>3.1e-71</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79626.1</td>
+              <td>FisI4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001595/1">BGC0001595</a></td>
+              <td>alkaloid</td>
+              <td>47.0</td>
+              <td>94.6</td>
+              <td>259.0</td>
+              <td>6.4e-69</td>
+          </tr>
+    
+          <tr>
+              <td>AHB62780.1</td>
+              <td>AmbT3</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001126/1">BGC0001126</a></td>
+              <td>terpene-alkaloid</td>
+              <td>47.0</td>
+              <td>94.6</td>
+              <td>257.0</td>
+              <td>3.2e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79603.1</td>
+              <td>FilI4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001501/1">BGC0001501</a></td>
+              <td>alkaloid</td>
+              <td>47.0</td>
+              <td>94.6</td>
+              <td>257.0</td>
+              <td>3.2e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APB62266.1</td>
+              <td>tryptophan_synthase_subunit_alpha</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001612/1">BGC0001612</a></td>
+              <td>alkaloid</td>
+              <td>47.0</td>
+              <td>94.6</td>
+              <td>257.0</td>
+              <td>3.2e-68</td>
+          </tr>
+    
+          <tr>
+              <td>APZ79570.1</td>
+              <td>FimI4</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0001594/1">BGC0001594</a></td>
+              <td>alkaloid</td>
+              <td>47.0</td>
+              <td>94.6</td>
+              <td>256.0</td>
+              <td>4.2e-68</td>
+          </tr>
+    
+          <tr>
+              <td>AFW60210.1</td>
+              <td>benzoxazinless1</td>
+              <td><a href="https://mibig.secondarymetabolites.org/go/BGC0000810/1">BGC0000810</a></td>
+              <td>alkaloid</td>
+              <td>45.0</td>
+              <td>78.1</td>
+              <td>194.0</td>
+              <td>1.9e-49</td>
+          </tr>
+    
+    </tbody>
+  </table>
+</body>

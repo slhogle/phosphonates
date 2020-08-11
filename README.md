@@ -21,15 +21,25 @@ The `data` directory contains results and summary tables needed to support the c
 - [HMM alignments](data/core_gene_families/HMM_alignments) used to produce core gene HMMs
 
 ### Genome context around PepM clusters in Prochlorococcus SB, SAR11 RS40, and SAR11 HTCC7217
+Annotations from [antiSMASH](https://antismash.secondarymetabolites.org/)
+
+Blin, K., S. Shaw, K. Steinke, R. Villebro, N. Ziemert, S. Y. Lee, M. H. Medema, and T. Weber. 2019. antiSMASH 5.0: updates to the secondary metabolite genome mining pipeline. Nucleic Acids Res. 47: W81–W87.
+
 - [Prochlorococcus SB antiSMASH results.](http://htmlpreview.github.io/?https://github.com/slhogle/phosphonates/blob/master/data/pepm_genome_context/antismash/prochlorococcus_SB/index.html) PepM cluster is in region 2.10. 
 - [SAR11 RS40 antiSMASH results.](http://htmlpreview.github.io/?https://github.com/slhogle/phosphonates/blob/master/data/pepm_genome_context/antismash/SAR11_RS40/index.html) PepM cluster is in region 1.5
 - [SAR11 HTCC7217 antiSMASH results.](http://htmlpreview.github.io/?https://github.com/slhogle/phosphonates/blob/master/data/pepm_genome_context/antismash/SAR11_HTCC7217/index.html) PepM cluster is in region 1.3
 
 ### Functional enrichments near PepM clusters
-![title](data/pepm_genome_context/clusterprofiler/map00520.png)
+Enrichments estimated from hypergeometric test implemented in clusterProfiler
+
+Yu, G., L.-G. Wang, Y. Han, and Q.-Y. He. 2012. clusterProfiler: an R package for comparing biological themes among gene clusters. OMICS 16: 284–287.
 
 - [clusterProfiler results](data/pepm_genome_context/clusterprofiler/enrichment_scores.tsv)
+- Kegg enzymes in red are found to be enriched using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html)
+![title](data/pepm_genome_context/clusterprofiler/map00520.png)
 
+
+### Directory Structure
 ```
 .
 ├── code
@@ -37,6 +47,12 @@ The `data` directory contains results and summary tables needed to support the c
     ├── core_gene_families
     │   ├── HMM_alignments
     │   └── HMM_models
+    ├── pepm_genome_context
+    │   ├── antismash
+    │   │   ├── SAR11_HTCC7217
+    │   │   ├── SAR11_RS40
+    │   │   └── prochlorococcus_SB
+    │   └── clusterprofiler
     ├── phosphonate_biosynthesis
     │   ├── GORG_tropics
     │   ├── HMM_models

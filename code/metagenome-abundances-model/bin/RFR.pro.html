@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="modelling-prochlorococcussar11-pepm-abundance-using-environmental-covariates">Modelling prochlorococcus/SAR11 pepm abundance using environmental covariates</h1>
+<ul>
+<li><a href="#intro">INTRO</a></li>
+<li><a href="#read-data">READ DATA</a></li>
+<li><a href="#general-formatting">GENERAL FORMATTING</a></li>
+<li><a href="#data-splitting-resampling">DATA SPLITTING &amp; RESAMPLING</a></li>
+<li><a href="#cross-fold-set">CROSS FOLD SET</a></li>
+<li><a href="#random-forest-model-ranger">RANDOM FOREST MODEL (RANGER)</a></li>
+<li><a href="#recipes">RECIPES</a>
+<ul>
+<li><a href="#car-score">CAR SCORE</a></li>
+<li><a href="#boruta">BORUTA</a></li>
+</ul></li>
+<li><a href="#workflow">WORKFLOW</a>
+<ul>
+<li><a href="#carscore">CARSCORE</a></li>
+<li><a href="#boruta-1">BORUTA</a></li>
+</ul></li>
+<li><a href="#tune-hyperparameters">TUNE HYPERPARAMETERS</a>
+<ul>
+<li><a href="#carscore-1">CARSCORE</a></li>
+<li><a href="#boruta-2">BORUTA</a></li>
+</ul></li>
+<li><a href="#final-fit">FINAL FIT</a>
+<ul>
+<li><a href="#model">MODEL</a></li>
+<li><a href="#recipe">RECIPE</a></li>
+<li><a href="#workflow-1">WORKFLOW</a></li>
+<li><a href="#execute">EXECUTE</a></li>
+</ul></li>
+</ul>
+<h1 id="intro">INTRO</h1>
+<p>useful tutorials: <a href="http://www.rebeccabarter.com/blog/2020-03-25_machine_learning">http://www.rebeccabarter.com/blog/2020-03-25_machine_learning</a> <a href="https://juliasilge.com/blog/sf-trees-random-tuning/">https://juliasilge.com/blog/sf-trees-random-tuning/</a> <a href="https://www.tidymodels.org/start/case-study/">https://www.tidymodels.org/start/case-study/</a> <a href="https://bradleyboehmke.github.io/HOML/random-forest.html">https://bradleyboehmke.github.io/HOML/random-forest.html</a></p>
+<p>feature selection: <a href="http://blog.datadive.net/selecting-good-features-part-iii-random-forests/">http://blog.datadive.net/selecting-good-features-part-iii-random-forests/</a> <a href="https://academic.oup.com/bib/article/20/2/492/4554516">https://academic.oup.com/bib/article/20/2/492/4554516</a></p>
+<p>SO questions on colinearity: <a href="https://stats.stackexchange.com/questions/168622/why-is-multicollinearity-not-checked-in-modern-statistics-machine-learning">https://stats.stackexchange.com/questions/168622/why-is-multicollinearity-not-checked-in-modern-statistics-machine-learning</a> <a href="https://stats.stackexchange.com/questions/141619/wont-highly-correlated-variables-in-random-forest-distort-accuracy-and-feature">https://stats.stackexchange.com/questions/141619/wont-highly-correlated-variables-in-random-forest-distort-accuracy-and-feature</a></p>
+<p>Evaluating performance <a href="https://bookdown.org/max/FES/measuring-performance.html">https://bookdown.org/max/FES/measuring-performance.html</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(here)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="kw">library</span>(tidymodels)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">library</span>(recipeselectors)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">library</span>(vip)</span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#library(parallel)</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#library(foreach)</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co">#library(doParallel)</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="kw">library</span>(ranger)</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="kw">library</span>(Boruta)</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="kw">library</span>(care)</span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="kw">library</span>(ggforce)</span></code></pre></div>
+<h1 id="read-data">READ DATA</h1>
+<p>Preformatted dataset</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>pepm &lt;-<span class="st"> </span><span class="kw">readRDS</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;input&quot;</span>, <span class="st">&quot;pepm.global.final&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="st">  </span><span class="kw">group_by</span>(sampleID, group) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="st">  </span><span class="kw">filter</span>(sampleID <span class="op">!=</span><span class="st"> &quot;S0468&quot;</span>)</span></code></pre></div>
+<h1 id="general-formatting">GENERAL FORMATTING</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>a &lt;-<span class="st"> </span><span class="kw">left_join</span>(<span class="kw">filter</span>(pepm, group<span class="op">==</span><span class="st">&quot;bactarc&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(sampleID, <span class="dt">bactarc_pepm=</span>RA),</span>
+<span id="cb3-2"><a href="#cb3-2"></a>               <span class="kw">filter</span>(pepm, group<span class="op">==</span><span class="st">&quot;sar11&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(sampleID, <span class="dt">sar11_pepm=</span>RA)) <span class="op">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">sar11_pepm=</span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(sar11_pepm), <span class="fl">1e-4</span>, sar11_pepm)) <span class="op">%&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">sar11_pepm=</span><span class="kw">ifelse</span>(sar11_pepm <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, <span class="fl">0.99</span>, sar11_pepm)) <span class="op">%&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">bactarc_pepm=</span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(bactarc_pepm), <span class="fl">1e-4</span>, bactarc_pepm)) <span class="op">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">bactarc_pepm=</span><span class="kw">ifelse</span>(bactarc_pepm <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, <span class="fl">0.99</span>, bactarc_pepm))</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a>PEPMreads2forest &lt;-<span class="st"> </span>pepm <span class="op">%&gt;%</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">!</span><span class="kw">str_detect</span>(<span class="kw">names</span>(.), <span class="st">&quot;imputed_&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">!</span><span class="kw">str_detect</span>(<span class="kw">names</span>(.), <span class="st">&quot;pel_&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">!</span><span class="kw">str_detect</span>(<span class="kw">names</span>(.), <span class="st">&quot;pro_LLVII&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">!</span><span class="kw">str_detect</span>(<span class="kw">names</span>(.), <span class="st">&quot;Long&quot;</span>)) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="st">  </span><span class="kw">filter</span>(group<span class="op">==</span><span class="st">&quot;prochlorococcus&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>section, <span class="op">-</span>lat, <span class="op">-</span>lon, <span class="op">-</span>group, <span class="op">-</span>W, <span class="op">-</span>M,</span>
+<span id="cb3-15"><a href="#cb3-15"></a>         <span class="op">-</span>synDarwin_umolC.kg, <span class="op">-</span>proDarwin_umolC.kg,</span>
+<span id="cb3-16"><a href="#cb3-16"></a>         <span class="op">-</span>DOFe_darwin_clim, <span class="op">-</span>POFe_darwin_clim) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">RA=</span><span class="kw">ifelse</span>(RA <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, <span class="fl">0.99</span>, RA)) <span class="op">%&gt;%</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">RA=</span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(RA), <span class="fl">1e-4</span>, RA)) <span class="op">%&gt;%</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="st">  </span><span class="kw">left_join</span>(., a) <span class="op">%&gt;%</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>sampleID,</span>
+<span id="cb3-22"><a href="#cb3-22"></a>         <span class="op">-</span>bacteria,                       <span class="co"># redundant with archaea</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a>         <span class="op">-</span>pro_LLII_LLIII,                 <span class="co"># redundant with pro_LLIV</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a>         <span class="op">-</span>DOironDarwin_dissolved_nmol.kg, <span class="co"># redundant with DOPDarwin_dissolved_umol.kg</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a>         <span class="op">-</span>copper_dissolved_nmol.kg,       <span class="co"># nitrateDarwin_dissolved_umol.kg</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a>         <span class="op">-</span>ironDarwin_dissolved_nmol.kg)   <span class="co"># nitrateDarwin_dissolved_umol.kg</span></span></code></pre></div>
+<h1 id="data-splitting--resampling">DATA SPLITTING &amp; RESAMPLING</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>splits      &lt;-<span class="st"> </span><span class="kw">initial_split</span>(PEPMreads2forest, <span class="dt">strata =</span> RA, <span class="dt">breaks=</span><span class="dv">10</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>pepm_other &lt;-<span class="st"> </span><span class="kw">training</span>(splits)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>pepm_test  &lt;-<span class="st"> </span><span class="kw">testing</span>(splits)</span></code></pre></div>
+<h1 id="cross-fold-set">CROSS FOLD SET</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>folds &lt;-<span class="st"> </span><span class="kw">vfold_cv</span>(pepm_other,</span>
+<span id="cb5-2"><a href="#cb5-2"></a>                  <span class="dt">v =</span> <span class="dv">10</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>                  <span class="dt">strata =</span> RA, </span>
+<span id="cb5-4"><a href="#cb5-4"></a>                  <span class="dt">breaks =</span> <span class="dv">10</span>)</span></code></pre></div>
+<h1 id="random-forest-model-ranger">RANDOM FOREST MODEL (RANGER)</h1>
+<p>Perform with parallel processing</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>cores &lt;-<span class="st"> </span>parallel<span class="op">::</span><span class="kw">detectCores</span>()</span>
+<span id="cb6-2"><a href="#cb6-2"></a>cores</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>rf_mod &lt;-<span class="st"> </span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="st">  </span><span class="kw">rand_forest</span>() <span class="op">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="st">  </span><span class="kw">set_args</span>(   <span class="dt">mtry =</span> <span class="kw">tune</span>(), </span>
+<span id="cb7-4"><a href="#cb7-4"></a>              <span class="dt">min_n =</span> <span class="kw">tune</span>(), </span>
+<span id="cb7-5"><a href="#cb7-5"></a>              <span class="dt">trees =</span> <span class="dv">1000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="st">  </span><span class="kw">set_engine</span>(<span class="st">&quot;ranger&quot;</span>, </span>
+<span id="cb7-7"><a href="#cb7-7"></a>             <span class="dt">num.threads =</span> cores,</span>
+<span id="cb7-8"><a href="#cb7-8"></a>             <span class="dt">importance =</span> <span class="st">&quot;permutation&quot;</span>, </span>
+<span id="cb7-9"><a href="#cb7-9"></a>             <span class="dt">splitrule =</span> <span class="st">&quot;beta&quot;</span>,</span>
+<span id="cb7-10"><a href="#cb7-10"></a>             <span class="dt">replace =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="st">  </span><span class="kw">set_mode</span>(<span class="st">&quot;regression&quot;</span>)</span>
+<span id="cb7-12"><a href="#cb7-12"></a></span>
+<span id="cb7-13"><a href="#cb7-13"></a>rf_mod <span class="op">%&gt;%</span><span class="st">    </span></span>
+<span id="cb7-14"><a href="#cb7-14"></a><span class="st">  </span><span class="kw">parameters</span>()</span></code></pre></div>
+<h1 id="recipes">RECIPES</h1>
+<h2 id="car-score">CAR SCORE</h2>
+<p>This version contains the variable filter step using the CAR score algorithm from the <code>care</code> package. See here: <a href="http://www.strimmerlab.org/software/care/">http://www.strimmerlab.org/software/care/</a></p>
+<p>The “care” package implements the regression approach of Zuber and Strimmer (2011). CAR scores measure the correlation between the response and the Mahalanobis-decorrelated predictors. The squared CAR score is a natural measure of variable importance and provides a canonical ordering of variables. This package provides functions for estimating CAR scores, for variable selection using CAR scores, and for estimating corresponding regression coefficients. Both shrinkage as well as empirical estimators are available.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>rf_recipe_carscore &lt;-<span class="st"> </span><span class="kw">recipe</span>(RA <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> pepm_other) <span class="op">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="st">  </span><span class="kw">step_normalize</span>(<span class="kw">all_predictors</span>(), <span class="op">-</span><span class="kw">all_nominal</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="st">  </span><span class="kw">step_corr</span>(<span class="kw">all_predictors</span>(), <span class="op">-</span><span class="kw">all_nominal</span>(), <span class="dt">threshold =</span> <span class="fl">0.9</span>) <span class="op">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="st">  </span><span class="kw">step_zv</span>(<span class="kw">all_predictors</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="st">  </span><span class="kw">step_select_carscore</span>(<span class="kw">all_predictors</span>(), </span>
+<span id="cb8-6"><a href="#cb8-6"></a>                       <span class="dt">outcome =</span> <span class="st">&quot;RA&quot;</span>, </span>
+<span id="cb8-7"><a href="#cb8-7"></a>                       <span class="dt">threshold =</span> <span class="fl">0.5</span>, <span class="co"># Retain features only within the top 50th percentile</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>                       <span class="dt">top_p =</span> <span class="kw">tune</span>())  <span class="co"># can be tuned</span></span></code></pre></div>
+<h2 id="boruta">BORUTA</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>rf_recipe_boruta &lt;-<span class="st"> </span><span class="kw">recipe</span>(RA <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> pepm_other) <span class="op">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="st">  </span><span class="kw">step_normalize</span>(<span class="kw">all_predictors</span>(), <span class="op">-</span><span class="kw">all_nominal</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="st">  </span><span class="kw">step_corr</span>(<span class="kw">all_predictors</span>(), <span class="op">-</span><span class="kw">all_nominal</span>(), <span class="dt">threshold =</span> <span class="fl">0.9</span>) <span class="op">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="st">  </span><span class="kw">step_zv</span>(<span class="kw">all_predictors</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="st">  </span><span class="kw">step_select_boruta</span>(<span class="kw">all_predictors</span>(), <span class="dt">outcome =</span> <span class="st">&quot;RA&quot;</span>, <span class="dt">res=</span><span class="st">&quot;boruta_tune&quot;</span>)</span></code></pre></div>
+<h1 id="workflow">WORKFLOW</h1>
+<h2 id="carscore">CARSCORE</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>rf_workflow_carscore &lt;-<span class="st"> </span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="st">  </span><span class="kw">workflow</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="st">  </span><span class="kw">add_recipe</span>(rf_recipe_carscore) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="st">  </span><span class="kw">add_model</span>(rf_mod)</span></code></pre></div>
+<h3 id="feature-selection-parameters">FEATURE SELECTION PARAMETERS</h3>
+<p>In case we are tuning top_p or threshold we need to update the tuned hyperparameters using upper bounds</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>p_info &lt;-<span class="st"> </span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="st">  </span>rf_workflow_carscore <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="st">  </span><span class="kw">parameters</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="st">  </span><span class="kw">update</span>(<span class="dt">threshold =</span> <span class="kw">threshold</span>(<span class="kw">c</span>(<span class="fl">0.5</span>, <span class="fl">0.9</span>))) <span class="op">%&gt;%</span><span class="st">  </span><span class="co"># Pick an upper bound for the threshold</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="st">  </span><span class="kw">update</span>(<span class="dt">top_p =</span> <span class="kw">top_p</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">20</span>))) <span class="op">%&gt;%</span><span class="st">             </span><span class="co"># Pick an upper bound for number of variables </span></span>
+<span id="cb11-6"><a href="#cb11-6"></a><span class="st">  </span><span class="kw">update</span>(<span class="dt">mtry =</span> <span class="kw">mtry</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">10</span>)))                   <span class="co"># Pick an upper bound for mtry </span></span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a>ctrl &lt;-<span class="st"> </span><span class="kw">control_grid</span>(<span class="dt">extract =</span> identity,</span>
+<span id="cb11-9"><a href="#cb11-9"></a>                     <span class="dt">verbose =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<h2 id="boruta-1">BORUTA</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>rf_workflow_boruta &lt;-<span class="st"> </span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="st">  </span><span class="kw">workflow</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="st">  </span><span class="kw">add_recipe</span>(rf_recipe_boruta) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="st">  </span><span class="kw">add_model</span>(rf_mod)</span></code></pre></div>
+<h1 id="tune-hyperparameters">TUNE HYPERPARAMETERS</h1>
+<h2 id="carscore-1">CARSCORE</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>rf_res_carscore &lt;-</span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="st">  </span>rf_mod <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="st">  </span><span class="kw">tune_grid</span>(</span>
+<span id="cb13-4"><a href="#cb13-4"></a>    rf_recipe,</span>
+<span id="cb13-5"><a href="#cb13-5"></a>    <span class="dt">resamples =</span> folds,</span>
+<span id="cb13-6"><a href="#cb13-6"></a>    <span class="dt">grid =</span> <span class="dv">20</span>,</span>
+<span id="cb13-7"><a href="#cb13-7"></a>    <span class="dt">param_info =</span> p_info, <span class="co"># use only with the CARscore recipe</span></span>
+<span id="cb13-8"><a href="#cb13-8"></a>    <span class="dt">control =</span> ctrl,</span>
+<span id="cb13-9"><a href="#cb13-9"></a>    <span class="dt">metrics =</span> <span class="kw">metric_set</span>(rmse, rsq)</span>
+<span id="cb13-10"><a href="#cb13-10"></a>  )</span>
+<span id="cb13-11"><a href="#cb13-11"></a></span>
+<span id="cb13-12"><a href="#cb13-12"></a><span class="kw">saveRDS</span>(rf_res_carscore, here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;rf_tune.carscore.pro&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>rf_res_carscore <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="st">  </span><span class="kw">show_best</span>(<span class="dt">metric =</span> <span class="st">&quot;rsq&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>rf_res_carscore <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="st">  </span><span class="kw">show_best</span>(<span class="dt">metric =</span> <span class="st">&quot;rmse&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">autoplot</span>(rf_res_carscore)</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>rf_best_carscore &lt;-<span class="st"> </span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="st">  </span>rf_res_carscore <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="st">  </span><span class="kw">select_best</span>(<span class="dt">metric =</span> <span class="st">&quot;rsq&quot;</span>)</span>
+<span id="cb17-4"><a href="#cb17-4"></a>rf_best_carscore</span></code></pre></div>
+<h2 id="boruta-2">BORUTA</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>rf_res_boruta &lt;-</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="st">  </span>rf_mod <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb18-3"><a href="#cb18-3"></a><span class="st">  </span><span class="kw">tune_grid</span>(</span>
+<span id="cb18-4"><a href="#cb18-4"></a>    rf_recipe,</span>
+<span id="cb18-5"><a href="#cb18-5"></a>    <span class="dt">resamples =</span> folds,</span>
+<span id="cb18-6"><a href="#cb18-6"></a>    <span class="dt">grid =</span> <span class="dv">20</span>,</span>
+<span id="cb18-7"><a href="#cb18-7"></a>    <span class="dt">control =</span> ctrl,</span>
+<span id="cb18-8"><a href="#cb18-8"></a>    <span class="dt">metrics =</span> <span class="kw">metric_set</span>(rmse, rsq)</span>
+<span id="cb18-9"><a href="#cb18-9"></a>  )</span>
+<span id="cb18-10"><a href="#cb18-10"></a></span>
+<span id="cb18-11"><a href="#cb18-11"></a><span class="kw">saveRDS</span>(rf_res_boruta, here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;rf_tune.boruta.pro&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>rf_res_boruta <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="st">  </span><span class="kw">show_best</span>(<span class="dt">metric =</span> <span class="st">&quot;rsq&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>rf_res_boruta <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="st">  </span><span class="kw">show_best</span>(<span class="dt">metric =</span> <span class="st">&quot;rmse&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">autoplot</span>(rf_res_boruta)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>rf_best_boruta &lt;-<span class="st"> </span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="st">  </span>rf_res_boruta <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb22-3"><a href="#cb22-3"></a><span class="st">  </span><span class="kw">select_best</span>(<span class="dt">metric =</span> <span class="st">&quot;rsq&quot;</span>)</span>
+<span id="cb22-4"><a href="#cb22-4"></a>rf_best_boruta</span></code></pre></div>
+<h1 id="final-fit">FINAL FIT</h1>
+<p>After selecting our best model and hyperparameter values, our last step is to fit the final model on all the rows of data not originally held out for testing (both the training and the validation sets combined), and then evaluate the model performance one last time with the held-out test set. We’ll start by building our parsnip model object again from scratch. We take our best hyperparameter values from our random forest model.</p>
+<h2 id="model">MODEL</h2>
+<p>Will run with Boruta</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>final_rf_mod &lt;-<span class="st"> </span></span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="st">  </span><span class="kw">rand_forest</span>() <span class="op">%&gt;%</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a><span class="st">  </span><span class="kw">set_args</span>(<span class="dt">mtry =</span> <span class="dv">9</span>, </span>
+<span id="cb23-4"><a href="#cb23-4"></a>              <span class="dt">min_n =</span> <span class="dv">4</span>, </span>
+<span id="cb23-5"><a href="#cb23-5"></a>              <span class="dt">trees =</span> <span class="dv">1000</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-6"><a href="#cb23-6"></a><span class="st">  </span><span class="kw">set_engine</span>(<span class="st">&quot;ranger&quot;</span>, </span>
+<span id="cb23-7"><a href="#cb23-7"></a>             <span class="dt">num.threads =</span> cores,</span>
+<span id="cb23-8"><a href="#cb23-8"></a>             <span class="dt">importance =</span> <span class="st">&quot;permutation&quot;</span>, </span>
+<span id="cb23-9"><a href="#cb23-9"></a>             <span class="dt">splitrule =</span> <span class="st">&quot;beta&quot;</span>,</span>
+<span id="cb23-10"><a href="#cb23-10"></a>             <span class="dt">replace =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb23-11"><a href="#cb23-11"></a><span class="st">  </span><span class="kw">set_mode</span>(<span class="st">&quot;regression&quot;</span>)</span></code></pre></div>
+<h2 id="recipe">RECIPE</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>final_rf_recipe &lt;-<span class="st"> </span><span class="kw">recipe</span>(RA <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> pepm_other) <span class="op">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="st">  </span><span class="kw">step_normalize</span>(<span class="kw">all_predictors</span>(), <span class="op">-</span><span class="kw">all_nominal</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="st">  </span><span class="kw">step_corr</span>(<span class="kw">all_predictors</span>(), <span class="op">-</span><span class="kw">all_nominal</span>(), <span class="dt">threshold =</span> <span class="fl">0.9</span>) <span class="op">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a><span class="st">  </span><span class="kw">step_zv</span>(<span class="kw">all_predictors</span>()) <span class="op">%&gt;%</span></span>
+<span id="cb24-5"><a href="#cb24-5"></a><span class="st">  </span><span class="kw">step_select_boruta</span>(<span class="kw">all_predictors</span>(), <span class="dt">outcome =</span> <span class="st">&quot;RA&quot;</span>, <span class="dt">res=</span><span class="st">&quot;boruta_tune&quot;</span>)</span>
+<span id="cb24-6"><a href="#cb24-6"></a>  <span class="co">#step_select_carscore(all_predictors(), -all_nominal(), outcome = &quot;RA&quot;, top_p = 16)</span></span></code></pre></div>
+<h2 id="workflow-1">WORKFLOW</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>final_rf_workflow &lt;-<span class="st"> </span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="st">  </span><span class="kw">workflow</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="st">  </span><span class="kw">add_recipe</span>(final_rf_recipe) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="st">  </span><span class="kw">add_model</span>(final_rf_mod)</span></code></pre></div>
+<h2 id="execute">EXECUTE</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>final_rf_res &lt;-</span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="st">  </span>final_rf_workflow <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="st">  </span><span class="kw">last_fit</span>(splits)</span>
+<span id="cb26-4"><a href="#cb26-4"></a></span>
+<span id="cb26-5"><a href="#cb26-5"></a><span class="kw">saveRDS</span>(final_rf_res, here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;final_rf_res.pro&quot;</span>))</span></code></pre></div>
+<p>This fitted workflow contains everything, including our final metrics based on the test set. So, how did this model do on the test set? Was the validation set a good estimate of future performance?</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>final_rf_res <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="st">  </span><span class="kw">collect_metrics</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>final_rf_res <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="st">  </span><span class="kw">pluck</span>(<span class="st">&quot;.workflow&quot;</span>, <span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st">   </span></span>
+<span id="cb28-3"><a href="#cb28-3"></a><span class="st">  </span><span class="kw">pull_workflow_fit</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb28-4"><a href="#cb28-4"></a><span class="st">  </span><span class="kw">vip</span>(<span class="dt">num_features =</span> <span class="dv">59</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>final_rf_prep &lt;-<span class="st"> </span><span class="kw">prep</span>(final_rf_recipe)</span>
+<span id="cb29-2"><a href="#cb29-2"></a>boruta_obj &lt;-<span class="st"> </span>final_rf_prep<span class="op">$</span>steps[[<span class="dv">4</span>]]<span class="op">$</span>res</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">plot</span>(boruta_obj)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>boruta_obj<span class="op">$</span>ImpHistory</span></code></pre></div>
+
+</body>
+</html>

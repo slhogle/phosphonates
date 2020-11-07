@@ -1,0 +1,360 @@
+---
+title: "Checking gene neighborhoods from GORG-TROPICS "
+output: html_notebook
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(here)
+library(readxl)
+#library(ggalluvial)
+#library(ggfittext)
+#library(patchwork)
+```
+
+# PHOSPHONATE BIOSYNTHESIS
+
+## READ DATA
+```{r message=FALSE, warning=FALSE}
+filessyn <- set_names(list.files(here::here("input-data", "phn-synthesis"), full.names = TRUE, pattern = "\\.tsv$"), 
+                   str_extract(list.files(here::here("input-data", "phn-synthesis"), full.names = TRUE, pattern = "\\.tsv$"),
+                               regex("(?<=[/])([^/]+)(?=\\-reciprocalbesthits.tsv)")))
+
+countssyn.0 <- map_df(filessyn[-2], read_tsv, 
+                 comment = "#", 
+                 col_names = c("seqid", "pfam", "dbit", "devalue", "fullbit", "fullevalue"),
+                 col_types = "ccdddd",
+                 .id = "enzyme")
+```
+
+## VERIFIED PEPM SEQUENCES
+```{r message=FALSE, warning=FALSE}
+PEPMverified <- read_tsv(here::here("input-data", "phn-synthesis", "PEPM-locateEDKX5NS.tsv"))
+```
+
+## FORMAT TO COORDINATES
+```{r}
+countssyn.1 <- countssyn.0 %>%
+  separate(seqid, c("genome", "contig", "gene_no", "start", "end", "strand"), sep = "_", remove = FALSE) %>%
+  mutate(contig=as.numeric(as.character(contig)),
+         gene_no=as.numeric(as.character(gene_no)),
+         start=as.numeric(as.character(start)),
+         end=as.numeric(as.character(end)))
+```
+
+## PEPM
+First filter to include only PEPM with verified catalytic motif
+```{r}
+countssyn.2 <- countssyn.1 %>%
+  filter(enzyme=="PEPM") %>%
+  filter(seqid %in% pull(PEPMverified, seqID))
+
+countssyn.3 <- countssyn.1 %>%
+  filter(enzyme!="PEPM")
+
+countssyn.4 <- bind_rows(countssyn.2, countssyn.3)
+```
+
+```{r}
+myids <- c("PEPM", "PPDA", "MPNS", "PPDH", "Wzy")
+
+pepm.match.1 <- countssyn.4 %>%
+  filter(enzyme %in% myids) %>%
+  group_by(genome) %>%
+  count(total=n(), enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from = n) %>%
+  filter(total > 1 | PEPM >= 1) %>%
+  ungroup() %>%
+  replace_na(list(PEPM = 0, PPDA = 0, MPNS=0, PPDH=0, Wzy=0)) %>%
+  filter(!((PPDH + MPNS < 2) & (PEPM + PPDA == 0))) # remove genomes that only have PPDH or MPNS (PPDH > 0 | MPNS > 0)
+```
+
+```{r}
+pepm.match.2 <- semi_join(countssyn.4, pepm.match.1) %>%
+  group_by(genome, contig) %>%
+  filter(any(c("PEPM", "PPDA") %in% enzyme)) %>% # remove any contigs with only PPDH and/or MPNS
+  count(enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from = n) %>%
+  replace_na(list(PEPM = 0, PPDA = 0, MPNS=0, PPDH=0)) %>%
+  ungroup()
+```
+
+```{r}
+pepm.counts <- semi_join(countssyn.4, pepm.match.2) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  arrange(genome, contig, gene_no)
+
+write_tsv(pepm.counts, here::here("results-tables", "pepm_genes.tsv"))
+```
+
+```{r}
+pepm.genomes <- pepm.counts %>% distinct(genome) %>% mutate(enzyme="PepM")
+```
+
+# PHOSPHONATE UTILIZATION
+
+## READ DATA
+```{r message=FALSE, warning=FALSE}
+filesutil <- set_names(list.files(here::here("input-data", "phn-utilization"), full.names = TRUE, pattern = "\\.tsv$"), 
+                   str_extract(list.files(here::here("input-data", "phn-utilization"), full.names = TRUE, pattern = "\\.tsv$"),
+                               regex("(?<=[/])([^/]+)(?=\\-reciprocalbesthits.tsv)")))
+
+countsutil.0 <- map_df(filesutil, read_tsv, 
+                 comment = "#", 
+                 col_names = c("seqid", "pfam", "dbit", "devalue", "fullbit", "fullevalue"),
+                 col_types = "ccdddd",
+                 .id = "enzyme")
+```
+
+## FORMAT TO COORDINATES
+```{r}
+countsutil.1 <- countsutil.0 %>%
+  separate(seqid, c("genome", "contig", "gene_no", "start", "end", "strand"), sep = "_", remove = FALSE) %>%
+  mutate(contig=as.numeric(as.character(contig)),
+         gene_no=as.numeric(as.character(gene_no)),
+         start=as.numeric(as.character(start)),
+         end=as.numeric(as.character(end)))
+```
+
+## PHNYZ
+Check that phnZ, ptxD, and phyH are present on same contig
+```{r}
+myids <- c("phnC", "phnD-like", "phnE", "ptxD", "phyH", "phnZ")
+
+phnyz.match.1 <- countsutil.1 %>% 
+  filter(enzyme %in% myids) %>%
+  group_by(genome, contig) %>%
+  count(total=n(), enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from = n) %>%
+  filter(total > 1) %>%
+  filter(phnZ >= 1 & ptxD >=1 & phyH >=1) %>% 
+  ungroup()
+```
+
+Check that phnZ, ptxD, and phyH are colocalized
+```{r}
+phnyz.match.2 <- semi_join(countsutil.1, phnyz.match.1) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome, contig) %>% # hacky way of finding genes that are consecutive within max distance of 5
+  arrange(contig, gene_no) %>%
+  mutate(previous_gene_no = lag(gene_no, order_by = gene_no)) %>%
+  mutate(gdiff=gene_no-lag(gene_no, order_by = gene_no)) %>%
+  filter(gdiff < 6) %>%
+  select(genome, contig, gene_no, previous_gene_no) %>% # just selecting the consecutive genes
+  pivot_longer(cols = c("gene_no", "previous_gene_no")) %>%
+  select(-name, gene_no=value) %>% distinct(gene_no)
+```
+
+```{r}
+phnyz.counts <- semi_join(countsutil.1, phnyz.match.2) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome) %>%
+  arrange(contig, gene_no) %>%
+  filter(all(c("ptxD", "phyH", "phnZ") %in% enzyme)) %>% # only keep contigs/genomes that have all three
+  ungroup()
+
+write_tsv(phnyz.counts, here::here("results-tables", "phnyz_genes.tsv"))
+```
+
+```{r} 
+phnyz.genomes <- phnyz.counts %>% distinct(genome) %>% mutate(enzyme="PhnYZ")
+```
+
+## C-P Lyase
+Check that phnK, phnL, or phnM are present on any contig
+```{r}
+myids <- c("phnC", "phnD", "phnE", "phnF", "phnG", "phnH", "phnI", "phnJ", "phnK", "phnL", "phnM", "phnN", "phnO", "phnP", "phn01", "phn02")
+
+cplyase.match.1 <- countsutil.1 %>% 
+  filter(enzyme %in% myids) %>%
+  group_by(genome, contig) %>%
+  count(total=n(), enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from = n) %>%
+  filter(total > 1) %>%
+  filter(phnK >= 1 | phnL >=1 | phnM >=1) %>%
+  ungroup()
+```
+
+Check that "phnF", "phnG", "phnH", "phnI", "phnJ", "phnK", "phnL", "phnM" are colocalized
+```{r}
+cplyase.match.2 <- semi_join(countsutil.1, cplyase.match.1) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome, contig) %>% # hacky way of finding genes that are consecutive within max distance of 5
+  arrange(contig, gene_no) %>%
+  mutate(previous_gene_no = lag(gene_no, order_by = gene_no)) %>%
+  mutate(gdiff=gene_no-lag(gene_no, order_by = gene_no)) %>%
+  filter(gdiff < 6) %>%
+  select(genome, contig, gene_no, previous_gene_no) %>% # just selecting the consecutive genes
+  pivot_longer(cols = c("gene_no", "previous_gene_no")) %>%
+  select(-name, gene_no=value) %>% distinct(gene_no)
+```
+
+```{r}
+cplyase.counts <- semi_join(countsutil.1, cplyase.match.2) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome) %>%
+  arrange(contig, gene_no) %>%
+  filter("phnK" %in% enzyme) %>% # only keep contigs/genomes that have all three
+  ungroup()
+
+write_tsv(cplyase.counts, here::here("results-tables", "cplyase_genes.tsv"))
+```
+
+```{r}
+cplyase.genomes <- cplyase.counts %>% distinct(genome) %>% mutate(enzyme="CPLyase")
+```
+
+## 2AEP
+Note: there are two 2AEP type pathways [GenProp0713](https://www.ebi.ac.uk/interpro/genomeproperties/#GenProp0713) and [GenProp0238](https://www.ebi.ac.uk/interpro/genomeproperties/#GenProp0238)
+
+### 2AEP - GenProp0713
+Check that phnW, phnA, or phnY are present on any contig
+```{r}
+myids <- c("lysR", "phnW", "phnA", "phnY", "phnS2", "phnT2", "phnU2", "phnS", "phnT", "phnU", "phnV")
+
+twoaepA.match.1 <- countsutil.1 %>% 
+  filter(enzyme %in% myids) %>%
+  group_by(genome, contig) %>%
+  count(total=n(), enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from = n) %>%
+  filter(total > 1) %>%
+  filter(phnW >= 1 | phnA >=1 | phnY >=1) %>%
+  ungroup()
+```
+
+Check that genes are colocalized
+```{r}
+twoaepA.match.2 <- semi_join(countsutil.1, twoaepA.match.1) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome, contig) %>% # hacky way of finding genes that are consecutive within max distance of 5
+  arrange(contig, gene_no) %>%
+  mutate(previous_gene_no = lag(gene_no, order_by = gene_no)) %>%
+  mutate(gdiff=gene_no-lag(gene_no, order_by = gene_no)) %>%
+  filter(gdiff < 6) %>%
+  select(genome, contig, gene_no, previous_gene_no) %>% # just selecting the consecutive genes
+  pivot_longer(cols = c("gene_no", "previous_gene_no")) %>%
+  select(-name, gene_no=value) %>% distinct(gene_no)
+```
+
+```{r}
+twoaepA.counts <- semi_join(countsutil.1, twoaepA.match.2) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome) %>%
+  arrange(genome, contig, gene_no) %>%
+  filter(all(c("phnW", "phnA", "phnY") %in% enzyme)) %>% # only keep contigs/genomes that have all three
+  ungroup()
+
+write_tsv(twoaepA.counts, here::here("results-tables", "2AEPa_genes.tsv"))
+```
+
+```{r}
+twoaepA.genomes <- twoaepA.counts %>% distinct(genome) %>% mutate(enzyme="2AEP-a")
+```
+
+### 2AEP - GenProp0238
+```{r}
+myids <- c("lysR", "phnX", "phnW", "phnS2", "phnT2", "phnU2", "phnS", "phnT", "phnU", "phnV")
+
+twoaepB.match.1 <- countsutil.1 %>% 
+  filter(enzyme %in% myids) %>%
+  group_by(genome, contig) %>%
+  count(total=n(), enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from = n) %>%
+  filter(total > 1) %>%
+  filter(phnX >= 1 | phnW >=1) %>%
+  ungroup()
+```
+
+Check that genes are colocalized
+```{r}
+twoaepB.match.2 <- semi_join(countsutil.1, twoaepB.match.1) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome, contig) %>% # hacky way of finding genes that are consecutive within max distance of 5
+  arrange(contig, gene_no) %>%
+  mutate(previous_gene_no = lag(gene_no, order_by = gene_no)) %>%
+  mutate(gdiff=gene_no-lag(gene_no, order_by = gene_no)) %>%
+  filter(gdiff < 6) %>%
+  select(genome, contig, gene_no, previous_gene_no) %>% # just selecting the consecutive genes
+  pivot_longer(cols = c("gene_no", "previous_gene_no")) %>%
+  select(-name, gene_no=value) %>% distinct(gene_no)
+```
+
+```{r}
+twoaepB.counts <- semi_join(countsutil.1, twoaepB.match.2) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome) %>%
+  arrange(genome, contig, gene_no) %>%
+  filter(all(c("phnX") %in% enzyme)) %>% # only keep contigs/genomes that have all three
+  ungroup()
+
+write_tsv(twoaepB.counts, here::here("results-tables", "2AEPb_genes.tsv"))
+```
+
+```{r}
+twoaepB.genomes <- twoaepB.counts %>% distinct(genome) %>% mutate(enzyme="2AEP-b")
+```
+
+## HpnWXZ
+Proposed phosphonate catabolism pathway HpnWXZ - [GenProp0736](https://www.ebi.ac.uk/interpro/genomeproperties/#GenProp0736) 
+
+```{r}
+myids <- c("gntR", "phnS2", "phnT2", "phnU2", "phnS", "phnT", "phnU", "hpnW", "phnZ")
+
+hpnwxz.match.1 <- countsutil.1 %>% 
+  filter(enzyme %in% myids) %>%
+  group_by(genome, contig) %>%
+  count(total=n(), enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from = n) %>%
+  filter(total > 1) %>%
+  filter(hpnW >= 1) %>%
+  ungroup()
+```
+
+Check that genes are colocalized
+```{r}
+hpnwxz.match.2 <- semi_join(countsutil.1, hpnwxz.match.1) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome, contig) %>% # hacky way of finding genes that are consecutive within max distance of 5
+  arrange(contig, gene_no) %>%
+  mutate(previous_gene_no = lag(gene_no, order_by = gene_no)) %>%
+  mutate(gdiff=gene_no-lag(gene_no, order_by = gene_no)) %>%
+  filter(gdiff < 6) %>%
+  select(genome, contig, gene_no, previous_gene_no) %>% # just selecting the consecutive genes
+  pivot_longer(cols = c("gene_no", "previous_gene_no")) %>%
+  select(-name, gene_no=value) %>% distinct(gene_no)
+```
+
+```{r}
+hpnwxz.counts <- semi_join(countsutil.1, hpnwxz.match.2) %>% # get only contigs with genes
+  filter(enzyme %in% myids) %>% # only keep genes of interest
+  group_by(genome) %>%
+  arrange(genome, contig, gene_no) %>%
+  filter(all(c("hpnW", "phnZ") %in% enzyme)) %>% # only keep contigs/genomes that have all three
+  ungroup()
+
+write_tsv(hpnwxz.counts, here::here("results-tables", "hpnwxz_genes.tsv"))
+```
+
+```{r}
+hpnwxz.genomes <- hpnwxz.counts %>% distinct(genome) %>% mutate(enzyme="HpnWXZ")
+```
+
+# COMBINE RESULTS
+```{r}
+summary <- bind_rows(pepm.genomes, phnyz.genomes, cplyase.genomes, twoaepA.genomes,
+          twoaepB.genomes, hpnwxz.genomes) %>%
+  group_by(genome) %>%
+  count(enzyme) %>%
+  pivot_wider(names_from = "enzyme", values_from= "n") %>%
+  replace_na(list(PepM=0, `2AEP-a` = 0, PhnYZ = 0, `2AEP-b`=0, CPLyase=0, HpnWXZ=0)) %>%
+  mutate(`2AEP`=`2AEP-a` + `2AEP-b`) %>% 
+  select(genome, PepM, HpnWXZ, PhnYZ, `2AEP`, CPLyase) %>%
+  ungroup() %>%
+  mutate(summary=case_when(PepM > 0 & (HpnWXZ + PhnYZ + `2AEP` + CPLyase) ==0 ~ "producer",
+                           PepM == 0 & (HpnWXZ + PhnYZ + `2AEP` + CPLyase) > 0 ~ "consumer",
+                           PepM > 0 & (HpnWXZ + PhnYZ + `2AEP` + CPLyase) > 0 ~ "both"))
+```
+
+```{r}
+write_tsv(summary, here::here("results-tables", "GORG-TROPICS-summary.tsv"))
+```

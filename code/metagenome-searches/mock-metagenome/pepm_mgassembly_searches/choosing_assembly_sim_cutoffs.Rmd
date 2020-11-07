@@ -1,0 +1,196 @@
+---
+title: "Choosing cutoffs for assembly PEPMs"
+output: html_notebook
+---
+## Set up environment
+```{r}
+library(tidyverse)
+setwd("/Users/shane/Desktop/phosphonates/read-simulation/assembly_searches")
+```
+## Download the results to local dir
+```{bash}
+scp shogle@eofe4.mit.edu:/nobackup1b/users/shogle/projects/phosphonates/profile-search-vs-MARMICRODB/phn-synthesis/read_simulation/GEOTRACES-assemblies/search2_besthits.m8 GEOTRACES
+
+scp shogle@eofe4.mit.edu:/nobackup1b/users/shogle/projects/phosphonates/profile-search-vs-MARMICRODB/phn-synthesis/read_simulation/TARA-OM-RGC/search2_besthits.m8 TARA-OM-RGC
+```
+## Load similarity files
+```{r}
+geotraces <- read_tsv("GEOTRACES/search2_besthits.m8", col_names=TRUE,  col_types="ccnnnnnnnn") 
+
+tara <- read_tsv("TARA-OM-RGC/search2_besthits.m8", col_names=TRUE,  col_types="ccnnnnnnnn") 
+
+MARMICRODB <- read_tsv("verifiedPEPM-all-v-all.m8", 
+                       col_names=c("query", "target", "pident",
+                                   "evalue", "bits", "qcov", "tcov",
+                                   "qlen", "tlen", "alnlen"),
+                       col_types="ccnnnnnnnn")
+
+pepmsources <- read_tsv("pepm-summary-mod.tsv", col_names=c("id", "source", "seq"), col_types="ccc")
+```
+## PROCHLOROCOCCUS
+```{r}
+proMARMICRODB <- MARMICRODB %>% 
+  filter(query %in% 
+    (pepmsources %>% filter(source=="prochlorococcus") %>% pull(id))) %>% 
+  group_by(query) %>%
+  filter(query!=target) %>%
+  arrange(desc(bits)) %>% 
+  filter(bits > quantile(bits, .95)) %>%
+  ungroup() %>%
+  left_join(., pepmsources %>% rename(target=id)) %>%
+  select(query, target, source, bits, pident, qcov, tcov)
+
+proGEOTRACESids <- geotraces %>% 
+  filter(target %in% (pepmsources %>% filter(source=="prochlorococcus") %>% pull(id))) %>% pull(query)
+
+proGEOTRACES <- geotraces %>%
+    filter(query %in% proGEOTRACESids)
+```
+## Write ids to collect sequences on engaging
+```{r}
+write_tsv(proGEOTRACES %>% 
+  select(query) %>% 
+  distinct(query) %>% 
+  separate(query, c("sample", "scaffold", "gene"), "_", remove=FALSE) %>% 
+  unite("scaffold", c("sample","scaffold"), sep="_", remove=FALSE) %>% 
+  select(sample, scaffold, query, -gene), 
+"pro_geotraces_scaffold_ids.tsv", col_names=FALSE)
+```
+## Tara Oceans (not sure if using tara yet... Stick with GEOTRACES for now)
+```{r}
+proTARAids <- tara %>% 
+  filter(target %in% (pepmsources %>% filter(source=="prochlorococcus") %>% pull(id))) %>% pull(query)
+
+proTARA <- tara %>%
+  filter(query %in% proTARAids)
+```
+## PELAGIBACTERALES
+```{r}
+pelMARMICRODB <- MARMICRODB %>% 
+  filter(query %in% 
+           (pepmsources %>% filter(source=="pelagibacterales") %>% pull(id))) %>% 
+  group_by(query) %>%
+  filter(query!=target) %>%
+  arrange(desc(bits)) %>% 
+  filter(bits > quantile(bits, .95)) %>%
+  ungroup() %>%
+  left_join(., pepmsources %>% rename(target=id)) %>%
+  select(query, target, source, bits, pident, qcov, tcov)
+
+pelGEOTRACESids <- geotraces %>% 
+  filter(target %in% (pepmsources %>% filter(source=="pelagibacterales") %>% pull(id))) %>% pull(query)
+
+pelGEOTRACES <- geotraces %>%
+  filter(query %in% pelGEOTRACESids) %>%
+  left_join(., pepmsources %>% rename(target=id)) %>%
+  select(query, target, source, bits, pident, qcov, tcov)
+```
+## Write ids to collect sequences on engaging
+```{r}
+write_tsv(pelGEOTRACES %>% 
+            select(query) %>% 
+            distinct(query) %>% 
+            separate(query, c("sample", "scaffold", "gene"), "_", remove=FALSE) %>% 
+            unite("scaffold", c("sample","scaffold"), sep="_", remove=FALSE) %>% 
+            select(sample, scaffold, query, -gene), 
+          "pel_geotraces_scaffold_ids.tsv", col_names=FALSE)
+```
+## Tara Oceans (not sure if using tara yet... Stick with GEOTRACES for now)
+```{r}
+pelTARAids <- tara %>% 
+  filter(target %in% (pepmsources %>% filter(source=="pelagibacterales") %>% pull(id))) %>% pull(query)
+
+pelTARA <- tara %>%
+  filter(query %in% pelTARAids) %>%
+  left_join(., pepmsources %>% rename(target=id)) %>%
+  filter(qcov >= 0.85 & tcov >=0.85) %>%
+  select(query, target, source, bits, pident, qcov, tcov)
+```
+## Send the id files to the cluster
+```{bash}
+scp pro_geotraces_scaffold_ids.tsv shogle@eofe4.mit.edu:/nobackup1b/users/shogle/projects/phosphonates/profile-search-vs-MARMICRODB/phn-synthesis/read_simulation/GEOTRACES-assemblies/initialsearch4pepm
+
+scp pel_geotraces_scaffold_ids.tsv shogle@eofe4.mit.edu:/nobackup1b/users/shogle/projects/phosphonates/profile-search-vs-MARMICRODB/phn-synthesis/read_simulation/GEOTRACES-assemblies/initialsearch4pepm
+```
+## Grab the AA seqs and search against MARMICRODB
+```{bash}
+bioawk -t '{print $1,$2}' "pro_geotraces_scaffold_ids.tsv" | while read LIB ID; do seqkit fx2tab $ass/$LIB.genes.faa | grep $ID | seqkit tab2fx; done > pro_geotraces_scaffold.faa
+
+mkdir tmp3
+mmseqs createdb pro_geotraces_scaffold.faa PEPMDB/PEPMDB3 --dont-split-seq-by-len
+mmseqs search PEPMDB/PEPMDB3 ${MARMICRODB} ALNDB/ALNDB3 tmp3 -a -s 7.5 --max-seqs 300 --threads 20
+mmseqs convertalis PEPMDB/PEPMDB3 ${MARMICRODB} ALNDB/ALNDB3 search3.m8 --format-mode 0 --format-output 'query,target,pident,evalue,bits,qcov,tcov,qlen,tlen,alnlen'
+```
+## Download the results to local dir
+```{bash}
+scp shogle@eofe4.mit.edu:/nobackup1b/users/shogle/projects/phosphonates/profile-search-vs-MARMICRODB/phn-synthesis/read_simulation/GEOTRACES-assemblies/pro_search3.m8 .
+
+scp shogle@eofe4.mit.edu:/nobackup1b/users/shogle/projects/phosphonates/profile-search-vs-MARMICRODB/phn-synthesis/read_simulation/GEOTRACES-assemblies/pel_search3.m8 .
+```
+## Load the results of searching the identified scaffolds vs MARMICRODB for Prochlorococcus
+```{r}
+pro_whole_scaffolds <- read_tsv("pro_search3.m8", 
+                       col_names=c("query", "target", "pident",
+                                   "evalue", "bits", "qcov", "tcov",
+                                   "qlen", "tlen", "alnlen"),
+                       col_types="ccnnnnnnnn") %>%
+    group_by(query) %>%
+    filter(bits==max(bits)) %>%
+    left_join(., pepmsources %>% rename(target=id)) %>%
+    separate(target, c("genome", "rest"), "__", remove=FALSE) %>%
+    left_join(., genomeclass %>% rename(genome=sgenome)) %>%
+    select(query, target, class, seq, pident, bits, evalue, qcov, tcov, qlen ,tlen, alnlen)
+```
+
+Valid Prochlorococcus PEPM (requires flanking genes also with best hit to Prochlorococcus genome)
+
+Sample | PEPM sequence | Flanking genes | PEPM best hit to MARMICRODB 
+------------- | ------------- | ------------- | -------------
+S0191 | S0191_14299_1 | S0191_14299_1, S0191_14299_2 | AG-418-P13__01110_2182663
+S0192 | S0192_16989_2 | S0192_16989_1, S0192_16989_2 | SB__01744_2182663
+S0192 | S0192_24776_1 | S0192_24776_1 | AG-418-P13__01110_2182663
+S0291 | S0291_13616_2 | S0291_13616_1, S0291_13616_2, S0291_13616_3 | AG-469-F22__00530_2182667
+S0292 | S0292_27394_1 | S0292_27394_1, S0292_27394_2 | AG-469-F22__00530_2182667
+S0318 | S0318_50549_2 | S0318_50549_1, S0318_50549_2 | AG-469-F22__00530_2182667
+S0352 | S0352.2_25424_1 | S0352.2_25424_1 | AG-436-C13__00172_2182948
+S0420 | S0420_7522_1 | S0420_7522_1, S0420_7522_2 | AG-469-F22__00530_2182667
+S0422 | S0422_14583_2 | S0422_14583_1, S0422_14583_2 | AG-469-F22__00530_2182667
+S0507 | S0507_35299_2 | S0507_35299_1, S0507_35299_2 | AG-347-I22__01066_2182663
+S0540 | S0540_21234_1 | S0540_21234_1, S0540_21234_2 | AG-347-I22__01066_2182663
+S0627 | S0627_13188_2 | S0627_13188_1, S0627_13188_2, S0627_13188_3 | AG-347-I22__01066_2182663
+
+## Load the results of searching the identified scaffolds vs MARMICRODB for Prochlorococcus
+```{r}
+pel_whole_scaffolds <- read_tsv("pel_search3.m8", 
+                       col_names=c("query", "target", "pident",
+                                   "evalue", "bits", "qcov", "tcov",
+                                   "qlen", "tlen", "alnlen"),
+                       col_types="ccnnnnnnnn") %>%
+    group_by(query) %>%
+    filter(bits==max(bits)) %>%
+    left_join(., pepmsources %>% rename(target=id)) %>%
+    separate(target, c("genome", "rest"), "__", remove=FALSE) %>%
+    left_join(., genomeclass %>% rename(genome=sgenome)) %>%
+    separate(query, c("a", "b", "c"), "_", remove=FALSE) %>% 
+    unite(scaffold, a, b, sep="_") %>% select(-c) %>%
+    mutate(thresh=ifelse((seq=="pepm" & tcov<0.7), "bad", 
+                         ifelse((seq=="pepm" & tcov>=0.9), "good", NA))) %>%
+    arrange(query) %>% 
+    group_by(scaffold) %>%
+    fill(thresh, .direction = "down") %>%
+    fill(thresh, .direction = "up") %>%
+    select(scaffold, query, target, class, thresh, seq, pident, bits, evalue, qcov, tcov, qlen ,tlen, alnlen) %>% filter(thresh=="good")
+```
+
+Valid Pelagibacterales PEPM (requires flanking genes also with best hit to Pelagibacterales genome)
+
+Sample | PEPM sequence | Flanking genes | PEPM best hit to MARMICRODB 
+------------- | ------------- | ------------- | -------------
+S0160 | S0160_15177_2 | S0160_15177_1, S0160_15177_2, S0160_15177_3, S0160_15177_4 | RS40__00847_2182711
+S0351 | S0351_10706_1 | S0351_10706_1, S0351_10706_2 | AG-345-F21__00664_2183171
+S0588 | S0588_11709_1 | S0588_11709_1, S0588_11709_2 | AG-325-E08__00885_2182690
+S0622 | S0622_19920_2 | S0622_19920_1, S0622_19920_2, S0622_19920_3 | AG-430-I06__00923_2182722
+S0624 | S0624_11743_2 | S0624_11743_1, S0624_11743_2 S0624_11743_3 | RS40__00847_2182711
+S0624 | S0624_33737_1 | S0624_33737_1, S0624_33737_2 | RS40__00847_2182711
+S0630 | S0630_45746_2 | S0630_45746_1, S0630_45746_2 | RS40__00847_2182711
+

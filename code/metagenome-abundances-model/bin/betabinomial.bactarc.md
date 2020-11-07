@@ -1,0 +1,188 @@
+Parametric modelling of Combined Bacteria/Archaea PepM abundance using
+top 5 environmental covariates identified using RFR
+================
+
+  - [READ DATA](#read-data)
+  - [VARIABLE SUBSETTING](#variable-subsetting)
+      - [BACTERIA/ARCHAEA](#bacteriaarchaea)
+  - [MODELS](#models)
+  - [SIMULATIONS](#simulations)
+
+``` r
+library(here)
+library(tidyverse)
+library(corncob)
+library(foreach)
+library(doParallel)
+library(RcppRoll)
+library(ggforce)
+```
+
+``` r
+source(here("bin", "beta_binom_functions.R"))
+```
+
+# READ DATA
+
+So the GEOTRACES data license is not GPL3 and you must request access
+and be approved before being allowed to download. So I am not including
+the GEOTRACES data here since it would be in violation of their license
+agreement. Unfortunately, this means that this is not truly reproducible
+as is. You can fill in the missing data for yourself by following the
+code available here - <https://doi.org/10.5281/zenodo.3689249>.
+
+Preformatted dataset
+
+``` r
+pepm <- readRDS(here::here("input", "pepm.global.final")) %>%
+  group_by(sampleID, group) %>% 
+  slice(1) %>%
+  ungroup() %>%
+  filter(sampleID != "S0468")
+```
+
+# VARIABLE SUBSETTING
+
+## BACTERIA/ARCHAEA
+
+``` r
+a <- left_join(filter(pepm, group=="bactarc") %>% select(sampleID, bactarc_pepm=RA),
+               filter(pepm, group=="sar11") %>% select(sampleID, sar11_pepm=RA)) %>%
+  mutate(sar11_pepm=ifelse(is.na(sar11_pepm), 1e-4, sar11_pepm)) %>%
+  mutate(sar11_pepm=ifelse(sar11_pepm > 1, 0.99, sar11_pepm)) %>%
+  mutate(bactarc_pepm=ifelse(is.na(bactarc_pepm), 1e-4, bactarc_pepm)) %>%
+  mutate(bactarc_pepm=ifelse(bactarc_pepm > 1, 0.99, bactarc_pepm))
+```
+
+    ## Joining, by = "sampleID"
+
+``` r
+data2corncob <- pepm %>%
+  filter(group=="bactarc") %>%
+  drop_na() %>%
+  mutate(RA=ifelse(RA > 1, 0.99, RA)) %>%
+  mutate(RA=ifelse(is.na(RA), 1e-4, RA)) %>%
+  mutate(W=ceiling(W),
+         M=ceiling(M), 
+         pel_IIb=pel_IIb*100,
+         archaea=archaea*100,
+         pel_IV=pel_IV*100,
+         pro_LLIV=pro_LLIV*100) %>%
+  left_join(., a)
+```
+
+    ## Joining, by = "sampleID"
+
+# MODELS
+
+``` r
+myfomula <- formula(cbind(W, M) ~ pel_IIb + sar11_pepm + archaea + pel_IV + pro_LLIV + depth) 
+
+mymod <- bbdml(formula = myfomula,
+               phi.formula = myfomula,
+               link="logit",
+               phi.link="logit",
+               data = data2corncob)
+
+summary(mymod)
+```
+
+### Bootstrap liklihood ratio tests for variables
+
+  - V1 = bactarc\_pepm
+  - V2 = nitrateDarwin\_dissolved\_umol.kg
+  - V3 = pel\_IV
+  - V4 = pel\_IIb
+  - V5 = aluminum\_dissolved\_nmol.kg
+
+Generate a null model omitting one of the terms
+
+``` r
+null.1.f <- remove_terms(myfomula, "pel_IIb")
+null.2.f <- remove_terms(myfomula, "sar11_pepm")
+null.3.f <- remove_terms(myfomula, "archaea")
+null.4.f <- remove_terms(myfomula, "pel_IV")
+null.5.f <- remove_terms(myfomula, "pro_LLIV")
+null.6.f <- remove_terms(myfomula, "depth")
+
+myforms <- list(null.1.f, null.2.f, null.3.f, null.4.f, null.5.f, null.6.f)
+      
+names(myforms) <- c("V1", "V2", "V3","V4", "V5", "V6")
+
+mynulls <- map(myforms, makenull, mymod, data2corncob)
+```
+
+``` r
+f.1.sim.stat <- PBLRTfun(mymod, mynulls$V1, 1000, bootLRT)
+f.2.sim.stat <- PBLRTfun(mymod, mynulls$V2, 1000, bootLRT)
+f.3.sim.stat <- PBLRTfun(mymod, mynulls$V3, 1000, bootLRT)
+f.4.sim.stat <- PBLRTfun(mymod, mynulls$V4, 1000, bootLRT)
+f.5.sim.stat <- PBLRTfun(mymod, mynulls$V5, 1000, bootLRT)
+f.6.sim.stat <- PBLRTfun(mymod, mynulls$V6, 1000, bootLRT)
+```
+
+### Regular likelihood ratio tests
+
+``` r
+f.1.lrt <- mypbLRT(mymod, mynulls$V1, f.1.sim.stat)
+f.2.lrt <- mypbLRT(mymod, mynulls$V2, f.2.sim.stat)
+f.3.lrt <- mypbLRT(mymod, mynulls$V3, f.3.sim.stat)
+f.4.lrt <- mypbLRT(mymod, mynulls$V4, f.4.sim.stat)
+f.5.lrt <- mypbLRT(mymod, mynulls$V5, f.5.sim.stat)
+f.6.lrt <- mypbLRT(mymod, mynulls$V5, f.6.sim.stat)
+```
+
+### LRT results
+
+results from bootstrapped LRT and regular LRT for the fully specified
+model
+
+``` r
+lrt.res <- bind_rows(
+  mutate(as_tibble(f.1.lrt), covariate="pel_IIb"),
+  mutate(as_tibble(f.2.lrt), covariate="sar11_pepm"),
+  mutate(as_tibble(f.3.lrt), covariate="archaea"),
+  mutate(as_tibble(f.4.lrt), covariate="pel_IV"),
+  mutate(as_tibble(f.5.lrt), covariate="pro_LLIV"),
+  mutate(as_tibble(f.6.lrt), covariate="depth")
+)
+
+lrt.res
+
+write_tsv(lrt.res, here::here("tables", "LRT_results.bactarc.tsv"))
+```
+
+# SIMULATIONS
+
+Do the simulations in 100 replicate chunks. Don’t know why but when you
+try 1000 for `sim_pa` it hangs. Breaking it up into chunks actually runs
+and finishes
+
+``` r
+sims <- list()
+  
+for (i in 1:10) {
+      sims[[i]] <- sim_pa(mymod, 100)
+}
+
+sims.drop <- lapply(sims, function(x) x[!is.na(x)])
+```
+
+``` r
+obs <- NULL
+for (i in 1:10) {obs <- rbind(obs, sims[[i]][,1])}
+
+mu <- NULL
+for (i in 1:10) {mu <- rbind(mu, sims[[i]][,2])}
+
+phi <- NULL
+for (i in 1:10) {phi <- rbind(phi, sims[[i]][,3])}
+
+summary.list <- sim_summary(mymod, list(obs, mu, phi))
+
+obs2 <- summary.list[[1]]
+mu2 <- summary.list[[2]] %>% rownames_to_column(var="variable")
+phi2 <- summary.list[[3]] %>% rownames_to_column(var="variable")
+
+save(obs2, mu2, phi2, file=here::here("data", "BB_sim.bactarc.Rdata"))
+```

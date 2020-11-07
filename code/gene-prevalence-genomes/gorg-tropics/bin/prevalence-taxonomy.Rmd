@@ -1,0 +1,717 @@
+---
+title: "Checking gene neighborhoods from GORG-TROPICS "
+output: html_notebook
+---
+
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(here)
+library(readxl)
+library(ggalluvial)
+library(ggfittext)
+library(patchwork)
+library(Polychrome)
+```
+
+# READ DATA
+## COMPLETENESS AND OTHER METATDATA
+```{r message=FALSE, warning=FALSE}
+summary <- read_tsv(here::here("input", "GORG-TROPICS-summary.tsv"))
+gorgsupp <- read_excel(here::here("input", "gorg-tropics_sags_tableS2.xlsx")) %>%
+  select(genome=SAG, sample=Sample, ssu.classification=`SSU classification CREST/SILVA`, 
+         size=`Assembly size (bp)`, comp=`Genome completeness (%)`)
+```
+
+## MATCH GORG TO CMAP DATA
+```{r}
+library(cmap4r)
+library(fuzzyjoin)
+set_authorization()
+
+local_cat <- get_catalog()
+
+GORGSamples <- read_tsv(here::here("input", "GORG-metadata.tsv"))
+
+darwinPO4.clim <- get_spacetime(tableName = 'tblDarwin_Nutrient_Climatology',
+              varName = 'PO4_darwin_clim',
+              dt1='2008-01-01',
+              dt2='2008-12-31',
+              lat1=-36,
+              lat2=40,
+              lon1=-170,
+              lon2=175,
+              depth1=0,
+              depth2=205)
+
+darwinPO4.clim1 <- darwinPO4.clim %>% group_by(lat, lon, depth) %>%
+  summarize(value=mean(PO4_darwin_clim, na.rm=T)) %>%
+  ungroup() %>%
+  mutate(variable="PO4_darwin_clim")
+
+darwinPO4.clim.joined <- geo_left_join(GORGSamples, darwinPO4.clim1, 
+                        by = c("lat","lon"),
+                        distance_col="geojoin.dist.km",
+                        max_dist = 65)
+
+darwinPO4.clim.joined.final <- darwinPO4.clim.joined %>%
+  mutate(depth.diff=abs(depth.x-depth.y)) %>%
+  group_by(Sample) %>%
+  filter(geojoin.dist.km==min(geojoin.dist.km)) %>%
+  filter(depth.diff==min(depth.diff)) %>%
+  slice(1) %>%
+  ungroup() %>%
+  select(Sample:ocean, lat=lat.x, lon=lon.x, depth=depth.x, date, darwinPO4=value)
+
+write_tsv(darwinPO4.clim.joined.final, here::here("input", "GORG-metadata-darwin.tsv"))
+```
+
+## GORG METADATA
+```{r}
+GORGSamples <- read_tsv(here::here("input", "GORG-metadata-darwin.tsv"))
+```
+
+## BIOSYNTHESIS AND CATABOLISM GENES
+```{r message=FALSE, warning=FALSE}
+pepm <- read_tsv(here::here("input", "pepm_genes.tsv")) %>%
+  mutate(fam= "pepm", prodcons = "producer")
+
+phnyz <- read_tsv(here::here("input", "phnyz_genes.tsv")) %>% mutate(fam="phnyz")
+hpnwxz <- read_tsv(here::here("input", "hpnwxz_genes.tsv")) %>% mutate(fam="hpnwxz")
+cplyase <- read_tsv(here::here("input", "cplyase_genes.tsv")) %>% mutate(fam="cplyase")
+AEPa <- read_tsv(here::here("input", "2AEPa_genes.tsv")) %>% mutate(fam="AEPa")
+AEPb <- read_tsv(here::here("input", "2AEPb_genes.tsv")) %>% mutate(fam="AEPb")
+
+catabol <- bind_rows(phnyz, hpnwxz, cplyase, AEPa, AEPb) %>%
+  mutate(prodcons = "consumer")
+
+phnyz <- NULL
+hpnwxz <- NULL
+cplyase <- NULL
+AEPa <- NULL
+AEPb <- NULL
+```
+
+## GTDB TAXONOMIC AFFILIATIONS
+Archaea
+```{r message=FALSE, warning=FALSE}
+argtdb <- read_tsv(here::here("input", "gtdbtk.ar122.summary.tsv")) %>%
+  select(genome=user_genome, gtdb.classification=classification) #%>%
+  
+bacgtdb <- read_tsv(here::here("input", "gtdbtk.bac120.classification_pplacer.tsv"), 
+                    col_names = c("genome", "gtdb.classification"))
+
+gtdb <- bind_rows(argtdb, bacgtdb)
+
+argtdb <- NULL
+bacgtdb <- NULL
+```
+
+Prevalence = number of samples a "unit" was observed in
+
+Relative abundance = Prevalence/Total samples
+
+# FORMAT DATA
+Combine annotations from GORG and GTDB results
+ 
+```{r}
+gorgsupp1 <- left_join(gorgsupp, gtdb) %>%
+  mutate(consensus.classification=ifelse(is.na(gtdb.classification), 
+                                         ssu.classification, gtdb.classification))
+```
+
+```{r}
+arch <- left_join(gorgsupp1, pepm) %>% 
+  filter(str_detect(consensus.classification, "Archaea")) %>%
+  distinct(genome, .keep_all = T) %>%
+  left_join(., rename(GORGSamples, sample=Sample))
+```
+
+## PARTITION GORG-TROPICS AND GORG-BATS
+Setup 2 separate datasets - 1) is GORG-BATS and 2) includes all samples but GORG-BATS is subsampled to the median depth (n=241) of the other samples
+
+```{r}
+#to be deterministic
+set.seed(482)
+
+gorgsupp2 <- gorgsupp1 %>%
+  select(genome, sample, consensus.classification, comp, size) %>%
+  mutate(comp=ifelse(comp==0, 0.05, comp/100)) %>%
+  mutate(estsize=size/(comp)) %>%
+  mutate(prochlorococcus = ifelse(str_detect(consensus.classification, 
+                                             "Prochlorococcus"), "yes", "no")) %>%
+  mutate(sar11 = ifelse(str_detect(consensus.classification, 
+                                   "o__Pelagibacterales|o__SAR11_clade"), "yes", "no")) %>%
+  mutate(npelagicus = ifelse(str_detect(consensus.classification, 
+                                   "f__Nitrosopumilaceae;g__Nitrosopelagicus|f__Nitrosopumilaceae;g__Nitrosopumilus"), "yes", "no")) %>%
+  mutate(npumulus = ifelse(str_detect(consensus.classification, 
+                                   "f__Nitrosopumilaceae;g__Nitrosopumilus"), "yes", "no")) %>%
+  mutate(everything = "yes") %>%
+  pivot_longer(cols=c(prochlorococcus, sar11, npelagicus, npumulus, everything), names_to="tax", values_to = "taxtrue")
+
+# filter bats
+a <- gorgsupp2 %>% 
+  filter(sample=="SWC-09")
+# filter not bats
+b <- gorgsupp2 %>%
+  filter(sample != "SWC-09")
+# subample bats
+c <- a %>%
+  sample_n(241)
+
+gorgsupp.tropics <- c(pull(c, genome), pull(b, genome))
+gorgsupp.fullbats <- pull(a, genome)
+  
+gorgsupp3 <- gorgsupp2 %>%
+  mutate(fullbats=ifelse(genome %in% gorgsupp.fullbats, "yes", "no"),
+         tropics=ifelse(genome %in% gorgsupp.tropics, "yes", "no")) %>% 
+  pivot_longer(cols=c(fullbats, tropics), names_to="site", values_to = "sitetrue")
+
+a <- NULL
+b <- NULL
+c <- NULL
+
+gorgsupp.tropics <- NULL
+gorgsupp.fullbats <- NULL
+```
+
+
+# ESTIMATING PREVALENCE
+
+## BY INDIVIDUAL GENE FAMILIES
+Two approaches to do this
+1: a heuristic proposed by Ramunas where you divide the apparent fraction of pepm genomes by the mean estimated completeness in GORG
+2: a more complicated approach taking length of the gene regions into consideration
+
+Turns out both of these answers more or less converge on the same value. Method 2 provides slightly higher estimates on average
+
+```{r}
+a <- bind_rows(pepm, catabol) %>%
+  mutate(len=abs(start-end)) %>%
+  group_by(genome) %>%
+  mutate(operon_len=sum(len, na.rm=T)) %>%
+  mutate(operon_len = ifelse(operon_len==0, NA_real_, operon_len)) %>%
+  ungroup() %>%
+  select(genome, operon_len, fam, prodcons) %>%
+  distinct()
+
+b <- left_join(gorgsupp3, a) %>%
+  group_by(fam, tax, taxtrue, site, sitetrue) %>%
+  summarize(sum_operon=sum(operon_len, na.rm=T),
+            mean_operon=mean(operon_len, na.rm=T),
+            n_operon=n()) %>%
+  ungroup() %>%
+  filter(sitetrue=="yes" & taxtrue=="yes") %>% select(-taxtrue, -sitetrue) %>%
+  filter(!is.na(fam))
+
+c <- gorgsupp3 %>%
+  group_by(tax, taxtrue, site, sitetrue) %>%
+  summarize(sum_genome = sum(size),
+            sum_tgenome = sum(estsize),
+            mean_complete=mean(comp, na.rm=T),
+            n_genome=n()) %>%
+  ungroup() %>%
+  filter(sitetrue=="yes" & taxtrue=="yes") %>% select(-taxtrue, -sitetrue) 
+  
+RA_table1 <- left_join(b, c) %>%
+  group_by(fam, tax, site) %>%
+  summarize(ramunas.est = round((n_operon/n_genome)/mean_complete*100, digits=1),
+            shane.est = round((sum_operon/sum_genome)*sum_tgenome/mean_operon/n_genome*100, digits=1),
+            fobs = round(n_operon/n_genome*100, digits=1))
+
+a <- NULL
+b <- NULL
+c <- NULL
+
+RA_table1
+```
+
+```{r}
+a <- bind_rows(pepm, catabol) %>%
+  mutate(len=abs(start-end)) %>%
+  group_by(genome) %>%
+  mutate(operon_len=sum(len, na.rm=T)) %>%
+  mutate(operon_len = ifelse(operon_len==0, NA_real_, operon_len)) %>%
+  ungroup() %>%
+  select(genome, operon_len, fam, prodcons) %>%
+  distinct()
+
+b <- left_join(gorgsupp3, a) %>%
+  group_by(prodcons, tax, taxtrue, site, sitetrue) %>%
+  summarize(sum_operon=sum(operon_len, na.rm=T),
+            mean_operon=mean(operon_len, na.rm=T),
+            n_operon=n()) %>%
+  ungroup() %>%
+  filter(sitetrue=="yes" & taxtrue=="yes") %>% select(-taxtrue, -sitetrue) %>%
+  filter(!is.na(prodcons))
+
+c <- gorgsupp3 %>%
+  group_by(tax, taxtrue, site, sitetrue) %>%
+  summarize(sum_genome = sum(size),
+            sum_tgenome = sum(estsize),
+            mean_complete=mean(comp, na.rm=T),
+            n_genome=n()) %>%
+  ungroup() %>%
+  filter(sitetrue=="yes" & taxtrue=="yes") %>% select(-taxtrue, -sitetrue) 
+  
+RA_table2 <- left_join(b, c) %>%
+  group_by(prodcons, tax, site) %>%
+  summarize(ramunas.est = round((n_operon/n_genome)/mean_complete*100, digits=1),
+            new.est = round((sum_operon/sum_genome)*sum_tgenome/mean_operon/n_genome*100, digits=1),
+            fobs = round(n_operon/n_genome*100, digits=1))
+
+#a <- NULL
+#b <- NULL
+#c <- NULL
+
+RA_table2
+```
+
+## DIFFERENCES IN PREVALENCE BY OCEAN BASIN
+```{r}
+a <- bind_rows(pepm, catabol) %>%
+  mutate(len=abs(start-end)) %>%
+  group_by(genome) %>%
+  mutate(operon_len=sum(len, na.rm=T)) %>%
+  mutate(operon_len = ifelse(operon_len==0, NA_real_, operon_len)) %>%
+  ungroup() %>%
+  select(genome, operon_len, fam, prodcons) %>%
+  distinct()
+
+b <- left_join(gorgsupp2, rename(GORGSamples, sample=Sample)) %>%
+  left_join(., a) %>%
+  group_by(prodcons, tax, taxtrue, sample) %>%
+  summarize(sum_operon=sum(operon_len, na.rm=T),
+            mean_operon=mean(operon_len, na.rm=T),
+            n_operon=n()) %>%
+  ungroup() %>%
+  filter(taxtrue=="yes") %>% select(-taxtrue) %>%
+  filter(!is.na(prodcons))
+
+c <- gorgsupp2 %>%
+  group_by(tax, taxtrue, sample) %>%
+  summarize(sum_genome = sum(size),
+            sum_tgenome = sum(estsize),
+            mean_complete=mean(comp, na.rm=T),
+            n_genome=n()) %>%
+  ungroup() %>%
+  filter(taxtrue=="yes") %>% select(-taxtrue) 
+  
+RA_table3 <- expand(b, tax, sample, prodcons) %>%
+  left_join(., b) %>%
+  left_join(., c) %>%
+  mutate(across(everything(), ~replace_na(.x, 0))) %>%
+  group_by(prodcons, tax, sample) %>%
+  summarize(ramunas.est = round((n_operon/n_genome)/mean_complete*100, digits=1),
+            shane.est = round((sum_operon/sum_genome)*sum_tgenome/mean_operon/n_genome*100, digits=1),
+            fobs = round(n_operon/n_genome*100, digits=1)) %>%
+  ungroup() %>%
+  mutate(shane.est=ifelse(is.na(shane.est) & !(is.na(fobs)), 0, shane.est)) %>%
+  left_join(., rename(GORGSamples, sample=Sample)) %>%
+  mutate(ocean=factor(ocean, levels=c("atlantic", "pacific")))
+
+BB_table3 <- expand(b, tax, sample, prodcons) %>%
+  left_join(., b) %>%
+  left_join(., c) %>%
+  drop_na(n_genome) %>%
+  mutate(across(everything(), ~replace_na(.x, 0))) %>%
+  left_join(., rename(GORGSamples, sample=Sample)) %>%
+  mutate(ocean=factor(ocean, levels=c("atlantic", "pacific")))
+
+a <- NULL
+b <- NULL
+c <- NULL
+```
+
+
+```{r}
+library(corncob)
+set.seed(345)
+
+tidy.bbdmlmods <- BB_table3 %>%
+  group_by(tax, prodcons) %>%
+  group_map(~ bbdml(formula = cbind(n_operon, n_genome-n_operon) ~ depth + ocean,
+        phi.formula = ~ 1, 
+        data = as.data.frame(.x)))
+
+map(tidy.bbdmlmods, .f = ~ summary(.x))
+```
+
+Producers:
+  Everything - depth 
+  SAR11 - none
+  Prochlorococcus - ocean
+
+Consumers:
+  Everything - ocean
+  SAR11 - ocean
+  Prochlorococcus - ocean
+
+## CONSUMER PLOTS
+```{r}
+library(aod)
+library(ggeffects)
+library(ggnewscale)
+
+e1 <- d %>% filter(tax=="everything" & prodcons == "consumer") %>%
+  mutate(ocean=factor(ocean, levels=c("atlantic", "pacific")))
+e2 <- d %>% filter(tax=="sar11" & prodcons == "consumer") %>%
+  mutate(ocean=factor(ocean, levels=c("atlantic", "pacific")))
+e3 <- d %>% filter(tax=="prochlorococcus" & prodcons == "consumer") %>%
+  mutate(ocean=factor(ocean, levels=c("atlantic", "pacific")))
+
+fm1 <- betabin(cbind(n_operon, n_genome-n_operon) ~ depth + ocean, ~ 1, link="logit", data = as.data.frame(e1))  
+fm2 <- betabin(cbind(n_operon, n_genome-n_operon) ~ depth + ocean, ~ 1, link="logit", data = as.data.frame(e2))
+fm3 <- betabin(cbind(n_operon, n_genome-n_operon) ~ depth + ocean, ~ 1, link="logit", data = as.data.frame(e3))
+
+summary(fm1)
+
+t1 <- ggpredict(fm1, back.transform=T, terms=c( "ocean", "depth [30, 80, 120]")) %>% mutate(tax="everything")
+t2 <- ggpredict(fm2, back.transform=T, terms=c( "ocean", "depth [30, 80, 120]")) %>% mutate(tax="sar11")
+t3 <- ggpredict(fm3, back.transform=T, terms=c( "ocean", "depth [30, 80, 120]")) %>% mutate(tax="prochlorococcus")
+
+z <- bind_rows(t1, t2, t3)
+
+ggplot() + 
+  #geom_ribbon(data=t, aes(x=x, ymin = conf.low, ymax = conf.high, fill=group), alpha=0.5) +
+  #geom_line(data=t, aes(x=x, y=predicted, color=group)) +
+  geom_pointrange(data=z, aes(x=x, y=predicted, ymin=conf.low,
+                              ymax=conf.high, color=group), position=position_dodge(width=0.5)) + 
+  scale_color_viridis_d(option = "D", direction=-1, begin=0, end=0.8) +
+  new_scale_color() + 
+  geom_jitter(data=d, aes(y=n_operon/(n_genome), x=ocean, color=depth), width=0.1) +
+  scale_color_viridis_c(option = "D", direction=-1, begin=0, end=0.8) +
+  facet_wrap(~tax, scales="free_y") + 
+  #scale_y_continuous(trans="identity", limits = c(0, 0.0035)) +
+  #scale_y_continuous(trans="logit") +
+  theme_bw()
+
+```
+
+```{r}
+a <- RA_table3 %>%
+  filter(prodcons=="consumer") %>%
+  mutate(shane.est= ifelse(shane.est > 100, 60, shane.est)) %>%
+  ggplot() + 
+  geom_boxplot(aes(y=shane.est, x=ocean)) +
+  geom_jitter(aes(y=shane.est, x=ocean, color=depth), width=0.2) +
+  scale_color_viridis_c(option = "D", direction=-1, begin=0, end=0.8) +
+  labs(x="Ocean", y="Proportion of genomes [%]", title="Phosphonate Consumers") +
+  facet_wrap(~tax, scales="free_y") + 
+  theme_bw()
+a
+
+a.sub <- RA_table3 %>%
+  filter(prodcons=="consumer" & tax == "everything") %>%
+  mutate(shane.est= ifelse(shane.est > 100, 60, shane.est)) %>%
+  ggplot() + 
+  geom_boxplot(aes(y=shane.est, x=ocean)) +
+  geom_jitter(aes(y=shane.est, x=ocean, color=depth), width=0.2) +
+  scale_color_viridis_c(option = "D", direction=-1, begin=0, end=0.8) +
+  labs(x="Ocean", y="Proportion of genomes [%]", title="Phosphonate Consumers") +
+  theme_bw()
+a.sub
+```
+
+```{r}
+b <- RA_table3 %>%
+  filter(prodcons=="producer") %>%
+  mutate(shane.est= ifelse(shane.est > 100, 60, shane.est)) %>%
+  ggplot() + 
+  geom_point(aes(y=shane.est, x=depth, color=ocean)) +
+  geom_smooth(aes(y=shane.est, x=depth, color=ocean), method="lm", se=F) +
+  scale_color_viridis_d(option = "D", direction=-1, begin=0, end=0.8) +
+  labs(x="Depth [m]", y="Proportion of genomes [%]", title="Phosphonate Producers") +
+  facet_wrap(~tax, scales="free") + 
+  theme_bw()
+b
+
+b.sub <- RA_table3 %>%
+  filter(prodcons=="producer" & tax == "everything") %>%
+  mutate(shane.est= ifelse(shane.est > 100, 60, shane.est)) %>%
+  ggplot() + 
+  geom_point(aes(y=shane.est, x=depth, color=ocean)) +
+  geom_smooth(aes(y=shane.est, x=depth, color=ocean), method="lm", se=F) +
+  scale_color_viridis_d(option = "D", direction=-1, begin=0, end=0.8) +
+  labs(x="Depth [m]", y="Proportion of genomes [%]", title="Phosphonate Producers") +
+  theme_bw()
+b.sub
+```
+
+## FINAL PLOT
+```{r}
+library(patchwork)
+
+c <- a/b + plot_annotation(tag_levels = 'A')
+
+c
+
+ggsave(here::here("figs", "GORG-quant.svg"), 
+       plot = c, units = "cm", width = 17.8, height=13, device = "svg")
+
+```
+
+
+## MPNS PREVALENCE IN SAR11
+```{r}
+left_join(pepm, gorgsupp.tropics) %>%
+  filter(!is.na(sample)) %>%
+  filter(enzyme=="MPNS") %>%
+  filter(group=="sar11")
+```
+
+
+# ALLUVIAL PLOTS
+```{r}
+allu <- gorgsupp3 %>%
+  filter(tax=="everything" & taxtrue =="yes" & site=="tropics" & sitetrue=="yes") %>%
+  select(-tax, -taxtrue, -site, -sitetrue, -comp, -size, -estsize) %>%
+  left_join(summary, .) %>%
+  filter(!is.na(sample)) %>%
+  mutate(consensus.classification=str_replace_all(consensus.classification, "[a-z]__", "")) %>%
+  separate(consensus.classification, 
+           c("domain", "phylum", "class", "order", "family", "genus", "species"), 
+           sep = ";", remove = FALSE) %>%
+  select(-species) %>%
+  mutate(domain=ifelse(str_detect(domain, "SSU"), NA_character_, domain)) %>%
+  mutate(phylum=ifelse(phylum=="", NA_character_, phylum)) %>%
+  mutate(class=ifelse(class=="", NA_character_, class)) %>%
+  mutate(order=case_when(str_detect(order, "SAR11_clade") ~ "Pelagibacterales",
+                         str_detect(order, "Synechococcales") ~ "PCC-6307",
+                         str_detect(order, "Rhizobiales") ~ "Rhizobiales_B",
+                         order=="" ~ NA_character_, 
+                         TRUE ~ order)) %>%
+  mutate(family=case_when(str_detect(family, "Surface_1") ~ "Pelagibacteraceae",
+                          str_detect(family, "TMED25") & str_detect(genus, "TMED25") ~ "OCS116",
+                          str_detect(family, "TMED25") & str_detect(genus, "AG-430-B22") ~ "PS1",
+                         family=="" ~ NA_character_, 
+                         TRUE ~ family)) %>%
+  mutate(genus=case_when(str_detect(family, "Surface_1") ~ "Pelagibacter",
+                         genus=="?" ~ NA_character_,
+                         genus=="" ~ NA_character_,
+                         TRUE ~ genus)) %>%
+  mutate(domain = ifelse(is.na(domain), "unknown.d", domain)) %>%
+  mutate(phylum = ifelse(is.na(phylum), "unknown.p", phylum)) %>%
+  mutate(class = ifelse(is.na(class), "unknown.c", class)) %>%
+  mutate(order = ifelse(is.na(order), "unknown.o", order)) %>%
+  mutate(family = ifelse(is.na(family), "unknown.f", family)) %>% 
+  mutate(genus = ifelse(is.na(genus), "unknown.g", genus)) %>%
+  filter(domain != "unknown.d")
+```
+
+## BREAKDOWN OF EVENESS/RICHNESS OF PRODUCERS/CONSUMERS
+```{r}
+allu %>% 
+  filter(summary=="producer") %>%
+  group_by(genus) %>% count() %>%
+  ungroup() %>%
+  mutate(p=n/sum(n)) %>% print(n=40)
+
+```
+
+domain = 2
+phylum = 11
+class = 12
+order = 25
+family = 30
+genus = 40
+
+```{r}
+allu %>% 
+  filter(summary=="consumer") %>%
+  group_by(genus) %>% count() %>%
+  ungroup() %>%
+  mutate(p=n/sum(n))
+```
+
+domain = 1
+phylum = 5
+class = 5
+order = 10
+family = 13
+genus = 17
+
+## FORMAT AND FACTOR
+```{r}
+allu.prod <- allu %>%
+  filter(summary=="producer") %>%
+  mutate(domain = fct_lump_prop(domain, 0.03, other_level="other.d")) %>%
+  mutate(phylum = fct_lump_prop(phylum, 0.03, other_level="other.p")) %>%
+  mutate(class =  fct_lump_prop(class,  0.03, other_level="other.c")) %>%
+  mutate(order =  fct_lump_prop(order,  0.03, other_level="other.o")) %>%
+  mutate(family = fct_lump_prop(family, 0.03, other_level="other.f")) %>%
+  mutate(genus =  fct_lump_prop(genus,  0.03, other_level="other.g")) %>%
+  mutate(domain = fct_rev(fct_infreq(domain))) %>%
+  mutate(phylum = fct_rev(fct_infreq(phylum))) %>%
+  mutate(class =  fct_rev(fct_infreq(class))) %>%
+  mutate(order =  fct_rev(fct_infreq(order))) %>%
+  mutate(family = fct_rev(fct_infreq(family))) %>%
+  mutate(genus =  fct_rev(fct_infreq(genus))) %>%
+  pivot_longer(cols=-c(genome:consensus.classification), names_to = "name", values_to="rank") %>%
+  mutate(name=factor(name, levels=c("domain", "phylum", "class", "order", "family", "genus"))) %>%
+  mutate(freq=1) %>%
+  mutate(rank=recode(rank, "AE"="AG-414-E02", "AF"="GCA-2704625", "AG"="Pelagibacter", "AH"="Pelagibacter_A", "AI"="Prochlorococcus_A", "AJ"="TMED189", "AK"="UBA11654", "AL"="AG-337-I02", "AM"="AG-422-B15", "AN"="GCA-002705045", "AO"="MED-G52", "AP"="Pelagibacter", "U"="Flavobacteriaceae", "V"="Pelagibacteraceae", "W"="TMED189", "X"="UBA11654", "Y"="AAA536-G10", "Z"="AG-422-B15", "AA"="Cyanobiaceae", "AB"="GCA-002718135", "AC"="Nisaeaceae", "AD"="Rhodobacteraceae", "J"="Flavobacteriales", "K"="PCC-6307", "L"="SAR86", "M"="TMED189", "N"="UBA11654", "O"="HIMB59", "P"="PCC-6307", "Q"="Pelagibacterales", "R"="Puniceispirillales", "S"="Rhodobacterales", "T"="Thalassobaculales", "E"="Alphaproteobacteria", "F"="Acidimicrobiia", "G"="Bacteroidia", "H"="Cyanobacteriia", "I"="Gammaproteobacteria", "A"="Actinobacteriota", "B"="Bacteroidota", "C"="Cyanobacteria", "D"="Proteobacteria")) 
+                              
+
+allu %>% filter(summary=="consumer") %>%
+  mutate(phylum = fct_lump_prop(phylum, 0.025, other_level="other.d")) %>%
+  distinct(phylum) %>% pull() %>% dput()
+
+```
+
+```{r}
+allu.cons <- allu %>%
+  filter(summary=="consumer") %>%
+  mutate(domain = fct_lump_prop(domain, 0.03, other_level="other.d")) %>%
+  mutate(phylum = fct_lump_prop(phylum, 0.03, other_level="other.p")) %>%
+  mutate(class =  fct_lump_prop(class,  0.03, other_level="other.c")) %>%
+  mutate(order =  fct_lump_prop(order,  0.03, other_level="other.o")) %>%
+  mutate(family = fct_lump_prop(family, 0.03, other_level="other.f")) %>%
+  mutate(genus =  fct_lump_prop(genus,  0.03, other_level="other.g")) %>%
+  mutate(domain = fct_rev(fct_infreq(domain))) %>%
+  mutate(phylum = fct_rev(fct_infreq(phylum))) %>%
+  mutate(class =  fct_rev(fct_infreq(class))) %>%
+  mutate(order =  fct_rev(fct_infreq(order))) %>%
+  mutate(family = fct_rev(fct_infreq(family))) %>%
+  mutate(genus =  fct_rev(fct_infreq(genus))) %>%
+  pivot_longer(cols=-c(genome:consensus.classification), names_to = "name", values_to="rank") %>%
+  mutate(name=factor(name, levels=c("domain", "phylum", "class", "order", "family", "genus"))) %>%
+  mutate(freq=1) %>%
+  mutate(rank=recode(rank, "AE"="AG-414-E02", "AF"="GCA-2704625", "AG"="Pelagibacter", "AH"="Pelagibacter_A", "AI"="Prochlorococcus_A", "AJ"="TMED189", "AK"="UBA11654", "AL"="AG-337-I02", "AM"="AG-422-B15", "AN"="GCA-002705045", "AO"="MED-G52", "AP"="Pelagibacter", "U"="Flavobacteriaceae", "V"="Pelagibacteraceae", "W"="TMED189", "X"="UBA11654", "Y"="AAA536-G10", "Z"="AG-422-B15", "AA"="Cyanobiaceae", "AB"="GCA-002718135", "AC"="Nisaeaceae", "AD"="Rhodobacteraceae", "J"="Flavobacteriales", "K"="PCC-6307", "L"="SAR86", "M"="TMED189", "N"="UBA11654", "O"="HIMB59", "P"="PCC-6307", "Q"="Pelagibacterales", "R"="Puniceispirillales", "S"="Rhodobacterales", "T"="Thalassobaculales", "E"="Alphaproteobacteria", "F"="Acidimicrobiia", "G"="Bacteroidia", "H"="Cyanobacteriia", "I"="Gammaproteobacteria", "A"="Actinobacteriota", "B"="Bacteroidota", "C"="Cyanobacteria", "D"="Proteobacteria")) 
+```
+
+## COLORS
+```{r}
+allranks <- bind_rows(allu.prod, allu.cons) %>%
+  distinct(rank)
+
+# 8 ranks of unknown or other. So 49 real colors
+redranks <- allranks %>% filter(!str_detect(rank, "other|unknown"))
+
+otranks <- allranks %>% filter(str_detect(rank, "other|unknown")) %>% 
+  pull(rank) %>% as.character()
+
+otranks
+
+# get indices
+which(str_detect(allranks$rank, "other|unknown"))
+
+firstpal <- unname(createPalette(69, c("#F3874AFF", "#FCD125FF"), M=5000))
+secpal <- c("#D4D4D4", "#F7F7F7", "#D4D4D4", "#D4D4D4", "#F7F7F7", "#D4D4D4", "#D4D4D4")
+#secpal <- c("#F7F7F7", "#F7F7F7", "#D4D4D4", "#D4D4D4", "#D4D4D4", "#F7F7F7", "#F7F7F7")
+            
+names(firstpal) <- pull(redranks, rank)
+names(secpal) <- otranks
+
+finalpal <- c(secpal, firstpal)
+
+#vc <-  sample(viridis(57, alpha = 1, begin = 0.25, end = 1, direction = 1, option = "C"))
+```
+
+```{r}
+allu.final <- bind_rows(allu.prod, allu.cons) %>%
+  mutate(summary=factor(summary, levels=c("producer", "consumer")))
+
+aluv.prod <- ggplot(allu.prod,
+       aes(x = name, stratum = rank, alluvium = genome,
+           y = freq,
+           fill = rank, label = rank)) +
+  scale_x_discrete(expand = c(.05, .05)) +
+  geom_flow(alpha = .5, width = 1/4, size=0.25) +
+  geom_stratum(alpha = .5, width = 1/4, color="black", size=0.25) +
+  geom_text(stat = "stratum", size = 3) + 
+  labs(x="", y="SAG Count") + 
+  scale_fill_manual(values = finalpal) + 
+  theme_bw() + 
+  theme(legend.position = "none", 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+
+aluv.cons <- ggplot(allu.cons,
+       aes(x = name, stratum = rank, alluvium = genome,
+           y = freq,
+           fill = rank, label = rank)) +
+  scale_x_discrete(expand = c(.05, .05)) +
+  geom_flow(alpha = .5, width = 1/4, size=0.25) +
+  geom_stratum(alpha = .5, width = 1/4, color="black", size=0.25) +
+  geom_text(stat = "stratum", size = 3) + 
+  labs(x="", y="SAG Count") + 
+  scale_fill_manual(values = finalpal) + 
+  theme_bw() + 
+  theme(legend.position = "none", 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+
+```
+
+```{r}
+pfinal <- aluv.prod + aluv.cons + b.sub + a.sub + 
+  plot_layout(ncol=2, widths = c(2, 2), heights=c(3,2), guides="collect") +
+  plot_annotation(tag_levels = 'A')
+
+pfinal 
+
+ggsave(here::here("figs", "GORG-flow1.svg"), 
+       plot = pfinal, units = "cm", width = 17.8, height=14, device = "svg")
+```
+
+
+```{r}
+allu.final <- bind_rows(allu.prod, allu.cons) %>%
+  mutate(summary=factor(summary, levels=c("producer", "consumer")))
+
+p1 <- ggplot(allu.final,
+       aes(x = name, stratum = rank, alluvium = genome,
+           y = freq,
+           fill = rank, label = rank)) +
+  scale_x_discrete(expand = c(.05, .05)) +
+  geom_flow(alpha = .5, width = 1/4, size=0.25) +
+  #stat_flow(alpha = .5, width = 1/4, size=0.25, aes.bind = "flows") +
+  geom_stratum(alpha = .5, width = 1/4, color="black", size=0.25) +
+  #stat_stratum(alpha = .5, width = 1/4, color="black", size=0.25, decreasing = TRUE) +
+  geom_text(stat = "stratum", size = 3) + 
+  #geom_label(stat = "stratum", size = 2, label.padding = unit(0.05, "lines")) + 
+  #ggrepel::geom_text_repel(stat = "stratum", size = 3) + #, direction = "y", nudge_x = -.5
+  labs(x="", y="SAG Count") + 
+  facet_wrap(~ summary, scales="free_y") + 
+  #scale_fill_viridis(option="D", discrete=T) +
+  #scale_fill_manual(values = vc) + 
+  scale_fill_manual(values = finalpal) + 
+  theme_bw() + 
+  theme(legend.position = "none", 
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+
+p1
+```
+
+```{r}
+gorg.bats.table <- tibble::tribble(
+                                 ~Group, ~Producer, ~Consumer, ~SAGcount,
+                     "Bacteria/Archaea",            "3-4%",        "10-14%",  6236L,
+                                "SAR11",           "8-10%",        "12-16%",   1865L,
+                      "Prochlorococcus",              "0%",        "30-43%",   424L
+                     ) %>%
+  column_to_rownames(var="Group")
+
+gorg.tropics.table <- tibble::tribble(
+                                    ~Group, ~Producer, ~Consumer, ~SAGCount,
+                        "Bacteria/Archaea",            "4-7%",          "3-4%",  6720L,
+                                   "SAR11",          "8-12%",          "2-3%",  2168L,
+                         "Prochlorococcus",            "2-3%",          "5-8%",   433L
+                        ) %>%
+  column_to_rownames(var="Group")
+```
+
+```{r}
+pfinal <- p1 / ( wrap_elements(gridExtra::tableGrob(gorg.tropics.table)) +
+       wrap_elements(gridExtra::tableGrob(gorg.bats.table))
+       ) + 
+  plot_layout(ncol=1, widths = c(3, 1), heights=c(4,1)) +
+  plot_annotation(tag_levels = 'A')
+
+pfinal
+
+ggsave(here::here("figs", "GORG-flow.svg"), 
+       plot = p1, units = "cm", width = 17.8, height=10, device = "svg")
+```
+

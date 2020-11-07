@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="modelling-prochlorococcussar11-pepm-abundance-using-environmental-covariates">Modelling prochlorococcus/SAR11 pepm abundance using environmental covariates</h1>
+<ul>
+<li><a href="#intro">INTRO</a></li>
+<li><a href="#read-data">READ DATA</a></li>
+<li><a href="#variable-subsetting">VARIABLE SUBSETTING</a></li>
+<li><a href="#variable-reduction">VARIABLE REDUCTION</a></li>
+<li><a href="#save-dataset-for-easy-reloading">SAVE DATASET FOR EASY RELOADING</a></li>
+<li><a href="#data-splitting-resampling">DATA SPLITTING &amp; RESAMPLING</a></li>
+<li><a href="#define-recipe">DEFINE RECIPE</a></li>
+<li><a href="#specify-model">SPECIFY MODEL</a></li>
+<li><a href="#workflow">WORKFLOW</a></li>
+<li><a href="#tuning">TUNING</a>
+<ul>
+<li><a href="#autotune">AUTOTUNE</a></li>
+<li><a href="#manualtune">MANUALTUNE</a></li>
+</ul></li>
+<li><a href="#model-selection">MODEL SELECTION</a></li>
+<li><a href="#final-workflow">FINAL WORKFLOW</a></li>
+<li><a href="#evaluate-final-workflow-on-full-test-set">EVALUATE FINAL WORKFLOW ON FULL TEST SET</a></li>
+<li><a href="#final-performance-metrics">FINAL PERFORMANCE METRICS</a></li>
+<li><a href="#final-fit-using-final-model">FINAL FIT USING FINAL MODEL</a></li>
+<li><a href="#variable-importance---first-look">VARIABLE IMPORTANCE - FIRST LOOK</a></li>
+<li><a href="#boruta-w-selected-hyperparameters">BORUTA W SELECTED HYPERPARAMETERS</a></li>
+</ul>
+<h1 id="intro">INTRO</h1>
+<p>useful tutorials: <a href="http://www.rebeccabarter.com/blog/2020-03-25_machine_learning">http://www.rebeccabarter.com/blog/2020-03-25_machine_learning</a> <a href="https://juliasilge.com/blog/sf-trees-random-tuning/">https://juliasilge.com/blog/sf-trees-random-tuning/</a> <a href="https://www.tidymodels.org/start/case-study/">https://www.tidymodels.org/start/case-study/</a> <a href="https://bradleyboehmke.github.io/HOML/random-forest.html">https://bradleyboehmke.github.io/HOML/random-forest.html</a></p>
+<p>feature selection: <a href="http://blog.datadive.net/selecting-good-features-part-iii-random-forests/">http://blog.datadive.net/selecting-good-features-part-iii-random-forests/</a> <a href="https://academic.oup.com/bib/article/20/2/492/4554516">https://academic.oup.com/bib/article/20/2/492/4554516</a></p>
+<p>SO questions on colinearity: <a href="https://stats.stackexchange.com/questions/168622/why-is-multicollinearity-not-checked-in-modern-statistics-machine-learning">https://stats.stackexchange.com/questions/168622/why-is-multicollinearity-not-checked-in-modern-statistics-machine-learning</a> <a href="https://stats.stackexchange.com/questions/141619/wont-highly-correlated-variables-in-random-forest-distort-accuracy-and-feature">https://stats.stackexchange.com/questions/141619/wont-highly-correlated-variables-in-random-forest-distort-accuracy-and-feature</a></p>
+<p>Evaluating performance <a href="https://bookdown.org/max/FES/measuring-performance.html">https://bookdown.org/max/FES/measuring-performance.html</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(here)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">library</span>(tidymodels)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="kw">library</span>(parallel)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">library</span>(foreach)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">library</span>(doParallel)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="kw">library</span>(ranger)</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="kw">library</span>(Boruta)</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="kw">library</span>(ggforce)</span></code></pre></div>
+<h1 id="read-data">READ DATA</h1>
+<p>Preformatted dataset</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>pepm &lt;-<span class="st"> </span><span class="kw">readRDS</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;input&quot;</span>, <span class="st">&quot;pepm.global.final&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="st">  </span><span class="kw">group_by</span>(sampleID, group) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="st">  </span><span class="kw">slice</span>(<span class="dv">1</span>) <span class="op">%&gt;%</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="st">  </span><span class="kw">ungroup</span>() <span class="op">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="st">  </span><span class="kw">filter</span>(sampleID <span class="op">!=</span><span class="st"> &quot;S0468&quot;</span>)</span></code></pre></div>
+<h1 id="variable-subsetting">VARIABLE SUBSETTING</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>a &lt;-<span class="st"> </span><span class="kw">full_join</span>(<span class="kw">filter</span>(pepm, group<span class="op">==</span><span class="st">&quot;bactarc&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(sampleID, <span class="dt">bactarc_pepm=</span>RA),</span>
+<span id="cb3-2"><a href="#cb3-2"></a>               <span class="kw">filter</span>(pepm, group<span class="op">==</span><span class="st">&quot;prochlorococcus&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(sampleID, <span class="dt">pro_pepm=</span>RA)) <span class="op">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">pro_pepm=</span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(pro_pepm), <span class="fl">1e-7</span>, pro_pepm)) <span class="op">%&gt;%</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">pro_pepm=</span><span class="kw">ifelse</span>(pro_pepm <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, <span class="fl">0.99</span>, pro_pepm)) <span class="op">%&gt;%</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">bactarc_pepm=</span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(bactarc_pepm), <span class="fl">1e-7</span>, bactarc_pepm)) <span class="op">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">bactarc_pepm=</span><span class="kw">ifelse</span>(bactarc_pepm <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, <span class="fl">0.99</span>, bactarc_pepm))</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a>PEPMreads2forest &lt;-<span class="st"> </span>pepm <span class="op">%&gt;%</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">!</span><span class="kw">str_detect</span>(<span class="kw">names</span>(.), <span class="st">&quot;imputed_&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">!</span><span class="kw">str_detect</span>(<span class="kw">names</span>(.), <span class="st">&quot;pro_&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">!</span><span class="kw">str_detect</span>(<span class="kw">names</span>(.), <span class="st">&quot;Long&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="st">  </span><span class="kw">filter</span>(group<span class="op">==</span><span class="st">&quot;sar11&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>section, <span class="op">-</span>lat, <span class="op">-</span>lon, <span class="op">-</span>group, <span class="op">-</span>W, <span class="op">-</span>M,</span>
+<span id="cb3-14"><a href="#cb3-14"></a>         <span class="op">-</span>synDarwin_umolC.kg, <span class="op">-</span>proDarwin_umolC.kg,</span>
+<span id="cb3-15"><a href="#cb3-15"></a>         <span class="op">-</span>DOFe_darwin_clim, <span class="op">-</span>POFe_darwin_clim) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="st">  </span><span class="kw">drop_na</span>() <span class="op">%&gt;%</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">RA=</span><span class="kw">ifelse</span>(RA <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>, <span class="fl">0.99</span>, RA)) <span class="op">%&gt;%</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">RA=</span><span class="kw">ifelse</span>(<span class="kw">is.na</span>(RA), <span class="fl">1e-4</span>, RA)) <span class="op">%&gt;%</span></span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="st">  </span><span class="kw">left_join</span>(., a) <span class="op">%&gt;%</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="st">  </span><span class="kw">select</span>(<span class="op">-</span>sampleID,</span>
+<span id="cb3-21"><a href="#cb3-21"></a>         <span class="op">-</span>bacteria,                       <span class="co"># redundant with archaea</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a>         <span class="op">-</span>pel_IIIb,                       <span class="co"># freshwater clade</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a>         <span class="op">-</span>pel_Ic,                         <span class="co"># redundant with pel_IIb</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a>         <span class="op">-</span>archaea,                        <span class="co"># redundant with pel_IIb</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a>         <span class="op">-</span>DOironDarwin_dissolved_nmol.kg, <span class="co"># redundant with DOPDarwin_dissolved_umol.kg</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a>         <span class="op">-</span>copper_dissolved_nmol.kg,       <span class="co"># nitrateDarwin_dissolved_umol.kg</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a>         <span class="op">-</span>ironDarwin_dissolved_nmol.kg)   <span class="co"># nitrateDarwin_dissolved_umol.kg</span></span></code></pre></div>
+<h1 id="variable-reduction">VARIABLE REDUCTION</h1>
+<p>These RFs quickly get big and very time consuming. Here we look at variance between RA and variables. Consolidate variables that correlate significantly with each other ( &gt; 0.8) so that we remove redundancy.</p>
+<ul>
+<li>Ultimately we removed pro_LLII_LLII since it is strongly correlated with pro_LLIV</li>
+</ul>
+<!-- end list -->
+
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>cordf &lt;-<span class="st"> </span>PEPMreads2forest <span class="op">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="op">~</span><span class="st"> </span><span class="kw">is.numeric</span>(.))</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a>df_corr &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">cor</span>(cordf, <span class="dt">method=</span><span class="st">&quot;spearman&quot;</span>), <span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="st">  </span><span class="kw">as.data.frame</span>() <span class="op">%&gt;%</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="st">  </span><span class="kw">rownames_to_column</span>(<span class="dt">var=</span><span class="st">&quot;source&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="op">-</span>source, <span class="dt">names_to=</span><span class="st">&quot;target&quot;</span>, <span class="dt">values_to=</span><span class="st">&quot;corr&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="st">  </span><span class="kw">filter</span>(source <span class="op">!=</span><span class="st"> </span>target) </span>
+<span id="cb4-9"><a href="#cb4-9"></a></span>
+<span id="cb4-10"><a href="#cb4-10"></a>hicor &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">cor</span>(cordf, <span class="dt">method=</span><span class="st">&quot;spearman&quot;</span>), <span class="dv">2</span>) <span class="op">%&gt;%</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="st">  </span><span class="kw">as.data.frame</span>() <span class="op">%&gt;%</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="st">  </span><span class="kw">rownames_to_column</span>() <span class="op">%&gt;%</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="st">  </span><span class="kw">filter</span>(<span class="kw">abs</span>(RA) <span class="op">&gt;=</span><span class="st"> </span><span class="fl">0.3</span>) <span class="op">%&gt;%</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="st">  </span><span class="kw">pull</span>(rowname)</span>
+<span id="cb4-15"><a href="#cb4-15"></a></span>
+<span id="cb4-16"><a href="#cb4-16"></a>hicor &lt;-<span class="st"> </span><span class="kw">append</span>(hicor, <span class="kw">c</span>(<span class="st">&quot;dcm.layer&quot;</span>, <span class="st">&quot;hdb_cl&quot;</span>, <span class="st">&quot;ocean&quot;</span>))</span>
+<span id="cb4-17"><a href="#cb4-17"></a></span>
+<span id="cb4-18"><a href="#cb4-18"></a>PEPMreads2forest &lt;-<span class="st"> </span>PEPMreads2forest <span class="op">%&gt;%</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a><span class="st">  </span><span class="kw">select_if</span>(<span class="kw">names</span>(.) <span class="op">%in%</span><span class="st"> </span>hicor)</span>
+<span id="cb4-20"><a href="#cb4-20"></a></span>
+<span id="cb4-21"><a href="#cb4-21"></a><span class="kw">ggplot</span>(PEPMreads2forest) <span class="op">+</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">x=</span>ocean, <span class="dt">y=</span>RA)) <span class="op">+</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="st">  </span><span class="co">#scale_x_log10() + </span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="st">  </span><span class="kw">scale_y_continuous</span>(<span class="dt">trans=</span><span class="st">&quot;sqrt&quot;</span>)</span></code></pre></div>
+<h1 id="save-dataset-for-easy-reloading">SAVE DATASET FOR EASY RELOADING</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">saveRDS</span>(PEPMreads2forest, here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;PEPMreads2forest.sar11&quot;</span>))</span></code></pre></div>
+<h1 id="data-splitting--resampling">DATA SPLITTING &amp; RESAMPLING</h1>
+<p>For a data splitting strategy, we reserve 20% of data to the test set. The rest will be used for training th emodel</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>pepm.split &lt;-<span class="st"> </span><span class="kw">initial_split</span>(PEPMreads2forest, <span class="dt">prop =</span> <span class="fl">0.8</span>)</span></code></pre></div>
+<p>training/validation/total</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>pepm.split</span></code></pre></div>
+<p>Extract training and testing sets</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>pepm.split.train &lt;-<span class="st"> </span><span class="kw">training</span>(pepm.split)</span>
+<span id="cb8-2"><a href="#cb8-2"></a>pepm.split.test &lt;-<span class="st"> </span><span class="kw">testing</span>(pepm.split)</span></code></pre></div>
+<p>Create cross-fold object for the training set</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>pepm.split.train.crossval &lt;-<span class="st"> </span><span class="kw">vfold_cv</span>(pepm.split.train)</span></code></pre></div>
+<h1 id="define-recipe">DEFINE RECIPE</h1>
+<p>Create recipe and roles for testing set</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>pepm.recipe &lt;-<span class="st"> </span><span class="kw">recipe</span>(RA <span class="op">~</span><span class="st"> </span>., <span class="dt">data =</span> PEPMreads2forest) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="st">  </span><span class="co">#step_rm(section, RPK_prochlorococcus_TBDT, RPK_total_prochlorococcus_reads, RPK_prochlorococcus_marker_median, W, M, lat, lon, LongCode, LongDesc, synDarwin_umolC.kg, proDarwin_umolC.kg, DOPDarwin_dissolved_umol.kg, oxygen_dissolved_umol.kg, pro_LLVII, imputed_iron, imputed_lead, imputed_manganese, imputed_zinc, imputed_cobalt, imputed_nickel, imputed_aluminum, imputed_copper) %&gt;% </span></span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="st">  </span><span class="co">#update_role(sampleID, new_role = &quot;ID&quot;) %&gt;% </span></span>
+<span id="cb10-4"><a href="#cb10-4"></a><span class="st">  </span><span class="co">#step_dummy(all_nominal(), -all_outcomes(), -sampleID) %&gt;% </span></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="st">  </span><span class="co">#step_zv(all_predictors()) %&gt;%</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="st">  </span><span class="kw">step_normalize</span>(<span class="kw">all_predictors</span>(), <span class="op">-</span>dcm.layer, <span class="op">-</span>hdb_cl, <span class="op">-</span>ocean) <span class="co">#%&gt;%</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>  <span class="co">#step_corr(all_predictors(), threshold = .6) #potentially remove highly correlated variables</span></span></code></pre></div>
+<p>apply the recipe to the training data and extract/inspect the pre-processed training dataset</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>pepm.split.train.preprocessed &lt;-<span class="st"> </span>pepm.recipe <span class="op">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="st">  </span><span class="kw">prep</span>(pepm.split.train) <span class="op">%&gt;%</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="st">  </span><span class="kw">juice</span>()</span>
+<span id="cb11-4"><a href="#cb11-4"></a></span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="kw">head</span>(pepm.split.train.preprocessed)</span></code></pre></div>
+<h1 id="specify-model">SPECIFY MODEL</h1>
+<ul>
+<li>using random forest from <code>ranger</code></li>
+<li>tune mtry and num.trees parameters</li>
+<li>select engine
+<ul>
+<li>ranger</li>
+<li>importance = impurity</li>
+<li>splitrule = beta</li>
+</ul></li>
+<li>regression mode</li>
+</ul>
+<!-- end list -->
+
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>pepm.rand.forest.model &lt;-<span class="st"> </span><span class="kw">rand_forest</span>() <span class="op">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="st">  </span><span class="kw">set_args</span>(<span class="dt">mtry =</span> <span class="kw">tune</span>(), <span class="dt">min_n =</span> <span class="kw">tune</span>(), <span class="dt">trees=</span><span class="dv">3000</span>) <span class="op">%&gt;%</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="st">  </span><span class="kw">set_engine</span>(<span class="st">&quot;ranger&quot;</span>, </span>
+<span id="cb12-4"><a href="#cb12-4"></a>             <span class="dt">importance =</span> <span class="st">&quot;permutation&quot;</span>, </span>
+<span id="cb12-5"><a href="#cb12-5"></a>             <span class="dt">splitrule =</span> <span class="st">&quot;beta&quot;</span>,</span>
+<span id="cb12-6"><a href="#cb12-6"></a>             <span class="dt">replace =</span> <span class="ot">FALSE</span>) <span class="op">%&gt;%</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="st">  </span><span class="kw">set_mode</span>(<span class="st">&quot;regression&quot;</span>)</span></code></pre></div>
+<h1 id="workflow">WORKFLOW</h1>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>pepm.rand.forest.workflow &lt;-<span class="st"> </span><span class="kw">workflow</span>() <span class="op">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="st">  </span><span class="kw">add_recipe</span>(pepm.recipe) <span class="op">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a><span class="st">  </span><span class="kw">add_model</span>(pepm.rand.forest.model)</span></code></pre></div>
+<h1 id="tuning">TUNING</h1>
+<p>Tune parameter grid using metrics root mean squared error, mean absolute error, and the concordance correlation coefficient. We can either manually specify tuning parameters or allow tidymodel to do it automatically</p>
+<h2 id="autotune">AUTOTUNE</h2>
+<p>Run parameter tuning using an automated grid selection first. (Run on cluster)</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>pepm.rand.forest.autotune &lt;-<span class="st"> </span>pepm.rand.forest.workflow <span class="op">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="st">  </span><span class="kw">tune_grid</span>(<span class="dt">resamples =</span> pepm.split.train.crossval,</span>
+<span id="cb14-3"><a href="#cb14-3"></a>            <span class="dt">grid =</span> <span class="dv">20</span>,</span>
+<span id="cb14-4"><a href="#cb14-4"></a>            <span class="dt">metrics =</span> <span class="kw">metric_set</span>(rmse, mae, ccc, rsq),</span>
+<span id="cb14-5"><a href="#cb14-5"></a>            <span class="dt">control =</span> <span class="kw">control_grid</span>(<span class="dt">verbose =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb14-6"><a href="#cb14-6"></a>                                  <span class="dt">allow_par =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb14-7"><a href="#cb14-7"></a>                                  <span class="dt">extract =</span> <span class="ot">NULL</span>,</span>
+<span id="cb14-8"><a href="#cb14-8"></a>                                  <span class="dt">save_pred =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb14-9"><a href="#cb14-9"></a>                                  <span class="dt">pkgs =</span> <span class="ot">NULL</span>))</span></code></pre></div>
+<p>examine cross validation results for the automatically specified grid</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>pepm.rand.forest.autotune &lt;-<span class="st"> </span><span class="kw">readRDS</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;rand.forest.autotune.par.sar11&quot;</span>))</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="kw">collect_metrics</span>(pepm.rand.forest.autotune) <span class="op">%&gt;%</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="kw">c</span>(<span class="st">&quot;mtry&quot;</span>, <span class="st">&quot;min_n&quot;</span>), <span class="dt">names_to=</span><span class="st">&quot;var&quot;</span>, <span class="dt">values_to=</span><span class="st">&quot;val&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="st">  </span><span class="kw">filter</span>(.metric <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;mae&quot;</span>, <span class="st">&quot;rmse&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>val, mean, <span class="dt">color =</span> val)) <span class="op">+</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&quot;loess&quot;</span>, <span class="dt">se=</span>T) <span class="op">+</span></span>
+<span id="cb15-8"><a href="#cb15-8"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">size=</span>trees)) <span class="op">+</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="st">  </span><span class="kw">facet_wrap</span>(var<span class="op">~</span>.metric, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a><span class="st">  </span><span class="kw">scale_color_distiller</span>(<span class="dt">palette=</span><span class="st">&quot;Spectral&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb15-11"><a href="#cb15-11"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Tune parameter&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Metric Mean&quot;</span>) <span class="op">+</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a><span class="st">  </span><span class="kw">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">collect_metrics</span>(pepm.rand.forest.autotune) <span class="op">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="st">  </span><span class="kw">pivot_longer</span>(<span class="dt">cols=</span><span class="kw">c</span>(<span class="st">&quot;mtry&quot;</span>, <span class="st">&quot;min_n&quot;</span>), <span class="dt">names_to=</span><span class="st">&quot;var&quot;</span>, <span class="dt">values_to=</span><span class="st">&quot;val&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>(.metric <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;mae&quot;</span>, <span class="st">&quot;rmse&quot;</span>))) <span class="op">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>val, mean, <span class="dt">color =</span> val)) <span class="op">+</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method=</span><span class="st">&quot;loess&quot;</span>, <span class="dt">se=</span>T) <span class="op">+</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">size=</span>trees)) <span class="op">+</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a><span class="st">  </span><span class="kw">facet_wrap</span>(var<span class="op">~</span>.metric, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>) <span class="op">+</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="st">  </span><span class="kw">scale_color_distiller</span>(<span class="dt">palette=</span><span class="st">&quot;Spectral&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb16-9"><a href="#cb16-9"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Tune parameter&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Metric Mean&quot;</span>) <span class="op">+</span></span>
+<span id="cb16-10"><a href="#cb16-10"></a><span class="st">  </span><span class="kw">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">select_best</span>(pepm.rand.forest.autotune, <span class="st">&quot;rmse&quot;</span>)</span></code></pre></div>
+<h2 id="manualtune">MANUALTUNE</h2>
+<p>Make a manual grid based on results from the automatic grid</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>pepm.rand.forest.grid &lt;-<span class="st"> </span><span class="kw">grid_regular</span>(</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="kw">mtry</span>(<span class="dt">range =</span> <span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">30</span>)),</span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="kw">min_n</span>(<span class="dt">range =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>)),</span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="dt">levels =</span> <span class="dv">7</span>)</span>
+<span id="cb18-5"><a href="#cb18-5"></a></span>
+<span id="cb18-6"><a href="#cb18-6"></a>pepm.rand.forest.grid</span></code></pre></div>
+<p>Run the grid</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>pepm.rand.forest.mantune &lt;-<span class="st"> </span>pepm.rand.forest.workflow <span class="op">%&gt;%</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="st">  </span><span class="kw">tune_grid</span>(<span class="dt">resamples =</span> pepm.split.train.crossval,</span>
+<span id="cb19-3"><a href="#cb19-3"></a>            <span class="dt">grid =</span> pepm.rand.forest.grid,</span>
+<span id="cb19-4"><a href="#cb19-4"></a>            <span class="dt">metrics =</span> <span class="kw">metric_set</span>(rmse, mae, ccc, rsq))</span></code></pre></div>
+<p>examine cross validation results for the manually specified grid</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>pepm.rand.forest.mantune &lt;-<span class="st"> </span><span class="kw">readRDS</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;pepm.rand.forest.mantune.par&quot;</span>))</span>
+<span id="cb20-2"><a href="#cb20-2"></a></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="kw">collect_metrics</span>(pepm.rand.forest.mantune) <span class="op">%&gt;%</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">min_n=</span><span class="kw">as.factor</span>(min_n)) <span class="op">%&gt;%</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a><span class="st">  </span><span class="co">#pivot_longer(cols=c(&quot;mtry&quot;, &quot;min_n&quot;), names_to=&quot;var&quot;, values_to=&quot;val&quot;) %&gt;%</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x=</span>mtry, mean, <span class="dt">color =</span> min_n, <span class="dt">group =</span> min_n)) <span class="op">+</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a><span class="st">  </span><span class="co">#geom_smooth(method=&quot;loess&quot;, se=T) +</span></span>
+<span id="cb20-8"><a href="#cb20-8"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="dv">2</span>) <span class="op">+</span></span>
+<span id="cb20-9"><a href="#cb20-9"></a><span class="st">  </span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st"> </span></span>
+<span id="cb20-10"><a href="#cb20-10"></a><span class="st">  </span><span class="kw">facet_wrap</span>(<span class="op">~</span>.metric, <span class="dt">scales =</span> <span class="st">&quot;free&quot;</span>, <span class="dt">nrow=</span><span class="dv">2</span>) <span class="op">+</span></span>
+<span id="cb20-11"><a href="#cb20-11"></a><span class="st">  </span><span class="kw">scale_color_brewer</span>(<span class="dt">palette=</span><span class="st">&quot;Dark2&quot;</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb20-12"><a href="#cb20-12"></a><span class="st">  </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">&quot;Tune parameter&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Metric Mean&quot;</span>) <span class="op">+</span></span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="st">  </span><span class="kw">theme_bw</span>()</span></code></pre></div>
+<h1 id="model-selection">MODEL SELECTION</h1>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">select_best</span>(pepm.rand.forest.mantune, <span class="st">&quot;rsq&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>pepm.rand.forest.mantune.best &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">mtry=</span><span class="dv">6</span>, <span class="dt">min_n=</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>pepm.rand.forest.model.final &lt;-<span class="st"> </span><span class="kw">finalize_model</span>(pepm.rand.forest.model,</span>
+<span id="cb23-2"><a href="#cb23-2"></a>                                               pepm.rand.forest.mantune.best)</span>
+<span id="cb23-3"><a href="#cb23-3"></a></span>
+<span id="cb23-4"><a href="#cb23-4"></a>pepm.rand.forest.model.final</span></code></pre></div>
+<h1 id="final-workflow">FINAL WORKFLOW</h1>
+<p>update workflow to the best model based on ccc</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>pepm.rand.forest.workflow.final &lt;-<span class="st"> </span><span class="kw">workflow</span>() <span class="op">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="st">  </span><span class="kw">add_recipe</span>(pepm.recipe) <span class="op">%&gt;%</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="st">  </span><span class="kw">add_model</span>(pepm.rand.forest.model.final)</span></code></pre></div>
+<h1 id="evaluate-final-workflow-on-full-test-set">EVALUATE FINAL WORKFLOW ON FULL TEST SET</h1>
+<p>Now we’ve defined our recipe, our model, and tuned the model’s parameters, we’re ready to actually fit the final model. Since all of this information is contained within the workflow object, we will apply the last_fit() function to our workflow and our train/test split object. This will automatically train the model specified by the workflow using the training data, and produce evaluations based on the test set.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>pepm.rand.forest.results.final &lt;-<span class="st"> </span>pepm.rand.forest.workflow.final <span class="op">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="st">  </span><span class="kw">last_fit</span>(pepm.split)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="kw">saveRDS</span>(pepm.rand.forest.results.final, here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;pepm.rand.forest.results.final&quot;</span>))</span></code></pre></div>
+<h1 id="final-performance-metrics">FINAL PERFORMANCE METRICS</h1>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>pepm.rand.forest.results.final <span class="op">%&gt;%</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="st">  </span><span class="kw">collect_metrics</span>(<span class="kw">metric_set</span>(rmse, mae, ccc))</span></code></pre></div>
+<h1 id="final-fit-using-final-model">FINAL FIT USING FINAL MODEL</h1>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>pepm.rand.forest.fit.final &lt;-<span class="st"> </span><span class="kw">fit</span>(pepm.rand.forest.workflow.final, PEPMreads2forest)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="kw">saveRDS</span>(pepm.rand.forest.fit.final, here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;PEPM.rand.forest.fit.final&quot;</span>))</span></code></pre></div>
+<h1 id="variable-importance---first-look">VARIABLE IMPORTANCE - FIRST LOOK</h1>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="kw">library</span>(vip)</span>
+<span id="cb30-2"><a href="#cb30-2"></a></span>
+<span id="cb30-3"><a href="#cb30-3"></a>pepm.rand.forest.fit.final <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb30-4"><a href="#cb30-4"></a><span class="st">  </span><span class="kw">pull_workflow_fit</span>() <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb30-5"><a href="#cb30-5"></a><span class="st">  </span>vip<span class="op">::</span><span class="kw">vip</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>ranger_obj &lt;-<span class="st"> </span><span class="kw">pull_workflow_fit</span>(PEPM.rand.forest.fit.final)<span class="op">$</span>fit</span>
+<span id="cb31-2"><a href="#cb31-2"></a>ranger_obj<span class="op">$</span>variable.importance</span></code></pre></div>
+<h1 id="boruta-w-selected-hyperparameters">BORUTA W SELECTED HYPERPARAMETERS</h1>
+<p>subset dataframe</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="kw">select</span>(tbdt.split.train.preprocessed, <span class="op">-</span>sampleID)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>getImpBetaZ &lt;-<span class="st"> </span><span class="cf">function</span>(x, y, <span class="dt">ntree=</span><span class="dv">2000</span>, <span class="dt">num.trees=</span>ntree, ...){</span>
+<span id="cb33-2"><a href="#cb33-2"></a>  x<span class="op">$</span>shadow.Boruta.decision &lt;-<span class="st"> </span>y</span>
+<span id="cb33-3"><a href="#cb33-3"></a>  ranger<span class="op">::</span><span class="kw">ranger</span>(<span class="dt">data=</span>x, </span>
+<span id="cb33-4"><a href="#cb33-4"></a>                <span class="dt">dependent.variable.name =</span> <span class="st">&quot;shadow.Boruta.decision&quot;</span>,</span>
+<span id="cb33-5"><a href="#cb33-5"></a>                <span class="dt">num.trees =</span> num.trees, </span>
+<span id="cb33-6"><a href="#cb33-6"></a>                <span class="dt">mtry =</span> <span class="dv">20</span>,</span>
+<span id="cb33-7"><a href="#cb33-7"></a>                <span class="dt">min.node.size =</span> <span class="dv">2</span>, </span>
+<span id="cb33-8"><a href="#cb33-8"></a>                <span class="dt">importance =</span> <span class="st">&quot;permutation&quot;</span>, <span class="co">#variance,</span></span>
+<span id="cb33-9"><a href="#cb33-9"></a>                <span class="dt">splitrule =</span> <span class="st">&quot;beta&quot;</span>,</span>
+<span id="cb33-10"><a href="#cb33-10"></a>                <span class="dt">scale.permutation.importance =</span> <span class="ot">TRUE</span>,</span>
+<span id="cb33-11"><a href="#cb33-11"></a>                <span class="dt">write.forest =</span> <span class="ot">FALSE</span>,...)<span class="op">$</span>variable.importance</span>
+<span id="cb33-12"><a href="#cb33-12"></a>}</span></code></pre></div>
+<p>Run on cluster</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>borutaTBDT &lt;-<span class="st"> </span><span class="kw">Boruta</span>(RA <span class="op">~</span><span class="st"> </span>.,</span>
+<span id="cb34-2"><a href="#cb34-2"></a>                     <span class="dt">getImp=</span>getImpBetaZ,</span>
+<span id="cb34-3"><a href="#cb34-3"></a>                     <span class="dt">data=</span><span class="kw">select</span>(tbdt.split.train.preprocessed, <span class="op">-</span>sampleID),</span>
+<span id="cb34-4"><a href="#cb34-4"></a>                     <span class="dt">doTrace=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>borutaPEPM &lt;-<span class="st"> </span><span class="kw">readRDS</span>(here<span class="op">::</span><span class="kw">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;PEPMboruta.sar11&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="kw">plot</span>(borutaPEPM)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="kw">plotImpHistory</span>(borutaPEPM)</span></code></pre></div>
+
+</body>
+</html>

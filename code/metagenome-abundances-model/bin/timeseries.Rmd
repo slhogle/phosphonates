@@ -1,0 +1,238 @@
+---
+title: "PepM abundance using environmental covariates at BATS/HOT"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+# INTRO
+
+[Bolker's draft](https://ms.mcmaster.ca/~bolker/classes/s4c03/notes/GLMM_Bolker_draft5.pdf) from "Linear and generalized linear mixed models" DOI:10.1093/acprof:oso/9780199672547.003.0014
+
+[Bolker's worked examples from the book](https://bbolker.github.io/mixedmodels-misc/ecostats_chap.html)
+
+[How to report results of GLMMs](https://bbolker.github.io/mixedmodels-misc/notes/GLMM_results_report.pdf)
+
+[Model evaluation](https://github.com/glmmTMB/glmmTMB/blob/master/glmmTMB/inst/doc/model_evaluation.pdf)
+
+[Example of fitting betabinomial model](http://rstudio-pubs-static.s3.amazonaws.com/371411_b572e753d5e94c959cee7f05bc969839.html) using glmmTMB
+
+https://bbolker.github.io/mixedmodels-misc/
+
+# LIBRARIES
+```{r message=FALSE, warning=FALSE}
+library(here)
+library(tidyverse)
+library(lubridate)
+library(ggforce)
+library(patchwork)
+library(viridis)
+```
+
+# FUNCTIONS
+```{r}
+getSeason <- function(input.date){
+  numeric.date <- 100*month(input.date)+day(input.date)
+  ## input Seasons upper limits in the form MMDD in the "break =" option:
+  cuts <- base::cut(numeric.date, breaks = c(0,319,0620,0921,1220,1231)) 
+  #cuts <- base::cut(numeric.date, breaks = c(0,0300,0500,0800,1100,1101)) 
+  # rename the resulting groups (could've been done within cut(...levels=) if "Winter" wasn't double
+  levels(cuts) <- c("Winter","Spring","Summer","Fall","Winter")
+  return(cuts)
+}
+```
+
+```{r}
+getSeason(as.POSIXct("2004-09-14 12:00:00"))
+```
+
+# LOAD DATA
+## RELATIVE ABUNDANCE DATA
+Preformatted dataset
+```{r message=FALSE, warning=FALSE}
+pepm <- readRDS(here::here("data", "pepm.timeseries.final")) %>%
+  group_by(sampleID, group) %>% 
+  slice(1) %>%
+  ungroup() %>%
+  filter(sampleID != "S0468") %>%
+  filter(date < as.POSIXct("2006-01-01 12:00:00")) %>%
+  mutate(season = getSeason(date))
+```
+
+# EXPLORATORY PLOTS
+```{r}
+cols <- c("#8856a7", "#8c96c6", "#9ebcda")
+
+pbats <- pepm %>%
+  filter(section=="BATS") %>%
+  mutate(environment=factor(environment, levels=c("surface", "dcm", "mixed.layer"),
+                            labels=c("Surface", "SCML", "Deep Mixed Layer"))) %>%
+  mutate(group=factor(group, 
+                      levels=c("prochlorococcus", "sar11", "bactarc"),
+                      labels=c("Prochlorococcus", "SAR11", "Bacteria/Archaea"))) %>%
+  ggplot() +
+  geom_point(aes(x=date, y=RA, color=group, shape=season)) +
+  geom_line(aes(x=date, y=RA, color=group)) +
+  labs(x="", y="", title="BATS") +
+  #scale_y_continuous(trans="sqrt") +
+  scale_color_manual(values=cols) + 
+  facet_grid(group~environment, scales="free_y") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size=8),
+        plot.margin=unit(c(0,0,0,0),"cm"))
+
+phot <- pepm %>%
+  filter(section=="HOT") %>%
+  mutate(environment=factor(environment, levels=c("surface", "dcm", "mixed.layer"),
+                            labels=c("Surface", "SCML", "Deep Mixed Layer"))) %>%
+  mutate(group=factor(group, 
+                      levels=c("prochlorococcus", "sar11", "bactarc"),
+                      labels=c("Prochlorococcus", "SAR11", "Bacteria/Archaea"))) %>%
+  ggplot() +
+  geom_point(aes(x=date, y=RA, color=group, shape=season)) +
+  geom_line(aes(x=date, y=RA, color=group)) +
+  labs(x="", y="PepM Rel. Abund.", title="HOT") +
+  #scale_y_continuous(trans="sqrt") +
+  scale_color_manual(values=cols) + 
+  facet_grid(group~environment, scales="free_y") +
+  theme_bw() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size=8),
+        plot.margin=unit(c(0,0,0,0),"cm"))
+```
+
+```{r}
+phot + pbats + plot_layout(guides="collect") + plot_annotation(tag_levels = 'A')
+```
+
+# TEST FOR SEASONALITY
+Here time series data is irregular so we can't just analyze it using base R timeseries or zoo packages. Gavin Simpson suggests using an additive model to "decompose" the seasonal and trend components. In this regression-based approach we model the residuals as a time series process to account for lack of independence in the residuals.
+
+We use GAMs and LMEs to fit a cyclic spline in the day of the year variable `dayOfYear` which is a proxy for the seasonality of the time series. Any trend is represented by the cumulative time days since sampling at T0 `timeOfSampling` which is a numeric variable. The residuals are modelled  as a continuous-time AR(1) using the timeOfSampling variable as the time component of the CAR(1).
+
+See SO post here: https://stackoverflow.com/a/12623280
+
+Gavin Simpson's blog here: https://fromthebottomoftheheap.net/2011/07/21/smoothing-temporally-correlated-data/
+
+## LOAD REQURIED LIBS
+```{r}
+library(mgcv)
+library(nlme)
+library(broom)
+library(gratia)
+```
+
+```{r}
+tidy.gamresults <- pepm %>% 
+  mutate(RA=ifelse(group=="prochlorococcus" & environment=="mixed.layer" & section=="BATS", NA, RA)) %>%
+  drop_na(RA) %>%
+  group_by(section, group, environment) %>%
+  mutate(dayOfYear=lubridate::yday(date)) %>%
+  arrange(date) %>%
+  mutate(timeOfSampling=as.numeric(date - min(date))) %>%
+  group_modify(~ broom::tidy(gamm(RA ~ s(dayOfYear, bs = "cc") + s(timeOfSampling), 
+     correlation = corCAR1(form = ~ timeOfSampling),
+     family="Gamma",
+     data = .x)$gam))
+
+tidy.gammods <- pepm %>% 
+  mutate(RA=ifelse(group=="prochlorococcus" & environment=="mixed.layer" & section=="BATS", NA, RA)) %>%
+  drop_na(RA) %>%
+  group_by(section, group, environment) %>%
+  mutate(dayOfYear=lubridate::yday(date)) %>%
+  arrange(date) %>%
+  mutate(timeOfSampling=as.numeric(date - min(date))) %>%
+  group_map(~ gamm(RA ~ s(dayOfYear, bs = "cc") + s(timeOfSampling), 
+     correlation = corCAR1(form = ~ timeOfSampling),
+    family="Gamma",
+     data = .x))
+```
+
+## MIXED LAYER DATA
+```{r}
+mld <- tibble::tribble(
+    ~year,  ~dayOfYear,  ~depth,
+  2003L,   0L, 130L,
+  2003L,  30L, 265L,
+  2003L,  60L, 240L,
+  2003L,  90L, 220L,
+  2003L, 120L,  15L,
+  2003L, 150L,  25L,
+  2003L, 180L,  15L,
+  2003L, 210L,  18L,
+  2003L, 240L,  25L,
+  2003L, 270L,  50L,
+  2003L, 300L,  70L,
+  2003L, 330L,  65L,
+  2004L,   0L, 150L,
+  2004L,  30L, 225L,
+  2004L,  60L, 275L,
+  2004L,  90L,  25L,
+  2004L, 120L,  30L,
+  2004L, 150L,  15L,
+  2004L, 180L,  10L,
+  2004L, 210L,  15L,
+  2004L, 240L,  10L,
+  2004L, 270L,  35L,
+  2004L, 300L,  50L,
+  2004L, 330L,  75L,
+  2005L,   0L, 150L,
+  2005L,  30L, 200L,
+  2005L,  60L, 160L,
+  2005L,  90L,  25L,
+  2005L, 120L,  35L,
+  2005L, 150L,  15L,
+  2005L, 180L,  20L,
+  2005L, 210L,  15L,
+  2005L, 240L,  24L,
+  2005L, 270L,  35L,
+  2005L, 300L,  74L,
+  2005L, 330L,  80L
+  )
+
+mldsum <- mld %>%
+  group_by(dayOfYear) %>%
+  summarize(mn=mean(depth)) %>%
+  #mutate(mn=-(mn-79.5)/3000) %>%
+  mutate(dayOfYear=ifelse(dayOfYear==0, 360, dayOfYear)) %>%
+  arrange(dayOfYear)
+
+mld.lm = lm(mn ~ dayOfYear, data=mldsum) 
+
+mldsum$resid <- resid(mld.lm)
+
+mldsum <- mldsum %>%
+  mutate(resid1=-resid/1000)
+```
+
+```{r}
+cols <- c("#8856a7", "#8c96c6", "#9ebcda")
+
+pseason <- bind_rows(evaluate_smooth(tidy.gammods[[3]]$gam, "s(dayOfYear)") %>% mutate(group="bactarc"),
+          evaluate_smooth(tidy.gammods[[5]]$gam, "s(dayOfYear)") %>% mutate(group="prochlorococcus"),
+          evaluate_smooth(tidy.gammods[[8]]$gam, "s(dayOfYear)") %>% mutate(group="sar11")) %>%
+  mutate(group=factor(group, 
+                      levels=c("prochlorococcus", "sar11", "bactarc"),
+                      labels=c("Prochlorococcus", "SAR11", "Cmb. Bacteria/Archaea"))) %>%
+  ggplot() + 
+    geom_line(data=mldsum, aes(x=dayOfYear, y=resid1), linetype="dashed", alpha=0.7) + 
+    geom_ribbon(aes(x=dayOfYear, ymin = est - se, ymax =  est + se, fill=group), alpha=0.3) + 
+    geom_line(aes(x=dayOfYear, y=est, color=group)) + 
+    labs(y="Modeled Seasonal Effect", x="Day of Year") + 
+    scale_color_manual(values=cols) +
+    scale_fill_manual(values=cols) +
+    theme_bw()
+```
+
+```{r}
+ptimeseries <- phot + pbats + pseason + guide_area() + plot_layout(guides="collect",
+                                       ncol=2, 
+                                       nrow=2,
+                                       heights=c(2, 1.5)) + plot_annotation(tag_levels = 'A')
+
+ptimeseries
+```
+
+```{r}
+ggsave(here::here("figs", "FigS_timeseries.svg"), plot=ptimeseries,
+       device="svg", height=17, width=17, units="cm")
+```

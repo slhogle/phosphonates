@@ -1,0 +1,29 @@
+Sample	Cruise	Station	Feature	ocean	lat	lon	depth	date
+SWC-01	BiG-RAPA	1	Oxygenated surface water	pacific	-20.08	-70.8	20	2009-07-01
+SWC-02	BiG-RAPA	1	Secondary DCM, oxygen deplete	pacific	-20.08	-70.8	55	2009-11-01
+SWC-03	BiG-RAPA	4	Mixed layer, 50% PAR	pacific	-23.46	-88.77	14	2009-08-01
+SWC-04	BiG-RAPA	4	DCM, <1% PAR	pacific	-23.46	-88.77	112	2009-11-01
+SWC-05	BiG-RAPA	7	Mixed layer, 50% PAR	pacific	-26.25	-103.96	14	2010-11-01
+SWC-06	BiG-RAPA	7	DCM, only 3% of Pro detected by qPCR	pacific	-26.25	-103.96	180	2010-11-01
+SWC-07	HOT ML	HOT214	HOT Mixed Layer ~25% narB	pacific	23.75	-158	5	2010-12-01
+SWC-08	HOT DCM	HOT216	HOT DCM region >30% narB (HLII and LLI)	pacific	23.75	-158	100	2010-12-01
+SWC-09	BATS ML	BATS248	BATS Mixed Layer ~20% narB	atlantic	31.07	-64.17	10	2010-12-01
+SWC-10	BATS DCM	BATS252	BATS DCM region >30% narB	atlantic	31.07	-64.17	100	2010-05-01
+SWC-11	GEOTRACES	GA02(L1)-16	Northern edge of Sargasso Sea	atlantic	36.2	-53.31	10	2010-12-01
+SWC-12	GEOTRACES	GA02(L2)-25	SW edge of Sargosso Sea, N of Puerto Rico	atlantic	24.71	-67.07	100	2010-06-01
+SWC-13	GEOTRACES	GA02(L2)-35	North Equatorial Current	atlantic	9.55	-50.47	100	2010-06-01
+SWC-14	GEOTRACES	GA03(L1)-07	Coastal North Africa	atlantic	24	-22	60	2011-11-01
+SWC-15	GEOTRACES	GA03(L2)-4	Off the North American Shelf, SE of WHOI	atlantic	38.32	-68.87	90	2010-10-01
+SWC-16	GEOTRACES	GA03(L2)-16	Over Mid-Atlantic Ridge	atlantic	26.14	-44.83	90	2011-12-01
+SWC-17	GEOTRACES	GA03(L2)-20	SE edge of Sargasso Sea	atlantic	22.33	-35.87	100	2011-11-01
+SWC-18	GEOTRACES	GA03(L2)-24	TENATSO time-series station	atlantic	17.4	-24.5	72	2010-11-01
+SWC-19	GEOTRACES	GA10(L1)-9	Off the SW coast of South Africa	atlantic	-34.98	16.02	20	2011-12-01
+SWC-20	GEOTRACES	GP13(L1)-04	Austrialia coast	pacific	-30	156	50	2011-05-01
+SWC-21	GEOTRACES	GP13(L1)-22	North of New Zealand	pacific	-30	174	50	2011-05-01
+SWC-22	GEOTRACES	GP13(L1)-38	32.5 S Line SW Pacific	pacific	-32.5	-170	75	2011-06-01
+SWC-23	GEOTRACES	GP13(L2)-GT3	32.5 S Line SW Pacific	pacific	-32.5	-170	200	2011-05-01
+SWC-24	GEOTRACES	GP13(L2)-GT19	32.5 S Line SW Pacific	pacific	-32.5	-154	100	2011-06-01
+17 Fiji-Hawaii 2007	BULA	3	BULA cruise. S Pacific	pacific	-3	-166	15	2007-04-23
+121 Fiji-Hawaii 2007	BULA	3	BULA cruise. S Pacific	pacific	-3	-166	100	2007-04-23
+133 Fiji-Hawaii 2007	BULA	5	BULA cruise. S Pacific	pacific	5	-162	15	2007-04-26
+137 Fiji-Hawaii 2007	BULA	5	BULA cruise. S Pacific	pacific	5	-162	100	2007-04-26

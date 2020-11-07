@@ -1,0 +1,168 @@
+---
+title: "Phylogenies for Bacteria and Archaea"
+output:   
+  github_document:
+    toc: yes
+    toc_depth: 2
+    fig_width: 7
+    fig_height: 5
+    dev: png
+    keep_html: yes
+    html_preview: yes
+---
+
+```{r}
+library(here)
+library(tidyverse)
+library(ggtree)
+library(tidytree)
+library(treeio)
+```
+
+# LOAD DATA
+## METADATA
+```{r}
+phn_synthesis <- read_tsv(here("data", "phn_synthesis.tsv")) %>% distinct()
+phn_util <- read_tsv(here("data", "phn_utilization.tsv")) %>% distinct()
+```
+
+```{r}
+phn_join <- full_join(mutate(phn_synthesis, phn_synthesis=ifelse(pepm + mpns >= 1, "phn_synthesis.yes", "phn_synthesis.no")),
+                      mutate(phn_util, phn_util=ifelse(`2AEP` + CPLyase + Hpn + Phosphite >= 1, "phn_util.yes", "phn_util.no"))) %>% 
+  replace_na(list(phn_util = "phn_util.no", phn_synthesis = "phn_synthesis.no", 
+                  mpns = "mpns.no", pepm = "pepm.no", 
+                  `2AEP` = "2AEP.no", CPLyase = "CPLyase.no",
+                  Hpn = "Hpn.no", Phosphite = "Phosphite.no")) %>%
+  mutate(var2plot=case_when(phn_synthesis=="phn_synthesis.yes" & phn_util=="phn_util.no" ~ "S",
+                            phn_synthesis=="phn_synthesis.no" & phn_util=="phn_util.yes" ~ "U",
+                            phn_synthesis=="phn_synthesis.yes" & phn_util=="phn_util.yes" ~ "B",
+                            TRUE ~ "other")) %>%
+  mutate(pepm=case_when(pepm == 1 ~ "pepm.yes", pepm == 0 ~ "pepm.no", TRUE ~ pepm),
+         mpns=case_when(mpns == 1 ~ "mpns.yes", mpns == 0 ~ "mpns.no", TRUE ~ mpns),
+         `2AEP`=case_when(`2AEP` == 1 ~ "2AEP.yes", `2AEP` == 0 ~ "2AEP.no", TRUE ~ `2AEP`),
+         CPLyase=case_when(CPLyase == 1 ~ "CPLyase.yes", CPLyase == 0 ~ "CPLyase.no", TRUE ~ CPLyase),
+         Hpn=case_when(Hpn == 1 ~ "Hpn.yes", Hpn == 0 ~ "Hpn.no", TRUE ~ Hpn),
+         Phosphite=case_when(Phosphite == 1 ~ "Phosphite.yes", Phosphite == 0 ~ "Phosphite.no", TRUE ~ Phosphite)) %>%
+  mutate(var2plot=factor(var2plot, levels=c("S", "U", "B"))) %>%
+  mutate(dummy1="dummy1",
+         dummy2="dummy2") %>%
+  select(genome, Hpn, Phosphite, `2AEP`, CPLyase, dummy1, pepm, mpns, dummy2, var2plot) %>%
+  column_to_rownames(var="genome") 
+```
+
+## NEWICK TREES
+### BACTERIA
+```{r}
+core_phylo_bac <- read.newick(here::here("data", 
+                                   "gtdbtk.bac120.user_msa.trimgappyout.tre"), node.label="support")
+
+ggcore_bac <- ggtree(core_phylo_bac, layout="fan", open.angle=15, size=0.25, aes(color=support))
+ggcore_bac1 <- rotate_tree(ggcore_bac, 15) +
+  scale_color_viridis_c(option = "A", direction = -1, na.value = "#000000")
+```
+
+### ARCHAEA
+```{r}
+core_phylo_arc <- read.newick(here::here("data", 
+                                   "gtdbtk.ar122.user_msa.trimgappyout.tre"), node.label="support")
+
+ggcore_arc <- ggtree(core_phylo_arc, size=0.5, aes(color=support)) +
+  geom_tiplab() + 
+  geom_treescale() +
+  scale_color_viridis_c(option = "A", direction = -1, na.value = "#000000", end=0.7)
+```
+
+# BACTERIA
+## IDENTIFY CLADES
+```{r}
+# essential
+cyano <- MRCA(ggcore_bac, .node1="UBA1221",    .node2="SB")
+pro <-   MRCA(ggcore_bac, .node1="AG-670-O11", .node2="SB")
+syn <-   MRCA(ggcore_bac, .node1="AG-670-B23", .node2="AG-363-B05")
+sar11 <- MRCA(ggcore_bac, .node1="SAT201",     .node2="HTCC7217")
+
+# others
+actinobacteria <- MRCA(ggcore_bac, .node1="specI-1463861", .node2="specI-1203602")
+clostridiales <- MRCA(ggcore_bac, .node1="UBA4338", .node2="UBA3660")
+bacilli <- MRCA(ggcore_bac, .node1="specI-260799", .node2="UBA4914")
+SAR202 <- MRCA(ggcore_bac, .node1="AG-410-A08", .node2="UBA7324")
+bacteroidetes <- MRCA(ggcore_bac, .node1="UBA1102", .node2="specI-1121930")
+marinimicrobia <- MRCA(ggcore_bac, .node1="UBA2126", .node2="NAT74")
+planctomycetes <- MRCA(ggcore_bac, .node1="EAC654", .node2="UBA4223")
+spirochetes <- MRCA(ggcore_bac, .node1="UBA768", .node2="specI-869212")
+verrucomicrobia <- MRCA(ggcore_bac, .node1="NP86", .node2="UBA2808")
+rhodobacteriacaea <- MRCA(ggcore_bac, .node1="specI-439496", .node2="NP49")
+betaproteobacteria <- MRCA(ggcore_bac, .node1="specI-944435", .node2="specI-243159")
+```
+
+```{r}
+ggcore_bac2 <- ggcore_bac1 +
+  geom_hilight(cyano, fill="#b8d933", extend=0.91) +
+  geom_cladelabel(node=cyano, color = "#b8d933", label="Cyanobacteria", offset = 0.91, fontsize = 2) + 
+  geom_hilight(syn,   fill="#33a02c", extend=0.91) +
+  geom_cladelabel(node=syn, color = "#33a02c", label="Synechococcus", offset = 0.91, fontsize = 2) + 
+  geom_hilight(pro,   fill="#b2df8a", extend=0.91) +
+  geom_cladelabel(node=pro, color = "#b2df8a", label="Prochlorococcus", offset = 0.91, fontsize = 2) + 
+  geom_hilight(sar11, fill="#a6cee3", extend=0.95) +
+  geom_cladelabel(node=sar11, color = "#a6cee3", label="SAR11", offset = 0.95, fontsize = 2) +
+  geom_hilight(actinobacteria, fill="#1f78b4", extend=0.95) +
+  geom_cladelabel(node=actinobacteria, color = "#1f78b4", label="Actinobacteria", offset = 0.95, fontsize = 2) +
+  geom_hilight(clostridiales, fill="#fb9a99", extend=0.85) +
+  geom_cladelabel(node=clostridiales, color = "#fb9a99", label="Clostridiales", offset = 0.85, fontsize = 2) +
+  geom_hilight(SAR202, fill="#e31a1c", extend=0.77) +
+  geom_cladelabel(node=SAR202, color = "#e31a1c", label="SAR202", offset = 0.77, fontsize = 2) +
+  geom_hilight(bacteroidetes, fill="#fdbf6f", extend=0.7) +
+  geom_cladelabel(node=bacteroidetes, color = "#fdbf6f", label="Bacteroidetes", offset = 0.7, fontsize = 2) +
+  geom_hilight(marinimicrobia, fill="#ff7f00", extend=1.0) +
+  geom_cladelabel(node=marinimicrobia, color = "#ff7f00", label="Marinimicrobia", offset = 1.0, fontsize = 2) +
+  geom_hilight(verrucomicrobia, fill="#cab2d6", extend=0.88) +
+  geom_cladelabel(node=verrucomicrobia, color = "#cab2d6", label="Verrucomicrobia", offset = 0.88, fontsize = 2) +
+  geom_hilight(rhodobacteriacaea, fill="#6a3d9a", extend=1.0) +
+  geom_cladelabel(node=rhodobacteriacaea, color = "#6a3d9a", label="Rhodobacteriacaea", offset = 1.0, fontsize = 2) +
+  geom_hilight(betaproteobacteria, fill="#ffff99", extend=1.58) +
+  geom_cladelabel(node=betaproteobacteria, color = "#ffff99", label="Betaproteobacteria", offset = 1.58, fontsize = 2) +
+  geom_hilight(bacilli, fill="#b15928", extend=0.68) +
+  geom_cladelabel(node=bacilli, color = "#b15928", label="Bacilli", offset = 0.68, fontsize = 2) +
+  geom_treescale() +
+  scale_color_viridis_c(option = "A", direction = -1, na.value = "#000000") +
+  theme(legend.position='none')
+```
+
+```{r}
+heatmap.colours <- c("#f0f0f0","#252525", "#fc9272", "#bdbdbd", "#252525")
+
+ggcore_bac_final <- gheatmap(ggcore_bac2, phn_join,
+              offset = 0.01,
+              width = 0.25,
+              colnames_position = "top",
+              colnames_angle = 90,
+              colnames_offset_y = 1,
+              hjust = 0,
+              font.size=2) #+ 
+  scale_fill_manual(values=heatmap.colours)
+```
+
+```{r}
+ggsave(here::here("figs", "phn-util-syn-combined_bac.svg"), 
+       plot = ggcore_bac_final, units = "cm", width = 17.8, height=17.8, device = "svg")
+```
+
+# ARCHAEA
+```{r}
+heatmap.colours <- c("#f0f0f0","#252525", "#fc9272", "#bdbdbd", "#252525")
+
+ggcore_arc_final <- gheatmap(ggcore_arc, phn_join,
+              offset = 0.5,
+              width = 0.25,
+              colnames_position = "top",
+              colnames_angle = 90,
+              colnames_offset_y = 1,
+              hjust = 0,
+              font.size=2) #+ 
+  scale_fill_manual(values=heatmap.colours)
+```
+
+```{r}
+ggsave(here::here("figs", "phn-util-syn-combined_arc.svg"), 
+       plot = ggcore_arc_final, units = "cm", width = 17.8, height=17.8, device = "svg")
+```

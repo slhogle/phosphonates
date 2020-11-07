@@ -1,0 +1,173 @@
+Parametric modelling of Prochlorococcus PepM abundance using top 5
+environmental covariates identified using RFR
+================
+
+  - [READ DATA](#read-data)
+  - [VARIABLE SUBSETTING](#variable-subsetting)
+  - [MODELS](#models)
+  - [SIMULATIONS](#simulations)
+
+``` r
+library(here)
+library(tidyverse)
+library(corncob)
+library(foreach)
+library(doParallel)
+library(RcppRoll)
+library(ggforce)
+```
+
+``` r
+source(here("bin", "beta_binom_functions.R"))
+```
+
+# READ DATA
+
+So the GEOTRACES data license is not GPL3 and you must request access
+and be approved before being allowed to download. So I am not including
+the GEOTRACES data here since it would be in violation of their license
+agreement. Unfortunately, this means that this is not truly reproducible
+as is. You can fill in the missing data for yourself by following the
+code available here - <https://doi.org/10.5281/zenodo.3689249>.
+
+Preformatted dataset
+
+``` r
+pepm <- readRDS(here::here("input", "pepm.global.final")) %>%
+  group_by(sampleID, group) %>% 
+  slice(1) %>%
+  ungroup() %>%
+  filter(sampleID != "S0468")
+```
+
+# VARIABLE SUBSETTING
+
+``` r
+a <- left_join(filter(pepm, group=="bactarc") %>% select(sampleID, bactarc_pepm=RA),
+               filter(pepm, group=="sar11") %>% select(sampleID, sar11_pepm=RA)) %>%
+  mutate(sar11_pepm=ifelse(is.na(sar11_pepm), 1e-4, sar11_pepm)) %>%
+  mutate(sar11_pepm=ifelse(sar11_pepm > 1, 0.99, sar11_pepm)) %>%
+  mutate(bactarc_pepm=ifelse(is.na(bactarc_pepm), 1e-4, bactarc_pepm)) %>%
+  mutate(bactarc_pepm=ifelse(bactarc_pepm > 1, 0.99, bactarc_pepm))
+
+data2corncob <- pepm %>%
+  filter(group=="prochlorococcus") %>%
+  drop_na() %>%
+  mutate(RA=ifelse(RA > 1, 0.99, RA)) %>%
+  mutate(RA=ifelse(is.na(RA), 1e-4, RA)) %>%
+  mutate(W=ceiling(W),
+         M=ceiling(M), 
+         pro=pro*100,
+         pro_LLIV=pro_LLIV*100) %>%
+  left_join(., a)
+```
+
+# MODELS
+
+``` r
+myfomula <- formula(cbind(W, M) ~ pro + pro_LLIV + DOPDarwin_dissolved_umol.kg + phosphate_dissolved_umol.kg + hdb_cl) 
+
+mymod <- bbdml(formula = myfomula,
+               phi.formula = myfomula,
+               link="logit",
+               phi.link="logit",
+               data = data2corncob)
+
+summary(mymod)
+```
+
+### Bootstrap liklihood ratio tests for variables
+
+  - pro
+  - pro\_LLIV
+  - DOPDarwin\_dissolved\_umol.kg
+  - phosphate\_dissolved\_umol.kg
+  - hdb\_cl
+
+Generate a null model omitting one of the terms
+
+``` r
+null.1.f <- remove_terms(myfomula, "pro")
+null.2.f <- remove_terms(myfomula, "pro_LLIV")
+null.3.f <- remove_terms(myfomula, "DOPDarwin_dissolved_umol.kg")
+null.4.f <- remove_terms(myfomula, "phosphate_dissolved_umol.kg")
+null.5.f <- remove_terms(myfomula, "hdb_cl")
+
+myforms <- list(null.1.f, null.2.f, null.3.f, null.4.f, null.5.f)
+      
+names(myforms) <- c("pro", "pro_LLIV", "DOPDarwin_dissolved_umol.kg","phosphate_dissolved_umol.kg", "hdb_cl")
+
+mynulls <- map(myforms, makenull, mymod, data2corncob)
+```
+
+``` r
+f.1.sim.stat <- PBLRTfun(mymod, mynulls$pro, 1000, bootLRT)
+f.2.sim.stat <- PBLRTfun(mymod, mynulls$pro_LLIV, 1000, bootLRT)
+f.3.sim.stat <- PBLRTfun(mymod, mynulls$DOPDarwin_dissolved_umol.kg, 1000, bootLRT)
+f.4.sim.stat <- PBLRTfun(mymod, mynulls$phosphate_dissolved_umol.kg, 1000, bootLRT)
+f.5.sim.stat <- PBLRTfun(mymod, mynulls$hdb_cl, 1000, bootLRT)
+```
+
+### Regular likelihood ratio tests
+
+``` r
+f.1.lrt <- mypbLRT(mymod, mynulls$pro, f.1.sim.stat)
+f.2.lrt <- mypbLRT(mymod, mynulls$pro_LLIV, f.2.sim.stat)
+f.3.lrt <- mypbLRT(mymod, mynulls$DOPDarwin_dissolved_umol.kg, f.3.sim.stat)
+f.4.lrt <- mypbLRT(mymod, mynulls$phosphate_dissolved_umol.kg, f.4.sim.stat)
+f.5.lrt <- mypbLRT(mymod, mynulls$hdb_cl, f.5.sim.stat)
+```
+
+### LRT results
+
+results from bootstrapped LRT and regular LRT for the fully specified
+model
+
+``` r
+lrt.res <- bind_rows(
+  mutate(as_tibble(f.1.lrt), covariate="Prochlorococcus"),
+  mutate(as_tibble(f.2.lrt), covariate="LLIV"),
+  mutate(as_tibble(f.3.lrt), covariate="DOPDarwin"),
+  mutate(as_tibble(f.4.lrt), covariate="PO4"),
+  mutate(as_tibble(f.5.lrt), covariate="scml_type"),
+)
+
+lrt.res
+
+write_tsv(lrt.res, here::here("tables", "LRT_results.pro.tsv"))
+```
+
+# SIMULATIONS
+
+Do the simulations in 100 replicate chunks. Don’t know why but when you
+try 1000 for `sim_pa` it hangs. Breaking it up into chunks actually runs
+and finishes
+
+``` r
+sims <- list()
+  
+for (i in 1:10) {
+      sims[[i]] <- sim_pa(mymod, 100)
+}
+
+sims.drop <- lapply(sims, function(x) x[!is.na(x)])
+```
+
+``` r
+obs <- NULL
+for (i in 1:10) {obs <- rbind(obs, sims[[i]][,1])}
+
+mu <- NULL
+for (i in 1:10) {mu <- rbind(mu, sims[[i]][,2])}
+
+phi <- NULL
+for (i in 1:10) {phi <- rbind(phi, sims[[i]][,3])}
+
+summary.list <- sim_summary(mymod, list(obs, mu, phi))
+
+obs2 <- summary.list[[1]]
+mu2 <- summary.list[[2]] %>% rownames_to_column(var="variable")
+phi2 <- summary.list[[3]] %>% rownames_to_column(var="variable")
+
+save(obs2, mu2, phi2, file=here::here("data", "BB_sim.pro.Rdata"))
+```

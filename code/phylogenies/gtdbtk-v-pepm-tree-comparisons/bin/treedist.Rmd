@@ -1,0 +1,182 @@
+---
+title: "Comparing tree topologies following Smith 2020"
+output: html_notebook
+---
+
+[Comment on the preprint](http://disq.us/p/2dal2ct) suggested that RF distance may not be most appropriate comparison tool.
+
+"A thought on the use of the Robinson-Foulds distance – because this metric is so readily saturated, random trees are likely to obtain a value unreasonably close to the maximum, meaning that they don't add much context to the distance between the PepM tree and genome phylogeny. The RF distance has other issues too. There are various other tree distances that might be more suitable, some of which which I've discussed and reviewed in [Smith (2020, Bioinformatics)](https://academic.oup.com/bioinformatics/article/36/20/5007/5866976)"
+
+So lets try using the TreeDist package
+
+
+[Generate pectinate, balanced or random trees](https://ms609.github.io/TreeTools/reference/GenerateTree.html)
+
+[Expected values for random trees](https://ms609.github.io/TreeDistData/articles/09-expected-similarity.html)
+
+```{r}
+library(here)
+library(tidyverse)
+library(ape)
+library(TreeDist)
+library(TreeDistData)
+library(TreeTools)
+library(TreeSearch)
+library(Ternary)
+library(kdensity)
+library(rcartocolor)
+```
+
+# LOAD TREES
+```{r}
+genome_bac <- read.tree(file=here("data", "gtdbtk.bac120.user_msa.trimgappyout.shared.tre"))
+pepm_bac <- read.tree(file=here("data", "bacteria_PEPM.curated.gappyout.genomes.shared.tre"))
+
+TIGR00019 <- read.tree(file=here("data", "core_fams", "TIGR00019.tre"))
+TIGR00006 <- read.tree(file=here("data", "core_fams", "TIGR00006.tre"))
+TIGR00020 <- read.tree(file=here("data", "core_fams", "TIGR00020.tre"))
+TIGR00043 <- read.tree(file=here("data", "core_fams", "TIGR00043.tre"))
+TIGR00092 <- read.tree(file=here("data", "core_fams", "TIGR00092.tre"))
+TIGR00755 <- read.tree(file=here("data", "core_fams", "TIGR00755.tre"))
+TIGR00936 <- read.tree(file=here("data", "core_fams", "TIGR00936.tre"))
+PF01025   <- read.tree(file=here("data", "core_fams", "PF01025.14.tre"))
+TIGR00086 <- read.tree(file=here("data", "core_fams", "TIGR00086.tre"))
+TIGR00083 <- read.tree(file=here("data", "core_fams", "TIGR00083.tre"))
+``` 
+
+# PREPROCESS TREES
+Need to ensure we have the same tips in all trees being compared
+
+Gets intersections of the tips in all trees
+```{r}
+commontips <- Reduce(intersect, list(TipLabels(genome_bac), 
+                       TipLabels(pepm_bac),
+                       TipLabels(TIGR00019),
+                       TipLabels(TIGR00006),
+                       TipLabels(TIGR00020),
+                       TipLabels(TIGR00043),
+                       TipLabels(TIGR00092),
+                       TipLabels(TIGR00755),
+                       TipLabels(TIGR00936),
+                       TipLabels(PF01025),
+                       TipLabels(TIGR00086),
+                       TipLabels(TIGR00083)))
+```
+
+simple function for extracting a vector of tree tips 
+```{r}
+subsetTree <- function(tree, tips2get){
+  DropTip(tree, setdiff(TipLabels(tree), TipLabels(tips2get)))
+}
+```
+
+generate final list for comparison
+```{r}
+genome_bac.r <- subsetTree(genome_bac, commontips)
+pepm_bac.r <- subsetTree(pepm_bac, commontips)
+TIGR00019.r <- subsetTree(TIGR00019, commontips)
+TIGR00006.r <- subsetTree(TIGR00006, commontips)
+TIGR00020.r <- subsetTree(TIGR00020, commontips)
+TIGR00043.r <- subsetTree(TIGR00043, commontips)
+TIGR00092.r <- subsetTree(TIGR00092, commontips)
+TIGR00755.r <- subsetTree(TIGR00755, commontips)
+TIGR00936.r <- subsetTree(TIGR00936, commontips)
+PF01025.r <- subsetTree(PF01025, commontips)
+TIGR00086.r <- subsetTree(TIGR00086, commontips)
+TIGR00083.r <- subsetTree(TIGR00083, commontips)
+
+
+tlist <- list("a"=genome_bac.r,
+              "b"=pepm_bac.r,
+              "c"=TIGR00019.r,
+              "d"=TIGR00006.r,
+              "e"=TIGR00020.r,
+              "f"=TIGR00043.r,
+              "g"=TIGR00092.r,
+              "g"=TIGR00092.r,
+              "h"=TIGR00755.r,
+              "i"=TIGR00936.r,
+              "j"=PF01025.r,
+              "k"=TIGR00086.r,
+              "l"=TIGR00083.r,
+              "m"=RandomTree(genome_bac.r))
+```
+
+# CALCULATE SIMILARITY AND CONTEXT BETWEEN TREES
+
+Calculate the expected variation between two random trees of the same topology/shape?
+
+```{r}
+getalldists <- function(tree1, tree2, t1name, t2name){
+  #t1name <- deparse(substitute(tree1))
+  #t2name <- deparse(substitute(tree2))
+  tibble(t1=t1name, 
+         t2=t2name, 
+         DifferentPhylogeneticInfo=DifferentPhylogeneticInfo(tree1, tree2),
+         MatchingSplitInfoDistance=MatchingSplitInfoDistance(tree1, tree2),
+         ClusteringInfoDistance=ClusteringInfoDistance(tree1, tree2)/ExpectedVariation(tree1, tree2, sample=10)['ClusteringInfoDistance', 'Estimate'])
+}
+```
+
+```{r}
+restable <- bind_rows(getalldists(tlist$a, tlist$b, "Species", "PepM"), 
+          getalldists(tlist$a, tlist$c, "Species", "TIGR00019 - PrfA"),
+          getalldists(tlist$a, tlist$d, "Species", "TIGR00006 - RsmH"),
+          getalldists(tlist$a, tlist$e, "Species", "TIGR00020 - PrfB"),
+          getalldists(tlist$a, tlist$f, "Species", "TIGR00043 - YbeY"),
+          getalldists(tlist$a, tlist$g, "Species", "TIGR00092 - YchF"),
+          getalldists(tlist$a, tlist$h, "Species", "TIGR00755 - KsgA"),
+          getalldists(tlist$a, tlist$i, "Species", "TIGR00936 - AhcY"),
+          getalldists(tlist$a, tlist$j, "Species", "PF01025 - GrpE"),
+          getalldists(tlist$a, tlist$k, "Species", "TIGR00086 - SsrA"),
+          getalldists(tlist$a, tlist$l, "Species", "TIGR00083 - RibF"),
+          getalldists(tlist$a, tlist$m, "Species", "Random"))
+
+restable
+```
+
+```{r}
+write_tsv(restable, here::here("results", "result_table.tsv"))
+```
+
+# CHECKING SIMILARITY TO A KNOWN SPECIES TREE
+Here we will compare a selection of "core" gene trees, the PepM tree, and a completely random tree to the species tree 
+
+## PLOT
+```{r}
+#dput(rcartocolor::carto_pal(4, "Vivid"))
+
+mycols <- c("#E58606", "#5D69B1", 
+            "#52BCA3", "#52BCA3", "#52BCA3", "#52BCA3", "#52BCA3",
+            "#52BCA3", "#52BCA3", "#52BCA3", "#52BCA3", "#52BCA3", "#52BCA3",
+            "#A5AA99")
+
+oldPar <- par(mar = rep(0.1, 4))
+
+TernaryPlot(point="up",
+            alab = '\u2190 Shared information ',
+            blab = 'Absent information \u2192', 
+            clab = '\u2190 Misinformation',
+            lab.cex = 0.8,
+            lab.offset = 0.18,
+            clockwise = FALSE,
+            grid.col = '#dedede', 
+            grid.minor.lines = 0,
+            axis.labels = 0:10 / 10, 
+            axis.col = "#aaaaaa")
+  
+HorizontalGrid()
+
+correct <- MutualClusteringInfo(tlist[['a']], tlist)
+
+resolved <- ClusteringEntropy(tlist)
+
+unresolved <- resolved[['a']] - resolved
+
+incorrect <- resolved - correct
+
+TernaryPoints(cbind(correct, abs(unresolved), incorrect), 
+                pch = 19, cex = 1.5, col = mycols)
+
+par(oldPar)
+```
